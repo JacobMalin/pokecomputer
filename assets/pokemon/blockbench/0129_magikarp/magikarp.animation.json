@@ -1,0 +1,75 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.magikarp.water_swim": {
+			"loop": true,
+			"bones": {
+				"whisker_right": {
+					"rotation": [0, 2.5, 0]
+				},
+				"whisker_left": {
+					"rotation": [0, -2.5, 0]
+				},
+				"fin_right": {
+					"rotation": [0, 15, 0]
+				},
+				"fin_left": {
+					"rotation": [0, -15, 0]
+				}
+			}
+		},
+		"animation.magikarp.air_idle": {
+			"loop": true,
+			"bones": {
+				"whisker_right": {
+					"rotation": [30, -30, 45]
+				},
+				"whisker_left": {
+					"rotation": [30, 30, -45]
+				},
+				"fin_right": {
+					"rotation": [60, 30, -90]
+				},
+				"fin_left": {
+					"rotation": [60, -30, 90]
+				},
+				"whisker_right2": {
+					"rotation": [0, 0, 15],
+					"position": [3, 0, 0]
+				},
+				"whisker_right3": {
+					"rotation": [0, 0, "20*1+q.anim_time*90*50"]
+				},
+				"whisker_left2": {
+					"rotation": [0, 0, -15],
+					"position": [-3, 0, 0]
+				},
+				"whisker_left3": {
+					"rotation": [0, 0, "-20*1+q.anim_time*90*50"]
+				},
+				"tail3": {
+					"rotation": [0, 0, 90]
+				}
+			}
+		},
+		"animation.magikarp.blink": {
+			"animation_length": 0.16667,
+			"bones": {
+				"eyelid_right": {
+					"position": {
+						"0.0": [-0.1, 0, -0.1],
+						"0.125": [-0.1, 0, 0],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_left": {
+					"position": {
+						"0.0": [0.1, 0, -0.1],
+						"0.125": [0.1, 0, 0],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}
