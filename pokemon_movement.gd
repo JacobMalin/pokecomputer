@@ -9,8 +9,10 @@ const ROTATION_NUDGE_BIAS: float = 0.5
 
 const RANDOM_DEST_DIST: float = 4.0
 
-@export var pokemon: String = "bulbasaur"
+@export var pokemon_id: int = 0
+var pokemon_name
 
+@onready var globals = get_node("/root/Globals")
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 var animation_player: AnimationPlayer
 
@@ -20,7 +22,9 @@ func _ready():
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
 
-	var pokemon_scene = load("res://assets/pokemon/scenes/"+pokemon+".tscn")
+	pokemon_name = globals.pokedex[pokemon_id]
+
+	var pokemon_scene = load("res://assets/pokemon/scenes/"+pokemon_name+".tscn")
 	var pokemon_instance = pokemon_scene.instantiate()
 	add_child(pokemon_instance)
 
@@ -35,7 +39,7 @@ func actor_setup():
 
 	# Now that the navigation map is no longer empty, set the movement target.
 	set_movement_target(movement_target_position)
-	animation_player.play("animation_"+pokemon+"_ground_walk")
+	animation_player.play("animation_"+pokemon_name+"_ground_walk")
 
 func set_movement_target(movement_target: Vector3):
 	navigation_agent.set_target_position(movement_target)

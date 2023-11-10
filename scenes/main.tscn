@@ -85,11 +85,12 @@ visible = false
 mesh = SubResource("PlaneMesh_0on5b")
 
 [node name="Pokemon" parent="." instance=ExtResource("7_2fqfm")]
+pokemon_id = 1
 
 [node name="Pokemon2" parent="." instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71707, 0, 0)
-pokemon = "charmander"
+pokemon_id = 4
 
 [node name="Pokemon3" parent="." instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68145, 0, 0)
-pokemon = "squirtle"
+pokemon_id = 7
