@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b7wmg30mdj4h6"
-path="res://.godot/imported/pokeball.FBX-6d6b89e3df433945bc2931d92ca6077f.scn"
+path="res://.godot/imported/pokeball.FBX-f2f360d8c8bbacbc501b88acf19367b6.scn"
 
 [deps]
 
-source_file="res://assets/pokeball.FBX"
-dest_files=["res://.godot/imported/pokeball.FBX-6d6b89e3df433945bc2931d92ca6077f.scn"]
+source_file="res://assets/pokeball/pokeball.FBX"
+dest_files=["res://.godot/imported/pokeball.FBX-f2f360d8c8bbacbc501b88acf19367b6.scn"]
 
 [params]
 

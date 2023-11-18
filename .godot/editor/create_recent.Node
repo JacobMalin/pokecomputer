@@ -1,8 +1,10 @@
+Area3D
+Node3D
+MeshInstance3D
 CollisionShape3D
 NavigationAgent3D
 CharacterBody3D
 NavigationRegion3D
-MeshInstance3D
 StaticBody3D
 XRController3D
 XROrigin3D
