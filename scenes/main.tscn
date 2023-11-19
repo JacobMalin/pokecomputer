@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=19 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="2_5q751"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_islgx"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_ncs64"]
 [ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand_material.tres" id="3_vdsm6"]
@@ -51,8 +52,12 @@ environment = SubResource("Environment_j8tdp")
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="PokeballHolster" type="Node3D" parent="XROrigin3D/XRCamera3D"]
+[node name="Holster" type="Node3D" parent="XROrigin3D/XRCamera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="Slot1" parent="XROrigin3D/XRCamera3D/Holster" instance=ExtResource("2_5q751")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.316179, 0, -0.202201)
+snap_require = "pokeball"
 
 [node name="LeftController" type="XRController3D" parent="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
@@ -105,17 +110,25 @@ navigation_mesh = SubResource("NavigationMesh_p03kc")
 visible = false
 mesh = SubResource("PlaneMesh_0on5b")
 
-[node name="Pokemon" parent="." instance=ExtResource("7_2fqfm")]
+[node name="Bulbasaur" parent="." instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.51792)
 id = 1
 
-[node name="Pokemon2" parent="." instance=ExtResource("7_2fqfm")]
+[node name="Charmander" parent="." instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71707, 0, 3.51792)
 id = 4
 
-[node name="Pokemon3" parent="." instance=ExtResource("7_2fqfm")]
+[node name="Squirtle" parent="." instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68145, 0, 3.51792)
 id = 7
 
 [node name="Pokeball" parent="." instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273303, 1, -1)
+
+[node name="Pokeball2" parent="." instance=ExtResource("9_g3mci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+visible = false
+
+[node name="Pokeball3" parent="." instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.292719, 1, -1)
+visible = false

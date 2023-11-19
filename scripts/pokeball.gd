@@ -1,5 +1,5 @@
 class_name Pokeball
-extends Node3D
+extends XRToolsPickable
 
 const POKE_SCAN_RANGE = 10
 const RISE_SPEED = 1
@@ -9,18 +9,19 @@ const EMPTY = null
 @export var contents : Pokemon = EMPTY;
 var contents_parent
 
-const DEFAULT = 0
-const PRIMED = 1
-const RISE = 2
-const HOLD = 3
-const DROP = 4
-@export var mode = DEFAULT;
+enum PokeballState {
+	DEFAULT,
+	PRIMED,
+	RISE,
+	HOLD,
+	DROP
+}
+@export var mode : PokeballState = PokeballState.DEFAULT;
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-@onready var rigid_body: RigidBody3D = $Pokeball
-@onready var rigid_body_collision: CollisionShape3D = $Pokeball/CollisionShape3D
-@onready var rigid_body_mesh: Node3D = $Pokeball/Mesh
-@onready var capture_radius: Area3D = $Pokeball/PokemonCaptureRadius
+@onready var collision: CollisionShape3D = $CollisionShape3D
+@onready var mesh: Node3D = $Mesh
+@onready var capture_radius: Area3D = $PokemonCaptureRadius
 
 @onready var player_body: XRToolsPlayerBody = %PlayerBody
 
@@ -33,13 +34,13 @@ var drop_start_rot
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	mode = DEFAULT
-
-	PhysicsServer3D.body_set_force_integration_callback(rigid_body, _rigid_body_integrate_forces)
+	super._ready()
 
 
 func _process(delta):
-	if mode == RISE: # Look at target
+	if mode == PokeballState.RISE: # Look at target
+		# Maybe fix some year: Pokeball snaps into place once rise starts
+
 		# Get target for look at
 		var target_position;
 		if contents == EMPTY and closest_pokemon != null: ## Look at the closest pokemon in a range of POKE_SCAN_RANGE
@@ -48,43 +49,44 @@ func _process(delta):
 			target_position = release_position()
 		
 		# Look at target
-		rigid_body_mesh.look_at(target_position)
-		rigid_body_mesh.rotate_object_local(Vector3.UP, PI)
+		mesh.look_at(target_position)
+		mesh.rotate_object_local(Vector3.UP, PI)
 
-	if mode == DROP: # Reset rotation
+	if mode == PokeballState.DROP: # Reset rotation
 		if drop_elapsed >= DROP_TIME:
-			mode = DEFAULT
-			rigid_body_mesh.rotation = Vector3.ZERO
+			mode = PokeballState.DEFAULT
+			mesh.rotation = Vector3.ZERO
 
 		drop_elapsed += delta
 
 		var intermediate_rot = drop_start_rot.lerp(Vector3.ZERO, drop_elapsed / DROP_TIME)
-		rigid_body_mesh.rotation = intermediate_rot
+		mesh.rotation = intermediate_rot
+
+func _integrate_forces(state):
+	# Rise upwards
+	if mode == PokeballState.RISE:
+		state.linear_velocity = Vector3.UP * 0.01 / state.step
+		state.angular_velocity = Vector3.ZERO
 
 
 ## Events ##
 
 func _on_pokeball_hit_something(body:Node):
-	if body.name == "Pokeball" or mode != PRIMED: # Don't hit itself and do not activate until primed
+	if body.name == "Pokeball" or mode != PokeballState.PRIMED: # Don't hit itself and do not activate until primed
 		return
 
 	# This controls many things, but essentially drives the pokemon capture/release
 	animation_player.play("capture_and_release")
 
-func _on_pokeball_picked_up(_pickable):
-	mode = PRIMED
-
-func _rigid_body_integrate_forces(state):
-	# Rise upwards
-	if mode == RISE:
-		state.linear_velocity = Vector3.UP * 0.01 / state.step
-		state.angular_velocity = Vector3.ZERO
+func _on_pokeball_dropped(_pickable):
+	mode = PokeballState.PRIMED
 
 
 
 ## Helper ##
 
 ### RISE phase ###
+
 func scan(): # If pokeball is empty, choose closest pokemon to capture
 	if contents == EMPTY:
 		var all_pokemon = get_tree().get_nodes_in_group("pokemon")
@@ -93,10 +95,11 @@ func scan(): # If pokeball is empty, choose closest pokemon to capture
 		closest_pokemon = nearby_pokemon.reduce(func(_min, poke): return poke if is_closer(poke, _min) else _min)
 
 func is_closer(poke, _min):
-	return poke.global_position.distance_squared_to(rigid_body.global_position) < \
-		   _min.global_position.distance_squared_to(rigid_body.global_position)
+	return poke.global_position.distance_squared_to(global_position) < \
+		   _min.global_position.distance_squared_to(global_position)
 
 ### HOLD phase ###
+
 func capture_and_release():
 	if contents == EMPTY: capture()
 	else: release()
@@ -104,9 +107,9 @@ func capture_and_release():
 func capture():
 	if closest_pokemon == null: # If no pokemon was found in the scan phase
 		$AnimationPlayer.stop()
-		mode = DROP
-		rigid_body_collision.disabled = false
-		rigid_body.enabled = true
+		mode = PokeballState.DROP
+		collision.disabled = false
+		enabled = true
 
 		drop_start()
 		return
@@ -115,23 +118,34 @@ func capture():
 	contents = closest_pokemon
 
 	contents_parent = contents.get_parent()
-	contents.reparent(rigid_body)
-	contents.capture(self)
+	contents.reparent(self)
+
+	# I do not like this rotate_object_local solution and I would fix it if I could, but
+	# unfortunately I do not understand the math well enough to do it using matrices
+	mesh.rotate_object_local(Vector3.UP, PI)
+	contents.capture(mesh.global_rotation)
+	mesh.rotate_object_local(Vector3.UP, PI)
 
 func release():
 	contents.reparent(contents_parent)
-	contents.release(self, release_position())
+	
+	# Same as capture, would fix if I could. Start and end rotation is the same currently.
+	mesh.rotate_object_local(Vector3.UP, PI)
+	contents.release(release_position(), mesh.global_rotation, mesh.global_rotation)
+	mesh.rotate_object_local(Vector3.UP, PI)
 
 	contents = EMPTY
 
+# A position on the ground 1 meter away from ball in the direction of the player
 func release_position():
-	var player_to_ball = rigid_body.global_position - player_body.global_position
+	var player_to_ball = global_position - player_body.global_position
 	player_to_ball.y = 0
-	var dir = player_to_ball.normalized()
+	var dir = -player_to_ball.normalized()
 
-	return (rigid_body.global_position + dir) * Vector3(1, 0, 1)
+	return (global_position + dir) * Vector3(1, 0, 1)
 
 ### DROP phase ###
+
 func drop_start():
 	drop_elapsed = 0
-	drop_start_rot = rigid_body_mesh.rotation
+	drop_start_rot = mesh.rotation

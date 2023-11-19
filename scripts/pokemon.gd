@@ -17,12 +17,14 @@ const POKEBALL_SCALE = 0.03
 @export var id: int = 0
 var pokemon_name: String
 
-const IDLE = 0
-const WALK = 1
-const CAPTURE = 2
-const CONTAIN = 3
-const RELEASE = 4
-@export var mode = 1
+enum PokemonState {
+	IDLE,
+	WALK,
+	CAPTURE,
+	CONTAIN,
+	RELEASE
+}
+@export var mode : PokemonState = PokemonState.WALK
 
 @onready var globals = get_node("/root/Globals")
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
@@ -90,9 +92,9 @@ func _physics_process(delta):
 	global_transform.basis = Basis(final)
 
 func _process(delta):
-	if mode == CAPTURE:
+	if mode == PokemonState.CAPTURE:
 		if capture_elapsed >= CAPTURE_TIME:
-			mode = CONTAIN
+			mode = PokemonState.CONTAIN
 			position = capture_dest_pos
 			rotation = Vector3.UP * PI # final rotation is aligned with rigid body, not mesh
 			scale = Vector3.ONE * POKEBALL_SCALE
@@ -112,9 +114,9 @@ func _process(delta):
 		var intermediate_size = Vector3.ONE.lerp(Vector3.ONE * POKEBALL_SCALE, capture_elapsed / CAPTURE_TIME)
 		scale = intermediate_size
 
-	if mode == RELEASE:
+	if mode == PokemonState.RELEASE:
 		if release_elapsed >= RELEASE_TIME:
-			mode = IDLE
+			mode = PokemonState.IDLE
 			global_position = release_dest_pos
 			global_rotation = release_dest_rot
 			scale = Vector3.ONE
@@ -142,7 +144,7 @@ func _process(delta):
 func _on_navigation_agent_3d_navigation_finished():
 	# animation_player.play("animation_bulbasaur_ground_idle")
 	# await get_tree().create_timer(1).timeout
-	if mode == WALK:
+	if mode == PokemonState.WALK:
 		walk()
 
 
@@ -163,48 +165,41 @@ func clear_movement_target():
 	set_movement_target(global_position)
 
 func walk():
-	mode = WALK
+	mode = PokemonState.WALK
 	animation_player.play("animation_"+pokemon_name+"_ground_walk")
 	set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
 								0.0,
 								randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
 
 func idle():
-	mode = IDLE
+	mode = PokemonState.IDLE
 	animation_player.play("animation_"+pokemon_name+"_ground_idle")
 	clear_movement_target()
 
-func capture(pokeball):
-	mode = CAPTURE
+func capture(dest_rot):
+	mode = PokemonState.CAPTURE
 	capture_elapsed = 0
 	
 	capture_start_pos = position
 	capture_dest_pos  = Vector3(0, -.02, 0)
+
 	capture_start_rot = global_rotation
-	
-	# This works, but boy do I not like it
-	pokeball.rotate_object_local(Vector3.UP, PI)
-	capture_dest_rot = pokeball.rigid_body_mesh.global_rotation
-	pokeball.rotate_object_local(Vector3.UP, PI)
+	capture_dest_rot = dest_rot
 
 	collision.disabled = true
 
 	animation_player.play("animation_"+pokemon_name+"_ground_idle")
 	clear_movement_target()
 
-func release(pokeball, dest_pos):
-	mode = RELEASE
+func release(dest_pos, start_rot, dest_rot):
+	mode = PokemonState.RELEASE
 	release_elapsed = 0
 	
 	release_start_pos = global_position
 	release_dest_pos  = dest_pos
 
-	# Still bad, but still works
-	pokeball.rotate_object_local(Vector3.UP, PI)
-	release_start_rot = pokeball.rigid_body_mesh.global_rotation
-	pokeball.rotate_object_local(Vector3.UP, PI)
-
-	release_dest_rot  = Vector3(0, 0, 0)
+	release_start_rot = start_rot
+	release_dest_rot  = dest_rot
 
 func end_release():
 	collision.disabled = false

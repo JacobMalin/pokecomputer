@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "GDScript Godot",
+            "name": "GDScript Godot Debug",
             "type": "godot",
             "request": "launch",
             "project": "${workspaceFolder}",

@@ -1,9 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://bpekn8na6qop8"]
+[gd_scene load_steps=24 format=3 uid="uid://bpekn8na6qop8"]
 
-[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_3tcvp"]
 [ext_resource type="Script" path="res://scripts/pokeball.gd" id="1_xx8pp"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_ysufs"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_6t2dr"]
+[ext_resource type="PackedScene" uid="uid://dh8grd7s3n8kg" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.tscn" id="4_ps8vi"]
 [ext_resource type="ArrayMesh" uid="uid://bacfkc6joudhd" path="res://assets/pokeball/pokeball_highlight.tres" id="5_d3tgv"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.gd" id="6_7vakd"]
 
@@ -212,13 +212,64 @@ radius = 0.1
 [sub_resource type="SphereShape3D" id="SphereShape3D_ppf53"]
 radius = 5.0
 
+[sub_resource type="Animation" id="Animation_yo53e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:freeze")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape3D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_mmjcs"]
 resource_name = "Take 001"
 length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../..:mode")
+tracks/0/path = NodePath(".:mode")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -230,7 +281,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("..:freeze")
+tracks/1/path = NodePath(".:freeze")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -242,7 +293,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../..")
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -262,7 +313,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../CollisionShape3D:disabled")
+tracks/3/path = NodePath("CollisionShape3D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -274,7 +325,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("..:enabled")
+tracks/4/path = NodePath(".:enabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -286,74 +337,74 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5dokd"]
 _data = {
+"RESET": SubResource("Animation_yo53e"),
 "capture_and_release": SubResource("Animation_mmjcs")
 }
 
-[node name="Pokeball" type="Node3D"]
-script = ExtResource("1_xx8pp")
-
-[node name="Pokeball" type="RigidBody3D" parent="."]
+[node name="Pokeball" type="RigidBody3D" groups=["pokeball"]]
 collision_layer = 4
 collision_mask = 196615
-mass = 0.16
+mass = 0.09
 freeze = true
 freeze_mode = 1
 angular_damp = 7.0
-script = ExtResource("1_3tcvp")
+script = ExtResource("1_xx8pp")
 release_mode = 0
+ranged_grab_method = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pokeball"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_uglay")
 
-[node name="Mesh" type="Node3D" parent="Pokeball"]
+[node name="Mesh" type="Node3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 
-[node name="Object001" type="MeshInstance3D" parent="Pokeball/Mesh"]
+[node name="Object001" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(3.08822, 0, 0, 0, 0, 1.40515, 0, -3.08822, 0, 0.000513918, -0.00135176, 0.0194148)
 mesh = SubResource("ArrayMesh_84dlv")
 skeleton = NodePath("")
 
-[node name="Cylinder001" type="MeshInstance3D" parent="Pokeball/Mesh"]
+[node name="Cylinder001" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(3.61568, 0, 0, 0, 3.61568, -1.9499e-08, 0, 1.58047e-07, 0.446085, 0.00770732, 0.0028982, 1.02405)
 mesh = SubResource("ArrayMesh_tvr6m")
 skeleton = NodePath("")
 
-[node name="Sphere001" type="MeshInstance3D" parent="Pokeball/Mesh"]
+[node name="Sphere001" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(2.54, 0, 0, 0, 0, 2.54, 0, -2.54, 0, 0.000513918, 0.00896834, 0.0194148)
 mesh = SubResource("ArrayMesh_86i0j")
 skeleton = NodePath("")
 
-[node name="GrabPointHandLeft" parent="Pokeball" instance=ExtResource("3_ysufs")]
-transform = Transform3D(0.543915, -0.0515516, -0.837555, 0.028077, 0.99867, -0.0432348, 0.838671, 0, 0.544639, 0.063, 0.052, -0.057)
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("3_ysufs")]
+transform = Transform3D(0.543915, -0.0515516, -0.837555, 0.028077, 0.99867, -0.0432348, 0.838671, 2.42144e-08, 0.544639, 0.063, 0.052, -0.057)
 
-[node name="GrabPointHandRight" parent="Pokeball" instance=ExtResource("4_6t2dr")]
+[node name="GrabPointHandRight" parent="." instance=ExtResource("4_6t2dr")]
 transform = Transform3D(0.544083, 0, 0.839032, 0, 1, 0, -0.839032, 0, 0.544083, -0.061, 0.052, -0.056)
 
-[node name="Highlight" type="MeshInstance3D" parent="Pokeball"]
+[node name="GrabPointSnapHolster" parent="." instance=ExtResource("4_ps8vi")]
+
+[node name="Highlight" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.002, 0)
 visible = false
 mesh = ExtResource("5_d3tgv")
 script = ExtResource("6_7vakd")
 
-[node name="StartCaptureRadius" type="Area3D" parent="Pokeball"]
+[node name="StartCaptureRadius" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 7
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pokeball/StartCaptureRadius"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartCaptureRadius"]
 shape = SubResource("SphereShape3D_ish8j")
 
-[node name="PokemonCaptureRadius" type="Area3D" parent="Pokeball"]
+[node name="PokemonCaptureRadius" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 7
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pokeball/PokemonCaptureRadius"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PokemonCaptureRadius"]
 shape = SubResource("SphereShape3D_ppf53")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Pokeball/Mesh")
 libraries = {
 "": SubResource("AnimationLibrary_5dokd")
 }
 
-[connection signal="picked_up" from="Pokeball" to="." method="_on_pokeball_picked_up"]
-[connection signal="body_entered" from="Pokeball/StartCaptureRadius" to="." method="_on_pokeball_hit_something"]
+[connection signal="dropped" from="." to="." method="_on_pokeball_dropped"]
+[connection signal="body_entered" from="StartCaptureRadius" to="." method="_on_pokeball_hit_something"]
