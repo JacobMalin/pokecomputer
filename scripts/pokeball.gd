@@ -72,8 +72,11 @@ func _integrate_forces(state):
 ## Events ##
 
 func _on_pokeball_hit_something(body:Node):
-	if body.name == "Pokeball" or mode != PokeballState.PRIMED: # Don't hit itself and do not activate until primed
+	var all_pokeballs = get_tree().get_nodes_in_group("pokeball")
+	if body in all_pokeballs or mode != PokeballState.PRIMED: # Don't hit itself and do not activate until primed
 		return
+
+	print(body.name)
 
 	# This controls many things, but essentially drives the pokemon capture/release
 	animation_player.play("capture_and_release")
@@ -90,9 +93,13 @@ func _on_pokeball_dropped(_pickable):
 func scan(): # If pokeball is empty, choose closest pokemon to capture
 	if contents == EMPTY:
 		var all_pokemon = get_tree().get_nodes_in_group("pokemon")
-		var nearby_pokemon = capture_radius.get_overlapping_bodies().filter(func(body): return body in all_pokemon)
+		var can_be_captured = (func(poke): return poke in all_pokemon and poke.capture_state == poke.PokemonCapture.FREE)
+		var nearby_pokemon = capture_radius.get_overlapping_bodies().filter(can_be_captured)
 
 		closest_pokemon = nearby_pokemon.reduce(func(_min, poke): return poke if is_closer(poke, _min) else _min)
+
+		# If there is a free pokemon nearby, mark as pre_captured
+		if closest_pokemon: closest_pokemon.pre_capture()
 
 func is_closer(poke, _min):
 	return poke.global_position.distance_squared_to(global_position) < \

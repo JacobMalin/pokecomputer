@@ -17,6 +17,10 @@ shape = SubResource("SphereShape3D_7lbeg")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -3.0
+unit_size = 8.0
+
 [node name="Placeholder" parent="." instance=ExtResource("2_1nrag")]
 
 [connection signal="navigation_finished" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_navigation_finished"]

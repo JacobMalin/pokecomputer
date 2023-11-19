@@ -17,21 +17,29 @@ const POKEBALL_SCALE = 0.03
 @export var id: int = 0
 var pokemon_name: String
 
-enum PokemonState {
+enum PokemonMove {
 	IDLE,
-	WALK,
+	WALK
+}
+@export var move_state : PokemonMove = PokemonMove.WALK
+
+enum PokemonCapture {
+	FREE,
+	PRE_CAPTURE,
 	CAPTURE,
 	CONTAIN,
 	RELEASE
 }
-@export var mode : PokemonState = PokemonState.WALK
+@export var capture_state : PokemonCapture = PokemonCapture.FREE
 
 @onready var globals = get_node("/root/Globals")
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var collision: CollisionShape3D = $CollisionShape3D
+@onready var audio_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var animation_player: AnimationPlayer
 
+var pokemon_cry
 
 var capture_elapsed = 0
 var capture_start_pos
@@ -63,13 +71,17 @@ func _ready():
 	var pokemon_instance = pokemon_scene.instantiate()
 	add_child(pokemon_instance)
 
+	## Load cry based on id
+	pokemon_cry = load("res://assets/pokemon/cries/"+pokemon_name+".mp3")
+	audio_player.stream = pokemon_cry
+
 	animation_player = pokemon_instance.get_node("AnimationPlayer")
 
 	# Make sure to not await during _ready.
 	call_deferred("actor_setup")
 
 func _physics_process(delta):
-	if navigation_agent.is_navigation_finished():
+	if navigation_agent.is_navigation_finished() || move_state != PokemonMove.WALK:
 		return
 		
 	var current_agent_position: Vector3 = global_position
@@ -92,12 +104,14 @@ func _physics_process(delta):
 	global_transform.basis = Basis(final)
 
 func _process(delta):
-	if mode == PokemonState.CAPTURE:
+	if capture_state == PokemonCapture.CAPTURE:
 		if capture_elapsed >= CAPTURE_TIME:
-			mode = PokemonState.CONTAIN
 			position = capture_dest_pos
 			rotation = Vector3.UP * PI # final rotation is aligned with rigid body, not mesh
 			scale = Vector3.ONE * POKEBALL_SCALE
+
+			end_capture()
+
 			return
 		
 		capture_elapsed += delta
@@ -114,14 +128,14 @@ func _process(delta):
 		var intermediate_size = Vector3.ONE.lerp(Vector3.ONE * POKEBALL_SCALE, capture_elapsed / CAPTURE_TIME)
 		scale = intermediate_size
 
-	if mode == PokemonState.RELEASE:
+	if capture_state == PokemonCapture.RELEASE:
 		if release_elapsed >= RELEASE_TIME:
-			mode = PokemonState.IDLE
 			global_position = release_dest_pos
 			global_rotation = release_dest_rot
 			scale = Vector3.ONE
 
 			end_release()
+
 			return
 		
 		release_elapsed += delta
@@ -144,7 +158,7 @@ func _process(delta):
 func _on_navigation_agent_3d_navigation_finished():
 	# animation_player.play("animation_bulbasaur_ground_idle")
 	# await get_tree().create_timer(1).timeout
-	if mode == PokemonState.WALK:
+	if move_state == PokemonMove.WALK:
 		walk()
 
 
@@ -164,20 +178,32 @@ func set_movement_target(movement_target: Vector3):
 func clear_movement_target():
 	set_movement_target(global_position)
 
+func cry():
+	audio_player.play()
+	animation_player.play("animation_"+pokemon_name+"_cry")
+
+### Pokemon move states ###
+
 func walk():
-	mode = PokemonState.WALK
+	move_state = PokemonMove.WALK
 	animation_player.play("animation_"+pokemon_name+"_ground_walk")
 	set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
 								0.0,
 								randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
 
 func idle():
-	mode = PokemonState.IDLE
+	move_state = PokemonMove.IDLE
 	animation_player.play("animation_"+pokemon_name+"_ground_idle")
 	clear_movement_target()
 
+### Pokemon capture states ###
+
+## Marks pokemon as not available to capture
+func pre_capture():
+	capture_state = PokemonCapture.PRE_CAPTURE
+
 func capture(dest_rot):
-	mode = PokemonState.CAPTURE
+	capture_state = PokemonCapture.CAPTURE
 	capture_elapsed = 0
 	
 	capture_start_pos = position
@@ -188,11 +214,14 @@ func capture(dest_rot):
 
 	collision.disabled = true
 
-	animation_player.play("animation_"+pokemon_name+"_ground_idle")
-	clear_movement_target()
+	cry()
+	idle()
+
+func end_capture():
+	capture_state = PokemonCapture.CONTAIN
 
 func release(dest_pos, start_rot, dest_rot):
-	mode = PokemonState.RELEASE
+	capture_state = PokemonCapture.RELEASE
 	release_elapsed = 0
 	
 	release_start_pos = global_position
@@ -201,7 +230,10 @@ func release(dest_pos, start_rot, dest_rot):
 	release_start_rot = start_rot
 	release_dest_rot  = dest_rot
 
+	cry()
+
 func end_release():
+	capture_state = PokemonCapture.FREE
 	collision.disabled = false
 
 	walk()

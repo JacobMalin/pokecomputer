@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=21 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="6_ygkyx"]
 [ext_resource type="PackedScene" uid="uid://dsgb4froubxfb" path="res://scenes/pokemon.tscn" id="7_2fqfm"]
 [ext_resource type="PackedScene" uid="uid://bpekn8na6qop8" path="res://scenes/pokeball.tscn" id="9_g3mci"]
+[ext_resource type="Script" path="res://scripts/holster.gd" id="10_qnokk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7px5o"]
 sky_top_color = Color(0.258824, 0.643137, 0.933333, 1)
@@ -27,6 +28,11 @@ background_mode = 2
 sky = SubResource("Sky_armv4")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pi5pi"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.03
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nq8ij"]
 
@@ -50,16 +56,11 @@ environment = SubResource("Environment_j8tdp")
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="Holster" type="Node3D" parent="XROrigin3D/XRCamera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-
-[node name="Slot1" parent="XROrigin3D/XRCamera3D/Holster" instance=ExtResource("2_5q751")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.316179, 0, -0.202201)
-snap_require = "pokeball"
-
 [node name="LeftController" type="XRController3D" parent="XROrigin3D"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
@@ -70,11 +71,13 @@ hand_material_override = ExtResource("3_vdsm6")
 strafe = true
 
 [node name="FunctionPickup" parent="XROrigin3D/LeftController" instance=ExtResource("4_cwh7a")]
+grab_distance = 0.2
 
 [node name="MovementCrouch" parent="XROrigin3D/LeftController" instance=ExtResource("6_ygkyx")]
 crouch_button_action = "ax_button"
 
 [node name="RightController" type="XRController3D" parent="XROrigin3D"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
@@ -86,6 +89,7 @@ turn_mode = 2
 smooth_turn_speed = 1.5
 
 [node name="FunctionPickup" parent="XROrigin3D/RightController" instance=ExtResource("4_cwh7a")]
+grab_distance = 0.2
 
 [node name="MovementCrouch" parent="XROrigin3D/RightController" instance=ExtResource("6_ygkyx")]
 crouch_button_action = "ax_button"
@@ -93,6 +97,75 @@ crouch_button_action = "ax_button"
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_el4ei")]
 unique_name_in_owner = true
 collision_mask = 1019
+
+[node name="Holster" type="Node3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0)
+script = ExtResource("10_qnokk")
+
+[node name="Left" type="Node3D" parent="XROrigin3D/Holster"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000352949, 0, -0.234632)
+
+[node name="Slot1" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117556, 0, 0.0301982)
+grab_distance = 0.1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Left/Pokeball")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Left/Slot1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
+
+[node name="Slot2" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+grab_distance = 0.1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Left/Pokeball2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Left/Slot2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
+
+[node name="Slot3" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0, 0.03)
+grab_distance = 0.1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Left/Pokeball3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Left/Slot3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
+
+[node name="Right" type="Node3D" parent="XROrigin3D/Holster"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.110816)
+
+[node name="Slot4" parent="XROrigin3D/Holster/Right" instance=ExtResource("2_5q751")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118, 0, 0.03)
+grab_distance = 0.1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Right/Pokeball4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Right/Slot4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
+
+[node name="Slot5" parent="XROrigin3D/Holster/Right" instance=ExtResource("2_5q751")]
+grab_distance = 0.1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Right/Pokeball5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Right/Slot5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
+
+[node name="Slot6" parent="XROrigin3D/Holster/Right" instance=ExtResource("2_5q751")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0, 0.03)
+grab_distance = 0.1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Right/Pokeball6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Right/Slot6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
 
 [node name="Floor" type="StaticBody3D" parent="."]
 
@@ -110,25 +183,42 @@ navigation_mesh = SubResource("NavigationMesh_p03kc")
 visible = false
 mesh = SubResource("PlaneMesh_0on5b")
 
-[node name="Bulbasaur" parent="." instance=ExtResource("7_2fqfm")]
+[node name="Pokeballs" type="Node3D" parent="."]
+
+[node name="Left" type="Node3D" parent="Pokeballs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000352949, 0, -0.234632)
+
+[node name="Pokeball" parent="Pokeballs/Left" instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117556, 0.775, 0.0301982)
+
+[node name="Pokeball2" parent="Pokeballs/Left" instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.775, 0)
+
+[node name="Pokeball3" parent="Pokeballs/Left" instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0.775, 0.03)
+
+[node name="Right" type="Node3D" parent="Pokeballs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.110816)
+
+[node name="Pokeball4" parent="Pokeballs/Right" instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118, 0.775, 0.03)
+
+[node name="Pokeball5" parent="Pokeballs/Right" instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.775, 0)
+
+[node name="Pokeball6" parent="Pokeballs/Right" instance=ExtResource("9_g3mci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0.775, 0.03)
+
+[node name="Pokemon" type="Node3D" parent="."]
+
+[node name="Bulbasaur" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.51792)
 id = 1
 
-[node name="Charmander" parent="." instance=ExtResource("7_2fqfm")]
+[node name="Charmander" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71707, 0, 3.51792)
 id = 4
 
-[node name="Squirtle" parent="." instance=ExtResource("7_2fqfm")]
+[node name="Squirtle" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68145, 0, 3.51792)
 id = 7
-
-[node name="Pokeball" parent="." instance=ExtResource("9_g3mci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273303, 1, -1)
-
-[node name="Pokeball2" parent="." instance=ExtResource("9_g3mci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
-visible = false
-
-[node name="Pokeball3" parent="." instance=ExtResource("9_g3mci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.292719, 1, -1)
-visible = false
