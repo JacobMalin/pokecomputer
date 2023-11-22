@@ -116,7 +116,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
 mesh = SubResource("CylinderMesh_pi5pi")
 
 [node name="Slot2" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 grab_distance = 0.1
 snap_require = "pokeball"
 initial_object = NodePath("../../../../Pokeballs/Left/Pokeball2")
@@ -222,3 +221,7 @@ id = 4
 [node name="Squirtle" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68145, 0, 3.51792)
 id = 7
+
+[node name="Squirtle2" parent="Pokemon" instance=ExtResource("7_2fqfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0110198, 0, -2.03067)
+id = 3
