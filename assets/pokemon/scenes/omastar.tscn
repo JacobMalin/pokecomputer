@@ -1,0 +1,254 @@
+[gd_scene load_steps=7 format=3 uid="uid://di5x6g4hip8tr"]
+
+[ext_resource type="PackedScene" uid="uid://bpk0mhu1sav6q" path="res://assets/pokemon/gltf/omastar.gltf" id="1_s8eek"]
+
+[sub_resource type="Animation" id="Animation_xictj"]
+resource_name = "animation_omastar_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omastar/body3/leftarmtop2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omastar/body3/rightarmtop2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.258819, 0, 0.965926)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omastar/body3/leftlegfront2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0.21644, 0.976296)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omastar/body3/rightlegfront2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.21644, 0.976296)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omastar/body3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omastar/body3/leftlegs2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.643176, 0.173402, 0.293374, 0.685703)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/omastar/body3/rightlegs2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.643176, -0.173402, -0.293374, 0.685703)
+
+[sub_resource type="Animation" id="Animation_48vsv"]
+resource_name = "animation_omastar_render"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omastar/body3/leftarmtop2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0938059, -0.241221, -0.350088, 0.90025)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omastar/body3/rightarmtop2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0885213, 0.24321, 0.330366, 0.907673)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omastar/body3/leftlegfront2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0.21644, 0.976296)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omastar/body3/rightlegfront2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.21644, 0.976296)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omastar/body3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omastar/body3/leftlegs2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.643176, 0.173402, 0.293374, 0.685703)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/omastar/body3/rightlegs2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.643176, -0.173402, -0.293374, 0.685703)
+
+[sub_resource type="Animation" id="Animation_4m160"]
+resource_name = "animation_omastar_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omastar/body3/leftarmtop2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0337827, 0.126079, 0.256605, 0.957662)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omastar/body3/rightarmtop2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0337827, -0.126079, -0.256605, 0.957662)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omastar/body3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omastar/body3/leftlegs2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.57092, 0.136862, 0.36563, 0.722242)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omastar/body3/rightlegs2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.57092, -0.136862, -0.36563, 0.722242)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omastar/body3/leftlegfront2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0.422618, 0.906308)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/omastar/body3/rightlegfront2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, -0.422618, 0.906308)
+
+[sub_resource type="Animation" id="Animation_k35jv"]
+resource_name = "animation_omastar_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omastar/body3/leftarmtop2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0669873, 0.25, 0.25, 0.933013)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omastar/body3/rightarmtop2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0669873, -0.25, -0.25, 0.933013)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omastar/body3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omastar/body3/leftlegs2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.511041, 0.229314, 0.477165, 0.677175)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omastar/body3/rightlegs2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.511041, -0.229314, -0.477165, 0.677175)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omastar/body3/leftlegfront2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0551628, 0.118297, 0.419003, 0.898554)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/omastar/body3/rightlegfront2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.0551628, -0.118297, -0.419003, 0.898554)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlad8"]
+_data = {
+"animation_omastar_ground_idle": SubResource("Animation_xictj"),
+"animation_omastar_render": SubResource("Animation_48vsv"),
+"animation_omastar_water_idle": SubResource("Animation_4m160"),
+"animation_omastar_water_swim": SubResource("Animation_k35jv")
+}
+
+[node name="omastar" instance=ExtResource("1_s8eek")]
+
+[node name="body3" parent="Node2/omastar" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.375, 0.03125)
+
+[node name="leftlegs2" parent="Node2/omastar/body3" index="4"]
+transform = Transform3D(0.439457, -0.880626, -0.177131, 0.411871, 0.0223017, 0.910969, -0.798273, -0.473287, 0.372505, -0.21875, -0.1875, -0.15625)
+
+[node name="rightlegs2" parent="Node2/omastar/body3" index="5"]
+transform = Transform3D(0.439457, 0.880626, 0.177131, -0.411871, 0.0223017, 0.910969, 0.798273, -0.473287, 0.372505, 0.21875, -0.1875, -0.15625)
+
+[node name="leftlegfront2" parent="Node2/omastar/body3" index="6"]
+transform = Transform3D(0.620885, -0.766044, 0.166366, 0.739942, 0.642788, 0.198267, -0.258819, 1.49012e-08, 0.965926, -0.171875, -0.25, -0.28125)
+
+[node name="rightlegfront2" parent="Node2/omastar/body3" index="7"]
+transform = Transform3D(0.620885, 0.766044, -0.166366, -0.739942, 0.642788, 0.198267, 0.258819, 1.49012e-08, 0.965926, 0.171875, -0.25, -0.28125)
+
+[node name="leftarmtop2" parent="Node2/omastar/body3" index="8"]
+transform = Transform3D(0.75, -0.5, 0.433013, 0.433013, 0.866025, 0.25, -0.5, 2.98023e-08, 0.866025, -0.21875, -0.140625, -0.265625)
+
+[node name="rightarmtop2" parent="Node2/omastar/body3" index="9"]
+transform = Transform3D(0.75, 0.5, -0.433013, -0.433013, 0.866025, 0.25, 0.5, 2.98023e-08, 0.866025, 0.21875, -0.140625, -0.265625)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_nlad8")
+}

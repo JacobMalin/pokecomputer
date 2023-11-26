@@ -1,0 +1,223 @@
+[gd_scene load_steps=7 format=3 uid="uid://s06wt3g2e4l6"]
+
+[ext_resource type="PackedScene" uid="uid://ch6pt75mfhq50" path="res://assets/pokemon/gltf/omanyte.gltf" id="1_p3qa2"]
+
+[sub_resource type="Animation" id="Animation_6abag"]
+resource_name = "animation_omanyte_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omanyte/body2/lefthand2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.130526, 0, 0.991445)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omanyte/body2/righthand2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.130526, 0, 0.991445)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omanyte/body2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omanyte/body2/frontfeet2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.5, 0, 0, 0.866025)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omanyte/body2/leftfeet2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0.258819, 0.965926)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omanyte/body2/rightfeet2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, -0.258819, 0.965926)
+
+[sub_resource type="Animation" id="Animation_1h5kb"]
+resource_name = "animation_omanyte_render"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omanyte/body2/lefthand2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0254644, -0.128018, -0.193421, 0.972395)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omanyte/body2/righthand2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0310242, 0.126786, 0.235652, 0.963032)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omanyte/body2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omanyte/body2/frontfeet2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.5, 0, 0, 0.866025)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omanyte/body2/leftfeet2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0.258819, 0.965926)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omanyte/body2/rightfeet2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, -0.258819, 0.965926)
+
+[sub_resource type="Animation" id="Animation_cnv58"]
+resource_name = "animation_omanyte_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omanyte/body2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omanyte/body2/frontfeet2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.382683, 0, 0, 0.92388)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omanyte/body2/leftfeet2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0.382683, 0.92388)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omanyte/body2/rightfeet2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.382683, 0.92388)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omanyte/body2/lefthand2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0337827, 0.126079, 0.256605, 0.957662)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omanyte/body2/righthand2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0337827, -0.126079, -0.256605, 0.957662)
+
+[sub_resource type="Animation" id="Animation_4n7ht"]
+resource_name = "animation_omanyte_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/omanyte/body2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/omanyte/body2/lefthand2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0669873, 0.25, 0.25, 0.933013)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/omanyte/body2/righthand2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0669873, -0.25, -0.25, 0.933013)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/omanyte/body2/frontfeet2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.130526, 0, 0, 0.991445)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/omanyte/body2/leftfeet2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0.59131, 0.806445)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/omanyte/body2/rightfeet2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, -0.608761, 0.793353)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byuax"]
+_data = {
+"animation_omanyte_ground_idle": SubResource("Animation_6abag"),
+"animation_omanyte_render": SubResource("Animation_1h5kb"),
+"animation_omanyte_water_idle": SubResource("Animation_cnv58"),
+"animation_omanyte_water_swim": SubResource("Animation_4n7ht")
+}
+
+[node name="omanyte" instance=ExtResource("1_p3qa2")]
+
+[node name="body2" parent="Node2/omanyte" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.125, -0.125)
+
+[node name="frontfeet2" parent="Node2/omanyte/body2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, -0.0625, -0.125)
+
+[node name="leftfeet2" parent="Node2/omanyte/body2" index="4"]
+transform = Transform3D(0.300706, -0.953717, 0, 0.953717, 0.300706, 0, 0, 0, 1, -0.15625, -0.0625, 0)
+
+[node name="rightfeet2" parent="Node2/omanyte/body2" index="5"]
+transform = Transform3D(0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0, 1, 0.15625, -0.0625, 0)
+
+[node name="lefthand2" parent="Node2/omanyte/body2" index="6"]
+transform = Transform3D(0.75, -0.5, 0.433013, 0.433013, 0.866025, 0.25, -0.5, 2.98023e-08, 0.866025, -0.15625, 0, 0)
+
+[node name="righthand2" parent="Node2/omanyte/body2" index="7"]
+transform = Transform3D(0.75, 0.5, -0.433013, -0.433013, 0.866025, 0.25, 0.5, 2.98023e-08, 0.866025, 0.15625, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_byuax")
+}

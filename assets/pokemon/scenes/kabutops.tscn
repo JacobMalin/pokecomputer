@@ -1,0 +1,562 @@
+[gd_scene load_steps=7 format=3 uid="uid://cahikttc4bm5n"]
+
+[ext_resource type="PackedScene" uid="uid://c1l7ygaj3aa3y" path="res://assets/pokemon/gltf/kabutops.gltf" id="1_w31sw"]
+
+[sub_resource type="Animation" id="Animation_k2rii"]
+resource_name = "animation_kabutops_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/kabutops")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.104687, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/kabutops/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.984375, 0.0625)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/kabutops/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/kabutops/body/leftleg")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.441868, 0.039121, -0.0192924, 0.896019)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/kabutops/body/rightleg")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.441868, -0.039121, 0.0192924, 0.896019)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/kabutops/body/tail")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.608761, 0, 0, 0.793353)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/kabutops/body/leftarm")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0669873, -0.25, 0.25, 0.933013)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/kabutops/body/leftarm/leftforearm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.0652631, -0.495722, -0.403426, 0.76632)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/kabutops/body/rightarm")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.0669873, 0.25, -0.25, 0.933013)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/kabutops/body/rightarm/rightforearm")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.0652631, 0.495722, 0.403426, 0.76632)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/kabutops/body/tail/tail2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/kabutops/body/neck")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/kabutops/body/neck/head")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/kabutops/body/leftleg/leftknee")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.422618, 0, 0, 0.906308)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/kabutops/body/leftleg/leftknee/leftfoot")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.173648, 9.31394e-19, -1.9175e-17, 0.984808)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/kabutops/body/rightleg/rightknee/rightfoot")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0.173648, -9.31394e-19, 1.9175e-17, 0.984808)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/kabutops/body/rightleg/rightknee")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.422618, 0, 0, 0.906308)
+
+[sub_resource type="Animation" id="Animation_syo5a"]
+resource_name = "animation_kabutops_ground_idle2"
+length = 0.375
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/kabutops")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.104687, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/kabutops/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.984375, 0.0625)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/kabutops/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/kabutops/body/leftleg")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.441868, 0.039121, -0.0192924, 0.896019, 0.375, 1, 0.510369, 0.0581447, -0.075383, 0.85467)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/kabutops/body/rightleg")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.441868, -0.039121, 0.0192924, 0.896019, 0.366667, 1, 0.434952, -0.149008, 0.0362405, 0.887299, 0.375, 1, 0.434731, -0.151489, 0.0366213, 0.886972)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/kabutops/body/tail")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.608761, 0, 0, 0.793353)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/kabutops/body/leftarm")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0669873, -0.25, 0.25, 0.933013)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/kabutops/body/leftarm/leftforearm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.0652631, -0.495722, -0.403426, 0.76632)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/kabutops/body/rightarm")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.0669873, 0.25, -0.25, 0.933013, 0.233333, 1, 0.0329433, 0.122946, -0.256714, 0.958069, 0.375, 1, 0.0119452, 0.04458, -0.258543, 0.964897)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/kabutops/body/rightarm/rightforearm")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.0652631, 0.495722, 0.403426, 0.76632, 0.375, 1, 0.1287, 0.479218, 0.49996, 0.709807)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/kabutops/body/tail/tail2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/kabutops/body/neck")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445, 0.366667, 1, -0.214546, 0, 0, 0.976714, 0.375, 1, -0.21644, 0, 0, 0.976296)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/kabutops/body/neck/head")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/kabutops/body/leftleg/leftknee")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.480989, 0, 0, 0.876727)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/kabutops/body/leftleg/leftknee/leftfoot")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.108867, 2.18351e-18, -1.9073e-17, 0.994056)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/kabutops/body/rightleg/rightknee/rightfoot")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0.173648, -9.31394e-19, 1.9175e-17, 0.984808)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/kabutops/body/rightleg/rightknee")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.422618, 0, 0, 0.906308)
+
+[sub_resource type="Animation" id="Animation_uospt"]
+resource_name = "animation_kabutops_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/kabutops")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.104687, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/kabutops/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.984375, -0.125)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/kabutops/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.382683, 0, 0, 0.92388)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/kabutops/body/tail")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.5, 0, 0, 0.866025)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/kabutops/body/leftarm")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.0669873, -0.25, 0.25, 0.933013)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/kabutops/body/leftarm/leftforearm")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.397693, -0.188824, -0.21468, 0.871836)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/kabutops/body/rightarm")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0669873, 0.25, -0.25, 0.933013)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/kabutops/body/rightarm/rightforearm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.397693, 0.188824, 0.21468, 0.871836)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/kabutops/body/tail/tail2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/kabutops/body/neck")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.0871557, 0, 0, 0.996195)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/kabutops/body/neck/head")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.173648, 0, 0, 0.984808)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/kabutops/body/leftleg/leftknee/leftfoot")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.34202, 1.03941e-17, -1.61403e-17, 0.939693)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/kabutops/body/rightleg/rightknee/rightfoot")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.34202, -1.03941e-17, 1.61403e-17, 0.939693)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/kabutops/body/leftleg")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0.258573, 0.0421331, -0.0112895, 0.965006)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/kabutops/body/rightleg")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.258573, -0.0421331, 0.0112895, 0.965006)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/kabutops/body/leftleg/leftknee")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.422618, 0, 0, 0.906308)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/kabutops/body/rightleg/rightknee")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.422618, 0, 0, 0.906308)
+
+[sub_resource type="Animation" id="Animation_a1n8r"]
+resource_name = "animation_kabutops_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/kabutops")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.104687, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/kabutops/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.984375, -0.1875)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/kabutops/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.5, 0, 0, 0.866025)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/kabutops/body/leftleg")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.130402, 0.0432462, -0.00569347, 0.990501)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/kabutops/body/rightleg")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.130402, -0.0432462, 0.00569347, 0.990501)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/kabutops/body/tail")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.608761, 0, 0, 0.793353)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/kabutops/body/leftarm")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.0473672, -0.176777, 0.476727, 0.859789)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/kabutops/body/leftarm/leftforearm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.397693, -0.188824, -0.21468, 0.871836)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/kabutops/body/rightarm")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.0473672, 0.176777, -0.476727, 0.859789)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/kabutops/body/rightarm/rightforearm")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.397693, 0.188824, 0.21468, 0.871836)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/kabutops/body/tail/tail2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/kabutops/body/neck")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.0654031, 0, 0, 0.997859)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/kabutops/body/neck/head")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.300706, 0, 0, 0.953717)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/kabutops/body/leftleg/leftknee")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.300706, 0, 0, 0.953717)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/kabutops/body/leftleg/leftknee/leftfoot")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, -0.34202, 1.03941e-17, -1.61403e-17, 0.939693)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/kabutops/body/rightleg/rightknee")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.300706, 0, 0, 0.953717)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/kabutops/body/rightleg/rightknee/rightfoot")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.34202, -1.03941e-17, 1.61403e-17, 0.939693)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nm8j3"]
+_data = {
+"animation_kabutops_ground_idle": SubResource("Animation_k2rii"),
+"animation_kabutops_ground_idle2": SubResource("Animation_syo5a"),
+"animation_kabutops_water_idle": SubResource("Animation_uospt"),
+"animation_kabutops_water_swim": SubResource("Animation_a1n8r")
+}
+
+[node name="kabutops" instance=ExtResource("1_w31sw")]
+
+[node name="kabutops" parent="Node2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.104687, 0)
+
+[node name="body" parent="Node2/kabutops" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0.984375, -0.1875)
+
+[node name="neck" parent="Node2/kabutops/body" index="6"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0.21875, -0.03125)
+
+[node name="head" parent="Node2/kabutops/body/neck" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.819152, -0.573576, 0, 0.573576, 0.819152, 0, 0.08125, 0)
+
+[node name="leftleg" parent="Node2/kabutops/body" index="7"]
+transform = Transform3D(0.996195, 0.0225576, 0.084186, -9.31323e-10, 0.965926, -0.258819, -0.0871557, 0.257834, 0.96225, -0.125, -0.375, 0)
+
+[node name="leftknee" parent="Node2/kabutops/body/leftleg" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, -0.0625, -0.28125, -0.09375)
+
+[node name="leftfoot" parent="Node2/kabutops/body/leftleg/leftknee" index="1"]
+transform = Transform3D(1, 2.32239e-17, 3.05752e-17, -3.74439e-17, 0.766044, 0.642788, -8.4939e-18, -0.642788, 0.766044, 0, -0.3125, 0.0625)
+
+[node name="rightleg" parent="Node2/kabutops/body" index="8"]
+transform = Transform3D(0.996195, -0.0225576, -0.084186, 9.31323e-10, 0.965926, -0.258819, 0.0871557, 0.257834, 0.96225, 0.125, -0.375, 0)
+
+[node name="rightknee" parent="Node2/kabutops/body/rightleg" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0.0625, -0.28125, -0.09375)
+
+[node name="rightfoot" parent="Node2/kabutops/body/rightleg/rightknee" index="1"]
+transform = Transform3D(1, -2.32239e-17, -3.05752e-17, 3.74439e-17, 0.766044, 0.642788, 8.4939e-18, -0.642788, 0.766044, 0, -0.3125, 0.0625)
+
+[node name="tail" parent="Node2/kabutops/body" index="9"]
+transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0, -0.3125, 0.0625)
+
+[node name="tail2" parent="Node2/kabutops/body/tail" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0.375)
+
+[node name="leftarm" parent="Node2/kabutops/body" index="10"]
+transform = Transform3D(0.482963, -0.803023, -0.349144, 0.836516, 0.540976, -0.0870968, 0.258819, -0.25, 0.933013, -0.21875, 0.125, 0)
+
+[node name="leftforearm" parent="Node2/kabutops/body/leftarm" index="1"]
+transform = Transform3D(0.836516, 0.524519, -0.158494, -0.224144, 0.591506, 0.774519, 0.5, -0.612372, 0.612372, -0.3125, 0, 0)
+
+[node name="rightarm" parent="Node2/kabutops/body" index="11"]
+transform = Transform3D(0.482963, 0.803023, 0.349144, -0.836516, 0.540976, -0.0870968, -0.258819, -0.25, 0.933013, 0.21875, 0.125, 0)
+
+[node name="rightforearm" parent="Node2/kabutops/body/rightarm" index="1"]
+transform = Transform3D(0.836516, -0.524519, 0.158494, 0.224144, 0.591506, 0.774519, -0.5, -0.612372, 0.612372, 0.3125, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_nm8j3")
+}

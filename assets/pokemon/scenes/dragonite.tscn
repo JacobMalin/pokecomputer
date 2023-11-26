@@ -1,0 +1,733 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvq8rj5ruhv4v"]
+
+[ext_resource type="PackedScene" uid="uid://dx3bvvyj711ye" path="res://assets/pokemon/gltf/dragonite.gltf" id="1_e6s8f"]
+
+[sub_resource type="Animation" id="Animation_k0kq3"]
+resource_name = "animation_dragonite_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/eyes/eye_left2/eyelid_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 5.20417e-18, 0, -0.00125, 0.1, 1, 5.20417e-18, 0, -0.00125, 0.133333, 1, 0.00125, 0, 8.14907e-10, 0.166667, 1, 0.00625, 0, 0.005)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/eyes/eye_right2/eyelid_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -5.20417e-18, 0, -0.00125, 0.1, 1, -5.20417e-18, 0, -0.00125, 0.133333, 1, -0.00125, 0, 8.14907e-10, 0.166667, 1, -0.00625, 0, 0.005)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dragonite/body/torso2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dragonite/body/torso2/chest")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dragonite/body/torso2/chest/chest22")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2/finger_back_left2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2/finger_middle_left2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2/finger_front_left2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2/finger_back_right2")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2/finger_middle_right2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2/finger_front_right2")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 5.79398e-16, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0.173648, 0.984808)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left/antenna_left22")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0.321439, 0.94693)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left/antenna_left22/antenna_left32")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, 0.21644, 0.976296)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/dragonite/body/torso2/tail12")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42/tail52")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42/tail52/tail6")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/dragonite/body/legs/leg_left")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/dragonite/body/legs/leg_left/leg_left22")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/dragonite/body/legs/leg_left/leg_left22/leg_left32")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/dragonite/body/legs/leg_left/leg_left22/leg_left32/foot_left")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/dragonite/body/legs/leg_right")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/dragonite/body/legs/leg_right/leg_right2")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/33/type = "rotation_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Node2/dragonite/body/legs/leg_right/leg_right2/leg_right3")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Node2/dragonite/body/legs/leg_right/leg_right2/leg_right3/foot_right")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/35/type = "rotation_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, 0, 0, -0.173648, 0.984808)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right/antenna_right22")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, 0, 0, -0.321439, 0.94693)
+tracks/37/type = "rotation_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right/antenna_right22/antenna_right32")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, 0, 0, -0.21644, 0.976296)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_left/wing_left22")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/39/type = "rotation_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_right/wing_right22")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/40/type = "rotation_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_left")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, 0, 0.21644, 0, 0.976296)
+tracks/41/type = "rotation_3d"
+tracks/41/imported = true
+tracks/41/enabled = true
+tracks/41/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_right")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = PackedFloat32Array(0, 1, 0, -0.21644, 0, 0.976296)
+
+[sub_resource type="Animation" id="Animation_6iwfi"]
+resource_name = "animation_dragonite_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dragonite/body/torso2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dragonite/body/torso2/chest")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dragonite/body/torso2/chest/chest22")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.101465, 0.0394575, 0.360284, 0.926468)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, -0.152123, 0, 0.988362)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.00142676, -0.0653876, 0.0217682, 0.997621)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2/finger_back_left2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2/finger_middle_left2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0.0871557, 0.996195)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2/finger_front_left2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0.0871557, 0.996195)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.101465, -0.0394575, -0.360284, 0.926468)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0.152123, 0, 0.988362)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.00142676, 0.0653876, -0.0217682, 0.997621)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2/finger_back_right2")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2/finger_middle_right2")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, -0.0871557, 0.996195)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2/finger_front_right2")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, -0.0871557, 0.996195)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.0871557, 0, 0, 0.996195)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.074334, 0.0792664, 0.167003, 0.97995)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left/antenna_left22")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0.0413045, 0.014021, 0.321134, 0.946029)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left/antenna_left22/antenna_left32")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.0638528, 0.0141558, 0.215976, 0.974206)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/dragonite/body/torso2/tail12")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, -0.173648, 0, 0, 0.984808)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42/tail52")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, -0.21644, 0, 0, 0.976296)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42/tail52/tail6")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, -0.173648, 0, 0, 0.984808)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/dragonite/body/legs/leg_left")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, -0.0151344, 0.172987, -0.0858316, 0.98106)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/dragonite/body/legs/leg_left/leg_left22")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, -0.0218097, 0.000475889, 0.0218097, 0.999524)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/dragonite/body/legs/leg_left/leg_left22/leg_left32")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0.00237492, -0.0216852, 0.0218097, 0.999524)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/dragonite/body/legs/leg_left/leg_left22/leg_left32/foot_left")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0.0217941, -0.000951552, 0.043609, 0.99881)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/dragonite/body/legs/leg_right")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, -0.0151344, -0.172987, 0.0858316, 0.98106)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/dragonite/body/legs/leg_right/leg_right2")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, -0.0218097, -0.000475889, -0.0218097, 0.999524)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/dragonite/body/legs/leg_right/leg_right2/leg_right3")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0.00237492, 0.0216852, -0.0218097, 0.999524)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/dragonite/body/legs/leg_right/leg_right2/leg_right3/foot_right")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0.0217941, 0.000951552, -0.043609, 0.99881)
+tracks/33/type = "rotation_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0.074334, -0.0792664, -0.167003, 0.97995)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right/antenna_right22")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, 0.0413045, -0.014021, -0.321134, 0.946029)
+tracks/35/type = "rotation_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right/antenna_right22/antenna_right32")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, 0.0638528, -0.0141558, -0.215976, 0.974206)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_left/wing_left22")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, 0, -0.108867, 0, 0.994056)
+tracks/37/type = "rotation_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_right/wing_right22")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, 0, 0.108867, 0, 0.994056)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_left")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, -0.00944096, 0.216234, 0.0425854, 0.975367)
+tracks/39/type = "rotation_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/wings/wing_right")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, -0.00944096, -0.216234, -0.0425854, 0.975367)
+tracks/40/type = "position_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/eyes/eye_left2/eyelid_left2")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, 0.00625, 0, 0.005)
+tracks/41/type = "position_3d"
+tracks/41/imported = true
+tracks/41/enabled = true
+tracks/41/path = NodePath("Node2/dragonite/body/torso2/chest/chest22/neck2/head2/eyes/eye_right2/eyelid_right2")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = PackedFloat32Array(0, 1, -0.00625, 0, 0.005)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vg1fh"]
+_data = {
+"animation_dragonite_blink": SubResource("Animation_k0kq3"),
+"animation_dragonite_ground_idle": SubResource("Animation_6iwfi")
+}
+
+[node name="dragonite" instance=ExtResource("1_e6s8f")]
+
+[node name="torso2" parent="Node2/dragonite/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0.03125)
+
+[node name="chest" parent="Node2/dragonite/body/torso2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.875, -0.03125)
+
+[node name="chest22" parent="Node2/dragonite/body/torso2/chest" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.46875, 0.03125)
+
+[node name="arm_left" parent="Node2/dragonite/body/torso2/chest/chest22/arms" index="0"]
+transform = Transform3D(0.737277, -0.67559, 0, 0.659576, 0.719801, 0.21644, -0.146224, -0.159576, 0.976296, -0.375, 0, 0)
+
+[node name="arm_left22" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left" index="1"]
+transform = Transform3D(0.953717, 0, -0.300706, 0, 1, 0, 0.300706, 0, 0.953717, -0.375, 0, 0.15625)
+
+[node name="hand_left2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22" index="1"]
+transform = Transform3D(0.990501, -0.0432462, -0.130526, 0.0436194, 0.999048, 2.32831e-10, 0.130402, -0.00569347, 0.991445, -0.3125, 0, 0)
+
+[node name="finger_back_left2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2" index="1"]
+transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, -0.25, -0.109375, -0.03125)
+
+[node name="finger_middle_left2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2" index="2"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, -0.25, -0.0625, -0.15625)
+
+[node name="finger_front_left2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2" index="3"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, -0.25, -0.109375, -0.28125)
+
+[node name="arm_right" parent="Node2/dragonite/body/torso2/chest/chest22/arms" index="1"]
+transform = Transform3D(0.737277, 0.67559, 0, -0.659576, 0.719801, 0.21644, 0.146224, -0.159576, 0.976296, 0.375, 0, 0)
+
+[node name="arm_right22" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right" index="1"]
+transform = Transform3D(0.953717, 0, 0.300706, 0, 1, 0, -0.300706, 0, 0.953717, 0.375, 0, 0.15625)
+
+[node name="hand_right2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22" index="1"]
+transform = Transform3D(0.990501, 0.0432462, 0.130526, -0.0436194, 0.999048, 2.32831e-10, -0.130402, -0.00569347, 0.991445, 0.3125, 0, 0)
+
+[node name="finger_back_right2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2" index="1"]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 0.25, -0.109375, -0.03125)
+
+[node name="finger_middle_right2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2" index="2"]
+transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0.25, -0.0625, -0.15625)
+
+[node name="finger_front_right2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2" index="3"]
+transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0.25, -0.109375, -0.28125)
+
+[node name="wing_left" parent="Node2/dragonite/body/torso2/chest/chest22/wings" index="0"]
+transform = Transform3D(0.902859, -0.0871557, 0.42101, 0.0789899, 0.996195, 0.0368336, -0.422618, -7.45058e-09, 0.906308, -0.15625, 0.15625, 0)
+
+[node name="wing_left22" parent="Node2/dragonite/body/torso2/chest/chest22/wings/wing_left" index="1"]
+transform = Transform3D(0.976296, 0, -0.21644, 0, 1, 0, 0.21644, 0, 0.976296, -0.6875, 0.3125, 0)
+
+[node name="wing_right" parent="Node2/dragonite/body/torso2/chest/chest22/wings" index="1"]
+transform = Transform3D(0.902859, 0.0871557, -0.42101, -0.0789899, 0.996195, 0.0368336, 0.422618, -7.45058e-09, 0.906308, 0.15625, 0.15625, 0)
+
+[node name="wing_right22" parent="Node2/dragonite/body/torso2/chest/chest22/wings/wing_right" index="1"]
+transform = Transform3D(0.976296, 0, 0.21644, 0, 1, 0, -0.21644, 0, 0.976296, 0.6875, 0.3125, 0)
+
+[node name="head2" parent="Node2/dragonite/body/torso2/chest/chest22/neck2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.625, 0.0625)
+
+[node name="antenna_left" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae" index="0"]
+transform = Transform3D(0.931653, -0.315525, 0.180182, 0.339094, 0.933169, -0.119212, -0.130526, 0.172163, 0.976383, -0.15625, 0, 0)
+
+[node name="antenna_left22" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left" index="1"]
+transform = Transform3D(0.793353, -0.606445, 0.0530571, 0.608761, 0.790334, -0.0691453, 3.72529e-09, 0.0871557, 0.996195, 0.03125, 0.1875, 0)
+
+[node name="antenna_left32" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left/antenna_left22" index="1"]
+transform = Transform3D(0.906308, -0.419003, 0.0551628, 0.422618, 0.898554, -0.118297, -3.72529e-09, 0.130526, 0.991445, 0, 0.1875, 0)
+
+[node name="antenna_right" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae" index="1"]
+transform = Transform3D(0.931653, 0.315525, -0.180182, -0.339094, 0.933169, -0.119212, 0.130526, 0.172163, 0.976383, 0.15625, 0, 0)
+
+[node name="antenna_right22" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right" index="1"]
+transform = Transform3D(0.793353, 0.606445, -0.0530571, -0.608761, 0.790334, -0.0691453, -3.72529e-09, 0.0871557, 0.996195, -0.03125, 0.1875, 0)
+
+[node name="antenna_right32" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right/antenna_right22" index="1"]
+transform = Transform3D(0.906308, 0.419003, -0.0551628, -0.422618, 0.898554, -0.118297, 3.72529e-09, 0.130526, 0.991445, 0, 0.1875, 0)
+
+[node name="tail12" parent="Node2/dragonite/body/torso2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.375, -0.25)
+
+[node name="tail22" parent="Node2/dragonite/body/torso2/tail12" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.976296, 0.21644, 0, -0.21644, 0.976296, 0, 0, 1)
+
+[node name="tail33" parent="Node2/dragonite/body/torso2/tail12/tail22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.6875)
+
+[node name="tail42" parent="Node2/dragonite/body/torso2/tail12/tail22/tail33" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.6875)
+
+[node name="tail52" parent="Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0.6875)
+
+[node name="tail6" parent="Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42/tail52" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.625)
+
+[node name="leg_left" parent="Node2/dragonite/body/legs" index="0"]
+transform = Transform3D(0.925417, 0.163176, 0.34202, -0.173648, 0.984808, 1.86265e-09, -0.336824, -0.0593912, 0.939693, -0.28125, 0, 0)
+
+[node name="leg_left22" parent="Node2/dragonite/body/legs/leg_left" index="1"]
+transform = Transform3D(0.999048, -0.0436194, 5.82077e-11, 0.0435779, 0.998097, 0.0436194, -0.00190265, -0.0435779, 0.999048, -0.21875, -0.5625, 0.03125)
+
+[node name="leg_left32" parent="Node2/dragonite/body/legs/leg_left/leg_left22" index="1"]
+transform = Transform3D(0.998108, -0.0437016, -0.0432462, 0.0434956, 0.999037, -0.00569347, 0.0434534, 0.00380168, 0.999048, 0.21875, -0.125, 0.03125)
+
+[node name="foot_left" parent="Node2/dragonite/body/legs/leg_left/leg_left22/leg_left32" index="1"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0870728, 0.995247, -0.0436194, 0.00380168, 0.0434534, 0.999048, 0, -0.0625, 0)
+
+[node name="leg_right" parent="Node2/dragonite/body/legs" index="1"]
+transform = Transform3D(0.925417, -0.163176, -0.34202, 0.173648, 0.984808, 1.86265e-09, 0.336824, -0.0593912, 0.939693, 0.90625, 0, 0)
+
+[node name="leg_right2" parent="Node2/dragonite/body/legs/leg_right" index="1"]
+transform = Transform3D(0.999048, 0.0436194, -5.82077e-11, -0.0435779, 0.998097, 0.0436194, 0.00190265, -0.0435779, 0.999048, 0.21875, -0.5625, 0.03125)
+
+[node name="leg_right3" parent="Node2/dragonite/body/legs/leg_right/leg_right2" index="1"]
+transform = Transform3D(0.998108, 0.0437016, 0.0432462, -0.0434956, 0.999037, -0.00569347, -0.0434534, 0.00380168, 0.999048, -0.21875, -0.125, 0.03125)
+
+[node name="foot_right" parent="Node2/dragonite/body/legs/leg_right/leg_right2/leg_right3" index="1"]
+transform = Transform3D(0.996195, 0.0871557, 0, -0.0870728, 0.995247, -0.0436194, -0.00380168, 0.0434534, 0.999048, 0, -0.0625, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_vg1fh")
+}

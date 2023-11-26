@@ -1,0 +1,291 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3k0b0udd4cxh"]
+
+[ext_resource type="PackedScene" uid="uid://c1fkd1l8wghbg" path="res://assets/pokemon/gltf/dragonair.gltf" id="1_7dsuo"]
+
+[sub_resource type="Animation" id="Animation_7mjww"]
+resource_name = "animation_dragonair_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dragonair/body/neck2/head2/eyes/eye_left2/eyelid_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 5.20417e-18, 0, 0, 0.1, 1, 5.20417e-18, 0, 0, 0.133333, 1, 0.00125, 0, 0, 0.166667, 1, 0.00625, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dragonair/body/neck2/head2/eyes/eye_right2/eyelid_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -5.20417e-18, 0, 0, 0.1, 1, -5.20417e-18, 0, 0, 0.133333, 1, -0.00125, 0, 0, 0.166667, 1, -0.00625, 0, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dragonair/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 1.25, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dragonair/body/neck2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dragonair/body/neck2/gem2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dragonair/body/neck2/head2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/dragonair/body/segment12")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/dragonair/body/segment12/segment22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82/segment92")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82/segment92/segment102")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_vjtkk"]
+resource_name = "animation_dragonair_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dragonair/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 1.3125, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dragonair/body/neck2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dragonair/body/neck2/gem2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.130526, 0, 0, 0.991445)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dragonair/body/neck2/head2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dragonair/body/segment12")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.15144, -0.0885158, 0.0136873, 0.9844)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dragonair/body/segment12/segment22")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.1725, -0.104542, 0.0127849, 0.979363)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.353577, -0.193552, -0.085936, 0.911118)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.341288, 0.0276406, 0.0592754, 0.937681)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 2.09933e-05, 0.00381973, 0.258655, 0.965962)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.00543523, 0.0238945, 0.278754, 0.96005)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0.362438, 0.932008)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0.149377, 0.0320689, -0.256148, -0.954488)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82/segment92")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.255378, -0.0548843, 0.230628, 0.937326)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82/segment92/segment102")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.134869, -0.0512577, 0.253398, 0.956542)
+tracks/14/type = "position_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/dragonair/body/neck2/head2/eyes/eye_left2/eyelid_left2")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.00625, 0, 0)
+tracks/15/type = "position_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/dragonair/body/neck2/head2/eyes/eye_right2/eyelid_right2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.00625, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kmlk4"]
+_data = {
+"animation_dragonair_blink": SubResource("Animation_7mjww"),
+"animation_dragonair_ground_idle": SubResource("Animation_vjtkk")
+}
+
+[node name="dragonair" instance=ExtResource("1_7dsuo")]
+
+[node name="body" parent="Node2/dragonair" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3125, 0)
+
+[node name="neck2" parent="Node2/dragonair/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, -0.03125)
+
+[node name="gem2" parent="Node2/dragonair/body/neck2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0.0625, -0.0625)
+
+[node name="head2" parent="Node2/dragonair/body/neck2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.53125, 0.03125)
+
+[node name="segment12" parent="Node2/dragonair/body" index="1"]
+transform = Transform3D(0.983955, -0.0537572, -0.170124, 0.000138002, 0.953757, -0.300578, 0.178415, 0.295732, 0.938462, 0, 0, 0)
+
+[node name="segment22" parent="Node2/dragonair/body/segment12" index="1"]
+transform = Transform3D(0.977815, 0.011025, -0.20918, 0.0611091, 0.940161, 0.335207, 0.200359, -0.340553, 0.918629, 0, -0.375, -0.015625)
+
+[node name="segment32" parent="Node2/dragonair/body/segment12/segment22" index="1"]
+transform = Transform3D(0.910305, 0.293467, -0.291927, -0.0197248, 0.735197, 0.677566, 0.413467, -0.611034, 0.675042, 0, -0.375, -0.015625)
+
+[node name="segment42" parent="Node2/dragonair/body/segment12/segment22/segment32" index="1"]
+transform = Transform3D(0.991445, -0.130029, 0.0113761, 0.092296, 0.760018, 0.643315, -0.092296, -0.636761, 0.765517, 0, -0.4375, 0)
+
+[node name="segment52" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42" index="1"]
+transform = Transform3D(0.866166, -0.499703, 0.00739029, 0.499703, 0.866195, 0.00193543, -0.00736857, 0.00201655, 0.999971, 0, -0.5, 0)
+
+[node name="segment63" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52" index="1"]
+transform = Transform3D(0.843451, -0.534976, 0.04891, 0.535495, 0.844533, 0.00288519, -0.0428497, 0.0237576, 0.998799, 0, -0.5, 0)
+
+[node name="segment7" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63" index="1"]
+transform = Transform3D(0.737277, -0.67559, 0, 0.67559, 0.737277, 0, 0, 0, 1, 0, -0.4375, 0)
+
+[node name="segment82" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7" index="1"]
+transform = Transform3D(0.86672, -0.479398, -0.137744, 0.49856, 0.82415, 0.268729, -0.0153065, -0.301586, 0.953316, 0, -0.375, 0)
+
+[node name="segment92" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82" index="1"]
+transform = Transform3D(0.887597, -0.404315, -0.220684, 0.46038, 0.763185, 0.453429, -0.0149056, -0.504061, 0.86354, 0, -0.375, 0)
+
+[node name="segment102" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82/segment92" index="1"]
+transform = Transform3D(0.866324, -0.470946, -0.166411, 0.498599, 0.835199, 0.232038, 0.0297091, -0.283992, 0.958366, 0, -0.375, -0.03125)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_kmlk4")
+}
