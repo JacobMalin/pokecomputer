@@ -1,11 +1,9 @@
+res://scenes/main.tscn
 res://addons/godot-xr-tools/objects/highlight/highlight_ring.gd
 res://pokemon_movement.gd
 res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
 res://addons/godot-xr-tools/hands/materials/cleaning_glove.material
 res://addons/godot-xr-tools/hands/animations/right/hand_blend_tree.tres
 res://assets/hand_material.tres
+res://scripts/pokemon.gd
 res://assets/pokeball/pokeball_highlight.tres
-res://scenes/main.tscn
-res://scenes/pokemon.tscn
-res://scenes/pokeball.tscn
-res://assets/pokemon/scenes/ivysaur.tscn

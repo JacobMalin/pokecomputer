@@ -19,3 +19,9 @@ https://www.youtube.com/watch?v=s6Gw-_Wex6Y&t=135s&ab_channel=7GamerMinutes%2B%3
 
 Pokémon models from Cobblemon public asset database
 https://gitlab.com/cable-mc/cobblemon-assets/-/tree/master/blockbench/pokemon/gen1
+
+Pokémon Computer Boot-up Sound by Matteo
+https://www.youtube.com/watch?v=fwEzOeeZxUE&ab_channel=Matteo
+
+Pokémon Computer Model + Textures by Hallow
+https://www.models-resource.com/3ds/pokemonxy/model/13867/
