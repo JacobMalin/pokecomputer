@@ -25,3 +25,6 @@ https://www.youtube.com/watch?v=fwEzOeeZxUE&ab_channel=Matteo
 
 Pokémon Computer Model + Textures by Hallow
 https://www.models-resource.com/3ds/pokemonxy/model/13867/
+
+Substitute Doll Model by Hallow
+https://www.models-resource.com/3ds/pokemonomegarubyalphasapphire/model/12155/
