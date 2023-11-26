@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1slgwendw6cv"]
+
+[ext_resource type="PackedScene" uid="uid://b3mjrvl2p4soc" path="res://assets/pokemon/gltf/shellder.gltf" id="1_tvyvn"]
+
+[sub_resource type="Animation" id="Animation_5oo6r"]
+resource_name = "animation_shellder_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/shellder/body14")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.234375, 0.015625)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/shellder/body14")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.130526, 0, 0, 0.991445)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/shellder/body14/tongue3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.258819, 0, 0, 0.965926)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/shellder/body14/tongue3/tongue22")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.258819, 0, 0, 0.965926)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gkbxe"]
+_data = {
+"animation_shellder_ground_idle": SubResource("Animation_5oo6r")
+}
+
+[node name="shellder" instance=ExtResource("1_tvyvn")]
+
+[node name="body14" parent="Node2/shellder" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0.234375, 0.015625)
+
+[node name="tongue3" parent="Node2/shellder/body14" index="10"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.09375, -0.1875)
+
+[node name="tongue22" parent="Node2/shellder/body14/tongue3" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.03125, -0.1875)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_gkbxe")
+}

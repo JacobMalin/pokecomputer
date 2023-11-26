@@ -1,0 +1,189 @@
+[gd_scene load_steps=5 format=3 uid="uid://cotaqgcnkdjfn"]
+
+[ext_resource type="PackedScene" uid="uid://ddqlmni5s3kh6" path="res://assets/pokemon/gltf/grimer.gltf" id="1_d4e6b"]
+
+[sub_resource type="Animation" id="Animation_0rw8o"]
+resource_name = "animation_grimer_blink"
+length = 0.1667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/grimer/body/torso/torso22/torso32/head/eye_right2/eyelid_right2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -5.20417e-18, 0, -2.25514e-17, 0.1, 1, -5.20417e-18, 0, -2.25514e-17, 0.133333, 1, -0.001249, 0, 0.001249, 0.1667, 1, -0.00625, 0, 0.00625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/grimer/body/torso/torso22/torso32/head/eye_left2/eyelid_left2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 5.20417e-18, 0, -2.25514e-17, 0.1, 1, 5.20417e-18, 0, -2.25514e-17, 0.133333, 1, 0.001249, 0, 0.001249, 0.1667, 1, 0.00625, 0, 0.00625)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2/finger_right_index2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2/finger_right_ring2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2/finger_left_index2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2/finger_left_ring2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_u0lg5"]
+resource_name = "animation_grimer_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0380603, 0.191342, -0.191342, 0.96194)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0813704, 0.477934, 0.0813704, 0.870825)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2/finger_right_index2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0380602, 0.191342, -0.191342, 0.96194)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2/finger_right_ring2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.0380602, -0.191342, -0.191342, 0.96194)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0380603, -0.191342, 0.191342, 0.96194)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.0813704, -0.477934, -0.0813704, 0.870825)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2/finger_left_index2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0380602, -0.191342, 0.191342, 0.96194)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2/finger_left_ring2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.0380602, 0.191342, 0.191342, 0.96194)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/grimer/body/torso/torso22/torso32/head/eye_right2/eyelid_right2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.00625, 0, 0.00625)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/grimer/body/torso/torso22/torso32/head/eye_left2/eyelid_left2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.00625, 0, 0.00625)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4q0g5"]
+_data = {
+"animation_grimer_blink": SubResource("Animation_0rw8o"),
+"animation_grimer_ground_idle": SubResource("Animation_u0lg5")
+}
+
+[node name="grimer" instance=ExtResource("1_d4e6b")]
+
+[node name="arm_right" parent="Node2/grimer/body/torso/torso22/torso32" index="2"]
+transform = Transform3D(0.853553, 0.353553, 0.382683, -0.382683, 0.92388, 8.19564e-08, -0.353553, -0.146447, 0.92388, 0.328125, 0.140625, -0.125)
+
+[node name="arm_right22" parent="Node2/grimer/body/torso/torso22/torso32/arm_right" index="1"]
+transform = Transform3D(0.529916, -0.0639394, 0.845637, 0.219498, 0.973515, -0.0639394, -0.819152, 0.219498, 0.529916, 0.25, 0.015625, 0.09375)
+
+[node name="finger_right_index2" parent="Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2" index="1"]
+transform = Transform3D(0.853553, 0.382683, 0.353553, -0.353553, 0.92388, -0.146447, -0.382683, 0, 0.92388, 0.125, 0.015625, -0.0625)
+
+[node name="finger_right_ring2" parent="Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2" index="3"]
+transform = Transform3D(0.853553, 0.382683, -0.353553, -0.353553, 0.92388, 0.146447, 0.382683, 0, 0.92388, 0.125, 0.015625, 0.0625)
+
+[node name="arm_left" parent="Node2/grimer/body/torso/torso22/torso32" index="3"]
+transform = Transform3D(0.853553, -0.353553, -0.382683, 0.382683, 0.92388, 8.19564e-08, 0.353553, -0.146447, 0.92388, -0.328125, 0.140625, -0.125)
+
+[node name="arm_left22" parent="Node2/grimer/body/torso/torso22/torso32/arm_left" index="1"]
+transform = Transform3D(0.529916, 0.0639394, -0.845637, -0.219498, 0.973515, -0.0639394, 0.819152, 0.219498, 0.529916, -0.25, 0.015625, 0.09375)
+
+[node name="finger_left_index2" parent="Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2" index="1"]
+transform = Transform3D(0.853553, -0.382683, -0.353553, 0.353553, 0.92388, -0.146447, 0.382683, 0, 0.92388, -0.125, 0.015625, -0.0625)
+
+[node name="finger_left_ring2" parent="Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2" index="3"]
+transform = Transform3D(0.853553, -0.382683, 0.353553, 0.353553, 0.92388, 0.146447, -0.382683, 0, 0.92388, -0.125, 0.015625, 0.0625)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_4q0g5")
+}

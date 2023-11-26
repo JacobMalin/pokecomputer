@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://bv8a03r6d8ppy"]
+
+[ext_resource type="PackedScene" uid="uid://dp2reky83b1ec" path="res://assets/pokemon/gltf/seel.gltf" id="1_1wsjv"]
+
+[sub_resource type="Animation" id="Animation_76oiq"]
+resource_name = "animation_seel_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seel/body/leftflipper")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0170371, 0.12941, 0.12941, 0.982963)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seel/body/rightflipper")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0170371, -0.12941, -0.12941, 0.982963)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seel/body/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.0625, -0.25)
+
+[sub_resource type="Animation" id="Animation_fvss0"]
+resource_name = "animation_seel_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seel/body/leftflipper")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.134931, 0.0258554, 0.134931, 0.981284)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seel/body/rightflipper")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.134931, -0.0258554, -0.134931, 0.981284)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seel/body/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, -0.03125, -0.3125)
+
+[sub_resource type="Animation" id="Animation_a708w"]
+resource_name = "animation_seel_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seel/body/leftflipper")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.28532, 0.33527, 0.21468, 0.871836)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seel/body/rightflipper")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.28532, -0.33527, -0.21468, 0.871836)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seel/body/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, -0.03125, -0.3125)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_81uqx"]
+_data = {
+"animation_seel_ground_idle": SubResource("Animation_76oiq"),
+"animation_seel_water_idle": SubResource("Animation_fvss0"),
+"animation_seel_water_swim": SubResource("Animation_a708w")
+}
+
+[node name="seel" instance=ExtResource("1_1wsjv")]
+
+[node name="leftflipper" parent="Node2/seel/body" index="2"]
+transform = Transform3D(0.683013, -0.56565, 0.462097, 0.183013, 0.74501, 0.641457, -0.707107, -0.353553, 0.612372, -0.25, -0.046875, -0.109375)
+
+[node name="rightflipper" parent="Node2/seel/body" index="3"]
+transform = Transform3D(0.683013, 0.56565, -0.462097, -0.183013, 0.74501, 0.641457, 0.707107, -0.353553, 0.612372, 0.25, -0.046875, -0.109375)
+
+[node name="head" parent="Node2/seel/body" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03125, -0.3125)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_81uqx")
+}

@@ -1,0 +1,173 @@
+[gd_scene load_steps=6 format=3 uid="uid://rv21ijh4eebk"]
+
+[ext_resource type="PackedScene" uid="uid://vjuuy4x00a0b" path="res://assets/pokemon/gltf/dewgong.gltf" id="1_t4dhr"]
+
+[sub_resource type="Animation" id="Animation_0xygn"]
+resource_name = "animation_dewgong_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dewgong/body/leftflipper")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0198561, 0.129007, 0.150822, 0.979906)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dewgong/body/rightflipper")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0198561, -0.129007, -0.150822, 0.979906)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dewgong/body/tail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dewgong/body/tail/tail2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0654031, 0, 0, 0.997859)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dewgong/body/tail/tail2/tail3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dewgong/body/head")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0.0625, -0.3125)
+
+[sub_resource type="Animation" id="Animation_s1g3k"]
+resource_name = "animation_dewgong_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dewgong/body/leftflipper")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.145194, 0.111411, 0.145194, 0.97233)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dewgong/body/rightflipper")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.145194, -0.111411, -0.145194, 0.97233)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dewgong/body/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.34375)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dewgong/body/tail")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0218149, 0, 0, 0.999762)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dewgong/body/tail/tail2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0218149, 0, 0, 0.999762)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dewgong/body/tail/tail2/tail3")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+
+[sub_resource type="Animation" id="Animation_pdwf7"]
+resource_name = "animation_dewgong_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/dewgong/body/leftflipper")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.388874, 0.41473, 0.294139, 0.768283)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/dewgong/body/rightflipper")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.388874, -0.41473, -0.294139, 0.768283)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/dewgong/body/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.34375)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/dewgong/body/tail/tail2/tail3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.0218149, 0, 0, 0.999762)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/dewgong/body/tail")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/dewgong/body/tail/tail2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vrg2d"]
+_data = {
+"animation_dewgong_ground_idle": SubResource("Animation_0xygn"),
+"animation_dewgong_water_idle": SubResource("Animation_s1g3k"),
+"animation_dewgong_water_swim": SubResource("Animation_pdwf7")
+}
+
+[node name="dewgong" instance=ExtResource("1_t4dhr")]
+
+[node name="leftflipper" parent="Node2/dewgong/body" index="1"]
+transform = Transform3D(0.92122, -0.300706, 0.24684, 0.29046, 0.953717, 0.0778284, -0.258819, 2.23517e-08, 0.965926, -0.21875, -0.046875, -0.203125)
+
+[node name="rightflipper" parent="Node2/dewgong/body" index="2"]
+transform = Transform3D(0.92122, 0.300706, -0.24684, -0.29046, 0.953717, 0.0778284, 0.258819, 2.23517e-08, 0.965926, 0.21875, -0.046875, -0.203125)
+
+[node name="tail" parent="Node2/dewgong/body" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0.34375)
+
+[node name="tail2" parent="Node2/dewgong/body/tail" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0.375)
+
+[node name="tail3" parent="Node2/dewgong/body/tail/tail2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0.28125)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_vrg2d")
+}

@@ -1,0 +1,172 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhfls4ge2ul78"]
+
+[ext_resource type="PackedScene" uid="uid://bca5gidgqlj6u" path="res://assets/pokemon/gltf/muk.gltf" id="1_4kwul"]
+
+[sub_resource type="Animation" id="Animation_v8pi6"]
+resource_name = "animation_muk_blink"
+length = 0.1667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/muk/body/torso/torso22/head/eye_right2/eyelid_right2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.25514e-17, 0, -2.25514e-17, 0.1, 1, 2.25514e-17, 0, -2.25514e-17, 0.133333, 1, -0.001249, 0, 0.001249, 0.1667, 1, -0.00625, 0, 0.00625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/muk/body/torso/torso22/head/eye_left2/eyelid_left2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -2.25514e-17, 0, -2.25514e-17, 0.1, 1, -2.25514e-17, 0, -2.25514e-17, 0.133333, 1, 0.001249, 0, 0.001249, 0.1667, 1, 0.00625, 0, 0.00625)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/muk/body/torso/torso22/arm_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/muk/body/torso/torso22/arm_right/arm_right22")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/muk/body/torso/torso22/arm_right/arm_right22/arm_right32")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/muk/body/torso/torso22/arm_right/arm_right22/arm_right32/hand_right2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/muk/body/torso/torso22/arm_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/muk/body/torso/torso22/arm_left/arm_left22/arm_left32")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/muk/body/torso/torso22/arm_left/arm_left22/arm_left32/hand_left2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_yjm6e"]
+resource_name = "animation_muk_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/muk/body/torso/torso22/arm_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.379188, 0.0516052, -0.124586, 0.915441)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/muk/body/torso/torso22/arm_right/arm_right22")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/muk/body/torso/torso22/arm_right/arm_right22/arm_right32")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/muk/body/torso/torso22/arm_right/arm_right22/arm_right32/hand_right2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/muk/body/torso/torso22/arm_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0.134851, 0.990866)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/muk/body/torso/torso22/arm_left/arm_left22/arm_left32")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/muk/body/torso/torso22/arm_left/arm_left22/arm_left32/hand_left2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.382683, 0, 0, 0.92388)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/muk/body/torso/torso22/head/eye_right2/eyelid_right2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.00625, 0, 0.00625)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/muk/body/torso/torso22/head/eye_left2/eyelid_left2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.00625, 0, 0.00625)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_40tsh"]
+_data = {
+"animation_muk_blink": SubResource("Animation_v8pi6"),
+"animation_muk_ground_idle": SubResource("Animation_yjm6e")
+}
+
+[node name="muk" instance=ExtResource("1_4kwul")]
+
+[node name="arm_right" parent="Node2/muk/body/torso/torso22" index="3"]
+transform = Transform3D(0.96363, 0.188966, 0.188966, -0.267238, 0.68139, 0.68139, -2.98023e-08, -0.707107, 0.707107, 0.515625, 0.3125, -0.046875)
+
+[node name="arm_right22" parent="Node2/muk/body/torso/torso22/arm_right" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0.25, 0.09375)
+
+[node name="arm_right32" parent="Node2/muk/body/torso/torso22/arm_right/arm_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0.25, 0)
+
+[node name="hand_right2" parent="Node2/muk/body/torso/torso22/arm_right/arm_right22/arm_right32" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0.3125, 0)
+
+[node name="arm_left" parent="Node2/muk/body/torso/torso22" index="4"]
+transform = Transform3D(0.96363, -0.267238, 0, 0.267238, 0.96363, 0, 0, 0, 1, -0.515625, 0.3125, -0.046875)
+
+[node name="arm_left32" parent="Node2/muk/body/torso/torso22/arm_left/arm_left22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0.25, 0)
+
+[node name="hand_left2" parent="Node2/muk/body/torso/torso22/arm_left/arm_left22/arm_left32" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.3125, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_40tsh")
+}
