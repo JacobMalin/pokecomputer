@@ -1,0 +1,192 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkxkdxj2nkblq"]
+
+[ext_resource type="PackedScene" uid="uid://cevy4r658uwi7" path="res://assets/pokemon/gltf/goldeen.gltf" id="1_i7uyk"]
+
+[sub_resource type="Animation" id="Animation_kclji"]
+resource_name = "animation_goldeen_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/goldeen/body/tail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0654031, 0, 0, 0.997859)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/goldeen/body/lefttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0940609, -0.0789265, 0.0940609, 0.987966)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/goldeen/body/righttail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0940609, 0.0789265, -0.0940609, 0.987966)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/goldeen/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.0226656, 0.128543, 0.172163, 0.976383)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/goldeen/body/rightwing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0226656, -0.128543, -0.172163, 0.976383)
+
+[sub_resource type="Animation" id="Animation_3t1uq"]
+resource_name = "animation_goldeen_render"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/goldeen/body/tail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.237686, 0, 0, 0.971342)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/goldeen/body/lefttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.141833, -0.0377272, 0.254552, 0.955857)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/goldeen/body/righttail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.249713, 0.0934145, -0.36406, 0.8924)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/goldeen/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.0226656, 0.128543, 0.172163, 0.976383)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/goldeen/body/rightwing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0226656, -0.128543, -0.172163, 0.976383)
+
+[sub_resource type="Animation" id="Animation_db441"]
+resource_name = "animation_goldeen_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/goldeen/body/tail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0871557, 0, 0, 0.996195)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/goldeen/body/lefttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.107677, -0.113049, 0.182711, 0.970692)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/goldeen/body/righttail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.107677, 0.113049, -0.182711, 0.970692)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/goldeen/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.126079, -0.0337827, 0.256605, 0.957662)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/goldeen/body/rightwing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.126079, 0.0337827, -0.256605, 0.957662)
+
+[sub_resource type="Animation" id="Animation_sqsed"]
+resource_name = "animation_goldeen_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/goldeen/body/tail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/goldeen/body/lefttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0579133, -0.0782044, 0.176567, 0.979466)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/goldeen/body/righttail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0579133, 0.0782044, -0.176567, 0.979466)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/goldeen/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.188197, 0.21523, 0.280493, 0.916287)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/goldeen/body/rightwing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.188197, -0.21523, -0.280493, 0.916287)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y2qe3"]
+_data = {
+"animation_goldeen_ground_idle": SubResource("Animation_kclji"),
+"animation_goldeen_render": SubResource("Animation_3t1uq"),
+"animation_goldeen_water_idle": SubResource("Animation_db441"),
+"animation_goldeen_water_swim": SubResource("Animation_sqsed")
+}
+
+[node name="goldeen" instance=ExtResource("1_i7uyk")]
+
+[node name="tail" parent="Node2/goldeen/body" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0.21875)
+
+[node name="lefttail" parent="Node2/goldeen/body" index="6"]
+transform = Transform3D(0.925417, -0.35494, -0.132746, 0.336824, 0.930941, -0.141065, 0.173648, 0.0858316, 0.98106, -0.09375, -0.015625, 0.21875)
+
+[node name="righttail" parent="Node2/goldeen/body" index="7"]
+transform = Transform3D(0.925417, 0.35494, 0.132746, -0.336824, 0.930941, -0.141065, -0.173648, 0.0858316, 0.98106, 0.09375, -0.015625, 0.21875)
+
+[node name="leftwing" parent="Node2/goldeen/body" index="8"]
+transform = Transform3D(0.75, -0.595035, 0.288849, 0.433013, 0.771812, 0.465625, -0.5, -0.224144, 0.836516, -0.15625, 0.015625, 0.015625)
+
+[node name="rightwing" parent="Node2/goldeen/body" index="9"]
+transform = Transform3D(0.75, 0.595035, -0.288849, -0.433013, 0.771812, 0.465625, 0.5, -0.224144, 0.836516, 0.15625, 0.015625, 0.015625)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_y2qe3")
+}

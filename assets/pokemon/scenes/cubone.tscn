@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://c83vx4ml0bvlc"]
+
+[ext_resource type="PackedScene" uid="uid://8m2qvpu1m0w" path="res://assets/pokemon/gltf/cubone.gltf" id="1_rtn2l"]
+
+[sub_resource type="Animation" id="Animation_515pd"]
+resource_name = "animation_cubone_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/cubone/body/leftarm")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0700359, -0.169082, 0.360423, 0.914659)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/cubone/body/rightarm")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0700359, 0.169082, -0.360423, 0.914659)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/cubone/body/tail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.258819, 0, 0, 0.965926)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/cubone/body/tail/tail2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cspfs"]
+_data = {
+"animation_cubone_ground_idle": SubResource("Animation_515pd")
+}
+
+[node name="cubone" instance=ExtResource("1_rtn2l")]
+
+[node name="leftarm" parent="Node2/cubone/body" index="2"]
+transform = Transform3D(0.683013, -0.635646, -0.359789, 0.683013, 0.73038, 0.006236, 0.258819, -0.25, 0.933013, -0.1875, 0.125, 0)
+
+[node name="rightarm" parent="Node2/cubone/body" index="3"]
+transform = Transform3D(0.683013, 0.635646, 0.359789, -0.683013, 0.73038, 0.006236, -0.258819, -0.25, 0.933013, 0.1875, 0.125, 0)
+
+[node name="tail" parent="Node2/cubone/body" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, -0.09375, 0.15625)
+
+[node name="tail2" parent="Node2/cubone/body/tail" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.0625, 0.1875)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_cspfs")
+}

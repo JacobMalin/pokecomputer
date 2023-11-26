@@ -1,0 +1,285 @@
+[gd_scene load_steps=6 format=3 uid="uid://djax1s8u2pdn6"]
+
+[ext_resource type="PackedScene" uid="uid://dapdtpgs8hfvj" path="res://assets/pokemon/gltf/jynx.gltf" id="1_t76f3"]
+
+[sub_resource type="Animation" id="Animation_kdof6"]
+resource_name = "animation_jynx_blink"
+length = 0.1667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/jynx/body/body2/head/eyelids/eyelid_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.984375, 0.215625, 0.1, 1, 0, -0.984375, 0.215625, 0.133333, 1, 0, -0.984375, 0.216874, 0.1667, 1, 0, -0.984375, 0.221875)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/jynx/body/body2/head/eyelids/eyelid_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.984375, 0.215625, 0.1, 1, 0, -0.984375, 0.215625, 0.133333, 1, 0, -0.984375, 0.216874, 0.1667, 1, 0, -0.984375, 0.221875)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/jynx/body/body2/leftarm")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm/lefthand")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm/lefthand/finger10")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, -0.5, 0, 0.866025)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/jynx/body/body2/rightarm")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm/righthand")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm/righthand/finger5")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, 0.866025)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/jynx/body/body2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_c05r3"]
+resource_name = "animation_jynx_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/jynx/body/body2/leftarm")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0746578, -0.37533, 0.18024, 0.906127)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.143633, -0.293969, -0.527, 0.784362)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm/lefthand")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.18024, -0.0746578, -0.37533, 0.906127)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm/lefthand/finger10")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.168953, -0.490393, 0.234926, 0.822058)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/jynx/body/body2/rightarm")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0746578, 0.37533, -0.18024, 0.906127)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.143633, 0.293969, 0.527, 0.784362)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm/righthand")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.18024, 0.0746578, 0.37533, 0.906127)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm/righthand/finger5")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.168953, 0.490393, -0.234926, 0.822058)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/jynx/body/body2/head/eyelids/eyelid_left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, -0.984375, 0.221875)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/jynx/body/body2/head/eyelids/eyelid_right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, -0.984375, 0.221875)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/jynx/body/body2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_4we26"]
+resource_name = "animation_jynx_render"
+length = 0.416667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/jynx/body/body2/leftarm")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.115075, -0.364972, 0.277816, 0.88112)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.264777, -0.0991127, -0.477758, 0.831756)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm/lefthand")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.18024, -0.0746578, -0.37533, 0.906127)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/jynx/body/body2/leftarm/leftforearm/lefthand/finger10")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.168953, -0.490393, 0.234926, 0.822058)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/jynx/body/body2/rightarm")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.115075, 0.364972, -0.277816, 0.88112)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.232963, 0.1533, 0.494052, 0.823492)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm/righthand")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.18024, 0.0746578, 0.37533, 0.906127)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/jynx/body/body2/rightarm/rightforearm/righthand/finger5")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.168953, 0.490393, -0.234926, 0.822058)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/jynx/body/body2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, -0.0218149, 0, 0.999762)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/jynx/body/body2/head/eyelids/eyelid_left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, -0.984375, 0.221875)
+tracks/10/type = "position_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/jynx/body/body2/head/eyelids/eyelid_right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, -0.984375, 0.221875)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yiqii"]
+_data = {
+"animation_jynx_blink": SubResource("Animation_kdof6"),
+"animation_jynx_ground_idle": SubResource("Animation_c05r3"),
+"animation_jynx_render": SubResource("Animation_4we26")
+}
+
+[node name="jynx" instance=ExtResource("1_t76f3")]
+
+[node name="leftarm" parent="Node2/jynx/body/body2" index="3"]
+transform = Transform3D(0.653282, -0.270598, -0.707107, 0.382683, 0.92388, 0, 0.653281, -0.270598, 0.707107, -0.34375, 0.375, -0.03125)
+
+[node name="leftforearm" parent="Node2/jynx/body/body2/leftarm" index="1"]
+transform = Transform3D(0.271707, 0.74227, -0.612545, -0.911164, 0.403282, 0.0845232, 0.309767, 0.535163, 0.785904, -0.25, 0, 0)
+
+[node name="lefthand" parent="Node2/jynx/body/body2/leftarm/leftforearm" index="1"]
+transform = Transform3D(0.707107, 0.653282, -0.270598, -0.707107, 0.653282, -0.270598, 1.49012e-08, 0.382683, 0.92388, -0.375, 0, 0)
+
+[node name="finger10" parent="Node2/jynx/body/body2/leftarm/leftforearm/lefthand" index="5"]
+transform = Transform3D(0.40865, -0.220538, -0.885646, 0.551952, 0.83253, 0.0473672, 0.72688, -0.50819, 0.46194, -0.0625, 0, -0.078125)
+
+[node name="rightarm" parent="Node2/jynx/body/body2" index="4"]
+transform = Transform3D(0.653282, 0.270598, 0.707107, -0.382683, 0.92388, 0, -0.653281, -0.270598, 0.707107, 0.34375, 0.375, -0.03125)
+
+[node name="rightforearm" parent="Node2/jynx/body/body2/rightarm" index="1"]
+transform = Transform3D(0.271707, -0.74227, 0.612545, 0.911164, 0.403282, 0.0845232, -0.309767, 0.535163, 0.785904, 0.25, 0, 0)
+
+[node name="righthand" parent="Node2/jynx/body/body2/rightarm/rightforearm" index="1"]
+transform = Transform3D(0.707107, -0.653282, 0.270598, 0.707107, 0.653282, -0.270598, -1.49012e-08, 0.382683, 0.92388, 0.375, 0, 0)
+
+[node name="finger5" parent="Node2/jynx/body/body2/rightarm/rightforearm/righthand" index="5"]
+transform = Transform3D(0.40865, 0.220538, 0.885646, -0.551952, 0.83253, 0.0473672, -0.72688, -0.50819, 0.46194, 0.0625, 0, -0.078125)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_yiqii")
+}

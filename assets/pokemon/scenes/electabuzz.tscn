@@ -1,0 +1,733 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcqd1mrvrdo8t"]
+
+[ext_resource type="PackedScene" uid="uid://1isokyofooc0" path="res://assets/pokemon/gltf/electabuzz.gltf" id="1_801yr"]
+
+[sub_resource type="Animation" id="Animation_exc4y"]
+resource_name = "animation_electabuzz_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/electabuzz/body/torso2/head/eyes/eye_left/eyelid_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.015625, -0.003125, 0.0003125, 0.1, 1, -0.015625, -0.003125, 0.0003125, 0.133333, 1, -0.014375, -0.003125, 0.0015625, 0.166667, 1, -0.009375, -0.003125, 0.0065625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/electabuzz/body/torso2/head/eyes/eye_right/eyelid_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.021875, -0.015625, 0.0003125, 0.1, 1, -0.021875, -0.015625, 0.0003125, 0.133333, 1, -0.023125, -0.015625, 0.0015625, 0.166667, 1, -0.028125, -0.015625, 0.0065625)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/electabuzz/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.78125, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/electabuzz/body/torso2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/electabuzz/body/torso2/tail")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_index_left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_index_left/finger_index_left22")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_middle_left")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_middle_left/finger_middle_left22")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_ring_left/finger_ring_left22")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_pinky_left")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_pinky_left/finger_pinky_left22")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/thumb_left")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/thumb_left/thumb_left22")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/electabuzz/body/legs/leg_left")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/electabuzz/body/legs/leg_left/leg_left22")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/electabuzz/body/legs/leg_left/leg_left22/foot_left2")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/electabuzz/body/legs/leg_left/leg_left22/foot_left2/claw_back_left2")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/electabuzz/body/legs/leg_right")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/electabuzz/body/legs/leg_right/leg_right22")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/electabuzz/body/legs/leg_right/leg_right22/foot_right2")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/electabuzz/body/legs/leg_right/leg_right22/foot_right2/claw_back_right2")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_pinky_right")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_pinky_right/finger_pinky_right22")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_ring_right/finger_ring_right22")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/33/type = "rotation_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_middle_right")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_middle_right/finger_middle_right22")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/35/type = "rotation_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_index_right")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_index_right/finger_index_right22")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/37/type = "rotation_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/thumb_right")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/thumb_right/thumb_right22")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/39/type = "rotation_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Node2/electabuzz/body/torso2/tail/tail22/tail32/tail42")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/40/type = "rotation_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Node2/electabuzz/body/torso2/tail/tail22/tail32")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/41/type = "rotation_3d"
+tracks/41/imported = true
+tracks/41/enabled = true
+tracks/41/path = NodePath("Node2/electabuzz/body/torso2/tail/tail22")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_era87"]
+resource_name = "animation_electabuzz_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/electabuzz/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.7625, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/electabuzz/body/torso2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0218149, 0, 0, 0.999762)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/electabuzz/body/torso2/tail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.106286, 0.0235631, 0.215153, 0.970493)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.382683, 0.92388)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.036525, -0.277435, 0.125312, 0.951836)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0.0654031, 0.997859)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0.573576, 0.819152)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_index_left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, -0.0218149, 0.999762)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_index_left/finger_index_left22")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0.608761, 0.793353)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_middle_left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, -0.0436194, 0.999048)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_middle_left/finger_middle_left22")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0.55557, 0.83147)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_ring_left/finger_ring_left22")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0.573576, 0.819152)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_pinky_left")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0.0436194, 0.999048)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_pinky_left/finger_pinky_left22")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0.67559, 0.737277)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/thumb_left")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.15733, -0.115359, 0.708484, 0.678226)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/thumb_left/thumb_left22")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0.422618, 0, 0.906308)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/electabuzz/body/legs/leg_left")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.011852, 0.10822, -0.10822, 0.988148)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/electabuzz/body/legs/leg_left/leg_left22")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/electabuzz/body/legs/leg_left/leg_left22/foot_left2")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.10827, 0.0113797, 0.103907, 0.988611)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/electabuzz/body/legs/leg_left/leg_left22/foot_left2/claw_back_left2")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/electabuzz/body/legs/leg_right")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0.011852, -0.10822, 0.10822, 0.988148)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/electabuzz/body/legs/leg_right/leg_right22")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/electabuzz/body/legs/leg_right/leg_right22/foot_right2")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0.10827, -0.0113797, -0.103907, 0.988611)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/electabuzz/body/legs/leg_right/leg_right22/foot_right2/claw_back_right2")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, -0.0020247, -0.0222134, -0.382358, 0.923745)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, -0.0304641, 0.278166, -0.104518, 0.954344)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0, 0, -0.108867, 0.994056)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, -0.518773, 0.854912)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_pinky_right")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0, 0, -0.0218149, 0.999762)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_pinky_right/finger_pinky_right22")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0, 0, -0.59131, 0.806445)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_ring_right/finger_ring_right22")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0, 0, -0.573576, 0.819152)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_middle_right")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0, 0, 0.0436194, 0.999048)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_middle_right/finger_middle_right22")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0, 0, -0.55557, 0.83147)
+tracks/33/type = "rotation_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_index_right")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0, 0, 0.0218149, 0.999762)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_index_right/finger_index_right22")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, 0, 0, -0.573576, 0.819152)
+tracks/35/type = "rotation_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/thumb_right")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, 0.0584941, 0.0918174, -0.534106, 0.838379)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/thumb_right/thumb_right22")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, 0, -0.461749, 0, 0.887011)
+tracks/37/type = "rotation_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Node2/electabuzz/body/torso2/tail/tail22/tail32/tail42")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, -0.320751, -0.0619322, 0.0210231, 0.944903)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Node2/electabuzz/body/torso2/tail/tail22/tail32")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, -0.361662, -0.0609562, 0.0237046, 0.930012)
+tracks/39/type = "rotation_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Node2/electabuzz/body/torso2/tail/tail22")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, -0.237686, 0, 0, 0.971342)
+tracks/40/type = "position_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Node2/electabuzz/body/torso2/head/eyes/eye_left/eyelid_left2")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, -0.009375, -0.003125, 0.0065625)
+tracks/41/type = "position_3d"
+tracks/41/imported = true
+tracks/41/enabled = true
+tracks/41/path = NodePath("Node2/electabuzz/body/torso2/head/eyes/eye_right/eyelid_right2")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = PackedFloat32Array(0, 1, -0.028125, -0.015625, 0.0065625)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fhb5"]
+_data = {
+"animation_electabuzz_blink": SubResource("Animation_exc4y"),
+"animation_electabuzz_ground_idle": SubResource("Animation_era87")
+}
+
+[node name="electabuzz" instance=ExtResource("1_801yr")]
+
+[node name="body" parent="Node2/electabuzz" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7625, 0)
+
+[node name="torso2" parent="Node2/electabuzz/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, -0.28125, -0.03125)
+
+[node name="tail" parent="Node2/electabuzz/body/torso2" index="2"]
+transform = Transform3D(0.906308, -0.422618, 0, 0.412601, 0.884825, 0.21644, -0.0914713, -0.196161, 0.976296, 0, 0.09375, 0.296875)
+
+[node name="tail22" parent="Node2/electabuzz/body/torso2/tail" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0.28125)
+
+[node name="tail32" parent="Node2/electabuzz/body/torso2/tail/tail22" index="1"]
+transform = Transform3D(0.991445, -7.45058e-09, -0.130526, 0.0881822, 0.737277, 0.66981, 0.096234, -0.67559, 0.73097, 0, 0, 0.296875)
+
+[node name="tail42" parent="Node2/electabuzz/body/torso2/tail/tail22/tail32" index="1"]
+transform = Transform3D(0.991445, 1.49012e-08, -0.130526, 0.0794593, 0.793353, 0.603553, 0.103553, -0.608761, 0.786566, 0, 0, 0.3125)
+
+[node name="arm_left" parent="Node2/electabuzz/body/torso2/arms" index="0"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -0.28125, -0.0625, 0)
+
+[node name="arm_left22" parent="Node2/electabuzz/body/torso2/arms/arm_left" index="1"]
+transform = Transform3D(0.814654, -0.218286, -0.5373, 0.258819, 0.965926, -7.45058e-09, 0.518992, -0.139063, 0.843391, -0.46875, 0, 0.09375)
+
+[node name="hand_left2" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22" index="2"]
+transform = Transform3D(0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0, 1, -0.4375, 0.078125, -0.03125)
+
+[node name="fingers_left" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2" index="1"]
+transform = Transform3D(0.34202, -0.939693, 0, 0.939693, 0.34202, 0, 0, 0, 1, -0.1875, 0, -0.03125)
+
+[node name="finger_pinky_left" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left" index="0"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 0, 0, 0.09375)
+
+[node name="finger_pinky_left22" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_pinky_left" index="1"]
+transform = Transform3D(0.0871557, -0.996195, 0, 0.996195, 0.0871557, 0, 0, 0, 1, -0.125, 0, 0)
+
+[node name="finger_ring_left22" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_ring_left" index="1"]
+transform = Transform3D(0.34202, -0.939693, 0, 0.939693, 0.34202, 0, 0, 0, 1, -0.125, 0, 0)
+
+[node name="finger_middle_left" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left" index="2"]
+transform = Transform3D(0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0, 1, 0, 0, -0.03125)
+
+[node name="finger_middle_left22" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_middle_left" index="1"]
+transform = Transform3D(0.382683, -0.92388, 0, 0.92388, 0.382683, 0, 0, 0, 1, -0.125, 0, 0)
+
+[node name="finger_index_left" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left" index="3"]
+transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, 0, -0.09375)
+
+[node name="finger_index_left22" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/fingers_left/finger_index_left" index="1"]
+transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -0.125, 0, 0)
+
+[node name="thumb_left" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2" index="2"]
+transform = Transform3D(-0.0305142, -0.997323, 0.0664523, 0.924726, -0.0534041, -0.37687, 0.37941, 0.0499502, 0.92388, -0.125, -0.09375, -0.140625)
+
+[node name="thumb_left22" parent="Node2/electabuzz/body/torso2/arms/arm_left/arm_left22/hand_left2/thumb_left" index="1"]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, -0.09375, 0, -0.03125)
+
+[node name="arm_right" parent="Node2/electabuzz/body/torso2/arms" index="1"]
+transform = Transform3D(0.706617, 0.706493, -0.0394907, -0.706313, 0.707596, 0.0207276, 0.0425873, 0.0132463, 0.999005, 0.28125, -0.0625, 0)
+
+[node name="arm_right22" parent="Node2/electabuzz/body/torso2/arms/arm_right" index="1"]
+transform = Transform3D(0.8234, 0.182543, 0.5373, -0.21644, 0.976296, -3.72529e-09, -0.524563, -0.116293, 0.843391, 0.46875, 0, 0.09375)
+
+[node name="hand_right2" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22" index="2"]
+transform = Transform3D(0.976296, 0.21644, 0, -0.21644, 0.976296, 0, 0, 0, 1, 0.4375, 0.078125, -0.03125)
+
+[node name="fingers_right" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2" index="1"]
+transform = Transform3D(0.461749, 0.887011, 0, -0.887011, 0.461749, 0, 0, 0, 1, 0.1875, 0, -0.03125)
+
+[node name="finger_pinky_right" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right" index="0"]
+transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, 0, 0.09375)
+
+[node name="finger_pinky_right22" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_pinky_right" index="1"]
+transform = Transform3D(0.300706, 0.953717, 0, -0.953717, 0.300706, 0, 0, 0, 1, 0.125, 0, 0)
+
+[node name="finger_ring_right22" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_ring_right" index="1"]
+transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 0.125, 0, 0)
+
+[node name="finger_middle_right" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right" index="2"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 0, 0, -0.03125)
+
+[node name="finger_middle_right22" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_middle_right" index="1"]
+transform = Transform3D(0.382683, 0.92388, 0, -0.92388, 0.382683, 0, 0, 0, 1, 0.125, 0, 0)
+
+[node name="finger_index_right" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right" index="3"]
+transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0, 0, -0.09375)
+
+[node name="finger_index_right22" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/fingers_right/finger_index_right" index="1"]
+transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 0.125, 0, 0)
+
+[node name="thumb_right" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2" index="2"]
+transform = Transform3D(0.412601, 0.906308, 0.0914713, -0.884825, 0.422618, -0.196161, -0.21644, 7.45058e-09, 0.976296, 0.125, -0.09375, -0.140625)
+
+[node name="thumb_right22" parent="Node2/electabuzz/body/torso2/arms/arm_right/arm_right22/hand_right2/thumb_right" index="1"]
+transform = Transform3D(0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.573576, 0.09375, 0, -0.03125)
+
+[node name="leg_left" parent="Node2/electabuzz/body/legs" index="0"]
+transform = Transform3D(0.953154, 0.21644, 0.211309, -0.211309, 0.976296, -0.0468461, -0.21644, -1.11759e-08, 0.976296, -0.203125, 0.09375, -0.078125)
+
+[node name="leg_left22" parent="Node2/electabuzz/body/legs/leg_left" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.21875, 0)
+
+[node name="foot_left2" parent="Node2/electabuzz/body/legs/leg_left/leg_left22" index="1"]
+transform = Transform3D(0.978148, -0.202983, 0.0450003, 0.207912, 0.954962, -0.21171, -7.45058e-09, 0.21644, 0.976296, 0, -0.15625, 0.09375)
+
+[node name="claw_back_left2" parent="Node2/electabuzz/body/legs/leg_left/leg_left22/foot_left2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0.125)
+
+[node name="leg_right" parent="Node2/electabuzz/body/legs" index="1"]
+transform = Transform3D(0.953154, -0.21644, -0.211309, 0.211309, 0.976296, -0.0468461, 0.21644, -1.11759e-08, 0.976296, 0.203125, 0.09375, -0.078125)
+
+[node name="leg_right22" parent="Node2/electabuzz/body/legs/leg_right" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.21875, 0)
+
+[node name="foot_right2" parent="Node2/electabuzz/body/legs/leg_right/leg_right22" index="1"]
+transform = Transform3D(0.978148, 0.202983, -0.0450003, -0.207912, 0.954962, -0.21171, 7.45058e-09, 0.21644, 0.976296, 0, -0.15625, 0.09375)
+
+[node name="claw_back_right2" parent="Node2/electabuzz/body/legs/leg_right/leg_right22/foot_right2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0.125)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_4fhb5")
+}

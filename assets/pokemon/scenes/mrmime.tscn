@@ -1,0 +1,580 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3sfgau68a25w"]
+
+[ext_resource type="PackedScene" uid="uid://btjdsuyr6k6jy" path="res://assets/pokemon/gltf/mrmime.gltf" id="1_8w1hb"]
+
+[sub_resource type="Animation" id="Animation_xwem8"]
+resource_name = "animation_mr_mime_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/mr_mime/body/torso3/chest2/head/eyes/eye_left2/eyelid_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.03125, 0.09375, -0.00125, 0.1, 1, -0.03125, 0.09375, -0.00125, 0.133333, 1, -0.03125, 0.09375, 8.14907e-10, 0.166667, 1, -0.03125, 0.09375, 0.005)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/mr_mime/body/torso3/chest2/head/eyes/eye_right2/eyelid_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.03125, 0.09375, -0.00125, 0.1, 1, 0.03125, 0.09375, -0.00125, 0.133333, 1, 0.03125, 0.09375, 8.14907e-10, 0.166667, 1, 0.03125, 0.09375, 0.005)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/mr_mime/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 1.1875, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/mr_mime/body/torso3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/mr_mime/body/torso3/chest2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/fingers_left")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/thumb_left")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, -0.518773, 0, 0.854912)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/thumb_left/thumb_left_rotation/thumb_left22")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2/fingers_right")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2/thumb_right")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.518773, 0, 0.854912)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/mr_mime/body/torso3/chest2/head")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/mr_mime/body/legs")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/mr_mime/body/legs/leg_left1")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42/foot_left")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42/foot_left/foot_left22")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/mr_mime/body/legs/leg_right12")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42/foot_right4")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42/foot_right4/foot_right22")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_3qe3r"]
+resource_name = "animation_mr_mime_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/mr_mime/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 1.10938, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/mr_mime/body/torso3")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.0654031, 0, 0.997859)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/mr_mime/body/torso3/chest2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.0218149, 0, 0.999762)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, -0.0654031, 0, 0.997859)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0667248, -0.335448, 0.183325, 0.921637)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0669873, -0.25, -0.330366, 0.907673)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.084658, -0.0207157, -0.236781, 0.967646)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.123599, -0.0419563, -0.318689, 0.938829)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/fingers_left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, -0.0871557, 0.996195)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/thumb_left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.0452141, -0.516799, -0.0745105, 0.851659)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/thumb_left/thumb_left_rotation/thumb_left22")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0.0654031, 0.997859)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, -0.130526, 0, 0.991445)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.0560187, 0.252684, -0.209065, 0.94303)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.0214218, 0.244602, 0.346115, 0.905492)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0.21644, 0.976296)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0.284584, 0.0820019, 0.315963, 0.901363)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2/fingers_right")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0.0436194, 0.999048)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2/thumb_right")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, -0.011317, 0.51865, 0.0186498, 0.854708)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/mr_mime/body/torso3/chest2/head")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, -0.025512, -0.0861041, 0.0415436, 0.995093)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/mr_mime/body/legs")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.0436194, 0, 0.999048)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/mr_mime/body/legs/leg_left1")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0.126786, -0.0310242, -0.235652, 0.963032)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0, 0.362438, 0, 0.932008)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, -0.361662, 0.0237046, 0.0609562, 0.930012)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42/foot_left")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, -0.23746, 0.0103677, 0.0423693, 0.970418)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42/foot_left/foot_left22")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0.34202, 0, 0, 0.939693)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/mr_mime/body/legs/leg_right12")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0.197276, -0.304843, 0.182162, 0.913767)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, -0.34202, 0, 0, 0.939693)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 6.80879e-16, -0.0416615, -0.10058, 0.994056)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42/foot_right4")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, -0.173648, 0, 0, 0.984808)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42/foot_right4/foot_right22")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0.21644, 0, 0, 0.976296)
+tracks/31/type = "position_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/mr_mime/body/torso3/chest2/head/eyes/eye_left2/eyelid_left2")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, -0.03125, 0.09375, 0.005)
+tracks/32/type = "position_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/mr_mime/body/torso3/chest2/head/eyes/eye_right2/eyelid_right2")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0.03125, 0.09375, 0.005)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uidol"]
+_data = {
+"animation_mr_mime_blink": SubResource("Animation_xwem8"),
+"animation_mr_mime_ground_idle": SubResource("Animation_3qe3r")
+}
+
+[node name="mrmime" instance=ExtResource("1_8w1hb")]
+
+[node name="body" parent="Node2/mr_mime" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10938, 0)
+
+[node name="torso3" parent="Node2/mr_mime/body" index="0"]
+transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, 0, -0.28125, 0.046875)
+
+[node name="chest2" parent="Node2/mr_mime/body/torso3" index="2"]
+transform = Transform3D(0.999048, 0, 0.0436194, 0, 1, 0, -0.0436194, 0, 0.999048, 0, 0.125, 0.171875)
+
+[node name="shoulder_left2" parent="Node2/mr_mime/body/torso3/chest2/arms" index="0"]
+transform = Transform3D(0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, 0.991445, -0.3125, -0.03125, -0.015625)
+
+[node name="arm_left" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2" index="1"]
+transform = Transform3D(0.707733, -0.293153, -0.642788, 0.382683, 0.92388, 7.45058e-09, 0.593858, -0.245984, 0.766044, -0.09375, 0, 0)
+
+[node name="arm_left22" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left" index="1"]
+transform = Transform3D(0.656716, 0.633223, -0.409576, -0.566235, 0.772742, 0.286788, 0.498097, 0.0435779, 0.866025, -0.5625, -0.0625, 0.0625)
+
+[node name="arm_left32" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22" index="1"]
+transform = Transform3D(0.887011, 0.454734, -0.0801818, -0.461749, 0.873535, -0.154028, -7.45058e-09, 0.173648, 0.984808, -0.125, 0, 0)
+
+[node name="wrist_left" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2" index="0"]
+transform = Transform3D(0.793353, 0.588018, -0.157559, -0.608761, 0.766321, -0.205335, 2.98023e-08, 0.258819, 0.965926, 0, -0.125, 0)
+
+[node name="fingers_left" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left" index="1"]
+transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, -0.25, 0, 0)
+
+[node name="thumb_left" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left" index="2"]
+transform = Transform3D(0.454734, 0.173648, -0.873535, -0.0801818, 0.984808, 0.154028, 0.887011, -7.45058e-09, 0.461749, -0.09375, 0.125, -0.15625)
+
+[node name="thumb_left22" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_left2/arm_left/arm_left22/arm_left32/hand_left2/wrist_left/thumb_left/thumb_left_rotation" index="1"]
+transform = Transform3D(0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0, 1, -0.125, 0, 0.03125)
+
+[node name="shoulder_right2" parent="Node2/mr_mime/body/torso3/chest2/arms" index="1"]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.3125, -0.03125, -0.015625)
+
+[node name="arm_right" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2" index="1"]
+transform = Transform3D(0.784886, 0.365998, 0.5, -0.422618, 0.906308, 0, -0.453154, -0.211309, 0.866025, 0.09375, 0, 0)
+
+[node name="arm_right22" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right" index="1"]
+transform = Transform3D(0.640749, -0.637289, 0.428141, 0.616329, 0.759491, 0.208115, -0.457798, 0.130526, 0.879422, 0.5625, -0.0625, 0.0625)
+
+[node name="arm_right32" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22" index="1"]
+transform = Transform3D(0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0, 0, 1, 0.125, 0, 0)
+
+[node name="wrist_right2" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right" index="0"]
+transform = Transform3D(0.786886, -0.522922, 0.327663, 0.616268, 0.638358, -0.461208, 0.0320093, 0.564846, 0.824575, 0, -0.125, 0)
+
+[node name="fingers_right" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2" index="1"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 0.25, 0, 0)
+
+[node name="thumb_right" parent="Node2/mr_mime/body/torso3/chest2/arms/shoulder_right2/arm_right/arm_right22/arm_right32/hand_right/wrist_right2" index="2"]
+transform = Transform3D(0.461309, -0.0436194, 0.886167, 0.0201412, 0.999048, 0.0386909, -0.887011, 1.86265e-09, 0.461749, 0.09375, 0.125, -0.15625)
+
+[node name="head" parent="Node2/mr_mime/body/torso3/chest2" index="4"]
+transform = Transform3D(0.98172, -0.078286, -0.173483, 0.0870728, 0.995247, 0.0436194, 0.169243, -0.0579277, 0.98387, 0, 0.5, -0.15625)
+
+[node name="legs" parent="Node2/mr_mime/body" index="1"]
+transform = Transform3D(0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, 0, -1, 0)
+
+[node name="leg_left1" parent="Node2/mr_mime/body/legs" index="0"]
+transform = Transform3D(0.887011, 0.446015, -0.119509, -0.461749, 0.856787, -0.229575, 7.45058e-09, 0.258819, 0.965926, -0.25, 0.8125, 0.03125)
+
+[node name="leg_left22" parent="Node2/mr_mime/body/legs/leg_left1" index="1"]
+transform = Transform3D(0.737277, 0, 0.67559, 0, 1, 0, -0.67559, 0, 0.737277, 0, 0, 0)
+
+[node name="leg_left42" parent="Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32" index="1"]
+transform = Transform3D(0.991445, -0.130526, 0, 0.096234, 0.73097, 0.67559, -0.0881822, -0.66981, 0.737277, 0, -0.125, 0)
+
+[node name="foot_left" parent="Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42" index="1"]
+transform = Transform3D(0.996195, -0.0871557, -1.86265e-09, 0.0773081, 0.883635, 0.461749, -0.040244, -0.459992, 0.887011, 0, -0.34375, 0)
+
+[node name="foot_left22" parent="Node2/mr_mime/body/legs/leg_left1/leg_left22/leg_left32/leg_left42/foot_left" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, -0.125, -0.09375)
+
+[node name="leg_right12" parent="Node2/mr_mime/body/legs" index="1"]
+transform = Transform3D(0.747775, -0.453184, -0.485239, 0.212631, 0.855799, -0.47159, 0.628984, 0.249466, 0.736306, 0.25625, 0.8125, 0.03125)
+
+[node name="leg_right22" parent="Node2/mr_mime/body/legs/leg_right12" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0)
+
+[node name="leg_right32" parent="Node2/mr_mime/body/legs/leg_right12/leg_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0, -0.375, -0.0625)
+
+[node name="leg_right42" parent="Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32" index="1"]
+transform = Transform3D(0.976296, 0.199964, -0.0828279, -0.199964, 0.979767, 0.00838063, 0.0828278, 0.00838063, 0.996529, 0, -0.125, 0)
+
+[node name="foot_right4" parent="Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, -0.34375, 0)
+
+[node name="foot_right22" parent="Node2/mr_mime/body/legs/leg_right12/leg_right22/leg_right32/leg_right42/foot_right4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, -0.125, -0.09375)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_uidol")
+}

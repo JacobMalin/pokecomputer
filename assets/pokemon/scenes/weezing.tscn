@@ -1,0 +1,201 @@
+[gd_scene load_steps=6 format=3 uid="uid://dryqs8x075r2x"]
+
+[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/weezing.gltf" id="1_k26a3"]
+
+[sub_resource type="Animation" id="Animation_fn4ge"]
+resource_name = "animation_weezing_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_left2/eyebrow_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.03125, 0.125, 0.00125, 0.1, 1, -0.03125, 0.125, 0.00125, 0.133333, 1, -0.03125, 0.1375, 0.00125, 0.166667, 1, -0.03125, 0.1875, 0.00125)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_right2/eyebrow_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.03125, 0.125, 0.00125, 0.1, 1, 0.03125, 0.125, 0.00125, 0.133333, 1, 0.03125, 0.1375, 0.00125, 0.166667, 1, 0.03125, 0.1875, 0.00125)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_left2/eyelid_left2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.046875, 1.11022e-16, 0.030625, 0.1, 1, -0.046875, 1.11022e-16, 0.030625, 0.133333, 1, -0.046875, 1.11022e-16, 0.031875, 0.166667, 1, -0.046875, 1.11022e-16, 0.036875)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_right2/eyelid_right2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.046875, 1.11022e-16, 0.030625, 0.1, 1, 0.046875, 1.11022e-16, 0.030625, 0.133333, 1, 0.046875, 1.11022e-16, 0.031875, 0.166667, 1, 0.046875, 1.11022e-16, 0.036875)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_left2/small_eyelid_left2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -1.11022e-16, 1.11022e-16, 0.036875)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_right2/small_eyelid_right2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 1.11022e-16, 1.11022e-16, 0.036875)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/weezing/bone/main_body2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.25, 0, 0)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/weezing/bone/main_body2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_k63b4"]
+resource_name = "animation_weezing_blink2"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_left2/small_eyelid_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.11022e-16, 1.11022e-16, 0.030625, 0.1, 1, -1.11022e-16, 1.11022e-16, 0.030625, 0.133333, 1, -1.11022e-16, 1.11022e-16, 0.031875, 0.166667, 1, -1.11022e-16, 1.11022e-16, 0.036875)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_right2/small_eyelid_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 1.11022e-16, 1.11022e-16, 0.030625, 0.1, 1, 1.11022e-16, 1.11022e-16, 0.030625, 0.133333, 1, 1.11022e-16, 1.11022e-16, 0.031875, 0.166667, 1, 1.11022e-16, 1.11022e-16, 0.036875)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_left2/eyebrow_left2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.03125, 0.1875, 0.00125)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_right2/eyebrow_right2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.03125, 0.1875, 0.00125)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_left2/eyelid_left2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.046875, 1.11022e-16, 0.036875)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_right2/eyelid_right2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.046875, 1.11022e-16, 0.036875)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/weezing/bone/main_body2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.25, 0, 0)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/weezing/bone/main_body2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_xthre"]
+resource_name = "animation_weezing_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/weezing/bone/main_body2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.25, 0.125, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/weezing/bone/main_body2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0435779, -0.00190265, -0.0435779, 0.998097)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_left2/eyebrow_left2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.03125, 0.1875, 0.00125)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_right2/eyebrow_right2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.03125, 0.1875, 0.00125)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_left2/eyelid_left2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.046875, 1.11022e-16, 0.036875)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/weezing/bone/main_body2/eyes/eye_right2/eyelid_right2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.046875, 1.11022e-16, 0.036875)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_left2/small_eyelid_left2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -1.11022e-16, 1.11022e-16, 0.036875)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_right2/small_eyelid_right2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 1.11022e-16, 1.11022e-16, 0.036875)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ags0"]
+_data = {
+"animation_weezing_blink": SubResource("Animation_fn4ge"),
+"animation_weezing_blink2": SubResource("Animation_k63b4"),
+"animation_weezing_ground_idle": SubResource("Animation_xthre")
+}
+
+[node name="weezing" instance=ExtResource("1_k26a3")]
+
+[node name="main_body2" parent="Node2/weezing/bone" index="0"]
+transform = Transform3D(0.996195, 0.0871557, 2.32831e-10, -0.0868241, 0.992404, 0.0871557, 0.00759612, -0.0868241, 0.996195, 0.25, 0.125, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_6ags0")
+}

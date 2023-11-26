@@ -1,0 +1,327 @@
+[gd_scene load_steps=5 format=3 uid="uid://ogji3yuc7k8e"]
+
+[ext_resource type="PackedScene" uid="uid://810de8x4e2bn" path="res://assets/pokemon/gltf/magmar.gltf" id="1_1btl1"]
+
+[sub_resource type="Animation" id="Animation_4xr5c"]
+resource_name = "animation_magmar_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/magmar/body/tail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.19509, 0, 0, 0.980785)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/magmar/body/tail/tail2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/magmar/body/tail/tail2/tail3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/magmar/body/tail/tail2/tail3/tailfire")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.55557, 0, 0, 0.83147)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/magmar/body/leftarm")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.0914713, -0.196161, 0.412601, 0.884825)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/magmar/body/leftarm/lefthand")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.191342, -0.191342, -0.0380602, 0.96194)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/magmar/body/leftarm/lefthand/leftlilfinger")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.382683, 0, 0, 0.92388)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/magmar/body/rightarm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.0914713, 0.196161, -0.412601, 0.884825)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/magmar/body/rightarm/righthand")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.191342, 0.191342, 0.0380602, 0.96194)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/magmar/body/rightarm/righthand/rightlilfinger")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.382683, 0, 0, 0.92388)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/magmar/body/leftleg/leftknee/leftfoot")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0.19509, 0, 0.980785)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/magmar/body/rightleg/rightknee/rightfoot")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, -0.19509, 0, 0.980785)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/magmar/body")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/magmar/body/neck")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/magmar/body/neck/head/jaw")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/magmar/body/leftleg")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/magmar/body/leftleg/leftknee")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/magmar/body/rightleg")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/magmar/body/rightleg/rightknee")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_empnh"]
+resource_name = "animation_magmar_render"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/magmar/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.130526, 0, 0.991445)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/magmar/body/neck")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.130526, 0, 0.991445)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/magmar/body/neck/head/jaw")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/magmar/body/tail")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.258819, 0, 0, 0.965926)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/magmar/body/tail/tail2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.084658, 0.236781, -0.0207157, 0.967646)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/magmar/body/tail/tail2/tail3")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.12059, 0.37941, 0.0499502, 0.915976)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/magmar/body/tail/tail2/tail3/tailfire")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.518773, 0, 0, 0.854912)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/magmar/body/leftarm")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.00380168, -0.0870728, 0.0434534, 0.995247)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/magmar/body/rightarm")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.00570026, 0.0869691, -0.0651542, 0.994062)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/magmar/body/rightarm/righthand")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.151798, 0.0646419, -0.00994935, 0.986245)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/magmar/body/leftleg")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, -0.152123, 0.988362)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/magmar/body/leftleg/leftknee")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0.108867, 0.994056)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/magmar/body/leftleg/leftknee/leftfoot")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0.0218149, 0.999762)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/magmar/body/rightleg")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0.108867, 0.994056)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/magmar/body/rightleg/rightknee")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.0652631, -0.00427757, -0.0652631, 0.995723)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/magmar/body/rightleg/rightknee/rightfoot")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.0869691, 0.00285284, -0.0653409, 0.994062)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/magmar/body/leftarm/lefthand")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/magmar/body/leftarm/lefthand/leftlilfinger")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/magmar/body/rightarm/righthand/rightlilfinger")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kk1q7"]
+_data = {
+"animation_magmar_ground_idle": SubResource("Animation_4xr5c"),
+"animation_magmar_render": SubResource("Animation_empnh")
+}
+
+[node name="magmar" instance=ExtResource("1_1btl1")]
+
+[node name="tail" parent="Node2/magmar/body" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, 0, -0.1875, 0.140625)
+
+[node name="tail2" parent="Node2/magmar/body/tail" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, -0.03125, 0.25)
+
+[node name="tail3" parent="Node2/magmar/body/tail/tail2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, -0.03125, 0.3125)
+
+[node name="tailfire" parent="Node2/magmar/body/tail/tail2/tail3" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.382683, 0.92388, 0, -0.92388, 0.382683, 0, 0, 0.25)
+
+[node name="leftarm" parent="Node2/magmar/body" index="6"]
+transform = Transform3D(0.582563, -0.766044, -0.271654, 0.694272, 0.642788, -0.323744, 0.422618, 0, 0.906308, -0.390625, 0.25, -0.078125)
+
+[node name="lefthand" parent="Node2/magmar/body/leftarm" index="4"]
+transform = Transform3D(0.92388, 0.146447, -0.353553, 0, 0.92388, 0.382683, 0.382683, -0.353553, 0.853553, -0.3125, 0, 0)
+
+[node name="leftlilfinger" parent="Node2/magmar/body/leftarm/lefthand" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -0.1875, -0.046875, -0.0625)
+
+[node name="rightarm" parent="Node2/magmar/body" index="7"]
+transform = Transform3D(0.582563, 0.766044, 0.271654, -0.694272, 0.642788, -0.323744, -0.422618, 0, 0.906308, 0.390625, 0.25, -0.078125)
+
+[node name="righthand" parent="Node2/magmar/body/rightarm" index="4"]
+transform = Transform3D(0.92388, -0.146447, 0.353553, 0, 0.92388, 0.382683, -0.382683, -0.353553, 0.853553, 0.3125, 0, 0)
+
+[node name="rightlilfinger" parent="Node2/magmar/body/rightarm/righthand" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0.1875, -0.046875, -0.0625)
+
+[node name="leftfoot" parent="Node2/magmar/body/leftleg/leftknee" index="1"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, 0, -0.125, 0)
+
+[node name="rightfoot" parent="Node2/magmar/body/rightleg/rightknee" index="1"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0, -0.125, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_kk1q7")
+}

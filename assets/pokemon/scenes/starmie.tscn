@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=3 uid="uid://dweyqdc4lj3qj"]
+
+[ext_resource type="PackedScene" uid="uid://den0xnmt5l8n2" path="res://assets/pokemon/gltf/starmie.gltf" id="1_qiwr2"]
+
+[sub_resource type="Animation" id="Animation_mak7w"]
+resource_name = "animation_starmie_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/starmie/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.46875, -0.078125)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/starmie/body/arm_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0.0654031, 0.997859)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/starmie/body/arm_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.0654031, 0.997859)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/starmie/body/leg_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.5373, 0.843391)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/starmie/body/leg_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.5373, 0.843391)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/starmie/back/arm_back_bottom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, -0.046875, 0.109375)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/starmie/back/arm_back_bottom")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.0654031, 0, 0, 0.997859)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/starmie/back/arm_back_bottom/arm_back_bottom22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.0654031, 0, 0, 0.997859)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/starmie/back/leg_back_left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.00610444, 0.0209434, 0.279762, 0.959821)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/starmie/back/leg_back_right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.00610444, -0.0209434, -0.279762, 0.959821)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/starmie/back/arm_back_left")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.00834819, 0.0201543, -0.382592, 0.92366)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/starmie/back/arm_back_right")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0.00834819, -0.0201543, 0.382592, 0.92366)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vks78"]
+_data = {
+"animation_starmie_ground_idle": SubResource("Animation_mak7w")
+}
+
+[node name="starmie" instance=ExtResource("1_qiwr2")]
+
+[node name="body" parent="Node2/starmie" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46875, -0.078125)
+
+[node name="arm_left" parent="Node2/starmie/body" index="11"]
+transform = Transform3D(0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0, 1, -0.09375, 0.09375, 0.0625)
+
+[node name="arm_right" parent="Node2/starmie/body" index="12"]
+transform = Transform3D(0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0, 0, 1, 0.09375, 0.09375, 0.0625)
+
+[node name="leg_left" parent="Node2/starmie/body" index="13"]
+transform = Transform3D(0.422618, -0.906308, 0, 0.906308, 0.422618, 0, 0, 0, 1, -0.0625, -0.03125, 0.0625)
+
+[node name="leg_right" parent="Node2/starmie/body" index="14"]
+transform = Transform3D(0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0, 1, 0.0625, -0.03125, 0.0625)
+
+[node name="arm_back_bottom" parent="Node2/starmie/back" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, 0, -0.046875, 0.109375)
+
+[node name="arm_back_bottom22" parent="Node2/starmie/back/arm_back_bottom" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, 0, -0.1875, 0)
+
+[node name="leg_back_left" parent="Node2/starmie/back" index="2"]
+transform = Transform3D(0.842589, -0.5373, 0.0367882, 0.536788, 0.843391, 0.0234367, -0.0436194, 0, 0.999048, -0.09375, -0.03125, 0.109375)
+
+[node name="leg_back_right" parent="Node2/starmie/back" index="3"]
+transform = Transform3D(0.842589, 0.5373, -0.0367882, -0.536788, 0.843391, 0.0234367, 0.0436194, 0, 0.999048, 0.09375, -0.03125, 0.109375)
+
+[node name="arm_back_left" parent="Node2/starmie/back" index="4"]
+transform = Transform3D(0.706434, 0.707107, 0.0308436, -0.706434, 0.707107, -0.0308436, -0.0436194, 3.72529e-09, 0.999048, -0.0625, 0.09375, 0.109375)
+
+[node name="arm_back_right" parent="Node2/starmie/back" index="5"]
+transform = Transform3D(0.706434, -0.707107, -0.0308436, 0.706434, 0.707107, -0.0308436, 0.0436194, 3.72529e-09, 0.999048, 0.0625, 0.09375, 0.109375)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_vks78")
+}

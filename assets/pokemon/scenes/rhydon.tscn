@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://bonfedob8hvu2"]
+
+[ext_resource type="PackedScene" uid="uid://tffo743x4xkf" path="res://assets/pokemon/gltf/rhydon.gltf" id="1_f1uf4"]
+
+[sub_resource type="Animation" id="Animation_kk6wr"]
+resource_name = "animation_rhydon_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/rhydon/body/leftarm")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.383022, -0.0714973, 0.383022, 0.837542)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/rhydon/body/leftarm/lefthand")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.19509, 0, 0.980785)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/rhydon/body/rightarm")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.383022, 0.0714973, -0.383022, 0.837542)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/rhydon/body/rightarm/righthand")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.19509, 0, 0.980785)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/rhydon/body/tail")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0784591, 0, 0, 0.996917)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/rhydon/body/tail/tail2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.19509, 0, 0, 0.980785)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/rhydon/body/tail/tail2/tail3")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.2292, 0, 0, 0.973379)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/rhydon/body/tail/tail2/tail3/tail4")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.254602, 0, 0, 0.967046)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yq4oq"]
+_data = {
+"animation_rhydon_ground_idle": SubResource("Animation_kk6wr")
+}
+
+[node name="rhydon" instance=ExtResource("1_f1uf4")]
+
+[node name="leftarm" parent="Node2/rhydon/body" index="1"]
+transform = Transform3D(0.696364, -0.586824, -0.413176, 0.696364, 0.413176, 0.586824, -0.173648, -0.696364, 0.696364, -0.40625, 0.20029, -0.264598)
+
+[node name="lefthand" parent="Node2/rhydon/body/leftarm" index="0"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, -0.3125, 0, 0)
+
+[node name="rightarm" parent="Node2/rhydon/body" index="2"]
+transform = Transform3D(0.696364, 0.586824, 0.413176, -0.696364, 0.413176, 0.586824, 0.173648, -0.696364, 0.696364, 0.40625, 0.20029, -0.264598)
+
+[node name="righthand" parent="Node2/rhydon/body/rightarm" index="0"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, 0.3125, 0, 0)
+
+[node name="tail" parent="Node2/rhydon/body" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.987688, 0.156434, 0, -0.156434, 0.987688, 0, -0.42471, -0.123973)
+
+[node name="tail2" parent="Node2/rhydon/body/tail" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, -0.03125, 0.65625)
+
+[node name="tail3" parent="Node2/rhydon/body/tail/tail2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.894934, -0.446198, 0, 0.446198, 0.894934, 0, -0.03125, 0.4375)
+
+[node name="tail4" parent="Node2/rhydon/body/tail/tail2/tail3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.870356, -0.492424, 0, 0.492424, 0.870356, 0, -0.03125, 0.375)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_yq4oq")
+}

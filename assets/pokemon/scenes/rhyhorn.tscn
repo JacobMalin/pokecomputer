@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnttfw1yt2x4n"]
+
+[ext_resource type="PackedScene" uid="uid://s2ayoykb30yf" path="res://assets/pokemon/gltf/rhyhorn.gltf" id="1_w3nxm"]
+
+[node name="rhyhorn" instance=ExtResource("1_w3nxm")]

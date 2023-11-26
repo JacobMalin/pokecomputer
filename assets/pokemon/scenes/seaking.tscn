@@ -1,0 +1,217 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyorqc4g3bihf"]
+
+[ext_resource type="PackedScene" uid="uid://bx2b72a2g5vbk" path="res://assets/pokemon/gltf/seaking.gltf" id="1_imwtt"]
+
+[sub_resource type="Animation" id="Animation_rkqgo"]
+resource_name = "animation_seaking_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seaking/body/lefttail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.177606, -0.120911, -0.0652333, 0.974465)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seaking/body/righttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.177606, 0.120911, 0.0652333, 0.974465)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seaking/body/rightwing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.237686, 0.971342)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/seaking/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.237686, 0.971342)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/seaking")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/seaking/body")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_jp21k"]
+resource_name = "animation_seaking_male_render2"
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seaking")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.1875, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seaking/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0644095, -0.173276, 0.0113571, 0.982699)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seaking/body/lefttail")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0854811, -0.194348, -0.0170032, 0.977053)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/seaking/body/righttail")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.0648436, 0.130247, 0.00853682, 0.989322)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/seaking/body/rightwing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.0158093, -0.0406536, -0.362093, 0.931121)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/seaking/body/leftwing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.161451, 0.147146, 0.29599, 0.929877)
+
+[sub_resource type="Animation" id="Animation_0pho0"]
+resource_name = "animation_seaking_water_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seaking/body/lefttail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0337827, -0.256605, -0.126079, 0.957662)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seaking/body/righttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0337827, 0.256605, 0.126079, 0.957662)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seaking/body/rightwing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.126079, 0.0337827, -0.256605, 0.957662)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/seaking/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.126079, -0.0337827, 0.256605, 0.957662)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/seaking")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/seaking/body")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_bo7o1"]
+resource_name = "animation_seaking_water_swim"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/seaking/body/lefttail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0170371, -0.12941, -0.12941, 0.982963)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/seaking/body/righttail")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0170371, 0.12941, 0.12941, 0.982963)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/seaking/body/rightwing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.158494, -0.0915064, -0.270866, 0.94506)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/seaking/body/leftwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.158494, 0.0915064, 0.270866, 0.94506)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/seaking")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/seaking/body")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3tfy8"]
+_data = {
+"animation_seaking_ground_idle": SubResource("Animation_rkqgo"),
+"animation_seaking_male_render2": SubResource("Animation_jp21k"),
+"animation_seaking_water_idle": SubResource("Animation_0pho0"),
+"animation_seaking_water_swim": SubResource("Animation_bo7o1")
+}
+
+[node name="seaking" instance=ExtResource("1_imwtt")]
+
+[node name="lefttail" parent="Node2/seaking/body" index="6"]
+transform = Transform3D(0.933013, 0.258819, -0.25, -0.25, 0.965926, 0.0669873, 0.258819, 7.45058e-09, 0.965926, -0.078125, 0.03125, 0.3125)
+
+[node name="righttail" parent="Node2/seaking/body" index="7"]
+transform = Transform3D(0.933013, -0.258819, 0.25, 0.25, 0.965926, 0.0669873, -0.258819, 7.45058e-09, 0.965926, 0.078125, 0.03125, 0.3125)
+
+[node name="rightwing" parent="Node2/seaking/body" index="8"]
+transform = Transform3D(0.836516, 0.540976, -0.0870968, -0.482963, 0.803023, 0.349144, 0.258819, -0.25, 0.933013, 0.15625, -0.078125, -0.046875)
+
+[node name="leftwing" parent="Node2/seaking/body" index="9"]
+transform = Transform3D(0.836516, -0.540976, 0.0870968, 0.482963, 0.803023, 0.349144, -0.258819, -0.25, 0.933013, -0.15625, -0.078125, -0.046875)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_3tfy8")
+}
