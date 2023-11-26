@@ -1,8 +1,8 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1701026997
+::res://::1701027302
 icon.svg::CompressedTexture2D::3125826134986704003::1699581277::1699577173::1::::<><>::
 openxr_action_map.tres::OpenXRActionMap::3200967946364024338::1699720617::0::1::::<><>::
-pokemon_movement.gd::GDScript::-1::1700615539::0::1::::<>CharacterBody3D<>::
+pokemon_movement.gd::GDScript::-1::1701027302::0::1::::<>CharacterBody3D<>::
 README.md::TextFile::-1::1700611560::0::1::::<><>::
 ::res://addons/::1699720616
 ::res://addons/godot-xr-tools/::1699720616
@@ -88,7 +88,7 @@ hand_physics_bone.gd::GDScript::-1::1699720616::0::1::::XRToolsHandPhysicsBone<>
 License.md::TextFile::-1::1699720616::0::1::::<><>::
 physics_hand.gd::GDScript::-1::1699720616::0::1::::XRToolsPhysicsHand<>XRToolsHand<>::
 ::res://addons/godot-xr-tools/hands/animations/::1699720616
-::res://addons/godot-xr-tools/hands/animations/left/::1700615539
+::res://addons/godot-xr-tools/hands/animations/left/::1701027302
 AnimationPlayer.tscn::PackedScene::1348338211824726535::1699720616::0::1::::<><>::uid://dgfeikrugfewi
 Cup.res::Animation::7590974708412206284::1699720616::0::1::::<><>::
 Default pose.res::Animation::7978875689906027064::1699720616::0::1::::<><>::
@@ -99,7 +99,7 @@ Grip 4.res::Animation::7295099457076786082::1699720616::0::1::::<><>::
 Grip 5.res::Animation::2673866244220991652::1699720616::0::1::::<><>::
 Grip Shaft.res::Animation::947226568896451102::1699720616::0::1::::<><>::
 Grip.res::Animation::1075547560655330150::1699720616::0::1::::<><>::
-hand_blend_tree.tres::AnimationNodeBlendTree::8000931627586676636::1700615539::0::1::::<><>::
+hand_blend_tree.tres::AnimationNodeBlendTree::8000931627586676636::1701027302::0::1::::<><>::
 Hold.res::Animation::3002329105171642897::1699720616::0::1::::<><>::
 Horns.res::Animation::6748282567936908705::1699720616::0::1::::<><>::
 Metal.res::Animation::7519107566372913432::1699720616::0::1::::<><>::
@@ -126,7 +126,7 @@ Sign_Point.res::Animation::6570490880079797409::1699720616::0::1::::<><>::
 Straight.res::Animation::2049549906742426534::1699720616::0::1::::<><>::
 Surfer.res::Animation::8978704289758581818::1699720616::0::1::::<><>::
 Thumb.res::Animation::4009559863906171416::1699720616::0::1::::<><>::
-::res://addons/godot-xr-tools/hands/animations/right/::1700615539
+::res://addons/godot-xr-tools/hands/animations/right/::1701027302
 AnimationPlayer.tscn::PackedScene::4018207629101171331::1699720616::0::1::::<><>::uid://do01jton6rk42
 Cup.res::Animation::8195111040024005301::1699720616::0::1::::<><>::
 Default pose.res::Animation::753131858148690599::1699720616::0::1::::<><>::
@@ -137,7 +137,7 @@ Grip 4.res::Animation::9032470046656576133::1699720616::0::1::::<><>::
 Grip 5.res::Animation::1318376778329847596::1699720616::0::1::::<><>::
 Grip Shaft.res::Animation::7095643256860440737::1699720616::0::1::::<><>::
 Grip.res::Animation::4920554403641237694::1699720616::0::1::::<><>::
-hand_blend_tree.tres::AnimationNodeBlendTree::912215260637445682::1700615539::0::1::::<><>::
+hand_blend_tree.tres::AnimationNodeBlendTree::912215260637445682::1701027302::0::1::::<><>::
 Hold.res::Animation::3923507217133086158::1699720616::0::1::::<><>::
 Horns.res::Animation::5002304244875762093::1699720616::0::1::::<><>::
 Metal.res::Animation::4232978752073040327::1699720616::0::1::::<><>::
@@ -166,12 +166,12 @@ Surfer.res::Animation::3575640989461724693::1699720616::0::1::::<><>::
 Thumb.res::Animation::9096268991651288585::1699720616::0::1::::<><>::
 ::res://addons/godot-xr-tools/hands/blend/::1699720616
 ::res://addons/godot-xr-tools/hands/blend/animations/::1699720616
-::res://addons/godot-xr-tools/hands/materials/::1700615539
+::res://addons/godot-xr-tools/hands/materials/::1701027302
 african_hands.material::ORMMaterial3D::5169467269350191889::1699720616::0::1::::<><>::uid://ijfutijrsylw
 african_hands_realistic.material::ORMMaterial3D::671277456893080278::1699720616::0::1::::<><>::uid://cnmcg22m0soxy
 caucasian_hand.material::ORMMaterial3D::7273175768992021098::1700522037::0::1::::<><>::uid://c506svon268ms
 caucasian_hands_realistic.material::ORMMaterial3D::8233322067701775964::1699720616::0::1::::<><>::uid://buo1o13fo7okd
-cleaning_glove.material::ORMMaterial3D::2439686247163898357::1700615539::0::1::::<><>::uid://dv711ytktesj2::::res://addons/godot-xr-tools/hands/textures/cleaning_glove_baseColor.png<>uid://yslwgnpbpeen::::res://addons/godot-xr-tools/hands/textures/glove_occlusionRoughnessMetallic.png<>uid://dt6k4nuvpo38o::::res://addons/godot-xr-tools/hands/textures/glove_normal.png
+cleaning_glove.material::ORMMaterial3D::2439686247163898357::1701027302::0::1::::<><>::uid://dv711ytktesj2::::res://addons/godot-xr-tools/hands/textures/cleaning_glove_baseColor.png<>uid://yslwgnpbpeen::::res://addons/godot-xr-tools/hands/textures/glove_occlusionRoughnessMetallic.png<>uid://dt6k4nuvpo38o::::res://addons/godot-xr-tools/hands/textures/glove_normal.png
 ghost_hand.tres::StandardMaterial3D::1105461953267014217::1699720616::0::1::::<><>::uid://dgkfppran5j1f
 glove_african_dark_camo.material::ORMMaterial3D::2265251246304334194::1699720616::0::1::::<><>::uid://bf5sf1lr5enkj
 glove_african_green_camo.material::ORMMaterial3D::4506712752526562566::1699720616::0::1::::<><>::uid://bidphehpipwhg
@@ -307,9 +307,9 @@ grab_point_hand_left.tscn::PackedScene::6731369851445284540::1699720616::0::1:::
 grab_point_hand_right.tscn::PackedScene::6153811939661709129::1699720616::0::1::::<><>::res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd
 grab_point_snap.gd::GDScript::-1::1699720616::0::1::::XRToolsGrabPointSnap<>XRToolsGrabPoint<>::
 grab_point_snap.tscn::PackedScene::7719103290742080710::1699720616::0::1::::<><>::res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.gd
-::res://addons/godot-xr-tools/objects/highlight/::1700615539
+::res://addons/godot-xr-tools/objects/highlight/::1701027302
 highlight_material.gd::GDScript::-1::1699720616::0::1::::XRToolsHighlightMaterial<>Node<>::
-highlight_ring.gd::GDScript::-1::1700615539::0::1::::XRToolsHighlightRing<>MeshInstance3D<>::
+highlight_ring.gd::GDScript::-1::1701027302::0::1::::XRToolsHighlightRing<>MeshInstance3D<>::
 highlight_ring.tres::StandardMaterial3D::-1::1699720616::0::1::::<><>::res://addons/godot-xr-tools/images/ring.png
 highlight_ring.tscn::PackedScene::7215983681683480321::1699720616::0::1::::<><>::res://addons/godot-xr-tools/objects/highlight/highlight_ring.gd<>res://addons/godot-xr-tools/objects/highlight/highlight_ring.tres
 highlight_visible.gd::GDScript::-1::1699720616::0::1::::XRToolsHighlightVisible<>Node3D<>::
@@ -348,13 +348,13 @@ user_settings_ui.tscn::PackedScene::1724889644455503399::1699720616::0::1::::<><
 ::res://addons/godot-xr-tools/xr/::1699720616
 start_xr.gd::GDScript::-1::1699720616::0::1::::XRToolsStartXR<>Node<>::
 start_xr.tscn::PackedScene::5550875170460828808::1699720616::0::1::::<><>::res://addons/godot-xr-tools/xr/start_xr.gd
-::res://assets/::1701026891
-hand_material.tres::StandardMaterial3D::5058422016094088577::1700615539::0::1::::<><>::
+::res://assets/::1701027302
+hand_material.tres::StandardMaterial3D::5058422016094088577::1701027302::0::1::::<><>::
 ::res://assets/bgm/::1700615365
 Oak Pokémon Lab [Pokémon_ FireRed & LeafGreen].mp3::AudioStreamMP3::2119798782182047495::1700611547::1700615365::1::::<><>::
-::res://assets/pokeball/::1700615539
+::res://assets/pokeball/::1701027302
 pokeball.FBX::PackedScene::4678620819199615417::1700522037::1700522037::1::::<><>::
-pokeball_highlight.tres::ArrayMesh::2390871035468156381::1700615539::0::1::::<><>::
+pokeball_highlight.tres::ArrayMesh::2390871035468156381::1701027302::0::1::::<><>::
 ::res://assets/pokeball/sound_effects/::1700615365
 pokeball_close.mp3::AudioStreamMP3::9220037538579024192::1700611229::1700615365::1::::<><>::
 pokeball_open.mp3::AudioStreamMP3::9137352291486067634::1700611054::1700615365::1::::<><>::
@@ -1414,13 +1414,16 @@ weezing.mp3::AudioStreamMP3::7271508225110232218::1700522038::1700522038::1::::<
 wigglytuff.mp3::AudioStreamMP3::8307590390795330381::1700522038::1700522038::1::::<><>::
 zapdos.mp3::AudioStreamMP3::4705658667514712667::1700522038::1700522038::1::::<><>::
 zubat.mp3::AudioStreamMP3::1665763078814410024::1700522038::1700522038::1::::<><>::
-::res://assets/pokemon/gltf/::1701027036
+::res://assets/pokemon/gltf/::1701029102
 abra.gltf::PackedScene::2009949732749013263::1700619654::1700620063::1::::<><>::uid://dyuu58yoyo4ag
 abra_0.png::CompressedTexture2D::8886351538160364586::1700620063::1700620064::1::::<><>::
+alakazam.gltf::PackedScene::5899751711027062825::1701028009::1701028289::1::::<><>::uid://b83ix1e6xba4v::::res://assets/pokemon/gltf/alakazam_0.png
 arbok.gltf::PackedScene::3134061962792991883::1700617601::1700617659::1::::<><>::uid://c464ywo8rv25m
 arbok_0.png::CompressedTexture2D::6874118373772848588::1700617659::1700617660::1::::<><>::
+arcanine.gltf::PackedScene::6482905836363050174::1701028058::1701028289::1::::<><>::uid://c7i5ych5u0wrc::::res://assets/pokemon/gltf/arcanine_0.png
 beedrill.gltf::PackedScene::8104647585730333213::1700616947::1700617020::1::::<><>::uid://dn1bsofdkyabw
 beedrill_0.png::CompressedTexture2D::8125484444463870008::1700617020::1700617022::1::::<><>::
+bellsprout.gltf::PackedScene::7547951026017416820::1701028090::1701028290::1::::<><>::uid://byxifc8pnjm5k::::res://assets/pokemon/gltf/bellsprout_0.png
 blastoise.gltf::PackedScene::5033199689877689522::1700616515::1700617020::1::::<><>::uid://dh0eomrcc6gws
 blastoise_0.png::CompressedTexture2D::7702461926119405102::1700617020::1700617022::1::::<><>::
 bulbasaur.gltf::PackedScene::4335987424693373289::1699720617::1699720617::1::::<><>::
@@ -1439,11 +1442,12 @@ clefable.gltf::PackedScene::1250387422404732331::1700618333::1700620062::1::::<>
 clefable_0.png::CompressedTexture2D::4670276346935221030::1700620062::1700620064::1::::<><>::
 clefairy.gltf::PackedScene::7274720525115776835::1700618301::1700620062::1::::<><>::uid://dxtqfthfk21i1
 clefairy_0.png::CompressedTexture2D::8813810041933887338::1700620062::1700620064::1::::<><>::
-com_bm_pc02.obj::Mesh::3121786551809664726::1701027035::1701027036::1::::<><>::
+diglett.gltf::PackedScene::6963008451421974765::1701028125::1701028290::1::::<><>::uid://i4hmy6kml3j5::::res://assets/pokemon/gltf/diglett_0.png
 dugtrio.gltf::PackedScene::6851600434600073195::1700619096::1700620062::1::::<><>::uid://mbih3nx2g7ry
 dugtrio_0.png::CompressedTexture2D::844830229727545050::1700620062::1700620064::1::::<><>::
 ekans.gltf::PackedScene::2798697778822080854::1700617468::1700617659::1::::<><>::uid://cm04pj0tyirq7
 ekans_0.png::CompressedTexture2D::5668505026818827492::1700617659::1700617660::1::::<><>::
+fearow.gltf::PackedScene::8865249295076119649::1701028172::1701028290::1::::<><>::uid://crolfp5aopgkb::::res://assets/pokemon/gltf/fearow_0.png
 geodude.gltf::PackedScene::6872711135240179726::1700620004::1700620062::1::::<><>::uid://sm1qqadfns7m
 geodude_0.png::CompressedTexture2D::1289779773564829740::1700620062::1700620064::1::::<><>::
 gloom.gltf::PackedScene::2450104544409746530::1700618854::1700620062::1::::<><>::uid://b1di38a77pyqx
@@ -1452,10 +1456,14 @@ golbat.gltf::PackedScene::7909850898747525507::1700618749::1700620061::1::::<><>
 golbat_0.png::CompressedTexture2D::4220188087021510754::1700620061::1700620064::1::::<><>::
 golduck.gltf::PackedScene::2068304145207956647::1700619253::1700620061::1::::<><>::uid://cxwy5rk8dyptw
 golduck_0.png::CompressedTexture2D::6434112773143139944::1700620061::1700620064::1::::<><>::
+golem.gltf::PackedScene::3770706463503842133::1701028204::1701028290::1::::<><>::uid://cfu8fjqf0mah0::::res://assets/pokemon/gltf/golem_0.png
+graveler.gltf::PackedScene::3592026197420072894::1701028242::1701028290::1::::<><>::uid://bsd5ptplxehdt::::res://assets/pokemon/gltf/graveler_0.png
+growlithe.gltf::PackedScene::505209696969662714::1701028273::1701028290::1::::<><>::uid://bmuoracp0qhl3::::res://assets/pokemon/gltf/growlithe_0.png
 ivysaur.gltf::PackedScene::3438459465577158195::1700615344::1700615415::1::::<><>::uid://rltiffmrcvnn
 ivysaur_0.png::CompressedTexture2D::1217086677263828987::1700615365::1700615367::1::::<><>::
 jigglypuff.gltf::PackedScene::4757500010430917616::1700618595::1700620061::1::::<><>::uid://brh5sxltjelvk
 jigglypuff_0.png::CompressedTexture2D::3595936549796724688::1700620061::1700620064::1::::<><>::
+kadabra.gltf::PackedScene::228270162092102884::1701028350::1701029110::1::::<><>::uid://dpo4wrirjr1ga::::res://assets/pokemon/gltf/kadabra_0.png
 kakuna.gltf::PackedScene::7840041578412441722::1700616893::1700617021::1::::<><>::uid://dpi1pcvf5hwia
 kakuna_0.png::CompressedTexture2D::8230215294157929696::1700617021::1700617022::1::::<><>::
 machamp.gltf::PackedScene::8029832042740682427::1700619780::1700620061::1::::<><>::uid://563mkk817407
@@ -1466,18 +1474,32 @@ machop.gltf::PackedScene::4319524731391500922::1700619726::1700620060::1::::<><>
 machop_0.png::CompressedTexture2D::6745430326259735167::1700620060::1700620064::1::::<><>::
 mankey.gltf::PackedScene::5945920502892381417::1700619283::1700620060::1::::<><>::uid://e2wncej1vhjc
 mankey_0.png::CompressedTexture2D::337852674743784632::1700620060::1700620064::1::::<><>::
+meowth.gltf::PackedScene::468082179545882421::1701028404::1701029110::1::::<><>::uid://cl1g8qmf8n3vx::::res://assets/pokemon/gltf/meowth_0.png
 metapod.gltf::PackedScene::5644778204703803094::1700616696::1700617021::1::::<><>::uid://bf8gq3j2mdq7l
 metapod_0.png::CompressedTexture2D::2805883728226286467::1700617021::1700617022::1::::<><>::
+nidoking.gltf::PackedScene::3036732442290965919::1701028448::1701029110::1::::<><>::uid://bh1l2x8a58dhg::::res://assets/pokemon/gltf/nidoking_0.png
+nidoqueen.gltf::PackedScene::6657196591057387015::1701028483::1701029109::1::::<><>::uid://cyrg17xlooijl::::res://assets/pokemon/gltf/nidoqueen_0.png
+nidoranf.gltf::PackedScene::1368865245914899345::1701028507::1701029109::1::::<><>::uid://bslcvsmtchmo1::::res://assets/pokemon/gltf/nidoranf_0.png
+nidoranm.gltf::PackedScene::559415552703460543::1701028538::1701029109::1::::<><>::uid://bmxj0tdu8nogu::::res://assets/pokemon/gltf/nidoranm_0.png
+nidorina.gltf::PackedScene::3003366811101625314::1701028577::1701029109::1::::<><>::uid://bf7lbyxsnjcxq::::res://assets/pokemon/gltf/nidorina_0.png
+nidorino.gltf::PackedScene::7602373664503762328::1701028599::1701029109::1::::<><>::uid://c142jbngx4gdq::::res://assets/pokemon/gltf/nidorino_0.png
+ninetales.gltf::PackedScene::8348941339305463442::1701028636::1701029109::1::::<><>::uid://bxhubjpt7wrr2::::res://assets/pokemon/gltf/ninetales_0.png
 oddish.gltf::PackedScene::4916242463368443555::1700618815::1700620060::1::::<><>::uid://n6wasc54vgfv
 oddish_0.png::CompressedTexture2D::977787401423696655::1700620060::1700620064::1::::<><>::
 paras.gltf::PackedScene::7007776450331402149::1700618928::1700620060::1::::<><>::uid://depvmv07lksyf
 parasect.gltf::PackedScene::8879242812095500953::1700618960::1700620060::1::::<><>::uid://bwtyo2ibx4wyx
 parasect_0.png::CompressedTexture2D::3971282060564239383::1700620059::1700620064::1::::<><>::
 paras_0.png::CompressedTexture2D::7472280721396795197::1700620060::1700620064::1::::<><>::
+persian.gltf::PackedScene::1591675721742052384::1701028688::1701029108::1::::<><>::uid://drtbnilnh4onu::::res://assets/pokemon/gltf/persian_0.png
+pidgeot.gltf::PackedScene::6634181869562803145::1701028758::1701029108::1::::<><>::uid://bs50a38rf7wfq::::res://assets/pokemon/gltf/pidgeot_0.png
+pidgeotto.gltf::PackedScene::7552224317199602568::1701028810::1701029108::1::::<><>::uid://c5k5don4vusws::::res://assets/pokemon/gltf/pidgeotto_0.png
+pidgey.gltf::PackedScene::7746070296246451550::1701028858::1701029108::1::::<><>::uid://duka1gwlxqvo5::::res://assets/pokemon/gltf/pidgey_0.png
 pikachu.gltf::PackedScene::6104029428610515976::1700617654::1700617659::1::::<><>::uid://c8hjc2u8lvong
 pikachu_0.png::CompressedTexture2D::7104075326783850096::1700617659::1700617660::1::::<><>::
+poliwag.gltf::PackedScene::6554107724082022816::1701028905::1701029108::1::::<><>::uid://foisgbcb0myf::::res://assets/pokemon/gltf/poliwag_0.png
 poliwhirl.gltf::PackedScene::2570846056728155473::1700619448::1700620059::1::::<><>::uid://dvc817tygct5b
 poliwhirl_0.png::CompressedTexture2D::8639408325585981689::1700620059::1700620064::1::::<><>::
+poliwrath.gltf::PackedScene::499220665548940937::1701028953::1701029107::1::::<><>::uid://cyyrveba5lmfd::::res://assets/pokemon/gltf/poliwrath_0.png
 primeape.gltf::PackedScene::444081056145941059::1700619318::1700620059::1::::<><>::uid://cef8demu26gnb
 primeape_0.png::CompressedTexture2D::5065927878428707451::1700620059::1700620064::1::::<><>::
 psyduck.gltf::PackedScene::2215268625373337142::1700619203::1700620059::1::::<><>::uid://bjhkeyyv7ftm5
@@ -1488,24 +1510,59 @@ raticate.gltf::PackedScene::5413605149632352631::1700617379::1700617660::1::::<>
 raticate_0.png::CompressedTexture2D::37967064991842267::1700617660::1700617660::1::::<><>::
 rattata.gltf::PackedScene::7324602881066953615::1700617318::1700617660::1::::<><>::uid://djloarjja03gm
 rattata_0.png::CompressedTexture2D::7814520744225108848::1700617660::1700617660::1::::<><>::
+alakazam_0.png::CompressedTexture2D::4760983283289383367::1701028289::1701028291::1::::<><>::
+arcanine_0.png::CompressedTexture2D::7037263871923557284::1701028289::1701028291::1::::<><>::
+bellsprout_0.png::CompressedTexture2D::4118928440985427694::1701028289::1701028291::1::::<><>::
+diglett_0.png::CompressedTexture2D::621825461368412248::1701028290::1701028291::1::::<><>::
+fearow_0.png::CompressedTexture2D::5995630647893235269::1701028290::1701028291::1::::<><>::
+golem_0.png::CompressedTexture2D::5167086228076456727::1701028290::1701028291::1::::<><>::
+graveler_0.png::CompressedTexture2D::3657862320777840453::1701028290::1701028291::1::::<><>::
+growlithe_0.png::CompressedTexture2D::3270854762630984862::1701028290::1701028291::1::::<><>::
+poliwrath_0.png::CompressedTexture2D::6507988583024188117::1701029107::1701029111::1::::<><>::
+poliwag_0.png::CompressedTexture2D::380363703757528381::1701029108::1701029111::1::::<><>::
+pidgey_0.png::CompressedTexture2D::8583729481679052958::1701029108::1701029111::1::::<><>::
+pidgeotto_0.png::CompressedTexture2D::6900978077988337430::1701029108::1701029111::1::::<><>::
+pidgeot_0.png::CompressedTexture2D::3713270649031355842::1701029108::1701029111::1::::<><>::
+persian_0.png::CompressedTexture2D::8391779940347340606::1701029108::1701029111::1::::<><>::
+ninetales_0.png::CompressedTexture2D::4016431354084636785::1701029108::1701029111::1::::<><>::
+nidorino_0.png::CompressedTexture2D::6659273760702918886::1701029109::1701029111::1::::<><>::
+nidorina_0.png::CompressedTexture2D::2804095959653983678::1701029109::1701029111::1::::<><>::
+nidoranm_0.png::CompressedTexture2D::3276759597006786000::1701029109::1701029111::1::::<><>::
+nidoranf_0.png::CompressedTexture2D::3672687924954068062::1701029109::1701029111::1::::<><>::
+nidoqueen_0.png::CompressedTexture2D::6492880485912885965::1701029109::1701029111::1::::<><>::
+nidoking_0.png::CompressedTexture2D::2932133773177735080::1701029109::1701029111::1::::<><>::
+meowth_0.png::CompressedTexture2D::5599016561348648425::1701029110::1701029111::1::::<><>::
+kadabra_0.png::CompressedTexture2D::8242796980503276396::1701029110::1701029111::1::::<><>::
+spearow_0.png::CompressedTexture2D::7598914290578545482::1701029107::1701029111::1::::<><>::
+venomoth_0.png::CompressedTexture2D::583233575303445407::1701029107::1701029111::1::::<><>::
+venonat_0.png::CompressedTexture2D::3949973978549462466::1701029107::1701029111::1::::<><>::
+victreebel_0.png::CompressedTexture2D::8494679067313989612::1701029107::1701029111::1::::<><>::
+vulpix_0.png::CompressedTexture2D::1799828912782961869::1701029107::1701029111::1::::<><>::
+weepinbell_0.png::CompressedTexture2D::1549525654797563135::1701029106::1701029111::1::::<><>::
 sandshrew.gltf::PackedScene::4171116923202497800::1700618074::1700620059::1::::<><>::
 sandshrew_0.png::CompressedTexture2D::7200529626750475324::1700620059::1700620064::1::::<><>::
 sandslash.gltf::PackedScene::6684726488270241699::1700618115::1700620059::1::::<><>::
-sandslash_0.png::CompressedTexture2D::5671837337616959430::1700620058::1700620064::1::::<><>::
+sandslash_0.png::PackedScene::3061804055557555432::1701028977::1701029107::1::::<><>::uid://dgi8ajol48t3o::::res://assets/pokemon/gltf/spearow_0.png
+spearow.gltf::::-1::1701028977::0::0::::<><>::
 squirtle.gltf::PackedScene::3749710906610491732::1699720617::1699720617::1::::<><>::
 squirtle_0.png::PackedScene::1280086371852830973::1699720617::1700522038::1::::<><>::uid://d1su58krk6b6x
 tentacool.gltf::PackedScene::2136466105272373124::1700619904::1700620058::1::::<><>::
 tentacool_0.png::CompressedTexture2D::66972334141506597::1700620058::1700620064::1::::<><>::
 tentacruel.gltf::PackedScene::8987184057889770742::1700619962::1700620058::1::::<><>::
-tentacruel_0.png::CompressedTexture2D::6139248784746927242::1700620058::1700620064::1::::<><>::
+tentacruel_0.png::PackedScene::3030321858588875710::1701029008::1701029107::1::::<><>::uid://ikr1if2b3m4f::::res://assets/pokemon/gltf/venomoth_0.png
+venomoth.gltf::PackedScene::8498343381789560987::1701029034::1701029107::1::::<><>::uid://bwjnq2pcxn11o::::res://assets/pokemon/gltf/venonat_0.png
+venonat.gltf::::-1::1701029034::0::0::::<><>::
 venusaur.gltf::PackedScene::8474989850551364964::1700615951::1700615955::1::::<><>::uid://pg4bulopyreq
-venusaur_0.png::CompressedTexture2D::9022600448419282417::1700615955::1700615956::1::::<><>::
+venusaur_0.png::PackedScene::3272373775811112047::1701029055::1701029107::1::::<><>::uid://dta5egmkp8gp5::::res://assets/pokemon/gltf/victreebel_0.png
+victreebel.gltf::::-1::1701029055::0::0::::<><>::
 vileplume.gltf::PackedScene::6178946124799205497::1700618898::1700620058::1::::<><>::
-vileplume_0.png::CompressedTexture2D::2433851490749436520::1700620058::1700620064::1::::<><>::
+vileplume_0.png::PackedScene::4968893447199220093::1701029074::1701029107::1::::<><>::uid://0v36ivve5s8t::::res://assets/pokemon/gltf/vulpix_0.png
+vulpix.gltf::::-1::1701029074::0::0::::<><>::
 wartortle.gltf::PackedScene::4776807529767973499::1700616394::1700617021::1::::<><>::uid://jsbw5wt77su0
 wartortle_0.png::CompressedTexture2D::1066982567795932300::1700617021::1700617022::1::::<><>::
 weedle.gltf::PackedScene::4776807529767973499::1700616864::1700617021::1::::<><>::
-weedle_0.png::CompressedTexture2D::668960007367558121::1700617021::1700617022::1::::<><>::
+weedle_0.png::PackedScene::8880168238321322110::1701029102::1701029107::1::::<><>::uid://wcupxc48lgr4::::res://assets/pokemon/gltf/weepinbell_0.png
+weepinbell.gltf::::-1::1701029102::0::0::::<><>::
 wigglytuff.gltf::PackedScene::1634540299900661884::1700618637::1700620058::1::::<><>::
 wigglytuff_0.png::CompressedTexture2D::2203636311152340524::1700620058::1700620064::1::::<><>::
 zubat.gltf::PackedScene::5955356342278509939::1700618695::1700620057::1::::<><>::
@@ -1558,20 +1615,20 @@ wartortle.tscn::PackedScene::3681849151828487304::1700620226::0::1::::<><>::uid:
 weedle.tscn::PackedScene::4262559273872541158::1700620438::0::1::::<><>::uid://xj1v002stxjw::::res://assets/pokemon/gltf/weedle.gltf
 wigglytuff.tscn::PackedScene::7283000120047865286::1700620967::0::1::::<><>::uid://cq3234j7bkx1d::::res://assets/pokemon/gltf/wigglytuff.gltf
 zubat.tscn::PackedScene::4419360075075706473::1700620996::0::1::::<><>::res://assets/pokemon/gltf/zubat.gltf
-::res://assets/pokemon computer/::1701027166
+::res://assets/pokemon computer/::1701027168
 com_bm_pc02.obj::Mesh::8068702781010724348::1701027063::1701027063::1::::<><>::
 com_bm_pc02.png::CompressedTexture2D::425029150013954764::1701027076::1701027078::1::::<><>::
 com_bm_pc02a.png::CompressedTexture2D::7964603446401432780::1701027089::1701027091::1::::<><>::
 com_bm_pc02b.png::CompressedTexture2D::338190437867626672::1701027165::1701027168::1::::<><>::
 pc_on_sound.mp3::AudioStreamMP3::1240906381225191918::1701026938::1701027002::1::::<><>::
-::res://problem children (temp folder)/::1700621919
-::res://scenes/::1701027137
-main.tscn::PackedScene::3908541978118929798::1700616066::0::1::::<><>::res://addons/godot-xr-tools/xr/start_xr.gd<>uid://bq86r4yll8po::::res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn<>uid://ce7vysyvondf8::::res://addons/godot-xr-tools/objects/snap_zone.tscn<>uid://b6bk2pj8vbj28::::res://addons/godot-xr-tools/functions/movement_turn.tscn<>uid://xqimcf20s2jp::::res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn<>uid://ceclqbehdcvh6::::res://assets/hand_material.tres<>uid://bl2nuu3qhlb5k::::res://addons/godot-xr-tools/functions/movement_direct.tscn<>uid://b4ysuy43poobf::::res://addons/godot-xr-tools/functions/function_pickup.tscn<>uid://diyu06cw06syv::::res://addons/godot-xr-tools/player/player_body.tscn<>uid://clt88d5d1dje4::::res://addons/godot-xr-tools/functions/movement_crouch.tscn<>uid://dsgb4froubxfb::::res://scenes/pokemon.tscn<>uid://bpekn8na6qop8::::res://scenes/pokeball.tscn<>res://scripts/holster.gd
+::res://problem children (temp folder)/::1701029087
+::res://scenes/::1701027302
+main.tscn::PackedScene::3908541978118929798::1701027302::0::1::::<><>::res://addons/godot-xr-tools/xr/start_xr.gd<>uid://bq86r4yll8po::::res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn<>uid://ce7vysyvondf8::::res://addons/godot-xr-tools/objects/snap_zone.tscn<>uid://b6bk2pj8vbj28::::res://addons/godot-xr-tools/functions/movement_turn.tscn<>uid://xqimcf20s2jp::::res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn<>uid://ceclqbehdcvh6::::res://assets/hand_material.tres<>uid://bl2nuu3qhlb5k::::res://addons/godot-xr-tools/functions/movement_direct.tscn<>uid://b4ysuy43poobf::::res://addons/godot-xr-tools/functions/function_pickup.tscn<>uid://diyu06cw06syv::::res://addons/godot-xr-tools/player/player_body.tscn<>uid://clt88d5d1dje4::::res://addons/godot-xr-tools/functions/movement_crouch.tscn<>uid://dsgb4froubxfb::::res://scenes/pokemon.tscn<>uid://bpekn8na6qop8::::res://scenes/pokeball.tscn<>res://scripts/holster.gd<>uid://cjumce4ec6p7s::::res://scenes/pc.tscn
 pokeball.tscn::PackedScene::3448142987923338375::1700616066::0::1::::<><>::res://scripts/pokeball.gd<>uid://c25yxb0vt53vc::::res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn<>uid://ctw7nbntd5pcj::::res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn<>uid://dh8grd7s3n8kg::::res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.tscn<>uid://bacfkc6joudhd::::res://assets/pokeball/pokeball_highlight.tres<>res://addons/godot-xr-tools/objects/highlight/highlight_ring.gd
 pokemon.tscn::PackedScene::8435160297645567695::1700616066::0::1::::<><>::res://scripts/pokemon.gd<>uid://dlpa2fwmxu3sx::::res://assets/pokemon/scenes/bulbasaur.tscn
 pc.tscn::PackedScene::5446560945789076326::1701027137::0::1::::<><>::uid://gb5fyhgyl11y::::res://assets/pokemon computer/com_bm_pc02.png<>uid://dm7smdqkfm6ei::::res://assets/pokemon computer/com_bm_pc02.obj
-::res://scripts/::1700522038
+::res://scripts/::1701027302
 globals.gd::GDScript::-1::1699578200::0::1::::<>Node<>::
 holster.gd::GDScript::-1::1700522038::0::1::::<>Node3D<>::
 pokeball.gd::GDScript::-1::1700522038::0::1::::Pokeball<>XRToolsPickable<>::
-pokemon.gd::GDScript::-1::1700522038::0::1::::Pokemon<>CharacterBody3D<>::
+pokemon.gd::GDScript::-1::1701027302::0::1::::Pokemon<>CharacterBody3D<>::

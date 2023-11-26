@@ -1,0 +1,540 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuixn47qd2x4q"]
+
+[ext_resource type="PackedScene" uid="uid://dyknmi6n8dcy8" path="res://assets/pokemon/gltf/fearow.gltf" id="1_kqppp"]
+
+[sub_resource type="Animation" id="Animation_75ceq"]
+resource_name = "animation_fearow_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/eye_right/eyelid_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -5.20417e-18, -4.44089e-16, 0.00015625, 0.1, 1, -5.20417e-18, -4.44089e-16, 0.00015625, 0.133333, 1, -0.00125, -4.44089e-16, 0.00140625, 0.166667, 1, -0.00625, -4.44089e-16, 0.00640625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/eye_left/eyelid_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 5.20417e-18, -4.44089e-16, 0.00015625, 0.1, 1, 5.20417e-18, -4.44089e-16, 0.00015625, 0.133333, 1, 0.00125, -4.44089e-16, 0.00140625, 0.166667, 1, 0.00625, -4.44089e-16, 0.00640625)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/fearow/body/torso/wing_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.3125, 0.375, -0.40625)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/fearow/body/torso/wing_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/fearow/body/torso/wing_left/wing_fluff_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 2.22045e-16, 0.0015625, 0.078125)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/fearow/body/torso/wing_left/wing_fluff_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, -0.0654031, 0.997859)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/fearow/body/torso/wing_right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.3125, 0.375, -0.40625)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/fearow/body/torso/wing_right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/fearow/body/torso/wing_right/wing_fluff_right")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -2.22045e-16, 0.0015625, 0.078125)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/fearow/body/torso/wing_right/wing_fluff_right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0.0654031, 0.997859)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/fearow/body/torso/neck")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -0.402747, 0, 0, 0.915312)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/fearow/body/torso/neck/neck2/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0.707107, 0, 0, 0.707107)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/jaw")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.0218149, 0, 0, 0.999762)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/fearow/body/torso/tail")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/fearow/body/torso/tail_fluff")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/fearow/body/torso/wing_left/wing_left2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/fearow/body/torso/wing_left/wing_left2/wing_left3")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/fearow/body/torso/wing_right/wing_right2")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/fearow/body/torso/wing_right/wing_right2/wing_right3")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/fearow/body/torso/wing_fluff_right2")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/fearow/body/torso/wing_fluff_left2")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/fearow/body/torso/neck_fluff3")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+
+[sub_resource type="Animation" id="Animation_scmxb"]
+resource_name = "animation_fearow_cry"
+length = 1.25
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/fearow/body/torso/neck")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.402747, 0, 0, 0.915312, 0.0333333, 1, -0.415686, 0, 0, 0.909508, 0.1, 1, -0.450098, 0, 0, 0.892979, 0.166667, 1, -0.480989, 0, 0, 0.876727, 0.2, 1, -0.482499, 0, 0, 0.875896, 0.233333, 1, -0.484009, 0, 0, 0.875063, 0.266667, 1, -0.485328, 0, 0, 0.874332, 0.3, 1, -0.486458, 0, 0, 0.873704, 0.333333, 1, -0.487587, 0, 0, 0.873074, 0.4, 1, -0.489138, 0, 0, 0.872206, 0.466667, 1, -0.490101, 0, 0, 0.871666, 0.7, 1, -0.488786, 0, 0, 0.872404, 0.733333, 1, -0.48794, 0, 0, 0.872877, 0.8, 1, -0.485964, 0, 0, 0.873979, 0.866667, 1, -0.483325, 0, 0, 0.875441, 0.9, 1, -0.481791, 0, 0, 0.876286, 0.933333, 1, -0.477878, 0, 0, 0.878427, 1, 1, -0.465373, 0, 0, 0.885115, 1.03333, 1, -0.45654, 0, 0, 0.889703, 1.06667, 1, -0.447113, 0, 0, 0.894478, 1.1, 1, -0.437452, 0, 0, 0.899242, 1.13333, 1, -0.427925, 0, 0, 0.903814, 1.16667, 1, -0.418907, 0, 0, 0.908029, 1.2, 1, -0.41134, 0, 0, 0.911482, 1.23333, 1, -0.405428, 0, 0, 0.914127, 1.25, 1, -0.402747, 0, 0, 0.915311)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/fearow/body/torso/neck/neck2/head")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.707107, 0, 0, 0.707107, 0.0333333, 1, 0.721987, 0, 0, 0.691907, 0.1, 1, 0.760406, 0, 0, 0.649448, 0.166667, 1, 0.793353, 0, 0, 0.608761, 0.2, 1, 0.794925, 0, 0, 0.606708, 0.233333, 1, 0.796491, 0, 0, 0.604651, 0.266667, 1, 0.797857, 0, 0, 0.602847, 0.333333, 1, 0.800189, 0, 0, 0.599748, 0.366667, 1, 0.80106, 0, 0, 0.598584, 0.4, 1, 0.801785, 0, 0, 0.597612, 0.466667, 1, 0.802774, 0, 0, 0.596283, 0.666667, 1, 0.802003, 0, 0, 0.597321, 0.7, 1, 0.801423, 0, 0, 0.598098, 0.733333, 1, 0.800552, 0, 0, 0.599263, 0.766667, 1, 0.799583, 0, 0, 0.600556, 0.8, 1, 0.798514, 0, 0, 0.601976, 0.866667, 1, 0.795782, 0, 0, 0.605583, 0.9, 1, 0.794189, 0, 0, 0.607671, 0.933333, 1, 0.790105, 0, 0, 0.612972, 1, 1, 0.776888, 0, 0, 0.629638, 1.03333, 1, 0.767401, 0, 0, 0.641167, 1.06667, 1, 0.757142, 0, 0, 0.65325, 1.1, 1, 0.746489, 0, 0, 0.665398, 1.13333, 1, 0.735848, 0, 0, 0.677147, 1.16667, 1, 0.725656, 0, 0, 0.688058, 1.2, 1, 0.717015, 0, 0, 0.697058, 1.23333, 1, 0.710209, 0, 0, 0.703991, 1.25, 1, 0.707107, 0, 0, 0.707107)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/jaw")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0218149, 0, 0, 0.999762, 0.0333333, 1, -0.0384423, 0, 0, 0.999261, 0.1, 1, -0.199368, 0, 0, 0.979925, 0.166667, 1, -0.34202, 0, 0, 0.939693, 0.233333, 1, -0.355751, 0, 0, 0.934581, 0.266667, 1, -0.361735, 0, 0, 0.932281, 0.333333, 1, -0.371958, 0, 0, 0.92825, 0.366667, 1, -0.37578, 0, 0, 0.926709, 0.4, 1, -0.37896, 0, 0, 0.925413, 0.433333, 1, -0.381501, 0, 0, 0.924368, 0.466667, 1, -0.383299, 0, 0, 0.923624, 0.533333, 1, -0.38499, 0, 0, 0.922921, 0.6, 1, -0.383722, 0, 0, 0.923449, 0.633333, 1, -0.382453, 0, 0, 0.923975, 0.7, 1, -0.377371, 0, 0, 0.926062, 0.733333, 1, -0.373551, 0, 0, 0.92761, 0.766667, 1, -0.3693, 0, 0, 0.92931, 0.8, 1, -0.364615, 0, 0, 0.931158, 0.866667, 1, -0.352647, 0, 0, 0.935756, 0.9, 1, -0.345675, 0, 0, 0.938354, 0.933333, 1, -0.327823, 0, 0, 0.944739, 1, 1, -0.270325, 0, 0, 0.962769, 1.03333, 1, -0.229366, 0, 0, 0.97334, 1.06667, 1, -0.185435, 0, 0, 0.982656, 1.1, 1, -0.14027, 0, 0, 0.990113, 1.13333, 1, -0.0956761, 0, 0, 0.995413, 1.16667, 1, -0.0534933, 0, 0, 0.998568, 1.2, 1, -0.0181681, 0, 0, 0.999835, 1.23333, 1, 0.00935715, 0, 0, 0.999956, 1.25, 1, 0.0218149, 0, 0, 0.999762)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/eye_right/eyelid_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.00625, -4.44089e-16, 0.00640625)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/eye_left/eyelid_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.00625, -4.44089e-16, 0.00640625)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/fearow/body/torso/wing_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.3125, 0.375, -0.40625)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/fearow/body/torso/wing_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/fearow/body/torso/wing_left/wing_fluff_left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 2.22045e-16, 0.0015625, 0.078125)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/fearow/body/torso/wing_left/wing_fluff_left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, -0.0654031, 0.997859)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/fearow/body/torso/wing_right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.3125, 0.375, -0.40625)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/fearow/body/torso/wing_right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "position_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/fearow/body/torso/wing_right/wing_fluff_right")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -2.22045e-16, 0.0015625, 0.078125)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/fearow/body/torso/wing_right/wing_fluff_right")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0.0654031, 0.997859)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/fearow/body/torso/tail")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/fearow/body/torso/tail_fluff")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/fearow/body/torso/wing_left/wing_left2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/fearow/body/torso/wing_left/wing_left2/wing_left3")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/fearow/body/torso/wing_right/wing_right2")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/fearow/body/torso/wing_right/wing_right2/wing_right3")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/fearow/body/torso/wing_fluff_right2")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/fearow/body/torso/wing_fluff_left2")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/fearow/body/torso/neck_fluff3")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+
+[sub_resource type="Animation" id="Animation_5n7r5"]
+resource_name = "animation_fearow_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/fearow/body/torso/tail")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.382683, 0, 0, 0.92388)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/fearow/body/torso/tail_fluff")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/fearow/body/torso/wing_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.3125, -0.0625, -0.59375)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/fearow/body/torso/wing_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.596475, -0.523094, -0.401384, -0.457691)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/fearow/body/torso/wing_left/wing_fluff_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 2.22045e-16, 0.0015625, 0.265625)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/fearow/body/torso/wing_left/wing_fluff_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.0115757, -0.265627, -0.171437, 0.94864)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/fearow/body/torso/wing_left/wing_left2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, -0.34202, 0, 0.939693)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/fearow/body/torso/wing_left/wing_left2/wing_left3")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.19509, 0, 0.980785)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/fearow/body/torso/wing_right")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.3125, -0.0625, -0.59375)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/fearow/body/torso/wing_right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.596475, 0.523094, 0.401384, -0.457691)
+tracks/10/type = "position_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/fearow/body/torso/wing_right/wing_fluff_right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -2.22045e-16, 0.0015625, 0.265625)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/fearow/body/torso/wing_right/wing_fluff_right")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0.0115757, 0.265627, 0.171437, 0.94864)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/fearow/body/torso/wing_right/wing_right2")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0.34202, 0, 0.939693)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/fearow/body/torso/wing_right/wing_right2/wing_right3")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, -0.19509, 0, 0.980785)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/fearow/body/torso/wing_fluff_right2")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0.279829, 0.96005)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/fearow/body/torso/wing_fluff_left2")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, -0.279829, 0.96005)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/fearow/body/torso/neck_fluff3")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.279829, 0, 0, 0.96005)
+tracks/17/type = "position_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/eye_right/eyelid_right")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, -0.00625, -4.44089e-16, 0.00640625)
+tracks/18/type = "position_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/eye_left/eyelid_left")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.00625, -4.44089e-16, 0.00640625)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/fearow/body/torso/neck")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, -0.402747, 0, 0, 0.915312)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/fearow/body/torso/neck/neck2/head")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0.707107, 0, 0, 0.707107)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/fearow/body/torso/neck/neck2/head/jaw")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0.0218149, 0, 0, 0.999762)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_td1yy"]
+_data = {
+"animation_fearow_blink": SubResource("Animation_75ceq"),
+"animation_fearow_cry": SubResource("Animation_scmxb"),
+"animation_fearow_ground_idle": SubResource("Animation_5n7r5")
+}
+
+[node name="fearow" instance=ExtResource("1_kqppp")]
+
+[node name="neck_fluff3" parent="Node2/fearow/body/torso" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.843391, 0.5373, 0, -0.5373, 0.843391, -6.93889e-18, 0.40625, 0.109375)
+
+[node name="tail_fluff" parent="Node2/fearow/body/torso" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.976296, 0.21644, 0, -0.21644, 0.976296, -6.93889e-18, 0.3125, 0.109375)
+
+[node name="wing_fluff_right2" parent="Node2/fearow/body/torso" index="6"]
+transform = Transform3D(0.843391, -0.5373, 0, 0.5373, 0.843391, 0, 0, 0, 1, 0.125, 0.439063, -0.265625)
+
+[node name="wing_fluff_left2" parent="Node2/fearow/body/torso" index="7"]
+transform = Transform3D(0.843391, 0.5373, 0, -0.5373, 0.843391, 0, 0, 0, 1, -0.125, 0.439063, -0.265625)
+
+[node name="wing_left" parent="Node2/fearow/body/torso" index="8"]
+transform = Transform3D(0.130526, -0.991445, -3.90806e-08, -0.256605, -0.0337827, 0.965926, -0.957662, -0.126079, -0.258819, -0.3125, -0.0625, -0.59375)
+
+[node name="wing_fluff_left" parent="Node2/fearow/body/torso/wing_left" index="1"]
+transform = Transform3D(0.800103, 0.319114, -0.507938, -0.331414, 0.940951, 0.0691143, 0.5, 0.113039, 0.858616, 2.22045e-16, 0.0015625, 0.265625)
+
+[node name="wing_left2" parent="Node2/fearow/body/torso/wing_left" index="2"]
+transform = Transform3D(0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, -0.5, 0, 0.46875)
+
+[node name="wing_left3" parent="Node2/fearow/body/torso/wing_left/wing_left2" index="1"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.5625, 0, -0.8125)
+
+[node name="wing_right" parent="Node2/fearow/body/torso" index="9"]
+transform = Transform3D(0.130526, 0.991445, 3.90806e-08, 0.256605, -0.0337827, 0.965926, 0.957662, -0.126079, -0.258819, 0.3125, -0.0625, -0.59375)
+
+[node name="wing_fluff_right" parent="Node2/fearow/body/torso/wing_right" index="1"]
+transform = Transform3D(0.800103, -0.319114, 0.507938, 0.331414, 0.940951, 0.0691143, -0.5, 0.113039, 0.858616, -2.22045e-16, 0.0015625, 0.265625)
+
+[node name="wing_right2" parent="Node2/fearow/body/torso/wing_right" index="2"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0.5, 0, 0.46875)
+
+[node name="wing_right3" parent="Node2/fearow/body/torso/wing_right/wing_right2" index="1"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.5625, 0, -0.8125)
+
+[node name="tail" parent="Node2/fearow/body/torso" index="10"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.31875, 0.421875)
+
+[node name="neck" parent="Node2/fearow/body/torso" index="11"]
+transform = Transform3D(1, 0, 0, 0, 0.67559, 0.737277, 0, -0.737277, 0.67559, 0, 0.265625, -0.5)
+
+[node name="head" parent="Node2/fearow/body/torso/neck/neck2" index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.59375, -0.09375)
+
+[node name="jaw" parent="Node2/fearow/body/torso/neck/neck2/head" index="9"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, -0.109375, -0.25)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_td1yy")
+}

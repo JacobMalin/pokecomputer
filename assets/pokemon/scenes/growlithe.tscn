@@ -1,0 +1,292 @@
+[gd_scene load_steps=5 format=3 uid="uid://kkqeifrxlncg"]
+
+[ext_resource type="PackedScene" uid="uid://hgyy204xa7ms" path="res://assets/pokemon/gltf/growlithe.gltf" id="1_7w1hx"]
+
+[sub_resource type="Animation" id="Animation_pquni"]
+resource_name = "animation_growlithe_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/growlithe/body/torso2/head2/eyes/eye_right2/eyelid_right2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.25514e-17, 0, -2.25514e-17, 0.1, 1, 2.25514e-17, 0, -2.25514e-17, 0.133333, 1, -0.00125, 0, 0.00125, 0.166667, 1, -0.00625, 0, 0.00625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/growlithe/body/torso2/head2/eyes/eye_left2/eyelid_left2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -2.25514e-17, 0, -2.25514e-17, 0.1, 1, -2.25514e-17, 0, -2.25514e-17, 0.133333, 1, 0.00125, 0, 0.00125, 0.166667, 1, 0.00625, 0, 0.00625)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/growlithe")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.0654031, 0, 0.997859)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/growlithe/body/torso2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.134851, 0, 0, 0.990866)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/growlithe/body/torso2/head2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.515625, -0.321875)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/growlithe/body/torso2/head2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0610485, 0, 0, 0.998135, 0.0333333, 1, -0.0776648, 0.04441, 0.000755522, 0.99599, 0.166667, 1, -0.142012, 0.220053, 0.00374364, 0.965088)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/growlithe/body/torso2/tail12")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.21644, 0, 0, 0.976296)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/growlithe/body/leg_front_right12/leg_front_right22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.147809, 0, 0, 0.989016)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/growlithe/body/leg_front_right12/leg_front_right22/leg_front_right32")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, -0.125, -0.09375)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/growlithe/body/leg_front_right12/leg_front_right22/leg_front_right32")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.104528, 0, 0, 0.994522)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/growlithe/body/leg_front_left12/leg_front_left22")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/11/type = "position_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/growlithe/body/leg_front_left12/leg_front_left22/leg_front_left32")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, -0.11875, -0.09375)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/growlithe/body/leg_front_left12/leg_front_left22/leg_front_left32")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/13/type = "position_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/growlithe/body/leg_back_left12")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.15625, 0, 0.28125)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/growlithe/body/leg_back_left12")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, -0.173648, 0, 0, 0.984808)
+tracks/15/type = "position_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/growlithe/body/leg_back_left12/leg_back_left22")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, -0.23125, 0.025)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/growlithe/body/leg_back_left12/leg_back_left22")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.337917, 0, 0, 0.941176)
+
+[sub_resource type="Animation" id="Animation_n1dwx"]
+resource_name = "animation_growlithe_render"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/growlithe/body/torso2/head2/eyes/eye_right2/eyelid_right2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.25514e-17, 0, -2.25514e-17, 0.1, 1, 2.25514e-17, 0, -2.25514e-17, 0.133333, 1, -0.00125, 0, 0.00125, 0.166667, 1, -0.00625, 0, 0.00625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/growlithe/body/torso2/head2/eyes/eye_left2/eyelid_left2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -2.25514e-17, 0, -2.25514e-17, 0.1, 1, -2.25514e-17, 0, -2.25514e-17, 0.133333, 1, 0.00125, 0, 0.00125, 0.166667, 1, 0.00625, 0, 0.00625)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/growlithe")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.0654031, 0, 0.997859)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/growlithe/body/torso2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.134851, 0, 0, 0.990866)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/growlithe/body/torso2/head2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.515625, -0.321875)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/growlithe/body/torso2/head2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0610485, 0, 0, 0.998135, 0.0333333, 1, -0.0776648, 0.04441, 0.000755522, 0.99599, 0.166667, 1, -0.142012, 0.220053, 0.00374364, 0.965088)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/growlithe/body/torso2/tail12")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.21644, 0, 0, 0.976296)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/growlithe/body/leg_front_right12/leg_front_right22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.147809, 0, 0, 0.989016)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/growlithe/body/leg_front_right12/leg_front_right22/leg_front_right32")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, -0.125, -0.09375)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/growlithe/body/leg_front_right12/leg_front_right22/leg_front_right32")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.104528, 0, 0, 0.994522)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/growlithe/body/leg_front_left12/leg_front_left22")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/11/type = "position_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/growlithe/body/leg_front_left12/leg_front_left22/leg_front_left32")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, -0.11875, -0.09375)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/growlithe/body/leg_front_left12/leg_front_left22/leg_front_left32")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/13/type = "position_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/growlithe/body/leg_back_left12")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.15625, 0, 0.28125)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/growlithe/body/leg_back_left12")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, -0.173648, 0, 0, 0.984808)
+tracks/15/type = "position_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/growlithe/body/leg_back_left12/leg_back_left22")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, -0.23125, 0.025)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/growlithe/body/leg_back_left12/leg_back_left22")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.337917, 0, 0, 0.941176)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p8mn7"]
+_data = {
+"animation_growlithe_blink": SubResource("Animation_pquni"),
+"animation_growlithe_render": SubResource("Animation_n1dwx")
+}
+
+[node name="growlithe" instance=ExtResource("1_7w1hx")]
+
+[node name="growlithe" parent="Node2" index="0"]
+transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, 0, 0, 0)
+
+[node name="torso2" parent="Node2/growlithe/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.96363, -0.267238, 0, 0.267238, 0.96363, 0, -0.421875, -0.03125)
+
+[node name="head2" parent="Node2/growlithe/body/torso2" index="1"]
+transform = Transform3D(0.903125, -0.0697262, 0.423679, -0.0552745, 0.959637, 0.275755, -0.425805, -0.27246, 0.862818, 0, 0.515625, -0.321875)
+
+[node name="tail12" parent="Node2/growlithe/body/torso2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0.5, 0.265625)
+
+[node name="leg_front_right22" parent="Node2/growlithe/body/leg_front_right12" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.956305, -0.292372, 0, 0.292372, 0.956305, 0, -0.21875, 0.09375)
+
+[node name="leg_front_right32" parent="Node2/growlithe/body/leg_front_right12/leg_front_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.978148, 0.207912, 0, -0.207912, 0.978148, 0, -0.125, -0.09375)
+
+[node name="leg_front_left22" parent="Node2/growlithe/body/leg_front_left12" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.21875, 0.09375)
+
+[node name="leg_front_left32" parent="Node2/growlithe/body/leg_front_left12/leg_front_left22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, -0.11875, -0.09375)
+
+[node name="leg_back_left12" parent="Node2/growlithe/body" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.15625, 0, 0.28125)
+
+[node name="leg_back_left22" parent="Node2/growlithe/body/leg_back_left12" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.771625, -0.636078, 0, 0.636078, 0.771625, 0, -0.23125, 0.025)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_p8mn7")
+}

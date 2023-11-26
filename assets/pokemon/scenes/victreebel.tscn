@@ -1,0 +1,180 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjxecc6tq6pex"]
+
+[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/victreebel.gltf" id="1_a76yc"]
+
+[sub_resource type="Animation" id="Animation_o1d8s"]
+resource_name = "animation_victreebel_ground_idle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/victreebel/body/torso_top2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0871557, 0, 0, 0.996195)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/leaf2/leaf_front2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.236781, -0.084658, -0.0207157, 0.967646)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.297904, -0.146359, -0.0422373, 0.942363)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.23702, 0.0610854, 0.0227435, 0.969316)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.171571, 0.119999, 0.0497638, 0.976569)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42/stem52")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.210237, 0.235652, 0.0310242, 0.948317)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42/stem52/stem62")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.254941, 0.193976, 0.0170006, 0.947148)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42/stem52/stem62/stem72")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.173648, 0, 0, 0.984808)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/victreebel/body/torso_bottom2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.0218149, 0, 0, 0.999762)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/victreebel/body/torso_bottom2/arm_right12")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -0.374973, -0.0163717, 0.234429, 0.896755)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/victreebel/body/torso_bottom2/arm_right12/arm_right22")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, -0.19509, 0.980785)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/victreebel/body/torso_bottom2/arm_right12/arm_right22/arm_right32/arm_right42")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, -0.19509, 0.980785)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/victreebel/body/torso_bottom2/arm_left12")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.374973, 0.0163717, -0.234429, 0.896755)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/victreebel/body/torso_bottom2/arm_left12/arm_left22")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0.19509, 0.980785)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/victreebel/body/torso_bottom2/arm_left12/arm_left22/arm_left32/arm_left42")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0.19509, 0.980785)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bn1c5"]
+_data = {
+"animation_victreebel_ground_idle": SubResource("Animation_o1d8s")
+}
+
+[node name="victreebel" instance=ExtResource("1_a76yc")]
+
+[node name="torso_top2" parent="Node2/victreebel/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.625, 0.21875)
+
+[node name="leaf_front2" parent="Node2/victreebel/body/torso_top2/leaf_top/leaf2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, -0.25)
+
+[node name="stem12" parent="Node2/victreebel/body/torso_top2/leaf_top" index="1"]
+transform = Transform3D(0.984808, 7.45058e-09, -0.173648, -0.0801818, 0.887011, -0.454734, 0.154028, 0.461749, 0.873535, 0, 0, 0)
+
+[node name="stem22" parent="Node2/victreebel/body/torso_top2/leaf_top/stem12" index="1"]
+transform = Transform3D(0.95359, -0.00759612, -0.301012, -0.166808, 0.818939, -0.549103, 0.250682, 0.573831, 0.779665, 0, 0, 0.25)
+
+[node name="stem32" parent="Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22" index="1"]
+transform = Transform3D(0.991503, -0.0151344, 0.129203, 0.0730482, 0.886609, -0.456716, -0.107641, 0.462273, 0.88018, 0, 0, 0.25)
+
+[node name="stem42" parent="Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32" index="1"]
+transform = Transform3D(0.966248, -0.0560187, 0.251451, 0.138372, 0.936174, -0.323159, -0.217299, 0.347046, 0.912327, 0, 0, 0.25)
+
+[node name="stem52" parent="Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42" index="1"]
+transform = Transform3D(0.887011, 0.040244, 0.459992, 0.157927, 0.909676, -0.384121, -0.433902, 0.413365, 0.800537, 0, 0, 0.25)
+
+[node name="stem62" parent="Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42/stem52" index="1"]
+transform = Transform3D(0.924169, 0.0667007, 0.376116, 0.131109, 0.869432, -0.476339, -0.35878, 0.489529, 0.794757, 0, 0, 0.25)
+
+[node name="stem72" parent="Node2/victreebel/body/torso_top2/leaf_top/stem12/stem22/stem32/stem42/stem52/stem62" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0.1875)
+
+[node name="torso_bottom2" parent="Node2/victreebel/body" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0.625, 0.21875)
+
+[node name="arm_right12" parent="Node2/victreebel/body/torso_bottom2" index="1"]
+transform = Transform3D(0.88955, -0.408174, -0.205172, 0.432729, 0.608876, 0.664842, -0.146447, -0.680194, 0.718254, 0.3125, -0.484375, -0.1875)
+
+[node name="arm_right22" parent="Node2/victreebel/body/torso_bottom2/arm_right12" index="1"]
+transform = Transform3D(0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0, 0, 1, 0.25, 0, -0.03125)
+
+[node name="arm_right42" parent="Node2/victreebel/body/torso_bottom2/arm_right12/arm_right22/arm_right32" index="1"]
+transform = Transform3D(0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0, 0, 1, 0.1875, 0, 0)
+
+[node name="arm_left12" parent="Node2/victreebel/body/torso_bottom2" index="2"]
+transform = Transform3D(0.88955, 0.408174, 0.205172, -0.432729, 0.608876, 0.664842, 0.146447, -0.680194, 0.718254, -0.3125, -0.484375, -0.1875)
+
+[node name="arm_left22" parent="Node2/victreebel/body/torso_bottom2/arm_left12" index="1"]
+transform = Transform3D(0.92388, -0.382683, 0, 0.382683, 0.92388, 0, 0, 0, 1, -0.25, 0, -0.03125)
+
+[node name="arm_left42" parent="Node2/victreebel/body/torso_bottom2/arm_left12/arm_left22/arm_left32" index="1"]
+transform = Transform3D(0.92388, -0.382683, 0, 0.382683, 0.92388, 0, 0, 0, 1, -0.1875, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_bn1c5")
+}

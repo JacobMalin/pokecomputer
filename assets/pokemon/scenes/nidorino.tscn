@@ -1,0 +1,239 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfuvxo2iu8iop"]
+
+[ext_resource type="PackedScene" uid="uid://dgkv8o72p7gi7" path="res://assets/pokemon/gltf/nidorino.gltf" id="1_vvw6w"]
+
+[sub_resource type="Animation" id="Animation_5l0ic"]
+resource_name = "animation_nidorino_blink"
+length = 0.125
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/eyes/eyelid/eyelid_left2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.00625, 0, 0, 0.0666667, 1, -0.00625, 0, 0, 0.1, 1, -0.00375, 0, 0, 0.125, 1, 0, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/eyes/eyelid/eyelid_right2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.00625, 0, 0, 0.0666667, 1, 0.00625, 0, 0, 0.1, 1, 0.00375, 0, 0, 0.125, 1, 0, 0, 0)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/nidorino/body2/torso/neck2/head2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/jaw")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0871558, 0, 0, 0.996195)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/nidorino/body2/leg_front_left4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/nidorino/body2/leg_front_left4/leg_front_left22")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.237686, 0, 0, 0.971342)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/nidorino/body2/leg_back_left4")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/nidorino/body2/leg_back_left4/leg_back_left22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.152123, 0, 0, 0.988362)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/nidorino/body2/torso/neck2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_56cxa"]
+resource_name = "animation_nidorino_cry"
+length = 1.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/nidorino/body2/torso/neck2/head2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445, 0.233333, 1, -0.00872653, 0, 0, 0.999962, 0.266667, 1, 0, 0, 0, 1, 1.23333, 1, 0, 0, 0, 1, 1.26667, 1, -0.00872653, 0, 0, 0.999962, 1.5, 1, -0.130526, 0, 0, 0.991445)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/jaw")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195, 0.0333333, 1, 0.0436194, 0, 0, 0.999048, 0.0666667, 1, 0, 0, 0, 1, 0.233333, 1, -0.21644, 0, 0, 0.976296, 0.266667, 1, -0.237686, 0, 0, 0.971342, 1.23333, 1, -0.237686, 0, 0, 0.971342, 1.26667, 1, -0.21644, 0, 0, 0.976296, 1.4, 1, -0.0436194, 0, 0, 0.999048, 1.43333, 1, -7.45058e-08, 0, 0, 1, 1.5, 1, 0.0871557, 0, 0, 0.996195)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/eyes/eyelid/eyelid_left2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/eyes/eyelid/eyelid_right2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/nidorino/body2/leg_front_left4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/nidorino/body2/leg_front_left4/leg_front_left22")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.237686, 0, 0, 0.971342)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/nidorino/body2/leg_back_left4")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/nidorino/body2/leg_back_left4/leg_back_left22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.152123, 0, 0, 0.988362)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/nidorino/body2/torso/neck2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_cgv3g"]
+resource_name = "animation_nidorino_pose"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/nidorino/body2/torso/neck2/head2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.130247, 0.0648436, 0.00853682, 0.989322)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/jaw")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.258819, 0, 0, 0.965926)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/nidorino/body2/leg_front_left4")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0165612, 0.151219, -0.1076, 0.982487)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/nidorino/body2/leg_front_left4/leg_front_left22")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.236273, 0.0258761, 0.105747, 0.965569)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/nidorino/body2/leg_back_left4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.10822, 0.011852, -0.10822, 0.988148)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/nidorino/body2/leg_back_left4/leg_back_left22")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.151219, -0.0165612, 0.1076, 0.982487)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/nidorino/body2/torso/neck2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.0871557, 0, 0.996195)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/eyes/eyelid/eyelid_left2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/nidorino/body2/torso/neck2/head2/eyes/eyelid/eyelid_right2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvms3"]
+_data = {
+"animation_nidorino_blink": SubResource("Animation_5l0ic"),
+"animation_nidorino_cry": SubResource("Animation_56cxa"),
+"animation_nidorino_pose": SubResource("Animation_cgv3g")
+}
+
+[node name="nidorino" instance=ExtResource("1_vvw6w")]
+
+[node name="neck2" parent="Node2/nidorino/body2/torso" index="3"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0, 0.6875, -0.4375)
+
+[node name="head2" parent="Node2/nidorino/body2/torso/neck2" index="1"]
+transform = Transform3D(0.991445, -0.0337827, 0.126079, 0, 0.965926, 0.258819, -0.130526, -0.256605, 0.957662, 0, -0.03125, -0.09375)
+
+[node name="jaw" parent="Node2/nidorino/body2/torso/neck2/head2" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.296875, -0.015625)
+
+[node name="leg_front_left4" parent="Node2/nidorino/body2" index="1"]
+transform = Transform3D(0.93111, 0.206422, 0.300706, -0.21644, 0.976296, -3.72529e-09, -0.293578, -0.0650847, 0.953717, -0.21875, 0.3125, -0.25)
+
+[node name="leg_front_left22" parent="Node2/nidorino/body2/leg_front_left4" index="1"]
+transform = Transform3D(0.976296, -0.191984, 0.0999407, 0.21644, 0.865985, -0.450803, 7.45058e-09, 0.461749, 0.887011, 0, -0.125, 0.09375)
+
+[node name="leg_back_left4" parent="Node2/nidorino/body2" index="3"]
+transform = Transform3D(0.976296, 0.211309, 0.0468461, -0.21644, 0.953154, 0.211309, 7.45058e-09, -0.21644, 0.976296, -0.21875, 0.3125, 0.15625)
+
+[node name="leg_back_left22" parent="Node2/nidorino/body2/leg_back_left4" index="1"]
+transform = Transform3D(0.976296, -0.206422, -0.0650847, 0.21644, 0.93111, 0.293578, 0, -0.300706, 0.953717, 0, -0.15625, -0.09375)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_pvms3")
+}

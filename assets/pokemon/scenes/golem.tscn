@@ -1,0 +1,528 @@
+[gd_scene load_steps=5 format=3 uid="uid://31mecu54kgde"]
+
+[ext_resource type="PackedScene" uid="uid://btys8qevljn1v" path="res://assets/pokemon/gltf/golem.gltf" id="1_v42vb"]
+
+[sub_resource type="Animation" id="Animation_luw7v"]
+resource_name = "animation_golem_blink"
+length = 0.166667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/golem/body/torso/head/eyes/left_eyelid")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.250625, 0, -2.25514e-17, 0.133333, 1, -0.250625, 0, -2.25514e-17, 0.166667, 1, -0.244375, 0, 0.00625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/golem/body/torso/head/eyes/right_eyelid")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.250625, 0, -2.25514e-17, 0.133333, 1, 0.250625, 0, -2.25514e-17, 0.166667, 1, 0.244375, 0, 0.00625)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/golem/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.0625, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/golem/body/torso")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/golem/body/torso/head")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/golem/body/torso/left_upper_arm")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_middle_finger/left_middle_finger_claw")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_middle_finger")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_thumb")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_thumb/left_thumb_claw")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_pinky_finger")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_pinky_finger/left_pinky_claw")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/golem/body/left_upper_leg")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.258819, 0, 0, 0.965926)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/golem/body/left_upper_leg/left_lower_leg")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.258819, 0, 0, 0.965926)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/golem/body/left_upper_leg/left_lower_leg/left_foot")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/golem/body/torso/right_upper_arm")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/golem/body/right_upper_leg")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.258819, 0, 0, 0.965926)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/golem/body/right_upper_leg/right_lower_leg")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, -0.258819, 0, 0, 0.965926)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/golem/body/right_upper_leg/right_lower_leg/right_foot")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_middle_finger")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_middle_finger/right_middle_finger_claw")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_thumb")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_thumb/right_thumb_claw")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_pinky_finger")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_pinky_finger/right_pinky_claw")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/golem/body/torso/head/jaw")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_emvwe"]
+resource_name = "animation_golem_test"
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/golem/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.015625, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/golem/body/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0218149, 0, 0, 0.999762)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/golem/body/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0654031, 0, 0, 0.997859)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/golem/body/torso/left_upper_arm")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.19509, 0.980785)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.010073, -0.461639, 0.01935, 0.8868)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, -0.442289, 0.896873)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_middle_finger/left_middle_finger_claw")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0.34202, 0.939693)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_middle_finger")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0.237686, 0.971342)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_thumb")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.331509, 0.162731, -0.0598897, 0.92738)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_thumb/left_thumb_claw")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.34202, 0, 0, 0.939693)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_pinky_finger")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.341804, -0.209958, -0.0530107, 0.914482)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_pinky_finger/left_pinky_claw")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0.362438, 0, 0, 0.932008)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/golem/body/left_upper_leg")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.294928, 0.186061, -0.0586648, 0.935392)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/golem/body/left_upper_leg/left_lower_leg")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.362438, 0, 0, 0.932008)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/golem/body/left_upper_leg/left_lower_leg/left_foot")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.0654031, 0, 0, 0.997859)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/golem/body/torso/right_upper_arm")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, -0.19509, 0.980785)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/golem/body/right_upper_leg")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.294928, -0.186061, 0.0586648, 0.935392)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/golem/body/right_upper_leg/right_lower_leg")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, -0.382683, 0, 0, 0.92388)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/golem/body/right_upper_leg/right_lower_leg/right_foot")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, -0.010073, 0.461639, -0.01935, 0.8868)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, 0.442289, 0.896873)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_middle_finger")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0, 0, -0.237686, 0.971342)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_middle_finger/right_middle_finger_claw")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0, 0, -0.34202, 0.939693)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_thumb")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, -0.331509, -0.162731, 0.0598897, 0.92738)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_thumb/right_thumb_claw")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, -0.34202, 0, 0, 0.939693)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_pinky_finger")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0.341804, 0.209958, 0.0530107, 0.914482)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_pinky_finger/right_pinky_claw")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0.362438, 0, 0, 0.932008)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/golem/body/torso/head/jaw")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, -0.362438, 0, 0, 0.932008)
+tracks/28/type = "position_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/golem/body/torso/head/eyes/left_eyelid")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, -0.244375, 0, 0.00625)
+tracks/29/type = "position_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/golem/body/torso/head/eyes/right_eyelid")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0.244375, 0, 0.00625)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v3lvp"]
+_data = {
+"animation_golem_blink": SubResource("Animation_luw7v"),
+"animation_golem_test": SubResource("Animation_emvwe")
+}
+
+[node name="golem" instance=ExtResource("1_v42vb")]
+
+[node name="body" parent="Node2/golem" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015625, 0)
+
+[node name="torso" parent="Node2/golem/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0.4375, 0)
+
+[node name="head" parent="Node2/golem/body/torso" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0.625, -0.6375)
+
+[node name="jaw" parent="Node2/golem/body/torso/head" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.737277, 0.67559, 0, -0.67559, 0.737277, 0, -0.15625, -0.125)
+
+[node name="left_upper_arm" parent="Node2/golem/body/torso" index="3"]
+transform = Transform3D(0.92388, -0.382683, 0, 0.382683, 0.92388, 0, 0, 0, 1, -0.625, 0.625, -0.25)
+
+[node name="left_lower_arm" parent="Node2/golem/body/torso/left_upper_arm" index="1"]
+transform = Transform3D(0.573031, -0.0250191, -0.819152, 0.0436194, 0.999048, 0, 0.818372, -0.0357309, 0.573576, -0.25, -0.03125, 0.1875)
+
+[node name="left_hand" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm" index="1"]
+transform = Transform3D(0.608761, 0.793353, 0, -0.793353, 0.608761, 0, 0, 0, 1, -0.5, -0.03125, -0.15625)
+
+[node name="left_middle_finger" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand" index="1"]
+transform = Transform3D(0.887011, -0.461749, 0, 0.461749, 0.887011, 0, 0, 0, 1, -0.25, 0.0625, 0)
+
+[node name="left_middle_finger_claw" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_middle_finger" index="1"]
+transform = Transform3D(0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 0, 0, 1, -0.1875, 0, 0)
+
+[node name="left_thumb" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand" index="2"]
+transform = Transform3D(0.939864, 0.00318746, 0.341535, -0.218975, 0.77303, 0.595377, -0.262119, -0.634361, 0.727241, -0.125, 0.0625, -0.15625)
+
+[node name="left_thumb_claw" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_thumb" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, -0.1875)
+
+[node name="left_pinky_finger" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand" index="3"]
+transform = Transform3D(0.906215, -0.0465747, -0.420245, -0.240484, 0.76072, -0.602887, 0.347768, 0.647408, 0.678175, -0.125, 0.0625, 0.15625)
+
+[node name="left_pinky_claw" parent="Node2/golem/body/torso/left_upper_arm/left_lower_arm/left_hand/left_pinky_finger" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.737277, -0.67559, 0, 0.67559, 0.737277, 0, 0, 0.1875)
+
+[node name="right_upper_arm" parent="Node2/golem/body/torso" index="4"]
+transform = Transform3D(0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0, 0, 1, 0.625, 0.625, -0.25)
+
+[node name="right_lower_arm" parent="Node2/golem/body/torso/right_upper_arm" index="1"]
+transform = Transform3D(0.573031, 0.0250191, 0.819152, -0.0436194, 0.999048, 0, -0.818372, -0.0357309, 0.573576, 0.25, -0.03125, 0.1875)
+
+[node name="right_hand" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm" index="1"]
+transform = Transform3D(0.608761, -0.793353, 0, 0.793353, 0.608761, 0, 0, 0, 1, 0.5, -0.03125, -0.15625)
+
+[node name="right_middle_finger" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand" index="1"]
+transform = Transform3D(0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0, 1, 0.25, 0.0625, 0)
+
+[node name="right_middle_finger_claw" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_middle_finger" index="1"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, 0.1875, 0, 0)
+
+[node name="right_thumb" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand" index="2"]
+transform = Transform3D(0.939864, -0.00318746, -0.341535, 0.218975, 0.77303, 0.595377, 0.262119, -0.634361, 0.727241, 0.125, 0.0625, -0.15625)
+
+[node name="right_thumb_claw" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_thumb" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, -0.1875)
+
+[node name="right_pinky_finger" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand" index="3"]
+transform = Transform3D(0.906215, 0.0465747, 0.420245, 0.240484, 0.76072, -0.602887, -0.347768, 0.647408, 0.678175, 0.125, 0.0625, 0.15625)
+
+[node name="right_pinky_claw" parent="Node2/golem/body/torso/right_upper_arm/right_lower_arm/right_hand/right_pinky_finger" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.737277, -0.67559, 0, 0.67559, 0.737277, 0, 0, 0.1875)
+
+[node name="left_upper_leg" parent="Node2/golem/body" index="1"]
+transform = Transform3D(0.92388, 0.219498, 0.313476, 7.45058e-09, 0.819152, -0.573576, -0.382683, 0.529916, 0.756798, -0.4375, 0.5625, 0.0625)
+
+[node name="left_lower_leg" parent="Node2/golem/body/left_upper_leg" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.737277, 0.67559, 0, -0.67559, 0.737277, 0, -0.375, -0.25)
+
+[node name="left_foot" parent="Node2/golem/body/left_upper_leg/left_lower_leg" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, 0, -0.3125, 0.1875)
+
+[node name="right_upper_leg" parent="Node2/golem/body" index="2"]
+transform = Transform3D(0.92388, -0.219498, -0.313476, -7.45058e-09, 0.819152, -0.573576, 0.382683, 0.529916, 0.756798, 0.4375, 0.5625, 0.0625)
+
+[node name="right_lower_leg" parent="Node2/golem/body/right_upper_leg" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, -0.375, -0.25)
+
+[node name="right_foot" parent="Node2/golem/body/right_upper_leg/right_lower_leg" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.3125, 0.1875)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_v3lvp")
+}

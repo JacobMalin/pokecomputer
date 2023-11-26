@@ -1,0 +1,677 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnwdjga5lal82"]
+
+[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/vulpix.gltf" id="1_ujp10"]
+
+[sub_resource type="Animation" id="Animation_586kd"]
+resource_name = "animation_vulpix_blink"
+length = 0.1667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/vulpix/body/torso2/head2/eyes/eye_right2/eyelid_right2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0396875, -1.11022e-16, -2.25514e-17, 0.1, 1, -0.0396875, -1.11022e-16, -2.25514e-17, 0.133333, 1, -0.0409365, -1.11022e-16, 0.001249, 0.1667, 1, -0.0459375, -1.11022e-16, 0.00625)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/vulpix/body/torso2/head2/eyes/eye_left2/eyelid_left2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0396875, -1.11022e-16, -2.25514e-17, 0.1, 1, 0.0396875, -1.11022e-16, -2.25514e-17, 0.133333, 1, 0.0409365, -1.11022e-16, 0.001249, 0.1667, 1, 0.0459375, -1.11022e-16, 0.00625)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/vulpix/body")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/vulpix/body")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/vulpix/body/torso2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.484375, 0.203125)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/vulpix/body/torso2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/vulpix/body/torso2/tail62")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.046875, 0.046875, 0.09375)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/vulpix/body/torso2/tail62")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.142244, 0.564863, 0.0996005, 0.806707)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/vulpix/body/leg_front_right4")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.125, 0.4375, -0.203125)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/vulpix/body/leg_front_right4")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.0654031, 0, 0, 0.997859)
+tracks/10/type = "position_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/vulpix/body/leg_front_left4")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, -0.125, 0.4375, -0.203125)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/vulpix/body/leg_front_left4")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.0654031, 0, 0, 0.997859)
+tracks/12/type = "position_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/vulpix/body/leg_back_right4")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.125, 0.453125, 0.1875)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/vulpix/body/leg_back_right4")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/14/type = "position_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/vulpix/body/leg_back_left4")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, -0.125, 0.453125, 0.1875)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/vulpix/body/leg_back_left4")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/vulpix/body/torso2/head2")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/vulpix/body/torso2/head2/head_tuft2")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/vulpix/body/torso2/head2/head_tuft2/head_hair_front3")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.152123, 0, 0, 0.988362)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/vulpix/body/torso2/head2/head_tuft2/head_hair_front3/head_hair_front22")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, -0.625924, 0, 0, 0.779884)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/vulpix/body/torso2/head2/ear_right2")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0.206239, 0.198008, -0.359285, 0.888354)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/vulpix/body/torso2/head2/ear_left2")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0.206239, -0.198008, 0.359285, 0.888354)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/vulpix/body/torso2/tail2")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, -0.336824, -0.163176, -0.0593912, 0.925417)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/vulpix/body/torso2/tail2/tail_end2")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0, 0.0871558, 0, 0.996195)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/vulpix/body/torso2/tail23")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, -0.336824, 0.163176, 0.0593912, 0.925417)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/vulpix/body/torso2/tail23/tail_end23")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0, -0.0871558, 0, 0.996195)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/vulpix/body/torso2/tail32")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, -0.239118, -0.369644, -0.0990458, 0.892399)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/vulpix/body/torso2/tail32/tail_end32")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0.0434534, 0.0870728, -0.00380168, 0.995247)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/vulpix/body/torso2/tail42")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, -0.142244, -0.564863, -0.0996005, 0.806707)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/vulpix/body/torso2/tail42/tail_end42")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0.130029, 0.0864101, -0.0113761, 0.987672)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/vulpix/body/torso2/tail52")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, -0.239118, 0.369644, 0.0990458, 0.892399)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/vulpix/body/torso2/tail52/tail_end52")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0.0434534, -0.0870728, 0.00380168, 0.995247)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/vulpix/body/torso2/tail62/tail_end62")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0.130029, -0.0864101, 0.0113761, 0.987672)
+tracks/33/type = "rotation_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Node2/vulpix/body/leg_front_right4/leg_front_right22")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0.19509, 0, 0, 0.980785)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Node2/vulpix/body/leg_front_right4/leg_front_right22/leg_front_right32")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/35/type = "rotation_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Node2/vulpix/body/leg_front_left4/leg_front_left22")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, 0.19509, 0, 0, 0.980785)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Node2/vulpix/body/leg_front_left4/leg_front_left22/leg_front_left32")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, -0.130526, 0, 0, 0.991445)
+tracks/37/type = "rotation_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Node2/vulpix/body/leg_back_right4/leg_back_right22")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, 0.130526, 0, 0, 0.991445)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Node2/vulpix/body/leg_back_right4/leg_back_right22/leg_back_right32")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, -0.0871558, 0, 0, 0.996195)
+tracks/39/type = "rotation_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Node2/vulpix/body/leg_back_left4/leg_back_left22")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, 0.130526, 0, 0, 0.991445)
+tracks/40/type = "rotation_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Node2/vulpix/body/leg_back_left4/leg_back_left22/leg_back_left32")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, -0.0871558, 0, 0, 0.996195)
+
+[sub_resource type="Animation" id="Animation_i6q6i"]
+resource_name = "animation_vulpix_sleep"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/vulpix/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.28125, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/vulpix/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, -0.152123, 0.988362)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/vulpix/body/torso2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.5, 0.203125)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/vulpix/body/torso2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.0654031, 0.997859, 0.166667, 1, -0.00112448, -7.37023e-05, 0.0654031, 0.997858, 0.333333, 1, -0.00217699, -0.000142687, 0.065403, 0.997857, 0.533333, 1, -0.00323322, -0.000211916, 0.0654028, 0.997854, 0.866667, 1, -0.00425557, -0.000278925, 0.0654025, 0.99785, 1.46667, 1, -0.00323454, -0.000212003, 0.0654028, 0.997854, 1.66667, 1, -0.00217699, -0.000142687, 0.065403, 0.997857, 1.83333, 1, -0.00112689, -7.38605e-05, 0.0654031, 0.997858, 2, 1, 9.13457e-18, 5.98711e-19, 0.0654031, 0.997859, 2.16667, 1, 0.00112689, 7.38605e-05, 0.0654031, 0.997858, 2.33333, 1, 0.00217699, 0.000142687, 0.065403, 0.997857, 2.53333, 1, 0.00322893, 0.000211635, 0.0654028, 0.997854, 2.86667, 1, 0.00425005, 0.000278563, 0.0654025, 0.99785, 3.46667, 1, 0.00322893, 0.000211635, 0.0654028, 0.997854, 3.66667, 1, 0.00217699, 0.000142687, 0.065403, 0.997857, 3.83333, 1, 0.00112689, 7.38605e-05, 0.0654031, 0.997858, 4, 1, 3.97375e-17, 2.60454e-18, 0.0654031, 0.997859)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/vulpix/body/torso2/head2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.373399, 0.13624, 0.0266955, 0.917223, 0.3, 1, -0.374431, 0.13621, 0.0268488, 0.916803, 0.5, 1, -0.375471, 0.13618, 0.0270034, 0.916377, 0.666667, 1, -0.376465, 0.13615, 0.027151, 0.91597, 0.833333, 1, -0.377504, 0.13612, 0.0273055, 0.915542, 1, 1, -0.37852, 0.136089, 0.0274566, 0.915122, 1.16667, 1, -0.379447, 0.136061, 0.0275945, 0.914738, 1.4, 1, -0.380465, 0.13603, 0.0277459, 0.914315, 2.4, 1, -0.379387, 0.136063, 0.0275855, 0.914763, 2.56667, 1, -0.378455, 0.136091, 0.027447, 0.915149, 2.73333, 1, -0.377435, 0.136122, 0.0272952, 0.91557, 2.9, 1, -0.376395, 0.136153, 0.0271407, 0.915998, 3.06667, 1, -0.375407, 0.136182, 0.0269938, 0.916404, 3.26667, 1, -0.374384, 0.136212, 0.0268417, 0.916822, 3.53333, 1, -0.373457, 0.136239, 0.0267041, 0.9172, 4, 1, -0.373399, 0.13624, 0.0266955, 0.917223)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/vulpix/body/torso2/head2/eyes/eye_right2/eyelid_right2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0396875, -1.11022e-16, -2.25514e-17)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/vulpix/body/torso2/head2/eyes/eye_left2/eyelid_left2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0396875, -1.11022e-16, -2.25514e-17)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/vulpix/body/torso2/head2/head_tuft2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.108867, 0, 0, 0.994056)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/vulpix/body/torso2/head2/head_tuft2/head_hair_front3")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.19509, 0, 0, 0.980785)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/vulpix/body/torso2/head2/head_tuft2/head_hair_front3/head_hair_front22")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.518773, 0, 0, 0.854912)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/vulpix/body/torso2/head2/ear_right2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.23749, 0.159187, -0.508088, 0.812468)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/vulpix/body/torso2/head2/ear_left2")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0.244207, -0.148676, 0.543044, 0.789533)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/vulpix/body/torso2/tail2")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.168834, -0.195187, -0.101734, 0.960754)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/vulpix/body/torso2/tail2/tail_end2")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0.150994, -0.19193, 0.019504, 0.969527)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/vulpix/body/torso2/tail23")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0.135455, -0.0391198, -0.174136, 0.974576)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/vulpix/body/torso2/tail23/tail_end23")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0.164976, -0.140197, 0.00196851, 0.976281)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/vulpix/body/torso2/tail32")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.200324, -0.379865, -0.0351249, 0.902407)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/vulpix/body/torso2/tail32/tail_end32")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0.0875602, -0.172127, 0.00200509, 0.981174)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/vulpix/body/torso2/tail42")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.221672, -0.564485, -0.0568176, 0.793089)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Node2/vulpix/body/torso2/tail42/tail_end42")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0.124109, -0.0321759, -0.0662316, 0.989533)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Node2/vulpix/body/torso2/tail52")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0.126012, 0.137108, -0.186348, 0.964675)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Node2/vulpix/body/torso2/tail52/tail_end52")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0.174021, -0.218672, 0.0156814, 0.960028)
+tracks/22/type = "position_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Node2/vulpix/body/torso2/tail62")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0.046875, 0.040625, 0.09375)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Node2/vulpix/body/torso2/tail62")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0.0674456, 0.299726, -0.120788, 0.943942)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Node2/vulpix/body/torso2/tail62/tail_end62")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0.288456, -0.24713, -0.0127008, 0.924964)
+tracks/25/type = "position_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Node2/vulpix/body/leg_front_right4")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0.140625, 0.4375, -0.203125)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Node2/vulpix/body/leg_front_right4")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0.632998, -0.0140707, 0.187059, 0.751082)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Node2/vulpix/body/leg_front_right4/leg_front_right22")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0.108867, 0, 0, 0.994056)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Node2/vulpix/body/leg_front_right4/leg_front_right22/leg_front_right32")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, -0.279829, 0, 0, 0.96005)
+tracks/29/type = "position_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Node2/vulpix/body/leg_front_left4")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, -0.140625, 0.4375, -0.203125)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Node2/vulpix/body/leg_front_left4")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0.38529, 0.380922, -0.00522856, 0.84049)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Node2/vulpix/body/leg_front_left4/leg_front_left22")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0.279829, 0, 0, 0.96005)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Node2/vulpix/body/leg_front_left4/leg_front_left22/leg_front_left32")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, -0.279829, 0, 0, 0.96005)
+tracks/33/type = "position_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Node2/vulpix/body/leg_back_right4")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0.15625, 0.484375, 0.1875)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Node2/vulpix/body/leg_back_right4")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, 0.862346, 0.0773806, 0.11524, 0.48692)
+tracks/35/type = "rotation_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Node2/vulpix/body/leg_back_right4/leg_back_right22")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, -0.984808, 0, 0, 0.173648)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Node2/vulpix/body/leg_back_right4/leg_back_right22/leg_back_right32")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, 0.279829, 0, 0, 0.96005)
+tracks/37/type = "position_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Node2/vulpix/body/leg_back_left4")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, -0.140625, 0.453125, 0.1875)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Node2/vulpix/body/leg_back_left4")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, 0.397353, 0.0818246, 0.0526745, 0.912492)
+tracks/39/type = "rotation_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Node2/vulpix/body/leg_back_left4/leg_back_left22")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, -0.939693, 0, 0, 0.34202)
+tracks/40/type = "rotation_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Node2/vulpix/body/leg_back_left4/leg_back_left22/leg_back_left32")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, -0.321439, 0, 0, 0.94693)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6kqga"]
+_data = {
+"animation_vulpix_blink": SubResource("Animation_586kd"),
+"animation_vulpix_sleep": SubResource("Animation_i6q6i")
+}
+
+[node name="vulpix" instance=ExtResource("1_ujp10")]
+
+[node name="eyelid_right2" parent="Node2/vulpix/body/torso2/head2/eyes/eye_right2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0396875, -1.11022e-16, -2.25514e-17)
+
+[node name="eyelid_left2" parent="Node2/vulpix/body/torso2/head2/eyes/eye_left2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0396875, -1.11022e-16, -2.25514e-17)
+
+[node name="head_hair_front3" parent="Node2/vulpix/body/torso2/head2/head_tuft2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0.046875, -0.125)
+
+[node name="head_hair_front22" parent="Node2/vulpix/body/torso2/head2/head_tuft2/head_hair_front3" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.21644, 0.976296, 0, -0.976296, 0.21644, 0, 0, -0.125)
+
+[node name="ear_right2" parent="Node2/vulpix/body/torso2/head2" index="4"]
+transform = Transform3D(0.663414, 0.720019, 0.203605, -0.55667, 0.656759, -0.508709, -0.5, 0.224144, 0.836516, 0.171875, 0.3125, -0.03125)
+
+[node name="ear_left2" parent="Node2/vulpix/body/torso2/head2" index="5"]
+transform = Transform3D(0.663414, -0.720019, -0.203605, 0.55667, 0.656759, -0.508709, 0.5, 0.224144, 0.836516, -0.171875, 0.3125, -0.03125)
+
+[node name="tail2" parent="Node2/vulpix/body/torso2" index="2"]
+transform = Transform3D(0.939693, 0.219846, -0.262003, -7.45058e-09, 0.766044, 0.642788, 0.34202, -0.604023, 0.719846, -0.015625, 0.046875, 0.09375)
+
+[node name="tail_end2" parent="Node2/vulpix/body/torso2/tail2" index="1"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 4.16334e-17, 0.03125, 0.25)
+
+[node name="tail23" parent="Node2/vulpix/body/torso2" index="3"]
+transform = Transform3D(0.939693, -0.219846, 0.262003, 7.45058e-09, 0.766044, 0.642788, -0.34202, -0.604023, 0.719846, 0.015625, 0.046875, 0.09375)
+
+[node name="tail_end23" parent="Node2/vulpix/body/torso2/tail23" index="1"]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, -4.16334e-17, 0.03125, 0.25)
+
+[node name="tail32" parent="Node2/vulpix/body/torso2" index="4"]
+transform = Transform3D(0.707107, 0.353553, -0.612372, -1.49012e-08, 0.866025, 0.5, 0.707107, -0.353553, 0.612372, -0.03125, 0.046875, 0.09375)
+
+[node name="tail_end32" parent="Node2/vulpix/body/torso2/tail32" index="1"]
+transform = Transform3D(0.984808, 0.0151344, 0.172987, 0, 0.996195, -0.0871557, -0.173648, 0.0858316, 0.98106, 4.16334e-17, 0.03125, 0.25)
+
+[node name="tail42" parent="Node2/vulpix/body/torso2" index="5"]
+transform = Transform3D(0.34202, 0.321394, -0.883022, 2.98023e-08, 0.939693, 0.34202, 0.939693, -0.116978, 0.321394, -0.046875, 0.046875, 0.09375)
+
+[node name="tail_end42" parent="Node2/vulpix/body/torso2/tail42" index="1"]
+transform = Transform3D(0.984808, 0.0449435, 0.167731, 0, 0.965926, -0.258819, -0.173648, 0.254887, 0.951251, 4.16334e-17, 0.03125, 0.25)
+
+[node name="tail52" parent="Node2/vulpix/body/torso2" index="6"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 1.49012e-08, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0.03125, 0.046875, 0.09375)
+
+[node name="tail_end52" parent="Node2/vulpix/body/torso2/tail52" index="1"]
+transform = Transform3D(0.984808, -0.0151344, -0.172987, 0, 0.996195, -0.0871557, 0.173648, 0.0858316, 0.98106, -4.16334e-17, 0.03125, 0.25)
+
+[node name="tail62" parent="Node2/vulpix/body/torso2" index="7"]
+transform = Transform3D(0.34202, -0.321394, 0.883022, -2.98023e-08, 0.939693, 0.34202, -0.939693, -0.116978, 0.321394, 0.046875, 0.046875, 0.09375)
+
+[node name="tail_end62" parent="Node2/vulpix/body/torso2/tail62" index="1"]
+transform = Transform3D(0.984808, -0.0449435, -0.167731, 0, 0.965926, -0.258819, 0.173648, 0.254887, 0.951251, -4.16334e-17, 0.03125, 0.25)
+
+[node name="leg_front_right22" parent="Node2/vulpix/body/leg_front_right4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382684, 0, 0.382684, 0.92388, 0, -0.21875, 0.09375)
+
+[node name="leg_front_right32" parent="Node2/vulpix/body/leg_front_right4/leg_front_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.15625, -0.09375)
+
+[node name="leg_front_left22" parent="Node2/vulpix/body/leg_front_left4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382684, 0, 0.382684, 0.92388, 0, -0.21875, 0.09375)
+
+[node name="leg_front_left32" parent="Node2/vulpix/body/leg_front_left4/leg_front_left22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.15625, -0.09375)
+
+[node name="leg_back_right22" parent="Node2/vulpix/body/leg_back_right4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, -0.21875, 0.09375)
+
+[node name="leg_back_right32" parent="Node2/vulpix/body/leg_back_right4/leg_back_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, -0.140625, -0.03125)
+
+[node name="leg_back_left22" parent="Node2/vulpix/body/leg_back_left4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, -0.21875, 0.09375)
+
+[node name="leg_back_left32" parent="Node2/vulpix/body/leg_back_left4/leg_back_left22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, -0.140625, -0.03125)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_6kqga")
+}

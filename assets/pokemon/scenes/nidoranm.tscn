@@ -1,0 +1,140 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0m708twebt1s"]
+
+[ext_resource type="PackedScene" uid="uid://h78q0ieoxfid" path="res://assets/pokemon/gltf/nidoranm.gltf" id="1_mmiym"]
+
+[sub_resource type="Animation" id="Animation_adm65"]
+resource_name = "animation_nidoranm_sleep"
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/nidoran_m/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.234375, 0.03125)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/nidoran_m/body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0436194, 0, 0, 0.999048)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/nidoran_m/body/head2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.178196, -0.098443, 0.0965538, 0.974286)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/nidoran_m/body/head2/eyelid_left2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.15625, 0.0462083, -0.280554)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/nidoran_m/body/head2/eyelid_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.1625, 0.0462083, -0.280554)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/nidoran_m/body/head2/ear_left2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.122654, 0.0446426, 0.339094, 0.931653)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/nidoran_m/body/head2/ear_right2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.122654, -0.0446426, -0.339094, 0.931653)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/nidoran_m/body/leg_front_left2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -0.15625, -0.046875, -0.1875)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/nidoran_m/body/leg_front_left2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.574141, 0.0731324, -0.0285586, 0.814984)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/nidoran_m/body/leg_front_right2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.15625, -0.046875, -0.1875)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/nidoran_m/body/leg_front_right2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.600365, -0.23575, 0.0621468, 0.761657)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/nidoran_m/body/leg_back_left2")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.430275, 0.0485745, -0.105465, 0.895199)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/nidoran_m/body/leg_back_right2")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.463064, -0.0658178, 0.20631, 0.859463)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vo6u5"]
+_data = {
+"animation_nidoranm_sleep": SubResource("Animation_adm65")
+}
+
+[node name="nidoranm" instance=ExtResource("1_mmiym")]
+
+[node name="body" parent="Node2/nidoran_m" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0.234375, 0.03125)
+
+[node name="head2" parent="Node2/nidoran_m/body" index="4"]
+transform = Transform3D(0.961973, -0.153058, -0.226234, 0.223226, 0.917847, 0.328218, 0.157412, -0.366238, 0.91711, 0, 0.0625, -0.21875)
+
+[node name="eyelid_left2" parent="Node2/nidoran_m/body/head2" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, -0.15625, 0.0462083, -0.280554)
+
+[node name="eyelid_right" parent="Node2/nidoran_m/body/head2" index="6"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0.1625, 0.0462083, -0.280554)
+
+[node name="ear_left2" parent="Node2/nidoran_m/body/head2" index="7"]
+transform = Transform3D(0.766044, -0.620885, 0.166366, 0.642788, 0.739942, -0.198267, -1.49012e-08, 0.258819, 0.965926, -0.1875, 0.171875, -0.109375)
+
+[node name="ear_right2" parent="Node2/nidoran_m/body/head2" index="8"]
+transform = Transform3D(0.766044, 0.620885, -0.166366, -0.642788, 0.739942, -0.198267, 1.49012e-08, 0.258819, 0.965926, 0.1875, 0.171875, -0.109375)
+
+[node name="leg_front_left2" parent="Node2/nidoran_m/body" index="5"]
+transform = Transform3D(0.987672, 0.130526, 0.0864101, 0.0374269, 0.339094, -0.940008, -0.151997, 0.931653, 0.330029, -0.15625, -0.046875, -0.1875)
+
+[node name="leg_front_right2" parent="Node2/nidoran_m/body" index="6"]
+transform = Transform3D(0.88112, -0.377741, -0.2845, -0.188403, 0.2714, -0.943847, 0.433743, 0.885242, 0.167968, 0.15625, -0.046875, -0.1875)
+
+[node name="leg_back_left2" parent="Node2/nidoran_m/body" index="7"]
+transform = Transform3D(0.973035, 0.147023, 0.177725, -0.230624, 0.607481, 0.760118, 0.0037899, -0.780609, 0.625008, -0.171875, 0, 0.140625)
+
+[node name="leg_back_right2" parent="Node2/nidoran_m/body" index="8"]
+transform = Transform3D(0.906209, -0.293675, -0.304205, 0.415586, 0.486016, 0.768815, -0.0779331, -0.82313, 0.562479, 0.171875, 0, 0.140625)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_vo6u5")
+}
