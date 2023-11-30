@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://dn7egt2s75w8b"]
+
+[ext_resource type="Script" path="res://scripts/keypad.gd" id="1_4nw3r"]
+[ext_resource type="PackedScene" uid="uid://iqy4qn41wpow" path="res://scenes/button.tscn" id="2_p2lig"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjumm"]
+albedo_color = Color(0.545098, 0.545098, 0.545098, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a0w8p"]
+material = SubResource("StandardMaterial3D_mjumm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxe5h"]
+albedo_color = Color(0.545098, 0.545098, 0.545098, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pmf1s"]
+material = SubResource("StandardMaterial3D_qxe5h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eji0s"]
+size = Vector3(1, 1.64547, 1.02593)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nrnt"]
+albedo_color = Color(0.47451, 0.47451, 0.47451, 1)
+metallic = 0.48
+roughness = 0.33
+
+[sub_resource type="BoxMesh" id="BoxMesh_x0dtw"]
+material = SubResource("StandardMaterial3D_2nrnt")
+
+[node name="Keypad" type="StaticBody3D"]
+script = ExtResource("1_4nw3r")
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.14098, 0, 0, 0, 1, 0, 0.0709896, 0)
+mesh = SubResource("BoxMesh_a0w8p")
+
+[node name="Stand" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.918865, 0, 0, 0, 0.2, 0, 1.05003, 0)
+mesh = SubResource("CylinderMesh_pmf1s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88431, 0.00878167)
+shape = SubResource("BoxShape3D_eji0s")
+
+[node name="Keypad" type="Node3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.405158, 0)
+
+[node name="Buttons" type="Node3D" parent="Keypad"]
+transform = Transform3D(0.999999, 0, 0, 0, 0.892443, -0.451158, 0, 0.451158, 0.892443, 0, 1.84255, -0.0491716)
+
+[node name="Button0" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.56)
+
+[node name="Button1" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399272, 0.25, -0.56)
+number = 1
+
+[node name="Button2" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.56)
+number = 2
+
+[node name="Button3" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399, 0.25, -0.56)
+number = 3
+
+[node name="Button4" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399, 0.25, -0.187)
+number = 4
+
+[node name="Button5" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.187)
+number = 5
+
+[node name="Button6" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399, 0.25, -0.187)
+number = 6
+
+[node name="Button7" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399, 0.25, 0.187)
+number = 7
+
+[node name="Button8" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.187)
+number = 8
+
+[node name="Button9" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399, 0.25, 0.187)
+number = 9
+
+[node name="Keypad" type="MeshInstance3D" parent="Keypad"]
+transform = Transform3D(1.5, 0, 0, 0, 0.178489, -0.676738, 0, 0.0902318, 1.33867, 0, 1.94578, 0)
+mesh = SubResource("BoxMesh_x0dtw")
+skeleton = NodePath("../..")

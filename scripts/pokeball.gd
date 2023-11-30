@@ -76,7 +76,7 @@ func _on_pokeball_hit_something(body:Node):
 	if body in all_pokeballs or mode != PokeballState.PRIMED: # Don't hit itself and do not activate until primed
 		return
 
-	print(body.name)
+	# print(body.name)
 
 	# This controls many things, but essentially drives the pokemon capture/release
 	animation_player.play("capture_and_release")

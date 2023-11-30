@@ -37,7 +37,7 @@ func _process(_delta):
 	var intermediate_pos; var intermediate_rot
 	var interp = %RightController.global_position.y - (global_position + LEFT_HOME_POS).y - MIN_HOLSTER_INTERP
 	interp = clamp(interp, 0, MAX_HOLSTER_INTERP)
-	print(interp)
+	# print(interp)
 
 	# left
 	intermediate_pos = LEFT_HOME_POS.lerp(LEFT_STOW_POS, interp / MAX_HOLSTER_INTERP)
