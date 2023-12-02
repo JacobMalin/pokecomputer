@@ -11,3 +11,4 @@ res://assets/pokeball/pokeball_highlight.tres
 res://scenes/keypad.tscn
 res://scenes/button.tscn
 res://scripts/keypad.gd
+res://scripts/globals.gd
