@@ -1,13 +1,13 @@
+MeshInstance3D
+CollisionShape3D
+StaticBody3D
 Label3D
 TextEdit
 Area3D
-StaticBody3D
-CollisionShape3D
 Node3D
 Button
 CheckButton
 AnimationPlayer
-MeshInstance3D
 DirectionalLight3D
 AudioListener3D
 AudioStreamPlayer3D

@@ -12,3 +12,4 @@ res://scenes/keypad.tscn
 res://scenes/button.tscn
 res://scripts/keypad.gd
 res://scripts/globals.gd
+res://scenes/pokespawner.tscn
