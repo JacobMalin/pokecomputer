@@ -16,7 +16,7 @@ albedo_color = Color(0.545098, 0.545098, 0.545098, 1)
 material = SubResource("StandardMaterial3D_qxe5h")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eji0s"]
-size = Vector3(1, 1.64547, 1.02593)
+size = Vector3(0.489459, 0.921927, 0.47155)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nrnt"]
 albedo_color = Color(0.47451, 0.47451, 0.47451, 1)
@@ -30,22 +30,22 @@ material = SubResource("StandardMaterial3D_2nrnt")
 script = ExtResource("1_4nw3r")
 
 [node name="Base" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.14098, 0, 0, 0, 1, 0, 0.0709896, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.071, 0, 0, 0, 0.5, 0, 0.0709896, 0)
 mesh = SubResource("BoxMesh_a0w8p")
 
 [node name="Stand" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.918865, 0, 0, 0, 0.2, 0, 1.05003, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.65, 0, 0, 0, 0.1, 0, 0.562042, 0)
 mesh = SubResource("CylinderMesh_pmf1s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88431, 0.00878167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.553912, 0.00393713)
 shape = SubResource("BoxShape3D_eji0s")
 
 [node name="Keypad" type="Node3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.405158, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.35776, 0)
 
 [node name="Buttons" type="Node3D" parent="Keypad"]
-transform = Transform3D(0.999999, 0, 0, 0, 0.892443, -0.451158, 0, 0.451158, 0.892443, 0, 1.84255, -0.0491716)
+transform = Transform3D(0.5, 0, 0, 0, 0.446222, -0.225579, 0, 0.225579, 0.446222, 0, 1.86963, -0.01983)
 
 [node name="Button0" parent="Keypad/Buttons" instance=ExtResource("2_p2lig")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.56)
@@ -87,6 +87,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399, 0.25, 0.187)
 number = 9
 
 [node name="Keypad" type="MeshInstance3D" parent="Keypad"]
-transform = Transform3D(1.5, 0, 0, 0, 0.178489, -0.676738, 0, 0.0902318, 1.33867, 0, 1.94578, 0)
+transform = Transform3D(0.75, 0, 0, 0, 0.0892444, -0.338369, 0, 0.0451159, 0.669333, 0, 1.94578, 0)
 mesh = SubResource("BoxMesh_x0dtw")
 skeleton = NodePath("../..")

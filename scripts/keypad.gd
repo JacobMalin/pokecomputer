@@ -6,13 +6,13 @@ extends StaticBody3D
 
 var id = ""
 
-signal on_keypad_press
+# signal on_keypad_press
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for child in buttons.get_children():
-		if child is MeshInstance3D:
+	for child in $Keypad/Buttons.get_children():
+		if child is Node3D:
 			child.on_pressed.connect(on_button_pressed)
 
 func on_button_pressed(number):
-	print("number: " + number)
+	print("number: ", number)
