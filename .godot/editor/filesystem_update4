@@ -1,7 +1,14 @@
+res://scripts/button.gd
+res://scripts/indexStaticL.gd
+res://addons/godot-xr-tools/xr/start_xr.gd
+res://scripts/pokemon.gd
+res://scripts/keypad.gd
+res://scripts/holster.gd
+res://scripts/indexStaticR.gd
+res://scripts/globals.gd
+res://scripts/pokeball.gd
 res://scenes/main.tscn
 res://addons/godot-xr-tools/objects/highlight/highlight_ring.gd
-res://scripts/button.gd
-res://scripts/pokemon.gd
 res://pokemon_movement.gd
 res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
 res://addons/godot-xr-tools/hands/materials/cleaning_glove.material
@@ -10,6 +17,5 @@ res://assets/hand_material.tres
 res://assets/pokeball/pokeball_highlight.tres
 res://scenes/keypad.tscn
 res://scenes/button.tscn
-res://scripts/keypad.gd
-res://scripts/globals.gd
 res://scenes/pokespawner.tscn
+res://scenes/computer.tscn

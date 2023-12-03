@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0hy51r435r8l"]
+
+[ext_resource type="Script" path="res://scripts/holster.gd" id="1_3bnkb"]
+[ext_resource type="PackedScene" uid="uid://blqy10bl4h7hy" path="res://scenes/holster_slot.tscn" id="2_kbl71"]
+
+[node name="Holster" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0)
+script = ExtResource("1_3bnkb")
+
+[node name="Left" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000352949, 0, -0.234632)
+
+[node name="Slot1" parent="Left" instance=ExtResource("2_kbl71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118, 0, 0.03)
+
+[node name="Slot2" parent="Left" instance=ExtResource("2_kbl71")]
+initial_object = NodePath("../../../../Pokeballs/Left/Pokeball2")
+
+[node name="Slot3" parent="Left" instance=ExtResource("2_kbl71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0, 0.03)
+initial_object = NodePath("../../../../Pokeballs/Left/Pokeball3")
+
+[node name="Right" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.110816)
+
+[node name="Slot4" parent="Right" instance=ExtResource("2_kbl71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118, 0, 0.03)
+initial_object = NodePath("../../../../Pokeballs/Right/Pokeball4")
+
+[node name="Slot5" parent="Right" instance=ExtResource("2_kbl71")]
+initial_object = NodePath("../../../../Pokeballs/Right/Pokeball5")
+
+[node name="Slot6" parent="Right" instance=ExtResource("2_kbl71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0, 0.03)
+initial_object = NodePath("../../../../Pokeballs/Right/Pokeball6")

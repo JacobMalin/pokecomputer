@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://blqy10bl4h7hy"]
+
+[ext_resource type="Script" path="res://scripts/hostler_slot.gd" id="1_ig5ga"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xe3x2"]
+size = Vector3(0.05, 0.124, 0.05)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pi5pi"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.03
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pe8x6"]
+points = PackedVector3Array(-0.0482729, -0.015, -0.00904407, 0.0477622, 0.015, 0.00894887, 0.0462661, 0.015, 0.0149241, 0.0467583, -0.015, 0.0150829, 0.0150812, -0.015, -0.0467608, -0.0298488, 0.015, -0.0388065, -0.0193947, 0.015, 0.0447724, 0.00904252, -0.015, 0.0482729, 0.0388042, 0.015, -0.0298483, -0.0477648, 0.015, 0.00894887, -0.0392196, -0.015, 0.0301658, 0.0253672, 0.015, 0.0417895, 0.0452462, -0.015, -0.0196002, -0.0256397, -0.015, -0.042234, 0.00894732, 0.015, -0.0477647, 0.039217, -0.015, 0.0301658, -0.0447726, 0.015, -0.0194033, -0.019601, -0.015, 0.0452487, -0.0388068, 0.015, 0.0298483, -0.0392196, -0.015, -0.0301658, -0.00905461, -0.015, -0.0482729, 0.0301637, -0.015, -0.0392193, -0.00895931, 0.015, 0.0477647, -0.0149157, 0.015, -0.0462686, 0.0477622, 0.015, -0.00894887, -0.0467609, -0.015, 0.0150829, 0.0253672, 0.015, -0.0417895, 0.0256371, -0.015, 0.042234, 0.0482703, -0.015, -0.00904407, 0.0388042, 0.015, 0.0298483, 0.00894732, 0.015, 0.0477647, -0.0301663, -0.015, 0.0392193)
+
+[node name="Slot" type="Area3D"]
+collision_layer = 4
+collision_mask = 65556
+script = ExtResource("1_ig5ga")
+grab_distance = 0.0
+snap_mode = 1
+snap_require = "pokeball"
+initial_object = NodePath("../../../../Pokeballs/Left/Pokeball")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_xe3x2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+unit_size = 3.0
+max_db = 1.0
+max_distance = 100.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+mesh = SubResource("CylinderMesh_pi5pi")
+
+[node name="PuckCollision" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PuckCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
+shape = SubResource("ConvexPolygonShape3D_pe8x6")
+
+[connection signal="body_entered" from="." to="." method="_on_snap_zone_body_entered" flags=18]
+[connection signal="body_exited" from="." to="." method="_on_snap_zone_body_exited" flags=18]
+[connection signal="has_picked_up" from="." to="." method="_on_has_picked_up"]
+[connection signal="area_entered" from="PuckCollision" to="." method="_on_area_entered"]
+[connection signal="area_exited" from="PuckCollision" to="." method="_on_area_exited"]

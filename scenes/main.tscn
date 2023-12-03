@@ -1,8 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=26 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
-[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="2_5q751"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_islgx"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_ncs64"]
 [ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand_material.tres" id="3_vdsm6"]
@@ -13,10 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://dsgb4froubxfb" path="res://scenes/pokemon.tscn" id="7_2fqfm"]
 [ext_resource type="Script" path="res://scripts/indexStaticL.gd" id="7_q3gi1"]
 [ext_resource type="PackedScene" uid="uid://bpekn8na6qop8" path="res://scenes/pokeball.tscn" id="9_g3mci"]
+[ext_resource type="PackedScene" uid="uid://d0hy51r435r8l" path="res://scenes/holster.tscn" id="10_c2yjo"]
 [ext_resource type="Script" path="res://scripts/indexStaticR.gd" id="10_q7dxt"]
-[ext_resource type="Script" path="res://scripts/holster.gd" id="10_qnokk"]
 [ext_resource type="PackedScene" uid="uid://cjumce4ec6p7s" path="res://scenes/pc.tscn" id="14_a75h3"]
 [ext_resource type="PackedScene" uid="uid://dn7egt2s75w8b" path="res://scenes/keypad.tscn" id="15_ia8od"]
+[ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer.tscn" id="18_4o8mq"]
 [ext_resource type="PackedScene" uid="uid://wvl520hbmur3" path="res://scenes/pokespawner.tscn" id="18_7gr3e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7px5o"]
@@ -36,11 +36,6 @@ glow_enabled = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1xnqn"]
 radius = 0.0102049
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_pi5pi"]
-top_radius = 0.05
-bottom_radius = 0.05
-height = 0.03
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nq8ij"]
 
@@ -124,73 +119,7 @@ shape = SubResource("SphereShape3D_1xnqn")
 unique_name_in_owner = true
 collision_mask = 1019
 
-[node name="Holster" type="Node3D" parent="XROrigin3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0)
-script = ExtResource("10_qnokk")
-
-[node name="Left" type="Node3D" parent="XROrigin3D/Holster"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000352949, 0, -0.234632)
-
-[node name="Slot1" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117556, 0, 0.0301982)
-grab_distance = 0.1
-snap_require = "pokeball"
-initial_object = NodePath("../../../../Pokeballs/Left/Pokeball")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Left/Slot1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
-mesh = SubResource("CylinderMesh_pi5pi")
-
-[node name="Slot2" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
-grab_distance = 0.1
-snap_require = "pokeball"
-initial_object = NodePath("../../../../Pokeballs/Left/Pokeball2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Left/Slot2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
-mesh = SubResource("CylinderMesh_pi5pi")
-
-[node name="Slot3" parent="XROrigin3D/Holster/Left" instance=ExtResource("2_5q751")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0, 0.03)
-grab_distance = 0.1
-snap_require = "pokeball"
-initial_object = NodePath("../../../../Pokeballs/Left/Pokeball3")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Left/Slot3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
-mesh = SubResource("CylinderMesh_pi5pi")
-
-[node name="Right" type="Node3D" parent="XROrigin3D/Holster"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.110816)
-
-[node name="Slot4" parent="XROrigin3D/Holster/Right" instance=ExtResource("2_5q751")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118, 0, 0.03)
-grab_distance = 0.1
-snap_require = "pokeball"
-initial_object = NodePath("../../../../Pokeballs/Right/Pokeball4")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Right/Slot4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
-mesh = SubResource("CylinderMesh_pi5pi")
-
-[node name="Slot5" parent="XROrigin3D/Holster/Right" instance=ExtResource("2_5q751")]
-grab_distance = 0.1
-snap_require = "pokeball"
-initial_object = NodePath("../../../../Pokeballs/Right/Pokeball5")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Right/Slot5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
-mesh = SubResource("CylinderMesh_pi5pi")
-
-[node name="Slot6" parent="XROrigin3D/Holster/Right" instance=ExtResource("2_5q751")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0, 0.03)
-grab_distance = 0.1
-snap_require = "pokeball"
-initial_object = NodePath("../../../../Pokeballs/Right/Pokeball6")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/Holster/Right/Slot6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015, 0)
-mesh = SubResource("CylinderMesh_pi5pi")
+[node name="Holster" parent="XROrigin3D" instance=ExtResource("10_c2yjo")]
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -210,6 +139,7 @@ visible = false
 mesh = SubResource("PlaneMesh_0on5b")
 
 [node name="Pokeballs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000139982, 0, 0.000594437)
 
 [node name="Left" type="Node3D" parent="Pokeballs"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000352949, 0, -0.234632)
@@ -257,3 +187,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.983, -0.0483904, -7.952)
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.011, -7.945)
+
+[node name="Computer" parent="." instance=ExtResource("18_4o8mq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63651, 0, -5.5362)

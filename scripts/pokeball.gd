@@ -5,27 +5,42 @@ const POKE_SCAN_RANGE = 10
 const RISE_SPEED = 1
 const DROP_TIME = 0.5
 
+const red_materials = {
+	DisplayState.DEFAULT: preload("res://assets/pokeball/pokeball_top_material_default.tres"),
+	DisplayState.HOLSTER: preload("res://assets/pokeball/pokeball_top_material_holster.tres"),
+	DisplayState.DIGITAL: preload("res://assets/pokeball/pokeball_top_material_digital.tres"),
+}
+
 const EMPTY = null
 @export var contents : Pokemon = EMPTY;
-var contents_parent
 
-enum PokeballState {
+enum CaptureState {
 	DEFAULT,
 	PRIMED,
 	RISE,
 	HOLD,
 	DROP
 }
-@export var mode : PokeballState = PokeballState.DEFAULT;
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@export var capture_state : CaptureState = CaptureState.DEFAULT;
 
+enum DisplayState {
+	DEFAULT,
+	HOLSTER,
+	DIGITAL
+}
+@export var display_state : DisplayState = DisplayState.DEFAULT;
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var mesh: Node3D = $Mesh
 @onready var capture_radius: Area3D = $PokemonCaptureRadius
 
+@onready var sphere_mesh = mesh.get_node("Sphere")
+
 @onready var player_body: XRToolsPlayerBody = %PlayerBody
 
 var closest_pokemon
+var contents_parent
 
 var drop_elapsed = 0
 var drop_start_rot
@@ -38,7 +53,7 @@ func _ready():
 
 
 func _process(delta):
-	if mode == PokeballState.RISE: # Look at target
+	if capture_state == CaptureState.RISE: # Look at target
 		# Maybe fix some year: Pokeball snaps into place once rise starts
 
 		# Get target for look at
@@ -52,9 +67,9 @@ func _process(delta):
 		mesh.look_at(target_position)
 		mesh.rotate_object_local(Vector3.UP, PI)
 
-	if mode == PokeballState.DROP: # Reset rotation
+	if capture_state == CaptureState.DROP: # Reset rotation
 		if drop_elapsed >= DROP_TIME:
-			mode = PokeballState.DEFAULT
+			capture_state = CaptureState.DEFAULT
 			mesh.rotation = Vector3.ZERO
 
 		drop_elapsed += delta
@@ -64,7 +79,7 @@ func _process(delta):
 
 func _integrate_forces(state):
 	# Rise upwards
-	if mode == PokeballState.RISE:
+	if capture_state == CaptureState.RISE:
 		state.linear_velocity = Vector3.UP * 0.01 / state.step
 		state.angular_velocity = Vector3.ZERO
 
@@ -73,27 +88,51 @@ func _integrate_forces(state):
 
 func _on_pokeball_hit_something(body:Node):
 	var all_pokeballs = get_tree().get_nodes_in_group("pokeball")
-	if body in all_pokeballs or mode != PokeballState.PRIMED: # Don't hit itself and do not activate until primed
+	if body in all_pokeballs or capture_state != CaptureState.PRIMED: # Don't hit itself and do not activate until primed
 		return
-
-	# print(body.name)
 
 	# This controls many things, but essentially drives the pokemon capture/release
 	animation_player.play("capture_and_release")
 
 func _on_pokeball_dropped(_pickable):
-	mode = PokeballState.PRIMED
+	capture_state = CaptureState.PRIMED
 
 
 
 ## Helper ##
+
+func enter_computer():
+	if display_state == DisplayState.HOLSTER:
+		display(DisplayState.DIGITAL)
+
+func exit_computer():
+	if display_state == DisplayState.DIGITAL:
+		display(DisplayState.HOLSTER)
+
+func enter_holster():
+	display(DisplayState.HOLSTER)
+	capture_state = CaptureState.DEFAULT
+
+func exit_holster():
+	display(DisplayState.DEFAULT)
+
+func display(_display_state):
+	display_state = _display_state
+	
+	sphere_mesh.mesh.surface_set_material(0, red_materials[display_state])
+
+	match display_state:
+		DisplayState.DEFAULT: mesh.visible = true
+		DisplayState.HOLSTER: mesh.visible = true
+		DisplayState.DIGITAL: mesh.visible = false
+
 
 ### RISE phase ###
 
 func scan(): # If pokeball is empty, choose closest pokemon to capture
 	if contents == EMPTY:
 		var all_pokemon = get_tree().get_nodes_in_group("pokemon")
-		var can_be_captured = (func(poke): return poke in all_pokemon and poke.capture_state == poke.PokemonCapture.FREE)
+		var can_be_captured = (func(poke): return poke in all_pokemon and poke.is_free())
 		var nearby_pokemon = capture_radius.get_overlapping_bodies().filter(can_be_captured)
 
 		closest_pokemon = nearby_pokemon.reduce(func(_min, poke): return poke if is_closer(poke, _min) else _min)
@@ -114,7 +153,7 @@ func capture_and_release():
 func capture():
 	if closest_pokemon == null: # If no pokemon was found in the scan phase
 		$AnimationPlayer.stop()
-		mode = PokeballState.DROP
+		capture_state = CaptureState.DROP
 		collision.disabled = false
 		enabled = true
 
