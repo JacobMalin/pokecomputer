@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_islgx"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_ncs64"]
-[ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand_material.tres" id="3_vdsm6"]
+[ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand/hand_material.tres" id="3_sue04"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_a8kta"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="4_cwh7a"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_el4ei"]
@@ -68,7 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
 [node name="LeftHand" parent="XROrigin3D/LeftController" instance=ExtResource("1_xixr5")]
-hand_material_override = ExtResource("3_vdsm6")
+hand_material_override = ExtResource("3_sue04")
 
 [node name="MovementDirect" parent="XROrigin3D/LeftController" instance=ExtResource("4_a8kta")]
 strafe = true
@@ -94,7 +94,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
 [node name="RightHand" parent="XROrigin3D/RightController" instance=ExtResource("2_ncs64")]
-hand_material_override = ExtResource("3_vdsm6")
+hand_material_override = ExtResource("3_sue04")
 
 [node name="MovementTurn" parent="XROrigin3D/RightController" instance=ExtResource("2_islgx")]
 turn_mode = 2
