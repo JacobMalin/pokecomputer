@@ -5,6 +5,8 @@ extends StaticBody3D
 @onready var globals = get_node("/root/Globals")
 @onready var buttons = $Keypad/Buttons
 
+signal spawn(num)
+
 var id = ""
 
 # signal on_keypad_press
@@ -23,7 +25,9 @@ func on_button_pressed(number):
 		id += str(number)
 		# spawn the correct pokemon based on the entered id
 		if int(id) > 151:
+			spawn.emit(0)
 			print("substitute")
 		else:
-			print(globals.pokedex[int(id)])
+			spawn.emit(int(id))
+			print(Globals.pokedex[int(id)])
 		id = ""

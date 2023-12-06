@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6pivvi8taemi"]
+
+[ext_resource type="ArrayMesh" uid="uid://chuq61p5x6ori" path="res://assets/pokemon/substitute/substitute.obj" id="1_h8em5"]
+
+[node name="Substitute" type="MeshInstance3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("1_h8em5")

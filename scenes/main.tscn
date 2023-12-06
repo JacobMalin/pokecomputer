@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=28 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://dn7egt2s75w8b" path="res://scenes/keypad.tscn" id="15_ia8od"]
 [ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer.tscn" id="18_4o8mq"]
 [ext_resource type="PackedScene" uid="uid://wvl520hbmur3" path="res://scenes/pokespawner.tscn" id="18_7gr3e"]
+[ext_resource type="Script" path="res://scripts/pokespawner.gd" id="18_cufov"]
+[ext_resource type="AudioStream" uid="uid://5g31nlggr03d" path="res://assets/bgm/Oak Pokémon Lab [Pokémon_ FireRed & LeafGreen].mp3" id="19_mh76h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7px5o"]
 sky_top_color = Color(0.258824, 0.643137, 0.933333, 1)
@@ -173,7 +175,7 @@ id = 1
 
 [node name="Charmander" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71707, 0, 3.51792)
-id = 4
+id = 8
 
 [node name="Squirtle" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68145, 0, 3.51792)
@@ -187,6 +189,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.983, -0.0483904, -7.952)
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.011, -7.945)
+script = ExtResource("18_cufov")
 
 [node name="Computer" parent="." instance=ExtResource("18_4o8mq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63651, 0, -5.5362)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_mh76h")
+volume_db = -19.676
+autoplay = true

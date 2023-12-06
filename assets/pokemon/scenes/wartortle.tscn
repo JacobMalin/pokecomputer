@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bsprrul8fpbvs"]
+[gd_scene load_steps=12 format=3 uid="uid://dh277ki4u2asv"]
 
-[ext_resource type="PackedScene" uid="uid://cab6k7mn28fh8" path="res://assets/pokemon/gltf/wartortle.gltf" id="1_ojqpr"]
+[ext_resource type="PackedScene" uid="uid://ds0l3ynhs65jc" path="res://assets/pokemon/gltf/wartortle.gltf" id="1_q1f4q"]
 
-[sub_resource type="Animation" id="Animation_p7smc"]
+[sub_resource type="Animation" id="Animation_usrnf"]
 resource_name = "animation_wartortle_blink"
 length = 0.1667
 tracks/0/type = "position_3d"
@@ -188,7 +188,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_qkvxv"]
+[sub_resource type="Animation" id="Animation_dmay6"]
 resource_name = "animation_wartortle_cry"
 length = 0.8333
 tracks/0/type = "position_3d"
@@ -374,7 +374,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_2k31y"]
+[sub_resource type="Animation" id="Animation_12l83"]
 resource_name = "animation_wartortle_faint"
 length = 3.0
 tracks/0/type = "position_3d"
@@ -560,7 +560,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_jpopn"]
+[sub_resource type="Animation" id="Animation_5ahbj"]
 resource_name = "animation_wartortle_ground_idle"
 length = 4.0
 loop_mode = 1
@@ -747,7 +747,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_270ut"]
+[sub_resource type="Animation" id="Animation_p8d6l"]
 resource_name = "animation_wartortle_ground_walk"
 length = 4.0
 loop_mode = 1
@@ -934,7 +934,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_vp38e"]
+[sub_resource type="Animation" id="Animation_b38d7"]
 resource_name = "animation_wartortle_render"
 length = 0.001
 tracks/0/type = "position_3d"
@@ -1120,7 +1120,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_coo3f"]
+[sub_resource type="Animation" id="Animation_supfc"]
 resource_name = "animation_wartortle_sleep"
 length = 4.0
 loop_mode = 1
@@ -1307,7 +1307,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_2pv75"]
+[sub_resource type="Animation" id="Animation_5a4nl"]
 resource_name = "animation_wartortle_water_idle"
 length = 4.0
 loop_mode = 1
@@ -1494,7 +1494,7 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_vcwn7"]
+[sub_resource type="Animation" id="Animation_vqfpn"]
 resource_name = "animation_wartortle_water_swim"
 length = 4.0
 loop_mode = 1
@@ -1681,55 +1681,46 @@ tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjlef"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s6x81"]
 _data = {
-"animation_wartortle_blink": SubResource("Animation_p7smc"),
-"animation_wartortle_cry": SubResource("Animation_qkvxv"),
-"animation_wartortle_faint": SubResource("Animation_2k31y"),
-"animation_wartortle_ground_idle": SubResource("Animation_jpopn"),
-"animation_wartortle_ground_walk": SubResource("Animation_270ut"),
-"animation_wartortle_render": SubResource("Animation_vp38e"),
-"animation_wartortle_sleep": SubResource("Animation_coo3f"),
-"animation_wartortle_water_idle": SubResource("Animation_2pv75"),
-"animation_wartortle_water_swim": SubResource("Animation_vcwn7")
+"animation_wartortle_blink": SubResource("Animation_usrnf"),
+"animation_wartortle_cry": SubResource("Animation_dmay6"),
+"animation_wartortle_faint": SubResource("Animation_12l83"),
+"animation_wartortle_ground_idle": SubResource("Animation_5ahbj"),
+"animation_wartortle_ground_walk": SubResource("Animation_p8d6l"),
+"animation_wartortle_render": SubResource("Animation_b38d7"),
+"animation_wartortle_sleep": SubResource("Animation_supfc"),
+"animation_wartortle_water_idle": SubResource("Animation_5a4nl"),
+"animation_wartortle_water_swim": SubResource("Animation_vqfpn")
 }
 
-[node name="wartortle" instance=ExtResource("1_ojqpr")]
+[node name="wartortle" instance=ExtResource("1_q1f4q")]
 
-[node name="body" parent="Node2/wartortle" index="0"]
-transform = Transform3D(0.999619, -0.0261795, -0.00873455, 0.00873156, -0.000228615, 0.999962, -0.0261805, -0.999657, 6.00101e-08, 0, 0.375, -0.0125)
-
-[node name="head2" parent="Node2/wartortle/body/torso2" index="2"]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 1.28125, -0.25)
-
-[node name="head_correction" parent="Node2/wartortle/body/torso2/head2" index="0"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+[node name="torso2" parent="Node2/wartortle/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, -0.6875, 0)
 
 [node name="head_angle" parent="Node2/wartortle/body/torso2/head2/head_correction/head_ai" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0)
 
 [node name="ear_right2" parent="Node2/wartortle/body/torso2/head2/head_correction/head_ai/head_angle/ears" index="0"]
-transform = Transform3D(0.944913, 0.153378, 0.289163, -0.0826692, 0.966606, -0.242565, -0.31671, 0.205298, 0.926039, 0.279687, -0.145313, -0.107813)
+transform = Transform3D(0.86273, 0.192898, 0.467427, -0.0754791, 0.963149, -0.258161, -0.5, 0.187442, 0.845497, 0.279687, -0.145313, -0.107813)
 
 [node name="ear_left2" parent="Node2/wartortle/body/torso2/head2/head_correction/head_ai/head_angle/ears" index="1"]
-transform = Transform3D(0.976071, -0.128209, -0.175635, 0.0853952, 0.968808, -0.232632, 0.199982, 0.212067, 0.956574, -0.279687, -0.145313, -0.107813)
+transform = Transform3D(0.86273, -0.192898, -0.467427, 0.0754791, 0.963149, -0.258161, 0.5, 0.187442, 0.845497, -0.279687, -0.145313, -0.107813)
 
 [node name="arm_right2" parent="Node2/wartortle/body/torso2" index="3"]
-transform = Transform3D(0.763129, 0.642788, 0.0667652, -0.640342, 0.766044, -0.0560226, -0.0871557, -3.72529e-09, 0.996195, 0.3125, 1.03125, -0.0625)
+transform = Transform3D(0.747886, 0.642788, 0.165802, -0.627551, 0.766044, -0.139125, -0.21644, -7.45058e-09, 0.976296, 0.3125, 1.03125, -0.0625)
 
 [node name="arm_left2" parent="Node2/wartortle/body/torso2" index="4"]
-transform = Transform3D(0.763201, -0.642301, -0.0705322, 0.64024, 0.766432, -0.0517231, 0.0872799, -0.00568246, 0.996168, -0.3125, 1.03125, -0.0625)
-
-[node name="tail2" parent="Node2/wartortle/body/torso2" index="5"]
-transform = Transform3D(0.999715, -0.00414604, -0.0235125, -0.0238752, -0.173599, -0.984527, 1.63913e-07, 0.984808, -0.173648, 0, 0.3125, 0.1875)
+transform = Transform3D(0.747943, -0.641736, -0.169576, 0.627441, 0.766906, -0.13481, 0.216561, -0.00556888, 0.976253, -0.3125, 1.03125, -0.0625)
 
 [node name="leg_right2" parent="Node2/wartortle/body" index="1"]
-transform = Transform3D(0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 0, 0, 1, 0.21875, -0.25, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21875, -0.25, -0.09375)
 
 [node name="leg_left2" parent="Node2/wartortle/body" index="2"]
-transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, -0.21875, -0.25, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21875, -0.25, -0.09375)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_rjlef")
+"": SubResource("AnimationLibrary_s6x81")
 }

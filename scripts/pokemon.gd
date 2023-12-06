@@ -171,7 +171,9 @@ func actor_setup():
 	await get_tree().physics_frame
 
 	# Now that the navigation map is no longer empty, set the movement target.
-	walk()
+	# walk()
+	if id != 0:
+		idle()
 
 func set_movement_target(movement_target: Vector3):
 	navigation_agent.set_target_position(movement_target)
@@ -218,8 +220,9 @@ func capture(dest_rot):
 
 	collision.disabled = true
 
-	cry()
-	idle()
+	#cry()
+	if id != 0:
+		idle()
 
 func end_capture():
 	capture_state = CaptureState.CONTAIN
@@ -233,11 +236,12 @@ func release(dest_pos, start_rot, dest_rot):
 
 	release_start_rot = start_rot
 	release_dest_rot  = dest_rot
-
-	cry()
+	if id != 0:
+		cry()
 
 func end_release():
 	capture_state = CaptureState.FREE
 	collision.disabled = false
 
-	walk()
+	if id != 0:
+		walk()
