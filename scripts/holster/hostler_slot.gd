@@ -12,6 +12,7 @@ enum HolsterMode {
 
 ### Lifecycle ###
 
+# Overwrite super._ready
 func _ready():
 	# Dont do this
 	# $CollisionShape3D.shape.radius = grab_distance
@@ -71,8 +72,10 @@ func holster(_holster_mode):
 	match holster_mode:
 		HolsterMode.DEFAULT:
 			if picked_up_object: picked_up_object.exit_computer()
+			visible = true
 			enabled = true
 		HolsterMode.DIGITAL:
 			if picked_up_object: picked_up_object.enter_computer()
+			else: visible = false
 			enabled = false
 

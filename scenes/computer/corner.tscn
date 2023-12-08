@@ -26,6 +26,7 @@ visible = false
 shape = SubResource("BoxShape3D_d6o21")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("PlaceholderMesh_oqbqm")
 script = ExtResource("3_3mo1d")
 

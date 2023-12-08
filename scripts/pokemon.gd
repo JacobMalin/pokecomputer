@@ -172,8 +172,7 @@ func actor_setup():
 
 	# Now that the navigation map is no longer empty, set the movement target.
 	# walk()
-	if id != 0:
-		idle()
+	idle()
 
 func set_movement_target(movement_target: Vector3):
 	navigation_agent.set_target_position(movement_target)
@@ -184,7 +183,7 @@ func clear_movement_target():
 func cry():
 	if id != 0:
 		audio_player.play()
-		animation_player.play("animation_"+pokemon_name+"_cry")
+		if animation_player: animation_player.play("animation_"+pokemon_name+"_cry")
 
 func is_free():
 	return capture_state == CaptureState.FREE
@@ -192,16 +191,18 @@ func is_free():
 ### Pokemon move states ###
 
 func walk():
-	move_state = MoveState.WALK
-	animation_player.play("animation_"+pokemon_name+"_ground_walk")
-	set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
-								0.0,
-								randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
+	if id != 0:
+		move_state = MoveState.WALK
+		if animation_player: animation_player.play("animation_"+pokemon_name+"_ground_walk")
+		set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
+									0.0,
+									randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
 
 func idle():
-	move_state = MoveState.IDLE
-	animation_player.play("animation_"+pokemon_name+"_ground_idle")
-	clear_movement_target()
+	if id != 0:
+		move_state = MoveState.IDLE
+		if animation_player: animation_player.play("animation_"+pokemon_name+"_ground_idle")
+		clear_movement_target()
 
 ### Pokemon capture states ###
 
@@ -221,9 +222,7 @@ func capture(dest_rot):
 
 	collision.disabled = true
 
-	#cry()
-	if id != 0:
-		idle()
+	idle()
 
 func end_capture():
 	capture_state = CaptureState.CONTAIN
@@ -237,12 +236,11 @@ func release(dest_pos, start_rot, dest_rot):
 
 	release_start_rot = start_rot
 	release_dest_rot  = dest_rot
-	if id != 0:
-		cry()
+
+	cry()
 
 func end_release():
 	capture_state = CaptureState.FREE
 	collision.disabled = false
 
-	if id != 0:
-		walk()
+	walk()

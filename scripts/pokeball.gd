@@ -4,15 +4,17 @@ extends XRToolsPickable
 const POKE_SCAN_RANGE = 10
 const RISE_SPEED = 1
 const DROP_TIME = 0.5
+const POKEBALL_SCALE = 0.03
+
+
+@onready var pokemon_scene = preload("res://scenes/pokemon.tscn")
+@onready var digital_scene = preload("res://scenes/digital_pokemon.tscn")
 
 const red_materials = {
 	DisplayState.DEFAULT: preload("res://assets/pokeball/pokeball_top_material_default.tres"),
 	DisplayState.HOLSTER: preload("res://assets/pokeball/pokeball_top_material_holster.tres"),
 	DisplayState.DIGITAL: preload("res://assets/pokeball/pokeball_top_material_digital.tres"),
 }
-
-const EMPTY = null
-@export var contents : Pokemon = EMPTY;
 
 enum CaptureState {
 	DEFAULT,
@@ -21,26 +23,34 @@ enum CaptureState {
 	HOLD,
 	DROP
 }
-@export var capture_state : CaptureState = CaptureState.DEFAULT;
+@export var capture_state : CaptureState = CaptureState.DEFAULT
 
 enum DisplayState {
 	DEFAULT,
 	HOLSTER,
 	DIGITAL
 }
-@export var display_state : DisplayState = DisplayState.DEFAULT;
+@export var display_state : DisplayState = DisplayState.DEFAULT
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var mesh: Node3D = $Mesh
 @onready var capture_radius: Area3D = $PokemonCaptureRadius
+@onready var digi_snap: DigiPokeSnap = $DigiPokeSnap
 
 @onready var sphere_mesh = mesh.get_node("Sphere")
 
 @onready var player_body: XRToolsPlayerBody = %PlayerBody
+@onready var holster: Holster = %Holster
+@onready var computer: Computer = %Computer
+
+
+const EMPTY = null
+var contents : DigitalPokemon = EMPTY
+var contents_temp : Pokemon = EMPTY
+var contents_parent
 
 var closest_pokemon
-var contents_parent
 
 var drop_elapsed = 0
 var drop_start_rot
@@ -57,7 +67,7 @@ func _process(delta):
 		# Maybe fix some year: Pokeball snaps into place once rise starts
 
 		# Get target for look at
-		var target_position;
+		var target_position
 		if contents == EMPTY and closest_pokemon != null: ## Look at the closest pokemon in a range of POKE_SCAN_RANGE
 			target_position = closest_pokemon.get_node("CollisionShape3D").global_position
 		else: ## Look at ground 1 meter away from ball in the direction away from the player
@@ -97,6 +107,13 @@ func _on_pokeball_hit_something(body:Node):
 func _on_pokeball_dropped(_pickable):
 	capture_state = CaptureState.PRIMED
 
+func _on_digi_snap_has_dropped():
+	computer.adopt(contents)
+	contents = EMPTY
+
+func _on_digi_snap_has_picked_up(what):
+	contents = what
+
 
 
 ## Helper ##
@@ -122,9 +139,21 @@ func display(_display_state):
 	sphere_mesh.mesh.surface_set_material(0, red_materials[display_state])
 
 	match display_state:
-		DisplayState.DEFAULT: mesh.visible = true
-		DisplayState.HOLSTER: mesh.visible = true
-		DisplayState.DIGITAL: mesh.visible = false
+		DisplayState.DEFAULT:
+			mesh.visible = true
+			enabled = true
+			collision.disabled = false
+			digi_snap.enabled = false
+		DisplayState.HOLSTER:
+			mesh.visible = true
+			enabled = true
+			collision.disabled = false
+			digi_snap.enabled = false
+		DisplayState.DIGITAL:
+			mesh.visible = false
+			enabled = false
+			collision.disabled = true
+			digi_snap.enabled = true
 
 
 ### RISE phase ###
@@ -161,23 +190,33 @@ func capture():
 		return
 	
 	# Monch pokemon
-	contents = closest_pokemon
+	contents_temp = closest_pokemon
 
-	contents_parent = contents.get_parent()
-	contents.reparent(self)
+	contents_parent = contents_temp.get_parent()
+	contents_temp.reparent(self)
 
 	# I do not like this rotate_object_local solution and I would fix it if I could, but
 	# unfortunately I do not understand the math well enough to do it using matrices
 	mesh.rotate_object_local(Vector3.UP, PI)
-	contents.capture(mesh.global_rotation)
+	contents_temp.capture(mesh.global_rotation)
 	mesh.rotate_object_local(Vector3.UP, PI)
 
 func release():
-	contents.reparent(contents_parent)
+	# Undigitize pokemon
+	var contents_id = contents.id
+	contents.queue_free()
+
+	var pokemon_instance = pokemon_scene.instantiate()
+
+	pokemon_instance.id = contents_id
+	pokemon_instance.global_position = global_position
+	pokemon_instance.scale = Vector3.ONE * POKEBALL_SCALE
+
+	contents_parent.add_child(pokemon_instance)
 	
 	# Same as capture, would fix if I could. Start and end rotation is the same currently.
 	mesh.rotate_object_local(Vector3.UP, PI)
-	contents.release(release_position(), mesh.global_rotation, mesh.global_rotation)
+	pokemon_instance.release(release_position(), mesh.global_rotation, mesh.global_rotation)
 	mesh.rotate_object_local(Vector3.UP, PI)
 
 	contents = EMPTY
@@ -195,3 +234,20 @@ func release_position():
 func drop_start():
 	drop_elapsed = 0
 	drop_start_rot = mesh.rotation
+
+	# Since capture has finished, digitize the pokemon
+	if contents_temp != EMPTY:
+		var contents_id = contents_temp.id
+		contents_temp.queue_free()
+
+		contents = digital_scene.instantiate()
+
+		contents.id = contents_id
+
+		add_child(contents)
+
+		digi_snap.pick_up_object(contents)
+
+
+
+

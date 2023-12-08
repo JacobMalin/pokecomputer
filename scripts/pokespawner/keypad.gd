@@ -26,12 +26,10 @@ func _ready():
 
 func on_button_pressed(number):
 	# takes in the entered id
-	if id.length() < 2:
-		id += str(number)
-	else:
-		id += str(number)
-
-		# spawn the correct pokemon based on the entered id
+	id += str(number)
+	print(id)
+	if id.length() >= 3:
+		# Spawn the correct pokemon based on the entered id
 		var int_id = int(id)
 		if int_id > 151 or int_id <= 0:
 			spawn.emit(0)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8h8g4awlu1x"]
+
+[ext_resource type="Script" path="res://scripts/digital_pokemon.gd" id="1_m6yxx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sou2a"]
+radius = 0.0507973
+
+[node name="DigitalPokemon" type="RigidBody3D" groups=["digital_pokemon"]]
+collision_layer = 32
+collision_mask = 131107
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_m6yxx")
+ranged_grab_method = 2
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_sou2a")
+
+[node name="Audio" type="AudioStreamPlayer3D" parent="."]
+visible = false
+volume_db = -3.0
+unit_size = 8.0

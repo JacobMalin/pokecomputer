@@ -9,6 +9,7 @@ const MIN_SIZE = 0.1
 const PADDING = 0.01 ## To prevent z-fighting
 
 @onready var cube : MeshInstance3D = $Cube
+@onready var collision : CollisionShape3D = $Area/Collision
 @onready var boxes = $Boxes
 var corners
 
@@ -65,6 +66,10 @@ func _on_corner_move(pos:Vector3, neg:Vector3):
 	else:
 		cube.global_position.z = (pos.z + neg.z) / 2
 
+	# Update collision to match
+	collision.shape.size = cube.mesh.size
+	collision.global_position = cube.global_position
+
 	# Fix too small
 	if fix: corners.fix_pos(pos, neg)
 
@@ -80,6 +85,10 @@ func fix_pos(pos, neg):
 
 	cube.mesh.size = pos - neg
 	cube.global_position = (pos + neg) / 2
+
+	# Update collision to match
+	collision.shape.size = cube.mesh.size
+	collision.global_position = cube.global_position
 
 	# Save corners
 	save_pos = pos
