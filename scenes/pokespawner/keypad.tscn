@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn7egt2s75w8b"]
 
-[ext_resource type="Script" path="res://scripts/keypad.gd" id="1_4nw3r"]
-[ext_resource type="PackedScene" uid="uid://iqy4qn41wpow" path="res://scenes/button.tscn" id="2_p2lig"]
+[ext_resource type="Script" path="res://scripts/pokespawner/keypad.gd" id="1_4nw3r"]
+[ext_resource type="PackedScene" uid="uid://iqy4qn41wpow" path="res://scenes/pokespawner/button.tscn" id="2_p2lig"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjumm"]
 albedo_color = Color(0.545098, 0.545098, 0.545098, 1)

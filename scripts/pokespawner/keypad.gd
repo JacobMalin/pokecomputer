@@ -1,3 +1,4 @@
+class_name Keypad
 extends StaticBody3D
 
 # keypad code adapted from https://www.youtube.com/watch?v=VKYjz5R73Os&ab_channel=DelanoLourenco
@@ -9,13 +10,19 @@ signal spawn(num)
 
 var id = ""
 
-# signal on_keypad_press
+
+
+### Lifecycle ###
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for child in $Keypad/Buttons.get_children():
-		if child is Node3D:
-			child.on_pressed.connect(on_button_pressed)
+	for button in buttons.get_children():
+		if button is Node3D:
+			button.on_pressed.connect(on_button_pressed)
+
+
+
+### Events ###
 
 func on_button_pressed(number):
 	# takes in the entered id
@@ -23,11 +30,14 @@ func on_button_pressed(number):
 		id += str(number)
 	else:
 		id += str(number)
+
 		# spawn the correct pokemon based on the entered id
-		if int(id) > 151:
+		var int_id = int(id)
+		if int_id > 151 or int_id <= 0:
 			spawn.emit(0)
-			print("substitute")
+			# print("substitute")
 		else:
-			spawn.emit(int(id))
-			print(Globals.pokedex[int(id)])
+			spawn.emit(int_id)
+			# print(Globals.pokedex[int_id])
+			
 		id = ""

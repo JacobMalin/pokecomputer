@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gb5fyhgyl11y"
-path.s3tc="res://.godot/imported/com_bm_pc02.png-b45b82ce6e7a0b9d0b199b357ed5b55f.s3tc.ctex"
-path.etc2="res://.godot/imported/com_bm_pc02.png-b45b82ce6e7a0b9d0b199b357ed5b55f.etc2.ctex"
+path.s3tc="res://.godot/imported/com_bm_pc02.png-c58320f0f90a23632b5d14d18dc50dc4.s3tc.ctex"
+path.etc2="res://.godot/imported/com_bm_pc02.png-c58320f0f90a23632b5d14d18dc50dc4.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/pokemon computer/com_bm_pc02.png"
-dest_files=["res://.godot/imported/com_bm_pc02.png-b45b82ce6e7a0b9d0b199b357ed5b55f.s3tc.ctex", "res://.godot/imported/com_bm_pc02.png-b45b82ce6e7a0b9d0b199b357ed5b55f.etc2.ctex"]
+source_file="res://assets/computer/com_bm_pc02.png"
+dest_files=["res://.godot/imported/com_bm_pc02.png-c58320f0f90a23632b5d14d18dc50dc4.s3tc.ctex", "res://.godot/imported/com_bm_pc02.png-c58320f0f90a23632b5d14d18dc50dc4.etc2.ctex"]
 
 [params]
 

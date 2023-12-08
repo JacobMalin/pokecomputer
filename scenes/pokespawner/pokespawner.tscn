@@ -1,4 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://wvl520hbmur3"]
+[gd_scene load_steps=11 format=3 uid="uid://wvl520hbmur3"]
+
+[ext_resource type="PackedScene" uid="uid://dn7egt2s75w8b" path="res://scenes/pokespawner/keypad.tscn" id="1_7lmw2"]
+[ext_resource type="Script" path="res://scripts/pokespawner/pokespawner.gd" id="1_mbmv3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lx4oa"]
 albedo_color = Color(1, 0, 0, 1)
@@ -28,6 +31,7 @@ albedo_color = Color(0.117647, 1, 1, 0.231373)
 material = SubResource("StandardMaterial3D_bk0nc")
 
 [node name="Pokespawner" type="StaticBody3D"]
+script = ExtResource("1_mbmv3")
 
 [node name="base" type="MeshInstance3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 0.012, 0, 0, 0, 3, 0, 0, 0)
@@ -49,3 +53,6 @@ mesh = SubResource("SphereMesh_sdjyc")
 transform = Transform3D(3, 0, 0, 0, 1.70988, 0, 0, 0, 3, 0, 1.73694, 0)
 layers = 524288
 mesh = SubResource("CylinderMesh_2dwpl")
+
+[node name="Keypad" parent="." instance=ExtResource("1_7lmw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.039, -0.0373904, -0.00699997)

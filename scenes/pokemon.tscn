@@ -13,11 +13,13 @@ script = ExtResource("1_xnnrg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.373989, 0.0339737)
+visible = false
 shape = SubResource("SphereShape3D_7lbeg")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+visible = false
 volume_db = -3.0
 unit_size = 8.0
 

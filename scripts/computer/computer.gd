@@ -1,0 +1,2 @@
+class_name Computer
+extends Node3D

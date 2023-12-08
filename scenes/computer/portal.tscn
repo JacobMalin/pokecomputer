@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://ycjht4w144b0"]
+
+[ext_resource type="Shader" path="res://scripts/computer/portal.gdshader" id="1_65fne"]
+[ext_resource type="Script" path="res://scripts/computer/portal.gd" id="1_yxmfh"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_23lrc"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8sywa"]
+viewport_path = NodePath("Portal/PortalViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_o5rxh"]
+viewport_path = NodePath("Portal/PortalViewport2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4sbh1"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_65fne")
+shader_parameter/v_local_position = Vector3(0, 0, 0)
+shader_parameter/left_tex = SubResource("ViewportTexture_8sywa")
+shader_parameter/right_tex = SubResource("ViewportTexture_o5rxh")
+
+[sub_resource type="SphereMesh" id="SphereMesh_g0cyk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_d8kq4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghg2i"]
+transparency = 4
+albedo_color = Color(1, 0, 0, 0.117647)
+
+[node name="Portal" type="Node3D"]
+
+[node name="Portal" type="MeshInstance3D" parent="." node_paths=PackedStringArray("other_portal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+layers = 16
+cast_shadow = 0
+mesh = SubResource("QuadMesh_23lrc")
+surface_material_override/0 = SubResource("ShaderMaterial_4sbh1")
+script = ExtResource("1_yxmfh")
+other_portal = NodePath("../Portal2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.44187)
+mesh = SubResource("SphereMesh_g0cyk")
+
+[node name="Helper" type="Node3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="PortalViewport" type="SubViewport" parent="Portal"]
+size = Vector2i(2048, 2048)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Portal/PortalViewport"]
+cull_mask = 1048559
+
+[node name="PortalViewport2" type="SubViewport" parent="Portal"]
+size = Vector2i(2048, 2048)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Portal/PortalViewport2"]
+cull_mask = 1048559
+
+[node name="TopLeft" type="Node3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.475145, 0.499811, 0.0466781)
+
+[node name="Portal2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.638365, 0, -0.769734, 0, 1, 0, 0.769734, 0, 0.638365, 2.296, 1.78814e-07, -2.59288)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_d8kq4")
+surface_material_override/0 = SubResource("StandardMaterial3D_ghg2i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.44187)
+mesh = SubResource("SphereMesh_g0cyk")
+
+[node name="Helper" type="Node3D" parent="Portal2"]

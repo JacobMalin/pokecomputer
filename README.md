@@ -28,3 +28,5 @@ https://www.models-resource.com/3ds/pokemonxy/model/13867/
 
 Substitute Doll Model by Hallow
 https://www.models-resource.com/3ds/pokemonomegarubyalphasapphire/model/12155/
+
+- Maybe (portal)[https://www.youtube.com/watch?v=oqDdIg3BRlg]

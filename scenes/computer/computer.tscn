@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://vx63dgvaox3e"]
+
+[ext_resource type="Script" path="res://scripts/computer/computer.gd" id="1_jmseb"]
+[ext_resource type="PackedScene" uid="uid://n66g3gxaodlr" path="res://scenes/computer/desktop.tscn" id="2_gv6u7"]
+
+[node name="Computer" type="Node3D"]
+script = ExtResource("1_jmseb")
+
+[node name="Desktop" parent="." instance=ExtResource("2_gv6u7")]

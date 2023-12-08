@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://n66g3gxaodlr"]
+
+[ext_resource type="Script" path="res://scripts/computer/desktop.gd" id="1_lh4xp"]
+[ext_resource type="Material" uid="uid://cijm10y01tl7a" path="res://assets/computer/desktop_material.tres" id="2_xf8r6"]
+[ext_resource type="PackedScene" uid="uid://dsiyru5ey4dgh" path="res://scenes/computer/box.tscn" id="3_oal8l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gm1c0"]
+size = Vector3(3.5, 3, 3.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m8pvx"]
+flip_faces = true
+size = Vector3(3.5, 3, 3.5)
+
+[node name="Desktop" type="Node3D"]
+script = ExtResource("1_lh4xp")
+
+[node name="Area3D" type="Area3D" parent="." groups=["computer"]]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+shape = SubResource("BoxShape3D_gm1c0")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_m8pvx")
+surface_material_override/0 = ExtResource("2_xf8r6")
+
+[node name="Boxes" type="Node3D" parent="."]
+
+[node name="Box" parent="Boxes" instance=ExtResource("3_oal8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1.25, 0)
+
+[node name="Box2" parent="Boxes" instance=ExtResource("3_oal8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 1.25, 0)
+color = Color(0.85098, 0.466667, 0.560784, 1)

@@ -1,3 +1,4 @@
+class_name Holster
 extends Node3D
 
 const LEFT_HOME_POS  = Vector3(0, 0, -0.235)

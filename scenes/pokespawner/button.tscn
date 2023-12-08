@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://iqy4qn41wpow"]
 
-[ext_resource type="Script" path="res://scripts/button.gd" id="1_sjptp"]
+[ext_resource type="Script" path="res://scripts/pokespawner/button.gd" id="1_sjptp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h23pt"]
 albedo_color = Color(0.870588, 0.713726, 0, 1)

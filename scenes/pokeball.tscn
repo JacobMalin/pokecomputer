@@ -225,6 +225,7 @@ release_mode = 0
 ranged_grab_method = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("SphereShape3D_uglay")
 
 [node name="Mesh" type="Node3D" parent="."]
@@ -260,6 +261,7 @@ mesh = ExtResource("5_d3tgv")
 script = ExtResource("6_7vakd")
 
 [node name="StartCaptureRadius" type="Area3D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 7
 
@@ -267,6 +269,7 @@ collision_mask = 7
 shape = SubResource("SphereShape3D_ish8j")
 
 [node name="PokemonCaptureRadius" type="Area3D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 7
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjumce4ec6p7s"]
 
-[ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/pokemon computer/com_bm_pc02.png" id="1_v0guy"]
-[ext_resource type="ArrayMesh" uid="uid://dm7smdqkfm6ei" path="res://assets/pokemon computer/com_bm_pc02.obj" id="2_sak1j"]
+[ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/com_bm_pc02.png" id="1_v0guy"]
+[ext_resource type="ArrayMesh" uid="uid://dm7smdqkfm6ei" path="res://assets/computer/com_bm_pc02.obj" id="2_sak1j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42xi2"]
 albedo_texture = ExtResource("1_v0guy")
