@@ -117,6 +117,8 @@ func _on_digi_snap_has_dropped():
 func _on_digi_snap_has_picked_up(what):
 	contents = what
 
+	contents.activate_snap()
+
 
 
 ## Helper ##

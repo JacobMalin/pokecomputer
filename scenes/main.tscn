@@ -61,6 +61,7 @@ environment = SubResource("Environment_j8tdp")
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+current = true
 
 [node name="LeftController" type="XRController3D" parent="XROrigin3D"]
 unique_name_in_owner = true
@@ -121,7 +122,7 @@ shape = SubResource("SphereShape3D_1xnqn")
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_el4ei")]
 unique_name_in_owner = true
-collision_mask = 1019
+collision_mask = 971
 
 [node name="Holster" parent="XROrigin3D" instance=ExtResource("10_c2yjo")]
 unique_name_in_owner = true
