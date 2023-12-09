@@ -29,4 +29,7 @@ https://www.models-resource.com/3ds/pokemonxy/model/13867/
 Substitute Doll Model by Hallow
 https://www.models-resource.com/3ds/pokemonomegarubyalphasapphire/model/12155/
 
+Button Press Audio from Gen 4 Sound Effects Pack (by Deo)
+https://reliccastle.com/resources/220/
+
 - Maybe (portal)[https://www.youtube.com/watch?v=oqDdIg3BRlg]

@@ -43,12 +43,12 @@ enum DisplayState {
 @onready var player_body: XRToolsPlayerBody = %PlayerBody
 @onready var holster: Holster = %Holster
 @onready var computer: Computer = %Computer
+@onready var pokemon_node: Node3D = %Pokemon
 
 
 const EMPTY = null
 var contents : DigitalPokemon = EMPTY
 var contents_temp : Pokemon = EMPTY
-var contents_parent
 
 var closest_pokemon
 
@@ -192,7 +192,6 @@ func capture():
 	# Monch pokemon
 	contents_temp = closest_pokemon
 
-	contents_parent = contents_temp.get_parent()
 	contents_temp.reparent(self)
 
 	# I do not like this rotate_object_local solution and I would fix it if I could, but
@@ -212,7 +211,7 @@ func release():
 	pokemon_instance.global_position = global_position
 	pokemon_instance.scale = Vector3.ONE * POKEBALL_SCALE
 
-	contents_parent.add_child(pokemon_instance)
+	pokemon_node.add_child(pokemon_instance)
 	
 	# Same as capture, would fix if I could. Start and end rotation is the same currently.
 	mesh.rotate_object_local(Vector3.UP, PI)

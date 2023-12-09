@@ -36,6 +36,6 @@ func on_button_pressed(number):
 			# print("substitute")
 		else:
 			spawn.emit(int_id)
-			# print(Globals.pokedex[int_id])
+			#print(Globals.pokedex[int_id])
 			
 		id = ""

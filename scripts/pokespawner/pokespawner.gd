@@ -26,3 +26,4 @@ func _spawn_pokemon(id):
 
 	pokemon_node.add_child(pokemon)
 	pokemon.cry()
+	print(pokemon.pokemon_name)

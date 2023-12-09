@@ -5,4 +5,4 @@ extends Node3D
 
 # Add a digital pokemon to the computer
 func adopt(poke : DigitalPokemon):
-    poke.reparent(self)
+	poke.reparent(self)
