@@ -15,4 +15,4 @@ func _on_finger_entered(area):
 	if area in fingers:
 		on_pressed.emit(number)
 		anim.play("press")
-		audio.play() # Replace with function body.
+		audio.play()

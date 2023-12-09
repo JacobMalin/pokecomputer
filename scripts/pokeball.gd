@@ -42,7 +42,7 @@ enum DisplayState {
 
 @onready var player_body: XRToolsPlayerBody = %PlayerBody
 @onready var holster: Holster = %Holster
-@onready var computer: Computer = %Computer
+@onready var pc: PC = %PC
 @onready var pokemon_node: Node3D = %Pokemon
 
 
@@ -108,7 +108,7 @@ func _on_pokeball_dropped(_pickable):
 	capture_state = CaptureState.PRIMED
 
 func _on_digi_snap_has_dropped():
-	computer.adopt(contents)
+	pc.adopt(contents)
 	contents = EMPTY
 
 func _on_digi_snap_has_picked_up(what):

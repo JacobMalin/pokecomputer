@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=26 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
@@ -14,8 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bpekn8na6qop8" path="res://scenes/pokeball.tscn" id="9_g3mci"]
 [ext_resource type="PackedScene" uid="uid://d0hy51r435r8l" path="res://scenes/holster/holster.tscn" id="10_c2yjo"]
 [ext_resource type="Script" path="res://scripts/indexStaticR.gd" id="10_q7dxt"]
-[ext_resource type="PackedScene" uid="uid://cjumce4ec6p7s" path="res://scenes/computer/pc.tscn" id="14_a75h3"]
-[ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer/computer.tscn" id="18_4o8mq"]
+[ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer/pc.tscn" id="18_4o8mq"]
 [ext_resource type="PackedScene" uid="uid://wvl520hbmur3" path="res://scenes/pokespawner/pokespawner.tscn" id="18_7gr3e"]
 [ext_resource type="AudioStream" uid="uid://5g31nlggr03d" path="res://assets/misc_audio/Oak Pokémon Lab [Pokémon_ FireRed & LeafGreen].mp3" id="18_fpwwk"]
 [ext_resource type="PackedScene" uid="uid://ycjht4w144b0" path="res://scenes/computer/portal.tscn" id="19_sp8c5"]
@@ -189,18 +188,13 @@ id = 7
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.011, -7.945)
 
-[node name="Computer" parent="." instance=ExtResource("18_4o8mq")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63651, 0, -5.5362)
-
-[node name="PC" parent="Computer" instance=ExtResource("14_a75h3")]
-transform = Transform3D(-0.999975, 0, 0.00712094, 0, 1, 0, -0.00712094, 0, -0.999975, 10.5106, 0.0875502, 12.9933)
-skeleton = NodePath("../..")
-
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_fpwwk")
-volume_db = -19.676
-autoplay = true
+volume_db = -23.424
 
 [node name="Portal" parent="." instance=ExtResource("19_sp8c5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772156, 1.03022, -3.53355)
+
+[node name="PC" parent="." instance=ExtResource("18_4o8mq")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57306, 0, -7.31472)

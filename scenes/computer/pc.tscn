@@ -1,12 +1,80 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjumce4ec6p7s"]
+[gd_scene load_steps=13 format=3 uid="uid://vx63dgvaox3e"]
 
-[ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/com_bm_pc02.png" id="1_v0guy"]
-[ext_resource type="ArrayMesh" uid="uid://dm7smdqkfm6ei" path="res://assets/computer/com_bm_pc02.obj" id="2_sak1j"]
+[ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/com_bm_pc02.png" id="1_tc1g5"]
+[ext_resource type="PackedScene" uid="uid://n66g3gxaodlr" path="res://scenes/computer/desktop.tscn" id="2_gv6u7"]
+[ext_resource type="ArrayMesh" uid="uid://dm7smdqkfm6ei" path="res://assets/computer/com_bm_pc02.obj" id="2_v06p8"]
+[ext_resource type="Script" path="res://scripts/computer/pc.gd" id="3_66oq6"]
+[ext_resource type="AudioStream" uid="uid://rxdsudov3c6y" path="res://assets/computer/pc_on_sound.mp3" id="5_xi2u4"]
+[ext_resource type="AudioStream" uid="uid://d1updlyxohcon" path="res://assets/computer/PC close.wav" id="6_kte3r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42xi2"]
-albedo_texture = ExtResource("1_v0guy")
+albedo_texture = ExtResource("1_tc1g5")
 
-[node name="PC" type="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.904992, 0, 0.536508)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tg7vp"]
+albedo_color = Color(0, 0.0470588, 0.317647, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rv3dv"]
+material = SubResource("StandardMaterial3D_tg7vp")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_teswj"]
+size = Vector3(0.602258, 0.593898, 0.121897)
+
+[sub_resource type="Animation" id="Animation_hsvj8"]
+resource_name = "onoff"
+length = 1.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Desktop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 3.24809, 1.5, 1, 0, 1.17751, 0.0749388)
+tracks/1/type = "scale_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Desktop")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 1, 1, 1, 1.5, 1, 0.1, 0.1, 0.1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0raka"]
+_data = {
+"on": SubResource("Animation_hsvj8")
+}
+
+[node name="PC" type="Node3D"]
+script = ExtResource("3_66oq6")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_42xi2")
-mesh = ExtResource("2_sak1j")
+mesh = ExtResource("2_v06p8")
+
+[node name="Desktop" parent="." instance=ExtResource("2_gv6u7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.24809)
+
+[node name="MonitorArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 131072
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorArea"]
+transform = Transform3D(0.297045, 0, 0, 0, -8.74228e-09, -0.240137, 0, 0.2, -1.04967e-08, -0.000785828, 1.34248, 0.28451)
+mesh = SubResource("PlaneMesh_rv3dv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33488, 0.348884)
+shape = SubResource("BoxShape3D_teswj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Mesh")
+libraries = {
+"": SubResource("AnimationLibrary_0raka")
+}
+
+[node name="OnSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_xi2u4")
+
+[node name="OffSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_kte3r")
+
+[connection signal="area_entered" from="MonitorArea" to="." method="_on_monitor_entered"]
