@@ -144,16 +144,19 @@ func display(_display_state):
 			enabled = true
 			collision.disabled = false
 			digi_snap.enabled = false
+			if contents: contents.visible = false
 		DisplayState.HOLSTER:
 			mesh.visible = true
 			enabled = true
 			collision.disabled = false
 			digi_snap.enabled = false
+			if contents: contents.visible = true
 		DisplayState.DIGITAL:
 			mesh.visible = false
 			enabled = false
 			collision.disabled = true
 			digi_snap.enabled = true
+			if contents: contents.visible = true
 
 
 ### RISE phase ###
@@ -242,6 +245,7 @@ func drop_start():
 		contents = digital_scene.instantiate()
 
 		contents.id = contents_id
+		contents.visible = false
 
 		add_child(contents)
 
