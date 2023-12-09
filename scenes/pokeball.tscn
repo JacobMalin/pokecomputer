@@ -281,7 +281,7 @@ collision_mask = 7
 shape = SubResource("SphereShape3D_ppf53")
 
 [node name="DigiPokeSnap" type="Area3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.021907, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.0267065, 0)
 visible = false
 collision_layer = 32
 collision_mask = 65568

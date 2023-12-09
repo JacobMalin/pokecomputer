@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd8h8g4awlu1x"]
+[gd_scene load_steps=5 format=3 uid="uid://dd8h8g4awlu1x"]
 
 [ext_resource type="Script" path="res://scripts/digital_pokemon.gd" id="1_m6yxx"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_f05a8"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_67ik6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_sou2a"]
 radius = 0.0507973
@@ -20,3 +22,13 @@ shape = SubResource("SphereShape3D_sou2a")
 visible = false
 volume_db = -3.0
 unit_size = 8.0
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("4_67ik6")]
+transform = Transform3D(-0.772215, -0.0666149, 0.631859, -0.046614, 0.997748, 0.048221, -0.633648, 0.00778362, -0.773582, -0.00928514, 0.00372614, 0.00225374)
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("3_f05a8")]
+transform = Transform3D(-0.781277, 0.0319751, -0.623365, 0.0949839, 0.993147, -0.0681026, 0.616915, -0.112417, -0.77896, 0.00415804, 0.00463996, 0.00299227)
+editor_preview_mode = 1
+
+[connection signal="dropped" from="." to="." method="_on_dropped"]
