@@ -15,8 +15,8 @@ void vertex() {
 
 void fragment() {
 	if (VIEW_INDEX == VIEW_MONO_LEFT) { 
-	ALBEDO = texture(left_tex, UV).rgb;
+	ALBEDO = texture(left_tex, SCREEN_UV).rgb;
 	} else if (VIEW_INDEX == VIEW_RIGHT) {
-	ALBEDO = texture(right_tex, UV).rgb;
+	ALBEDO = texture(right_tex, SCREEN_UV).rgb;
 	} 
 }
