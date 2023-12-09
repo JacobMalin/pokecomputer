@@ -11,6 +11,6 @@ func _ready():
 func _process(_delta):
 	position = skeleton.get_bone_global_pose(indexTipIdx).origin
 	position.z += 0.15
-	position.y -= 0.05
+	position.y -= 0.04
 	position.x -= 0.037
 	#print(skeleton.get_bone_global_pose(indexTipIdx).origin)

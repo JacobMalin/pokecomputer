@@ -27,7 +27,7 @@ func _ready():
 func on_button_pressed(number):
 	# takes in the entered id
 	id += str(number)
-	print(id)
+	# print(id)
 	if id.length() >= 3:
 		# Spawn the correct pokemon based on the entered id
 		var int_id = int(id)
