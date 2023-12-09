@@ -72,9 +72,11 @@ libraries = {
 }
 
 [node name="OnSound" type="AudioStreamPlayer3D" parent="."]
+visible = false
 stream = ExtResource("5_xi2u4")
 
 [node name="OffSound" type="AudioStreamPlayer3D" parent="."]
+visible = false
 stream = ExtResource("6_kte3r")
 
 [connection signal="area_entered" from="MonitorArea" to="." method="_on_monitor_entered"]

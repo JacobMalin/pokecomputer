@@ -38,6 +38,9 @@ enum DisplayState {
 @onready var capture_radius: Area3D = $PokemonCaptureRadius
 @onready var digi_snap: DigiPokeSnap = $DigiPokeSnap
 
+@onready var catch_audio = $CatchSound
+@onready var release_audio = $ReleaseSound
+
 @onready var sphere_mesh = mesh.get_node("Sphere")
 
 @onready var player_body: XRToolsPlayerBody = %PlayerBody
@@ -194,6 +197,8 @@ func capture():
 	
 	# Monch pokemon
 	contents_temp = closest_pokemon
+	
+	catch_audio.play()
 
 	contents_temp.reparent(self)
 
@@ -215,6 +220,8 @@ func release():
 	pokemon_instance.scale = Vector3.ONE * POKEBALL_SCALE
 
 	pokemon_node.add_child(pokemon_instance)
+	
+	release_audio.play()
 	
 	# Same as capture, would fix if I could. Start and end rotation is the same currently.
 	mesh.rotate_object_local(Vector3.UP, PI)

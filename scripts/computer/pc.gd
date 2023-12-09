@@ -15,15 +15,12 @@ func adopt(poke : DigitalPokemon):
 
 
 func _on_monitor_entered(area):
-	print("test1")
 	if area in fingers:
 		if !on:
 			anim.play_backwards("on")
 			on = true
 			onAudio.play()
-			print("test")
 		else:
 			anim.play("on")
 			on = false
 			offAudio.play()
-			print("test")
