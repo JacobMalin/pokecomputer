@@ -12,8 +12,8 @@ void fragment() {
 	vec2 manual_screen_uv = UV;
 	
 	if (VIEW_INDEX == VIEW_MONO_LEFT) { 
-	ALBEDO = texture(right_tex, SCREEN_UV).rgb;
+	ALBEDO = texture(right_tex, UV).rgb;
 	} else if (VIEW_INDEX == VIEW_RIGHT) {
-	ALBEDO = texture(right_tex, SCREEN_UV).rgb;
+	ALBEDO = texture(right_tex, UV).rgb;
 	} 
 }

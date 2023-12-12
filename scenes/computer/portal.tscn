@@ -37,7 +37,6 @@ albedo_color = Color(1, 0, 0, 0.560784)
 
 [node name="Portal" type="MeshInstance3D" parent="." node_paths=PackedStringArray("other_portal")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-visible = false
 layers = 16
 cast_shadow = 0
 mesh = SubResource("QuadMesh_23lrc")

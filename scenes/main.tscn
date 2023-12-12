@@ -218,7 +218,6 @@ volume_db = -23.424
 
 [node name="Portal" parent="." instance=ExtResource("19_sp8c5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772156, 1.03022, -3.53355)
-visible = false
 
 [node name="PC" parent="." instance=ExtResource("18_4o8mq")]
 unique_name_in_owner = true

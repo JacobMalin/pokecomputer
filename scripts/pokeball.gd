@@ -119,7 +119,7 @@ func request_highlight(from : Node, on : bool = true) -> void:
 	if _highlighted != old_highlighted:
 		if _highlighted: # If highlight is on and new, rumble controller
 			if from is XRToolsFunctionPickup:
-				# from.parent.rumble()
+				from.get_parent().rumble()
 				pass
 		emit_signal("highlight_updated", self, _highlighted)
 
