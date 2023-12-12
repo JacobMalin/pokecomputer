@@ -12,8 +12,10 @@ func _ready():
 	$Area3D/button/number.text = str(number)
 
 func _on_finger_entered(area):
-	print("test")
 	if area in fingers:
 		on_pressed.emit(number)
 		anim.play("press")
 		audio.play()
+
+		# Rumble
+		area.get_parent().rumble()

@@ -307,12 +307,12 @@ libraries = {
 [node name="CatchSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
 stream = ExtResource("9_b0ad5")
-volume_db = -3.368
+volume_db = -12.168
 
 [node name="ReleaseSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
 stream = ExtResource("10_4eerd")
-volume_db = -9.134
+volume_db = -17.934
 
 [connection signal="dropped" from="." to="." method="_on_pokeball_dropped"]
 [connection signal="body_entered" from="StartCaptureRadius" to="." method="_on_pokeball_hit_something"]

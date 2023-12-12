@@ -183,21 +183,36 @@ func clear_movement_target():
 func cry():
 	if id != 0:
 		audio_player.play()
-		safe_anim_play("animation_"+pokemon_name+"_cry")
+		safe_anim_queue("animation_"+pokemon_name+"_cry")
 
 func is_free():
 	return capture_state == CaptureState.FREE
 
-func safe_anim_play(_name):
+func anim_in_list(_name):
 	if animation_player:
 		var anim_list = animation_player.get_animation_list()
-		if _name in anim_list:
+		return _name in anim_list
+
+	return false
+
+func safe_anim_play(_name, backup=""):
+	if animation_player:
+		if anim_in_list(_name):
 			animation_player.play(_name)
+		elif anim_in_list(backup):
+			animation_player.play(backup)
+
+func safe_anim_queue(_name, backup=""):
+	if animation_player:
+		if anim_in_list(_name):
+			animation_player.queue(_name)
+		elif anim_in_list(backup):
+			animation_player.queue(backup)
 
 ### Pokemon move states ###
 
 func walk():
-	if id != 0:
+	if id != 0 and anim_in_list("animation_"+pokemon_name+"_ground_walk"):
 		move_state = MoveState.WALK
 		safe_anim_play("animation_"+pokemon_name+"_ground_walk")
 		set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
@@ -207,7 +222,7 @@ func walk():
 func idle():
 	if id != 0:
 		move_state = MoveState.IDLE
-		safe_anim_play("animation_"+pokemon_name+"_ground_idle")
+		safe_anim_play("animation_"+pokemon_name+"_ground_idle", "animation_"+pokemon_name+"_idle")
 		clear_movement_target()
 
 ### Pokemon capture states ###

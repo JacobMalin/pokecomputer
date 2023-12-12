@@ -119,8 +119,7 @@ func request_highlight(from : Node, on : bool = true) -> void:
 	if _highlighted != old_highlighted:
 		if _highlighted: # If highlight is on and new, rumble controller
 			if from is XRToolsFunctionPickup:
-				from.get_parent().rumble()
-				pass
+				rumble(from)
 		emit_signal("highlight_updated", self, _highlighted)
 
 
@@ -189,6 +188,10 @@ func display(_display_state):
 			collision.set_deferred("disabled", true)
 			digi_snap.enabled = true
 			if contents: contents.visible = true
+
+func rumble(from):
+	if contents: from.get_parent().full_rumble()
+	else: from.get_parent().empty_rumble()
 
 
 ### RISE phase ###

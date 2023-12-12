@@ -1533,7 +1533,7 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.281131, 0.033975)
 
 [node name="torso2" type="Node3D" parent="Node2/bulbasaur/body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.88864e-19, -1.25e-06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.25e-06)
 
 [node name="torso" type="MeshInstance3D" parent="Node2/bulbasaur/body/torso2"]
 transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0)
@@ -1554,7 +1554,7 @@ mesh = SubResource("ArrayMesh_ljrdp")
 skeleton = NodePath("")
 
 [node name="head5" type="Node3D" parent="Node2/bulbasaur/body/torso2"]
-transform = Transform3D(0.999799, -0.019968, 0.00174697, 0.0200443, 0.995995, -0.0871382, 2.32831e-10, 0.0871558, 0.996195, 0, 0.00011875, -0.252724)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0, 0.00011875, -0.252724)
 
 [node name="head" type="MeshInstance3D" parent="Node2/bulbasaur/body/torso2/head5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28125, 0.21875)
@@ -1623,7 +1623,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, -0.078125)
 
 [node name="ear_right2" type="Node3D" parent="Node2/bulbasaur/body/torso2/head5/ears"]
-transform = Transform3D(0.73059, 0.300706, -0.613038, -0.230354, 0.953717, 0.19329, 0.642788, 1.49012e-08, 0.766044, 0.171875, -0.0234375, -0.015625)
+transform = Transform3D(0.73059, 0.300705, -0.613038, -0.230354, 0.953717, 0.19329, 0.642789, -1.04308e-07, 0.766044, 0.171875, -0.0234375, -0.015625)
 
 [node name="ear_right" type="MeshInstance3D" parent="Node2/bulbasaur/body/torso2/head5/ears/ear_right2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171875, -0.632813, 0.3125)

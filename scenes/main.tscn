@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
-[ext_resource type="Script" path="res://scripts/hands/rumble.gd" id="2_3qtel"]
+[ext_resource type="Script" path="res://scripts/hands/rumble_controller.gd" id="2_3w6hr"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_islgx"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_ncs64"]
 [ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand/hand_material.tres" id="3_sue04"]
@@ -71,7 +71,7 @@ current = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
-script = ExtResource("2_3qtel")
+script = ExtResource("2_3w6hr")
 
 [node name="LeftHand" parent="XROrigin3D/LeftController" instance=ExtResource("1_xixr5")]
 hand_material_override = ExtResource("3_sue04")
@@ -109,7 +109,7 @@ shape = SubResource("BoxShape3D_okg6x")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
-script = ExtResource("2_3qtel")
+script = ExtResource("2_3w6hr")
 
 [node name="RightHand" parent="XROrigin3D/RightController" instance=ExtResource("2_ncs64")]
 hand_material_override = ExtResource("3_sue04")

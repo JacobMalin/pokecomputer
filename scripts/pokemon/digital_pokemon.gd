@@ -122,11 +122,19 @@ func let_go(p_linear_velocity: Vector3, p_angular_velocity: Vector3) -> void:
 
 ## Helper ##
 
-func safe_poke_anim_play(_name):
+func anim_in_list(_name):
 	if poke_anim_player:
 		var anim_list = poke_anim_player.get_animation_list()
-		if _name in anim_list:
+		return _name in anim_list
+
+	return false
+
+func safe_poke_anim_play(_name, backup=""):
+	if poke_anim_player:
+		if anim_in_list(_name):
 			poke_anim_player.play(_name)
+		elif anim_in_list(backup):
+			poke_anim_player.play(backup)
 
 func cry():
 	if id != 0:
@@ -134,7 +142,7 @@ func cry():
 		safe_poke_anim_play("animation_"+pokemon_name+"_cry")
 
 func idle():
-	safe_poke_anim_play("animation_"+pokemon_name+"_ground_idle")
+	safe_poke_anim_play("animation_"+pokemon_name+"_ground_idle", "animation_"+pokemon_name+"_idle")
 
 func _on_let_go():
 	disable_snap()
