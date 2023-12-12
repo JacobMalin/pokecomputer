@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp7vcah8lre6c"
-path.s3tc="res://.godot/imported/magneton_0.png-968ba4f293b2fef98bda1295332db35c.s3tc.ctex"
-path.etc2="res://.godot/imported/magneton_0.png-968ba4f293b2fef98bda1295332db35c.etc2.ctex"
+path="res://.godot/imported/magneton_0.png-968ba4f293b2fef98bda1295332db35c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/magneton_0.png"
-dest_files=["res://.godot/imported/magneton_0.png-968ba4f293b2fef98bda1295332db35c.s3tc.ctex", "res://.godot/imported/magneton_0.png-968ba4f293b2fef98bda1295332db35c.etc2.ctex"]
+dest_files=["res://.godot/imported/magneton_0.png-968ba4f293b2fef98bda1295332db35c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

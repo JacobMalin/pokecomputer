@@ -157,7 +157,7 @@ func _process(delta):
 ## Events ##
 
 func _on_navigation_agent_3d_navigation_finished():
-	# animation_player.play("animation_bulbasaur_ground_idle")
+	# safe_anim_play("animation_bulbasaur_ground_idle")
 	# await get_tree().create_timer(1).timeout
 	if move_state == MoveState.WALK:
 		walk()
@@ -183,17 +183,23 @@ func clear_movement_target():
 func cry():
 	if id != 0:
 		audio_player.play()
-		if animation_player: animation_player.play("animation_"+pokemon_name+"_cry")
+		safe_anim_play("animation_"+pokemon_name+"_cry")
 
 func is_free():
 	return capture_state == CaptureState.FREE
+
+func safe_anim_play(_name):
+	if animation_player:
+		var anim_list = animation_player.get_animation_list()
+		if _name in anim_list:
+			animation_player.play(_name)
 
 ### Pokemon move states ###
 
 func walk():
 	if id != 0:
 		move_state = MoveState.WALK
-		if animation_player: animation_player.play("animation_"+pokemon_name+"_ground_walk")
+		safe_anim_play("animation_"+pokemon_name+"_ground_walk")
 		set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
 									0.0,
 									randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
@@ -201,7 +207,7 @@ func walk():
 func idle():
 	if id != 0:
 		move_state = MoveState.IDLE
-		if animation_player: animation_player.play("animation_"+pokemon_name+"_ground_idle")
+		safe_anim_play("animation_"+pokemon_name+"_ground_idle")
 		clear_movement_target()
 
 ### Pokemon capture states ###

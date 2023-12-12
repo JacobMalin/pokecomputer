@@ -1,24 +1,109 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd8h8g4awlu1x"]
+[gd_scene load_steps=8 format=3 uid="uid://dd8h8g4awlu1x"]
 
-[ext_resource type="Script" path="res://scripts/digital_pokemon.gd" id="1_m6yxx"]
+[ext_resource type="Script" path="res://scripts/pokemon/digital_pokemon.gd" id="1_vbjam"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_f05a8"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_67ik6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_sou2a"]
-radius = 0.0507973
+radius = 0.0286926
+
+[sub_resource type="Animation" id="Animation_qqh60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Collision:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Collision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.03, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rob8j"]
+resource_name = "grow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Collision:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(4, 4, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.03, 0.03, 0.03), Vector3(0.12, 0.12, 0.12)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Collision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.03, 0), Vector3(0, 0.115007, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdg3s"]
+_data = {
+"RESET": SubResource("Animation_qqh60"),
+"grow": SubResource("Animation_rob8j")
+}
 
 [node name="DigitalPokemon" type="RigidBody3D" groups=["digital_pokemon"]]
 collision_layer = 32
 collision_mask = 131107
 freeze = true
 freeze_mode = 1
-script = ExtResource("1_m6yxx")
+script = ExtResource("1_vbjam")
 ranged_grab_method = 2
 
 [node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
 shape = SubResource("SphereShape3D_sou2a")
 
-[node name="Audio" type="AudioStreamPlayer3D" parent="."]
+[node name="CryPlayer" type="AudioStreamPlayer3D" parent="."]
 visible = false
 volume_db = -3.0
 unit_size = 8.0
@@ -31,4 +116,7 @@ editor_preview_mode = 1
 transform = Transform3D(-0.781277, 0.0319751, -0.623365, 0.0949839, 0.993147, -0.0681026, 0.616915, -0.112417, -0.77896, 0.00415804, 0.00463996, 0.00299227)
 editor_preview_mode = 1
 
-[connection signal="dropped" from="." to="." method="_on_dropped"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kdg3s")
+}

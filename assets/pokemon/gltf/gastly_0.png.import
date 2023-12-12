@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h4x8ynvg1up1"
-path.s3tc="res://.godot/imported/gastly_0.png-b47e59e78ef6cc6f8ead130a1e51f334.s3tc.ctex"
-path.etc2="res://.godot/imported/gastly_0.png-b47e59e78ef6cc6f8ead130a1e51f334.etc2.ctex"
+path="res://.godot/imported/gastly_0.png-b47e59e78ef6cc6f8ead130a1e51f334.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/gastly_0.png"
-dest_files=["res://.godot/imported/gastly_0.png-b47e59e78ef6cc6f8ead130a1e51f334.s3tc.ctex", "res://.godot/imported/gastly_0.png-b47e59e78ef6cc6f8ead130a1e51f334.etc2.ctex"]
+dest_files=["res://.godot/imported/gastly_0.png-b47e59e78ef6cc6f8ead130a1e51f334.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

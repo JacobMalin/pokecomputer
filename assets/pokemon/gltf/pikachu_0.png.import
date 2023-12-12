@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8hjc2u8lvong"
-path.s3tc="res://.godot/imported/pikachu_0.png-90b13c5c0faabf782a7d0bc2183dd451.s3tc.ctex"
-path.etc2="res://.godot/imported/pikachu_0.png-90b13c5c0faabf782a7d0bc2183dd451.etc2.ctex"
+path="res://.godot/imported/pikachu_0.png-90b13c5c0faabf782a7d0bc2183dd451.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/pikachu_0.png"
-dest_files=["res://.godot/imported/pikachu_0.png-90b13c5c0faabf782a7d0bc2183dd451.s3tc.ctex", "res://.godot/imported/pikachu_0.png-90b13c5c0faabf782a7d0bc2183dd451.etc2.ctex"]
+dest_files=["res://.godot/imported/pikachu_0.png-90b13c5c0faabf782a7d0bc2183dd451.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

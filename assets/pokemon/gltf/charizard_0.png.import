@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kfo012qrg0to"
-path.s3tc="res://.godot/imported/charizard_0.png-3c84ae722f7cda98dab7422c0ce87c29.s3tc.ctex"
-path.etc2="res://.godot/imported/charizard_0.png-3c84ae722f7cda98dab7422c0ce87c29.etc2.ctex"
+path="res://.godot/imported/charizard_0.png-3c84ae722f7cda98dab7422c0ce87c29.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/charizard_0.png"
-dest_files=["res://.godot/imported/charizard_0.png-3c84ae722f7cda98dab7422c0ce87c29.s3tc.ctex", "res://.godot/imported/charizard_0.png-3c84ae722f7cda98dab7422c0ce87c29.etc2.ctex"]
+dest_files=["res://.godot/imported/charizard_0.png-3c84ae722f7cda98dab7422c0ce87c29.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

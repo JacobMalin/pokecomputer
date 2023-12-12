@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1s3kyi8vwe6s"
-path.s3tc="res://.godot/imported/zapdos_0.png-aec58a4fcf325fbb392fa8430d92afbb.s3tc.ctex"
-path.etc2="res://.godot/imported/zapdos_0.png-aec58a4fcf325fbb392fa8430d92afbb.etc2.ctex"
+path="res://.godot/imported/zapdos_0.png-aec58a4fcf325fbb392fa8430d92afbb.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/zapdos_0.png"
-dest_files=["res://.godot/imported/zapdos_0.png-aec58a4fcf325fbb392fa8430d92afbb.s3tc.ctex", "res://.godot/imported/zapdos_0.png-aec58a4fcf325fbb392fa8430d92afbb.etc2.ctex"]
+dest_files=["res://.godot/imported/zapdos_0.png-aec58a4fcf325fbb392fa8430d92afbb.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

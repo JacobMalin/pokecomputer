@@ -11,14 +11,15 @@ const RIGHT_STOW_POS = Vector3(0.235, 0, 0)
 const LEFT_STOW_ROT  = Vector3(0, PI/2, 0)
 const RIGHT_STOW_ROT = Vector3(0, -PI/2, 0)
 
-const MIN_HOLSTER_INTERP = 0.15
-const MAX_HOLSTER_INTERP = 0.25
+const MIN_HOLSTER_INTERP = 40
+const MAX_HOLSTER_INTERP = 45
 
 @onready var camera : XRCamera3D = %XRCamera3D
 @onready var player_body : XRToolsPlayerBody = %PlayerBody
 
 @onready var left : Node3D = $Left
 @onready var right : Node3D = $Right
+@onready var center_ref : Node3D = $CenterReference
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,7 +37,10 @@ func _process(_delta):
 
 	# Holstering of left and right
 	var intermediate_pos; var intermediate_rot
-	var interp = %RightController.global_position.y - (global_position + LEFT_HOME_POS).y - MIN_HOLSTER_INTERP
+	
+	var head_to_holster = center_ref.global_position - camera.global_position
+	var angle_to_center = rad_to_deg((-camera.transform.basis.z).angle_to(head_to_holster))
+	var interp = angle_to_center - MIN_HOLSTER_INTERP
 	interp = clamp(interp, 0, MAX_HOLSTER_INTERP)
 
 	# left

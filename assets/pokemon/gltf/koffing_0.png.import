@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm65cvj4dsuys"
-path.s3tc="res://.godot/imported/koffing_0.png-cf51860b25fe37e7a4dbb9d993e1aae4.s3tc.ctex"
-path.etc2="res://.godot/imported/koffing_0.png-cf51860b25fe37e7a4dbb9d993e1aae4.etc2.ctex"
+path="res://.godot/imported/koffing_0.png-cf51860b25fe37e7a4dbb9d993e1aae4.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/koffing_0.png"
-dest_files=["res://.godot/imported/koffing_0.png-cf51860b25fe37e7a4dbb9d993e1aae4.s3tc.ctex", "res://.godot/imported/koffing_0.png-cf51860b25fe37e7a4dbb9d993e1aae4.etc2.ctex"]
+dest_files=["res://.godot/imported/koffing_0.png-cf51860b25fe37e7a4dbb9d993e1aae4.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

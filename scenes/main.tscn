@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=28 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
+[ext_resource type="Script" path="res://scripts/hands/rumble.gd" id="2_3qtel"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_islgx"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_ncs64"]
 [ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand/hand_material.tres" id="3_sue04"]
@@ -10,10 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_el4ei"]
 [ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="6_ygkyx"]
 [ext_resource type="PackedScene" uid="uid://dsgb4froubxfb" path="res://scenes/pokemon.tscn" id="7_2fqfm"]
-[ext_resource type="Script" path="res://scripts/indexStaticL.gd" id="7_q3gi1"]
+[ext_resource type="Script" path="res://scripts/hands/indexStaticL.gd" id="8_kxrgf"]
 [ext_resource type="PackedScene" uid="uid://bpekn8na6qop8" path="res://scenes/pokeball.tscn" id="9_g3mci"]
 [ext_resource type="PackedScene" uid="uid://d0hy51r435r8l" path="res://scenes/holster/holster.tscn" id="10_c2yjo"]
-[ext_resource type="Script" path="res://scripts/indexStaticR.gd" id="10_q7dxt"]
+[ext_resource type="Script" path="res://scripts/hands/indexStaticR.gd" id="11_0lr56"]
 [ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer/pc.tscn" id="18_4o8mq"]
 [ext_resource type="PackedScene" uid="uid://wvl520hbmur3" path="res://scenes/pokespawner/pokespawner.tscn" id="18_7gr3e"]
 [ext_resource type="AudioStream" uid="uid://5g31nlggr03d" path="res://assets/misc_audio/Oak Pokémon Lab [Pokémon_ FireRed & LeafGreen].mp3" id="18_fpwwk"]
@@ -36,6 +37,9 @@ glow_enabled = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1xnqn"]
 radius = 0.0102049
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_okg6x"]
+size = Vector3(0.0750698, 0.141514, 0.197411)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nq8ij"]
 
@@ -67,6 +71,7 @@ current = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
+script = ExtResource("2_3qtel")
 
 [node name="LeftHand" parent="XROrigin3D/LeftController" instance=ExtResource("1_xixr5")]
 hand_material_override = ExtResource("3_sue04")
@@ -85,16 +90,26 @@ crouch_button_action = "ax_button"
 [node name="IndexArea" type="Area3D" parent="XROrigin3D/LeftController" groups=["index"]]
 collision_layer = 131072
 collision_mask = 0
-script = ExtResource("7_q3gi1")
+script = ExtResource("8_kxrgf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/LeftController/IndexArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0125668, 0)
 shape = SubResource("SphereShape3D_1xnqn")
 
+[node name="HandArea" type="Area3D" parent="XROrigin3D/LeftController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0380599, 0, -0.000342846)
+collision_layer = 131072
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/LeftController/HandArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185065, -0.0423975, 0.0805774)
+shape = SubResource("BoxShape3D_okg6x")
+
 [node name="RightController" type="XRController3D" parent="XROrigin3D"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
+script = ExtResource("2_3qtel")
 
 [node name="RightHand" parent="XROrigin3D/RightController" instance=ExtResource("2_ncs64")]
 hand_material_override = ExtResource("3_sue04")
@@ -114,11 +129,19 @@ crouch_button_action = "ax_button"
 [node name="IndexArea" type="Area3D" parent="XROrigin3D/RightController" groups=["index"]]
 collision_layer = 131072
 collision_mask = 0
-script = ExtResource("10_q7dxt")
+script = ExtResource("11_0lr56")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/RightController/IndexArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000694931, -0.0125668, 0)
 shape = SubResource("SphereShape3D_1xnqn")
+
+[node name="HandArea" type="Area3D" parent="XROrigin3D/RightController"]
+collision_layer = 131072
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/RightController/HandArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185065, -0.0423975, 0.0805774)
+shape = SubResource("BoxShape3D_okg6x")
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_el4ei")]
 unique_name_in_owner = true
@@ -195,6 +218,7 @@ volume_db = -23.424
 
 [node name="Portal" parent="." instance=ExtResource("19_sp8c5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772156, 1.03022, -3.53355)
+visible = false
 
 [node name="PC" parent="." instance=ExtResource("18_4o8mq")]
 unique_name_in_owner = true

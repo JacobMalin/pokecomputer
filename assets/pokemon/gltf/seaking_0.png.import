@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdb15a14uxalr"
-path.s3tc="res://.godot/imported/seaking_0.png-914617df3a7881e609d3a5d7e1529789.s3tc.ctex"
-path.etc2="res://.godot/imported/seaking_0.png-914617df3a7881e609d3a5d7e1529789.etc2.ctex"
+path="res://.godot/imported/seaking_0.png-914617df3a7881e609d3a5d7e1529789.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/seaking_0.png"
-dest_files=["res://.godot/imported/seaking_0.png-914617df3a7881e609d3a5d7e1529789.s3tc.ctex", "res://.godot/imported/seaking_0.png-914617df3a7881e609d3a5d7e1529789.etc2.ctex"]
+dest_files=["res://.godot/imported/seaking_0.png-914617df3a7881e609d3a5d7e1529789.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

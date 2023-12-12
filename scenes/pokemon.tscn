@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsgb4froubxfb"]
 
-[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_xnnrg"]
+[ext_resource type="Script" path="res://scripts/pokemon/pokemon.gd" id="1_6qww2"]
 [ext_resource type="PackedScene" uid="uid://dlpa2fwmxu3sx" path="res://assets/pokemon/scenes/bulbasaur.tscn" id="2_1nrag"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7lbeg"]
@@ -9,7 +9,7 @@ radius = 0.317801
 [node name="Pokemon" type="CharacterBody3D" groups=["pokemon"]]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_xnnrg")
+script = ExtResource("1_6qww2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.373989, 0.0339737)

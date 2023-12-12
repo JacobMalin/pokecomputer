@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c71no5qwrey3u"
-path.s3tc="res://.godot/imported/porygon_0.png-efc91dde2c4b08df6dd11f34be828baa.s3tc.ctex"
-path.etc2="res://.godot/imported/porygon_0.png-efc91dde2c4b08df6dd11f34be828baa.etc2.ctex"
+path="res://.godot/imported/porygon_0.png-efc91dde2c4b08df6dd11f34be828baa.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/porygon_0.png"
-dest_files=["res://.godot/imported/porygon_0.png-efc91dde2c4b08df6dd11f34be828baa.s3tc.ctex", "res://.godot/imported/porygon_0.png-efc91dde2c4b08df6dd11f34be828baa.etc2.ctex"]
+dest_files=["res://.godot/imported/porygon_0.png-efc91dde2c4b08df6dd11f34be828baa.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

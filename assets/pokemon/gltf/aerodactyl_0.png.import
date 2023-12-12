@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d04u3hn62fpok"
-path.s3tc="res://.godot/imported/aerodactyl_0.png-956f4bae9938891ec9c9a8c1b91ada98.s3tc.ctex"
-path.etc2="res://.godot/imported/aerodactyl_0.png-956f4bae9938891ec9c9a8c1b91ada98.etc2.ctex"
+path="res://.godot/imported/aerodactyl_0.png-956f4bae9938891ec9c9a8c1b91ada98.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/aerodactyl_0.png"
-dest_files=["res://.godot/imported/aerodactyl_0.png-956f4bae9938891ec9c9a8c1b91ada98.s3tc.ctex", "res://.godot/imported/aerodactyl_0.png-956f4bae9938891ec9c9a8c1b91ada98.etc2.ctex"]
+dest_files=["res://.godot/imported/aerodactyl_0.png-956f4bae9938891ec9c9a8c1b91ada98.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://capaqxgisq6wq"
-path.s3tc="res://.godot/imported/dewgong_0.png-7f379f22b08c3a28ffd951ed75023696.s3tc.ctex"
-path.etc2="res://.godot/imported/dewgong_0.png-7f379f22b08c3a28ffd951ed75023696.etc2.ctex"
+path="res://.godot/imported/dewgong_0.png-7f379f22b08c3a28ffd951ed75023696.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/dewgong_0.png"
-dest_files=["res://.godot/imported/dewgong_0.png-7f379f22b08c3a28ffd951ed75023696.s3tc.ctex", "res://.godot/imported/dewgong_0.png-7f379f22b08c3a28ffd951ed75023696.etc2.ctex"]
+dest_files=["res://.godot/imported/dewgong_0.png-7f379f22b08c3a28ffd951ed75023696.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

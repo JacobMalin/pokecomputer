@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://0yl7h2hi5vi3"]
 
-[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/squirtle.gltf" id="1_8k2ps"]
+[ext_resource type="PackedScene" uid="uid://btongqs5tai3m" path="res://assets/pokemon/gltf/squirtle.gltf" id="1_8k2ps"]
 
 [sub_resource type="Animation" id="Animation_xudjy"]
 resource_name = "animation_squirtle_blink"

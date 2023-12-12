@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://depvmv07lksyf"
-path.s3tc="res://.godot/imported/paras_0.png-907f4f2b324939104bdb5b4c65cbc13e.s3tc.ctex"
-path.etc2="res://.godot/imported/paras_0.png-907f4f2b324939104bdb5b4c65cbc13e.etc2.ctex"
+path="res://.godot/imported/paras_0.png-907f4f2b324939104bdb5b4c65cbc13e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/paras_0.png"
-dest_files=["res://.godot/imported/paras_0.png-907f4f2b324939104bdb5b4c65cbc13e.s3tc.ctex", "res://.godot/imported/paras_0.png-907f4f2b324939104bdb5b4c65cbc13e.etc2.ctex"]
+dest_files=["res://.godot/imported/paras_0.png-907f4f2b324939104bdb5b4c65cbc13e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

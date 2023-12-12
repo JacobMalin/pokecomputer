@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0xa23vbn2ll1"
-path.s3tc="res://.godot/imported/articuno_0.png-1f234829ae63a5f47daa4d2e49798755.s3tc.ctex"
-path.etc2="res://.godot/imported/articuno_0.png-1f234829ae63a5f47daa4d2e49798755.etc2.ctex"
+path="res://.godot/imported/articuno_0.png-1f234829ae63a5f47daa4d2e49798755.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/articuno_0.png"
-dest_files=["res://.godot/imported/articuno_0.png-1f234829ae63a5f47daa4d2e49798755.s3tc.ctex", "res://.godot/imported/articuno_0.png-1f234829ae63a5f47daa4d2e49798755.etc2.ctex"]
+dest_files=["res://.godot/imported/articuno_0.png-1f234829ae63a5f47daa4d2e49798755.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

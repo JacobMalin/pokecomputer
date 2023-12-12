@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6nptkygkcgt5"
-path.s3tc="res://.godot/imported/wigglytuff_0.png-75d4f5827af3df36f7ccaaf7bc75c96f.s3tc.ctex"
-path.etc2="res://.godot/imported/wigglytuff_0.png-75d4f5827af3df36f7ccaaf7bc75c96f.etc2.ctex"
+path="res://.godot/imported/wigglytuff_0.png-75d4f5827af3df36f7ccaaf7bc75c96f.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/wigglytuff_0.png"
-dest_files=["res://.godot/imported/wigglytuff_0.png-75d4f5827af3df36f7ccaaf7bc75c96f.s3tc.ctex", "res://.godot/imported/wigglytuff_0.png-75d4f5827af3df36f7ccaaf7bc75c96f.etc2.ctex"]
+dest_files=["res://.godot/imported/wigglytuff_0.png-75d4f5827af3df36f7ccaaf7bc75c96f.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

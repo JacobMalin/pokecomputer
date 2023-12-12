@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://vx63dgvaox3e"]
+[gd_scene load_steps=14 format=3 uid="uid://vx63dgvaox3e"]
 
 [ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/com_bm_pc02.png" id="1_tc1g5"]
 [ext_resource type="PackedScene" uid="uid://n66g3gxaodlr" path="res://scenes/computer/desktop.tscn" id="2_gv6u7"]
@@ -19,6 +19,21 @@ material = SubResource("StandardMaterial3D_tg7vp")
 [sub_resource type="BoxShape3D" id="BoxShape3D_teswj"]
 size = Vector3(0.602258, 0.593898, 0.121897)
 
+[sub_resource type="Animation" id="Animation_hkm8l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MonitorArea/CollisionShape3D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_hsvj8"]
 resource_name = "onoff"
 length = 1.5
@@ -36,9 +51,22 @@ tracks/1/path = NodePath("../Desktop")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 1, 1, 1, 1.5, 1, 0.1, 0.1, 0.1)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MonitorArea/CollisionShape3D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 1.45, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0raka"]
 _data = {
+"RESET": SubResource("Animation_hkm8l"),
 "on": SubResource("Animation_hsvj8")
 }
 

@@ -97,6 +97,33 @@ func _integrate_forces(state):
 		state.angular_velocity = Vector3.ZERO
 
 
+## This method requests highlighting of the [XRToolsPickable].
+## If [param from] is null then all highlighting requests are cleared,
+## otherwise the highlight request is associated with the specified node.
+func request_highlight(from : Node, on : bool = true) -> void:
+	# Save if we are highlighted
+	var old_highlighted := _highlighted
+
+	# Update the highlight requests dictionary
+	if not from:
+		_highlight_requests.clear()
+	elif on:
+		_highlight_requests[from] = from
+	else:
+		_highlight_requests.erase(from)
+
+	# Update the highlighted state
+	_highlighted = _highlight_requests.size() > 0
+
+	# Report any changes
+	if _highlighted != old_highlighted:
+		if _highlighted: # If highlight is on and new, rumble controller
+			if from is XRToolsFunctionPickup:
+				# from.parent.rumble()
+				pass
+		emit_signal("highlight_updated", self, _highlighted)
+
+
 ## Events ##
 
 func _on_pokeball_hit_something(body:Node):
@@ -117,7 +144,7 @@ func _on_digi_snap_has_dropped():
 func _on_digi_snap_has_picked_up(what):
 	contents = what
 
-	contents.activate_snap()
+	contents._on_picked_up_by_ball()
 
 
 
@@ -147,19 +174,19 @@ func display(_display_state):
 		DisplayState.DEFAULT:
 			mesh.visible = true
 			enabled = true
-			collision.disabled = false
+			collision.set_deferred("disabled", false)
 			digi_snap.enabled = false
 			if contents: contents.visible = false
 		DisplayState.HOLSTER:
 			mesh.visible = true
 			enabled = true
-			collision.disabled = false
+			collision.set_deferred("disabled", false)
 			digi_snap.enabled = false
 			if contents: contents.visible = true
 		DisplayState.DIGITAL:
 			mesh.visible = false
 			enabled = false
-			collision.disabled = true
+			collision.set_deferred("disabled", true)
 			digi_snap.enabled = true
 			if contents: contents.visible = true
 
@@ -218,10 +245,10 @@ func release():
 	var pokemon_instance = pokemon_scene.instantiate()
 
 	pokemon_instance.id = contents_id
-	pokemon_instance.global_position = global_position
 	pokemon_instance.scale = Vector3.ONE * POKEBALL_SCALE
 
 	pokemon_node.add_child(pokemon_instance)
+	pokemon_instance.global_position = global_position # Must happen after added to tree
 	
 	release_audio.play()
 	

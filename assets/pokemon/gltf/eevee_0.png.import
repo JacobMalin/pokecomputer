@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d6exfw6tijs5"
-path.s3tc="res://.godot/imported/eevee_0.png-aaedeeabd4caa54083fa7616efded654.s3tc.ctex"
-path.etc2="res://.godot/imported/eevee_0.png-aaedeeabd4caa54083fa7616efded654.etc2.ctex"
+path="res://.godot/imported/eevee_0.png-aaedeeabd4caa54083fa7616efded654.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/eevee_0.png"
-dest_files=["res://.godot/imported/eevee_0.png-aaedeeabd4caa54083fa7616efded654.s3tc.ctex", "res://.godot/imported/eevee_0.png-aaedeeabd4caa54083fa7616efded654.etc2.ctex"]
+dest_files=["res://.godot/imported/eevee_0.png-aaedeeabd4caa54083fa7616efded654.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

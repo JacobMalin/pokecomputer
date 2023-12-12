@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dh8grd7s3n8kg" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.tscn" id="4_ps8vi"]
 [ext_resource type="ArrayMesh" uid="uid://bacfkc6joudhd" path="res://assets/pokeball/pokeball_highlight.tres" id="5_d3tgv"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.gd" id="6_7vakd"]
+[ext_resource type="Script" path="res://scripts/pokemon/digi_poke_snap.gd" id="7_3fi2o"]
 [ext_resource type="AnimationLibrary" uid="uid://d6oadxfn3n7s" path="res://assets/pokeball/pokeball_animations.res" id="8_a1076"]
-[ext_resource type="Script" path="res://scripts/digi_poke_snap.gd" id="8_e0vry"]
 [ext_resource type="AudioStream" uid="uid://d4miw25xpjv33" path="res://assets/pokeball/sound_effects/pokeball_close.mp3" id="9_b0ad5"]
 [ext_resource type="AudioStream" uid="uid://d3gg4e8viwk8y" path="res://assets/pokeball/sound_effects/pokeball_open.mp3" id="10_4eerd"]
 
@@ -287,7 +287,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.
 visible = false
 collision_layer = 32
 collision_mask = 65568
-script = ExtResource("8_e0vry")
+script = ExtResource("7_3fi2o")
 enabled = false
 snap_require = "digital_pokemon"
 

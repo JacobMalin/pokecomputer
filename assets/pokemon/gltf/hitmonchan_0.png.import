@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0w1b7161gypa"
-path.s3tc="res://.godot/imported/hitmonchan_0.png-f96c5ca6ea48388e32717ecec68f3c49.s3tc.ctex"
-path.etc2="res://.godot/imported/hitmonchan_0.png-f96c5ca6ea48388e32717ecec68f3c49.etc2.ctex"
+path="res://.godot/imported/hitmonchan_0.png-f96c5ca6ea48388e32717ecec68f3c49.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/hitmonchan_0.png"
-dest_files=["res://.godot/imported/hitmonchan_0.png-f96c5ca6ea48388e32717ecec68f3c49.s3tc.ctex", "res://.godot/imported/hitmonchan_0.png-f96c5ca6ea48388e32717ecec68f3c49.etc2.ctex"]
+dest_files=["res://.godot/imported/hitmonchan_0.png-f96c5ca6ea48388e32717ecec68f3c49.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

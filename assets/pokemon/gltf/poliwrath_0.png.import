@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyyrveba5lmfd"
-path.s3tc="res://.godot/imported/poliwrath_0.png-13305b00753a6eb046f9991a8259d5ed.s3tc.ctex"
-path.etc2="res://.godot/imported/poliwrath_0.png-13305b00753a6eb046f9991a8259d5ed.etc2.ctex"
+path="res://.godot/imported/poliwrath_0.png-13305b00753a6eb046f9991a8259d5ed.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/poliwrath_0.png"
-dest_files=["res://.godot/imported/poliwrath_0.png-13305b00753a6eb046f9991a8259d5ed.s3tc.ctex", "res://.godot/imported/poliwrath_0.png-13305b00753a6eb046f9991a8259d5ed.etc2.ctex"]
+dest_files=["res://.godot/imported/poliwrath_0.png-13305b00753a6eb046f9991a8259d5ed.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

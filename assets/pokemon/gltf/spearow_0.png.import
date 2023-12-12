@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgi8ajol48t3o"
-path.s3tc="res://.godot/imported/spearow_0.png-e809bc3d20defa0fcf9bbeb75fc18abc.s3tc.ctex"
-path.etc2="res://.godot/imported/spearow_0.png-e809bc3d20defa0fcf9bbeb75fc18abc.etc2.ctex"
+path="res://.godot/imported/spearow_0.png-e809bc3d20defa0fcf9bbeb75fc18abc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/spearow_0.png"
-dest_files=["res://.godot/imported/spearow_0.png-e809bc3d20defa0fcf9bbeb75fc18abc.s3tc.ctex", "res://.godot/imported/spearow_0.png-e809bc3d20defa0fcf9bbeb75fc18abc.etc2.ctex"]
+dest_files=["res://.godot/imported/spearow_0.png-e809bc3d20defa0fcf9bbeb75fc18abc.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cebuk7do2mpsn"
-path.s3tc="res://.godot/imported/mewtwo_0.png-a099ef597a0ddb4029fb3ae8110763df.s3tc.ctex"
-path.etc2="res://.godot/imported/mewtwo_0.png-a099ef597a0ddb4029fb3ae8110763df.etc2.ctex"
+path="res://.godot/imported/mewtwo_0.png-a099ef597a0ddb4029fb3ae8110763df.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/mewtwo_0.png"
-dest_files=["res://.godot/imported/mewtwo_0.png-a099ef597a0ddb4029fb3ae8110763df.s3tc.ctex", "res://.godot/imported/mewtwo_0.png-a099ef597a0ddb4029fb3ae8110763df.etc2.ctex"]
+dest_files=["res://.godot/imported/mewtwo_0.png-a099ef597a0ddb4029fb3ae8110763df.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

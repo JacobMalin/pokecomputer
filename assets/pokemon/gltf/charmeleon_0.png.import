@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0xvrti2gj4yb"
-path.s3tc="res://.godot/imported/charmeleon_0.png-8e440bb2864c4dbc78933dd202d5e9dd.s3tc.ctex"
-path.etc2="res://.godot/imported/charmeleon_0.png-8e440bb2864c4dbc78933dd202d5e9dd.etc2.ctex"
+path="res://.godot/imported/charmeleon_0.png-8e440bb2864c4dbc78933dd202d5e9dd.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/charmeleon_0.png"
-dest_files=["res://.godot/imported/charmeleon_0.png-8e440bb2864c4dbc78933dd202d5e9dd.s3tc.ctex", "res://.godot/imported/charmeleon_0.png-8e440bb2864c4dbc78933dd202d5e9dd.etc2.ctex"]
+dest_files=["res://.godot/imported/charmeleon_0.png-8e440bb2864c4dbc78933dd202d5e9dd.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

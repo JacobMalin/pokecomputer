@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dui4qbl4tbcmx"
-path.s3tc="res://.godot/imported/flareon_0.png-d54a56f93163271b9253a470ab7bca1a.s3tc.ctex"
-path.etc2="res://.godot/imported/flareon_0.png-d54a56f93163271b9253a470ab7bca1a.etc2.ctex"
+path="res://.godot/imported/flareon_0.png-d54a56f93163271b9253a470ab7bca1a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/flareon_0.png"
-dest_files=["res://.godot/imported/flareon_0.png-d54a56f93163271b9253a470ab7bca1a.s3tc.ctex", "res://.godot/imported/flareon_0.png-d54a56f93163271b9253a470ab7bca1a.etc2.ctex"]
+dest_files=["res://.godot/imported/flareon_0.png-d54a56f93163271b9253a470ab7bca1a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y7a1mvvepkdd"
-path.s3tc="res://.godot/imported/marowak_0.png-9c882a023d2cc68c3000bab1a6c2054a.s3tc.ctex"
-path.etc2="res://.godot/imported/marowak_0.png-9c882a023d2cc68c3000bab1a6c2054a.etc2.ctex"
+path="res://.godot/imported/marowak_0.png-9c882a023d2cc68c3000bab1a6c2054a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/marowak_0.png"
-dest_files=["res://.godot/imported/marowak_0.png-9c882a023d2cc68c3000bab1a6c2054a.s3tc.ctex", "res://.godot/imported/marowak_0.png-9c882a023d2cc68c3000bab1a6c2054a.etc2.ctex"]
+dest_files=["res://.godot/imported/marowak_0.png-9c882a023d2cc68c3000bab1a6c2054a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

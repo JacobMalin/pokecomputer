@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dldnc2i87dyjd"
-path.s3tc="res://.godot/imported/jynx_0.png-1560cebc0aec738d949dffc5ef956c38.s3tc.ctex"
-path.etc2="res://.godot/imported/jynx_0.png-1560cebc0aec738d949dffc5ef956c38.etc2.ctex"
+path="res://.godot/imported/jynx_0.png-1560cebc0aec738d949dffc5ef956c38.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/jynx_0.png"
-dest_files=["res://.godot/imported/jynx_0.png-1560cebc0aec738d949dffc5ef956c38.s3tc.ctex", "res://.godot/imported/jynx_0.png-1560cebc0aec738d949dffc5ef956c38.etc2.ctex"]
+dest_files=["res://.godot/imported/jynx_0.png-1560cebc0aec738d949dffc5ef956c38.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

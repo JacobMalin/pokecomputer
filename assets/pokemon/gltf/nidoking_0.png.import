@@ -3,22 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh1l2x8a58dhg"
-path.s3tc="res://.godot/imported/nidoking_0.png-8888acf2eb87383a411ee7c7cb9fdf68.s3tc.ctex"
-path.etc2="res://.godot/imported/nidoking_0.png-8888acf2eb87383a411ee7c7cb9fdf68.etc2.ctex"
+path="res://.godot/imported/nidoking_0.png-8888acf2eb87383a411ee7c7cb9fdf68.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/pokemon/gltf/nidoking_0.png"
-dest_files=["res://.godot/imported/nidoking_0.png-8888acf2eb87383a411ee7c7cb9fdf68.s3tc.ctex", "res://.godot/imported/nidoking_0.png-8888acf2eb87383a411ee7c7cb9fdf68.etc2.ctex"]
+dest_files=["res://.godot/imported/nidoking_0.png-8888acf2eb87383a411ee7c7cb9fdf68.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
