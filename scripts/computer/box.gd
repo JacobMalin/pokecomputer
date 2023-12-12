@@ -3,6 +3,8 @@ extends Node3D
 
 signal check_bounds(box, pos, neg) # Global position
 
+signal take_priority(box)
+
 @export var color : Color = Color("ad985b")
 
 const MIN_SIZE = 0.1
@@ -32,6 +34,7 @@ func _ready():
 
 	for box in boxes.get_children():
 		box.check_bounds.connect(_on_check_bounds)
+		box.take_priority.connect(_on_take_priority)
 
 
 ### Events ###
@@ -80,6 +83,9 @@ func _on_corner_move(pos:Vector3, neg:Vector3):
 	# Check and fix out of bounds
 	check_bounds.emit(self, pos, neg)
 
+	# Take priority
+	take_priority.emit(self)
+
 func fix_pos(pos, neg):
 	corners.fix_pos(pos, neg)
 
@@ -109,3 +115,9 @@ func _on_check_bounds(child, child_pos, child_neg):
 	if child_neg.z < save_neg.z + PADDING: child_neg.z = save_neg.z + PADDING
 
 	child.fix_pos(child_pos, child_neg)
+
+func _on_take_priority(child):
+	boxes.move_child(child, 0)
+
+	# Take priority for self
+	take_priority.emit(self)

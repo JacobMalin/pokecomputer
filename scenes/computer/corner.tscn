@@ -49,4 +49,3 @@ mesh = ExtResource("5_l5an0")
 skeleton = NodePath("")
 
 [connection signal="dropped" from="." to="." method="_on_dropped"]
-[connection signal="picked_up" from="." to="." method="_on_picked_up"]

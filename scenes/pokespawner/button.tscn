@@ -19,39 +19,27 @@ material = SubResource("StandardMaterial3D_h23pt")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fagfi"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="Animation" id="Animation_jv1wq"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_cgu8o"]
 resource_name = "press"
 length = 0.4
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area3D/button")
+tracks/0/path = NodePath("Mesh")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.2, 1, 0, -0.0548746, 0, 0.4, 1, 0, 0, 0)
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area3D/CollisionShape3D:disabled")
+tracks/1/path = NodePath(".:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_jv1wq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Area3D/CollisionShape3D:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.4),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -63,26 +51,25 @@ _data = {
 "press": SubResource("Animation_cgu8o")
 }
 
-[node name="Button" type="Node3D"]
+[node name="Button" type="Area3D"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
-script = ExtResource("1_sjptp")
-
-[node name="Area3D" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 131072
+script = ExtResource("1_sjptp")
 
-[node name="button" type="MeshInstance3D" parent="Area3D"]
+[node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 mesh = SubResource("BoxMesh_gi27j")
-skeleton = NodePath("../../../..")
+skeleton = NodePath("../../..")
 
-[node name="number" type="Label3D" parent="Area3D/button"]
+[node name="Number" type="Label3D" parent="Mesh"]
 transform = Transform3D(5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, 0, 0.52997, 0)
 text = "0"
 outline_size = 6
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
 shape = SubResource("ConvexPolygonShape3D_fagfi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -95,4 +82,4 @@ visible = false
 stream = ExtResource("2_026c8")
 volume_db = 1.688
 
-[connection signal="area_entered" from="Area3D" to="." method="_on_finger_entered"]
+[connection signal="area_entered" from="." to="." method="_on_finger_entered"]
