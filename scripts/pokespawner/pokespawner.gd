@@ -3,7 +3,7 @@ extends StaticBody3D
 
 @onready var pokemon_node = get_tree().get_root().get_node("Main/Pokemon")
 @onready var pokescene = preload("res://scenes/pokemon.tscn")
-
+@onready var audio : AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 ### Lifecycle ###
 
@@ -18,6 +18,9 @@ func _ready():
 
 # called when an id is entered into the keypad
 func _spawn_pokemon(id):
+	# play the teleporter audio
+	audio.play()
+	
 	var pokemon = pokescene.instantiate()
 
 	pokemon.id = id

@@ -32,8 +32,14 @@ https://www.models-resource.com/3ds/pokemonxy/model/13867/
 Substitute Doll Model by Hallow
 https://www.models-resource.com/3ds/pokemonomegarubyalphasapphire/model/12155/
 
+Substitute Sound Effect from downloads.khinsider.com
+https://downloads.khinsider.com/game-soundtracks/album/pokemon-sfx-gen-3-attack-moves-rse-fr-lg/Substitute.mp3
+
 Button Press Audio from Gen 4 Sound Effects Pack (by Deo)
 https://reliccastle.com/resources/220/
+
+Pokespawner Sound Effect from downloads.khinsider.com
+https://downloads.khinsider.com/game-soundtracks/album/pokemon-sfx-gen-3-attack-moves-rse-fr-lg/Teleport.mp3
 
 - Maybe (portal)[https://www.youtube.com/watch?v=oqDdIg3BRlg]
 - (PC Open)[https://reliccastle.com/resources/220/]
