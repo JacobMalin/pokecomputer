@@ -41,5 +41,8 @@ https://reliccastle.com/resources/220/
 Pokespawner Sound Effect from downloads.khinsider.com
 https://downloads.khinsider.com/game-soundtracks/album/pokemon-sfx-gen-3-attack-moves-rse-fr-lg/Teleport.mp3
 
+Lab Machine by Christian Quintero Vázquez
+https://sketchfab.com/3d-models/laboratory-wall-pc-aa5e7257a65b4b63bb958d499336a885
+
 - Maybe (portal)[https://www.youtube.com/watch?v=oqDdIg3BRlg]
 - (PC Open)[https://reliccastle.com/resources/220/]
