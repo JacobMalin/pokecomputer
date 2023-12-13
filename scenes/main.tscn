@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=28 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
 [ext_resource type="Script" path="res://scripts/hands/rumble_controller.gd" id="2_3w6hr"]
+[ext_resource type="AudioStream" uid="uid://c5odh5qak6mnm" path="res://assets/misc_audio/Professor Oak's Laboratory - Pokemon Let's Go Pikachu & Eevee Music Extended.mp3" id="2_fhy0p"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_islgx"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_ncs64"]
 [ext_resource type="Material" uid="uid://ceclqbehdcvh6" path="res://assets/hand/hand_material.tres" id="3_sue04"]
@@ -16,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d0hy51r435r8l" path="res://scenes/holster/holster.tscn" id="10_c2yjo"]
 [ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer/pc.tscn" id="18_4o8mq"]
 [ext_resource type="PackedScene" uid="uid://wvl520hbmur3" path="res://scenes/pokespawner/pokespawner.tscn" id="18_7gr3e"]
-[ext_resource type="AudioStream" uid="uid://5g31nlggr03d" path="res://assets/misc_audio/Oak Pokémon Lab [Pokémon_ FireRed & LeafGreen].mp3" id="18_fpwwk"]
+[ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/table.tscn" id="19_7ksaf"]
 [ext_resource type="PackedScene" uid="uid://ycjht4w144b0" path="res://scenes/computer/portal.tscn" id="19_sp8c5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7px5o"]
@@ -60,8 +61,9 @@ shadow_enabled = true
 environment = SubResource("Environment_j8tdp")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_fpwwk")
+stream = ExtResource("2_fhy0p")
 volume_db = -23.424
+autoplay = true
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
@@ -202,23 +204,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0.775, 0.03)
 unique_name_in_owner = true
 
 [node name="Bulbasaur" parent="Pokemon" instance=ExtResource("7_2fqfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.51792)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.305, 0.979314, 5.988)
 id = 1
 
 [node name="Charmander" parent="Pokemon" instance=ExtResource("7_2fqfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71707, 0, 3.51792)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979, 5.988)
 id = 4
 
 [node name="Squirtle" parent="Pokemon" instance=ExtResource("7_2fqfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68145, 0, 3.51792)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305, 0.979, 5.988)
 id = 7
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.011, -7.945)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.014, -7.945)
 
 [node name="Portal" parent="." instance=ExtResource("19_sp8c5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772156, 1.03022, -3.53355)
+visible = false
 
 [node name="PC" parent="." instance=ExtResource("18_4o8mq")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57306, 0, -7.31472)
+
+[node name="Poketable" parent="." instance=ExtResource("19_7ksaf")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -0.501276, 6.11224)

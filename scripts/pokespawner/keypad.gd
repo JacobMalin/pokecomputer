@@ -5,6 +5,7 @@ extends StaticBody3D
 # and https://www.youtube.com/watch?v=mGYi7pnEgnA&ab_channel=Gwizz
 @onready var globals = get_node("/root/Globals")
 @onready var buttons = $Keypad/Buttons
+@onready var id_label : Label3D = $ID
 
 signal spawn(num)
 
@@ -25,8 +26,9 @@ func _ready():
 ### Events ###
 
 func on_button_pressed(number):
-	# takes in the entered id
+	# takes in the entered id and changes the display
 	id += str(number)
+	id_label.text = str(id)
 	
 	if id.length() >= 3:
 		# Spawn the correct pokemon based on the entered id
@@ -39,3 +41,4 @@ func on_button_pressed(number):
 			#print(Globals.pokedex[int_id])
 			
 		id = ""
+		id_label.text = ""

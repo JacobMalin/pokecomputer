@@ -14,8 +14,11 @@ https://www.myinstants.com/en/instant/pokeball-open/
 Pokéball Closing Sound Effect by nauth
 https://www.myinstants.com/en/instant/pokeball-return/
 
-Oak Pokémon Lab Theme by 7GamerMinutes+: Video Game Music
-https://www.youtube.com/watch?v=s6Gw-_Wex6Y&t=135s&ab_channel=7GamerMinutes%2B%3AVideoGameMusic
+Oak Pokémon Lab Theme by TheCoffingsExtended
+https://www.youtube.com/watch?v=9AtffDvUbUU&ab_channel=TheCoffingsExtended
+
+Meowth Cry by Dwain
+https://www.youtube.com/watch?v=wDgOlC7rHrg&ab_channel=Dwain
 
 Pokémon models from Cobblemon public asset database
 https://gitlab.com/cable-mc/cobblemon-assets/-/tree/master/blockbench/pokemon/gen1

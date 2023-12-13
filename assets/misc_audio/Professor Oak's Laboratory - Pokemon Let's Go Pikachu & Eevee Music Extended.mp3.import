@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5odh5qak6mnm"
+path="res://.godot/imported/Professor Oak's Laboratory - Pokemon Let's Go Pikachu & Eevee Music Extended.mp3-b2e741945602cfe96963eb13a41362b4.mp3str"
+
+[deps]
+
+source_file="res://assets/misc_audio/Professor Oak's Laboratory - Pokemon Let's Go Pikachu & Eevee Music Extended.mp3"
+dest_files=["res://.godot/imported/Professor Oak's Laboratory - Pokemon Let's Go Pikachu & Eevee Music Extended.mp3-b2e741945602cfe96963eb13a41362b4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

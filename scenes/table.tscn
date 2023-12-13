@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://3e0pfgcef2fq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ad53c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_psc6o"]
+size = Vector3(3.06768, 0.832851, 1.30857)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b27i6"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="desktop" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.2, 0, 0, 0, 0.269, 0, 0, 0, 1.428, 0, 1.09765, 0)
+mesh = SubResource("BoxMesh_ad53c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.815779, 0.0106282)
+shape = SubResource("BoxShape3D_psc6o")
+
+[node name="leg" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.16, 0, 0, 0, 0.8, 0, 0, 0, 0.16, -1.44633, 0.808587, 0.552065)
+mesh = SubResource("BoxMesh_b27i6")
+
+[node name="leg2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.16, 0, 0, 0, 0.8, 0, 0, 0, 0.16, 1.446, 0.809, 0.552)
+mesh = SubResource("BoxMesh_b27i6")
+
+[node name="leg3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.16, 0, 0, 0, 0.8, 0, 0, 0, 0.16, -1.446, 0.809, -0.552)
+mesh = SubResource("BoxMesh_b27i6")
+
+[node name="leg4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.16, 0, 0, 0, 0.8, 0, 0, 0, 0.16, 1.446, 0.809, -0.552)
+mesh = SubResource("BoxMesh_b27i6")
