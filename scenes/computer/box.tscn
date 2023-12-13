@@ -4,6 +4,9 @@
 [ext_resource type="Script" path="res://scripts/computer/corners.gd" id="2_5s6s4"]
 [ext_resource type="PackedScene" uid="uid://bgw5r8lmumjw2" path="res://scenes/computer/corner.tscn" id="2_dbay3"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0w6mr"]
+resource_local_to_scene = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_uo0on"]
 resource_local_to_scene = true
 flip_faces = true
@@ -12,23 +15,19 @@ flip_faces = true
 resource_local_to_scene = true
 albedo_color = Color(0.678431, 0.596078, 0.356863, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0w6mr"]
-resource_local_to_scene = true
-
-[node name="Box" type="Node3D"]
+[node name="Box" type="Area3D" groups=["box"]]
+collision_layer = 16
+collision_mask = 48
 script = ExtResource("1_mwstn")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0w6mr")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 cast_shadow = 0
 mesh = SubResource("BoxMesh_uo0on")
+skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_yy10u")
-
-[node name="Area" type="Area3D" parent="." groups=["box"]]
-collision_layer = 16
-collision_mask = 16
-
-[node name="Collision" type="CollisionShape3D" parent="Area"]
-shape = SubResource("BoxShape3D_0w6mr")
 
 [node name="Corners" type="Node3D" parent="."]
 script = ExtResource("2_5s6s4")
@@ -66,5 +65,6 @@ transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.8
 
 [node name="Boxes" type="Node3D" parent="."]
 
+[node name="Pokemon" type="Node3D" parent="."]
+
 [connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]
-[connection signal="request_fix_pos" from="Corners" to="." method="_on_request_fix_pos"]

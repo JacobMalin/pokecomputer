@@ -31,3 +31,16 @@ func _on_take_priority(child):
 
 	# Desktop already has priority
 	# take_priority.emit(self)
+
+
+
+### Helper ###
+
+func in_bounds(_poke : DigitalPokemon):
+	return true ## digital pokemon are always in the desktop
+
+func power(on : bool):
+	for box in boxes.get_children():
+		box.power(on)
+	
+	# corners.power(on)

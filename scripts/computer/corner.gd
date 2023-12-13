@@ -7,6 +7,8 @@ signal request_fix_pos
 enum Id {X = 1, Y = 2, Z = 4}
 @export_flags("x", "y", "z") var id = 0
 
+@onready var collision : CollisionShape3D = $Collision
+
 @onready var starting_rotation = rotation
 @onready var new_position = global_position
 
@@ -36,7 +38,6 @@ func _integrate_forces(state):
 ## If [param from] is null then all highlighting requests are cleared,
 ## otherwise the highlight request is associated with the specified node.
 func request_highlight(from : Node, on : bool = true) -> void:
-	print(from, "\t", on)
 	# Save if we are highlighted
 	var old_highlighted := _highlighted
 
@@ -80,3 +81,7 @@ func fix_pos(pos, neg):
 	new_position.x = pos.x if id & Id.X else neg.x
 	new_position.y = pos.y if id & Id.Y else neg.y
 	new_position.z = pos.z if id & Id.Z else neg.z
+
+func power(on : bool):
+	enabled = on
+	collision.disabled = !on

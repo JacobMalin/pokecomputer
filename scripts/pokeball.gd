@@ -138,9 +138,12 @@ func _on_pokeball_dropped(_pickable):
 
 func _on_digi_snap_has_dropped():
 	pc.adopt(contents)
+
 	contents = EMPTY
 
 func _on_digi_snap_has_picked_up(what):
+	what.reparent(self)
+
 	contents = what
 
 	contents._on_picked_up_by_ball()

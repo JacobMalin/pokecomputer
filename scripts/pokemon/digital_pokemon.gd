@@ -23,6 +23,8 @@ enum SizeState {
 @onready var cry_player: AudioStreamPlayer3D = $CryPlayer
 @onready var digi_anim_player: AnimationPlayer = $AnimationPlayer
 
+@onready var pc: PC = get_tree().get_root().get_node("Main").get_node("%PC")
+
 var mesh
 var poke_anim_player: AnimationPlayer
 
@@ -93,7 +95,7 @@ func let_go(p_linear_velocity: Vector3, p_angular_velocity: Vector3) -> void:
 	# given it.
 	if by_hand:
 		by_hand.remove_pose_override(self)
-		_on_let_go() ## This line is new
+		_on_let_go_by_controller() ## This line is new
 
 	# If we are held by a cillision hand then remove any collision exceptions
 	# we may have added.
@@ -144,9 +146,10 @@ func cry():
 func idle():
 	safe_poke_anim_play("animation_"+pokemon_name+"_ground_idle", "animation_"+pokemon_name+"_idle")
 
-func _on_let_go():
+func _on_let_go_by_controller():
 	disable_snap()
 	grow()
+	pc.adopt(self) ## Re-adopt when dropped
 
 func _on_picked_up_by_ball():
 	activate_snap()

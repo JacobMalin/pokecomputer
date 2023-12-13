@@ -1,5 +1,5 @@
 class_name Box
-extends Node3D
+extends Area3D
 
 signal check_bounds(box, pos, neg) # Global position
 
@@ -11,8 +11,10 @@ const MIN_SIZE = 0.1
 const PADDING = 0.01 ## To prevent z-fighting
 
 @onready var cube : MeshInstance3D = $Cube
-@onready var collision : CollisionShape3D = $Area/Collision
+@onready var collision : CollisionShape3D = $Collision
 @onready var boxes = $Boxes
+@onready var pokemon = $Pokemon
+
 var corners
 
 var save_pos : Vector3
@@ -121,3 +123,27 @@ func _on_take_priority(child):
 
 	# Take priority for self
 	take_priority.emit(self)
+
+
+
+### Helper ###
+
+func in_bounds(poke : DigitalPokemon):
+	return overlaps_body(poke)
+
+func adopt(poke : DigitalPokemon):
+	if not in_bounds(poke): return false
+
+	for box in boxes.get_children():
+		var ret = box.adopt(poke)
+		if ret: return true
+
+	poke.reparent(pokemon)
+
+	return true
+
+func power(on : bool):
+	for box in boxes.get_children():
+		box.power(on)
+	
+	corners.power(on)

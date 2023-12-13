@@ -1,7 +1,5 @@
 extends XRToolsSnapZone
 
-@onready var all_computer = get_tree().get_nodes_in_group("computer")
-
 var holster_mode : HolsterMode = HolsterMode.DEFAULT
 enum HolsterMode {
 	DEFAULT,
@@ -102,12 +100,12 @@ func _on_snap_zone_body_exited(target: Node3D) -> void:
 ### Signals ###
 
 func _on_area_entered(area:Area3D):
-	if area in all_computer:
+	if area.is_in_group("desktop"):
 		holster(HolsterMode.DIGITAL)
 
 
 func _on_area_exited(area:Area3D):
-	if area in all_computer:
+	if area.is_in_group("desktop"):
 		holster(HolsterMode.DEFAULT)
 
 

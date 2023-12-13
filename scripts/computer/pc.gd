@@ -3,10 +3,12 @@ extends Node3D
 
 @export var on = true
 
+@onready var desktop : Desktop = $Desktop
+@onready var monitor_collision : CollisionShape3D = $MonitorArea/Collision
+
 @onready var anim : AnimationPlayer = $AnimationPlayer
 @onready var onAudio : AudioStreamPlayer3D = $OnSound
 @onready var offAudio : AudioStreamPlayer3D = $OffSound
-@onready var monitor_collision : CollisionShape3D = $MonitorArea/Collision
 
 var disabled = false
 
@@ -27,6 +29,7 @@ func _on_monitor_entered(area):
 			on = false
 			anim.play("on")
 			offAudio.play()
+			desktop.power(false)
 		else:
 			on = true
 			anim.play_backwards("on")
@@ -41,10 +44,14 @@ func _on_monitor_entered(area):
 
 # Add a digital pokemon to the computer
 func adopt(poke : DigitalPokemon):
-	poke.reparent(self)
+	desktop.adopt(poke)
 
-func update_disabled(start : bool):
-	if on: disabled = !start
-	else: disabled = start
+func update_state(start : bool):
+	if on:
+		disabled = !start
+		if start: desktop.power(true) # only show corners at end of opening animation
+	else:
+		disabled = start
+
 
 
