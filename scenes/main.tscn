@@ -243,10 +243,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57306, 0, -7.31472)
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -0.501276, 6.11224)
 
 [node name="pc_lab" parent="." instance=ExtResource("20_w45rh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.02662, 0, 8.8245)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.02662, -0.419688, 8.8245)
 
 [node name="pc_lab2" parent="." instance=ExtResource("20_w45rh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.8992, 0, 8.8245)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.899, -0.42, 8.825)
 
 [node name="NorthWall" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.90028, 0)
@@ -281,7 +281,7 @@ mesh = SubResource("BoxMesh_8srnl")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EastWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.805391, -9.98858)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2408, 0.805391, -9.98858)
 shape = SubResource("BoxShape3D_vt3mt")
 
 [node name="WestWall" type="StaticBody3D" parent="."]
@@ -293,7 +293,7 @@ mesh = SubResource("BoxMesh_8srnl")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WestWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.805391, -9.98858)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.3893, 0.805391, -0.0376024)
 shape = SubResource("BoxShape3D_vt3mt")
 
 [node name="Ceiling" parent="." instance=ExtResource("21_t726b")]
