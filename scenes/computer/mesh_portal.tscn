@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=3 uid="uid://thbnfaucudy"]
+
+[ext_resource type="Script" path="res://scripts/computer/mesh_portal.gd" id="1_2gicd"]
+[ext_resource type="Shader" path="res://scripts/computer/portal.gdshader" id="1_cgkrc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xgwhe"]
+flip_faces = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hmqi7"]
+viewport_path = NodePath("Portal/LeftPortalViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_j1b3x"]
+viewport_path = NodePath("Portal/RightPortalViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5gbv"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_cgkrc")
+shader_parameter/x_offset = -0.061
+shader_parameter/y_offset = 0.017
+shader_parameter/left_tex = SubResource("ViewportTexture_hmqi7")
+shader_parameter/right_tex = SubResource("ViewportTexture_j1b3x")
+
+[sub_resource type="SphereMesh" id="SphereMesh_g0cyk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7xnjl"]
+size = Vector3(0.05, 0.05, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s2b47"]
+flip_faces = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghg2i"]
+transparency = 4
+albedo_color = Color(1, 0, 0, 0.207843)
+
+[node name="MeshPortal" type="Node3D"]
+
+[node name="Portal" type="MeshInstance3D" parent="." node_paths=PackedStringArray("other_portal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+layers = 16
+cast_shadow = 0
+mesh = SubResource("BoxMesh_xgwhe")
+surface_material_override/0 = SubResource("ShaderMaterial_b5gbv")
+script = ExtResource("1_2gicd")
+other_portal = NodePath("../Portal2")
+
+[node name="Sphere" type="MeshInstance3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.44187)
+mesh = SubResource("SphereMesh_g0cyk")
+
+[node name="Helper" type="Node3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="LeftPortalViewport" type="SubViewport" parent="Portal"]
+size = Vector2i(1824, 1840)
+render_target_update_mode = 4
+
+[node name="XROrigin3D" type="XROrigin3D" parent="Portal/LeftPortalViewport"]
+
+[node name="Camera3D" type="XRCamera3D" parent="Portal/LeftPortalViewport/XROrigin3D"]
+cull_mask = 1048559
+h_offset = -0.034
+fov = 98.3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal/LeftPortalViewport/XROrigin3D/Camera3D"]
+visible = false
+mesh = SubResource("BoxMesh_7xnjl")
+
+[node name="RightPortalViewport" type="SubViewport" parent="Portal"]
+size = Vector2i(1824, 1840)
+render_target_update_mode = 4
+
+[node name="XROrigin3D" type="XROrigin3D" parent="Portal/RightPortalViewport"]
+
+[node name="Camera3D" type="XRCamera3D" parent="Portal/RightPortalViewport/XROrigin3D"]
+cull_mask = 1048559
+h_offset = 0.034
+fov = 98.3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal/RightPortalViewport/XROrigin3D/Camera3D"]
+visible = false
+mesh = SubResource("BoxMesh_7xnjl")
+
+[node name="TopLeft" type="Node3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5002, 0.5, 0)
+
+[node name="BottomRight" type="Node3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, 0)
+
+[node name="Portal2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.638365, 0, -0.769734, 0, 1, 0, 0.769734, 0, 0.638365, 2.296, 1.78814e-07, -2.59288)
+layers = 16
+cast_shadow = 0
+mesh = SubResource("BoxMesh_s2b47")
+surface_material_override/0 = SubResource("StandardMaterial3D_ghg2i")
+
+[node name="Sphere" type="MeshInstance3D" parent="Portal2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.44187)
+mesh = SubResource("SphereMesh_g0cyk")
+
+[node name="Helper" type="Node3D" parent="Portal2"]

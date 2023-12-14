@@ -1,19 +1,24 @@
 shader_type spatial;
 render_mode unshaded;
 
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
-uniform sampler2D left_tex : source_color;
-uniform sampler2D right_tex : source_color;
+uniform sampler2D left_tex;
+uniform sampler2D right_tex;
+
+uniform float x_offset;
+uniform float y_offset;
 
 void vertex() {
 }
 
 void fragment() {
-	vec2 manual_screen_uv = UV;
-	
-	if (VIEW_INDEX == VIEW_MONO_LEFT) { 
-	ALBEDO = texture(right_tex, UV).rgb;
+	if (VIEW_INDEX == VIEW_MONO_LEFT) {
+		vec2 left_screen_uv = SCREEN_UV + vec2(x_offset, y_offset);
+		ALBEDO = texture(left_tex, left_screen_uv).rgb;
 	} else if (VIEW_INDEX == VIEW_RIGHT) {
-	ALBEDO = texture(right_tex, UV).rgb;
-	} 
+		vec2 right_screen_uv = SCREEN_UV + vec2(-x_offset, y_offset);
+		ALBEDO = texture(right_tex, right_screen_uv).rgb;
+	}
+	
+	// Color correction
+	ALBEDO = pow(ALBEDO, vec3(3));
 }

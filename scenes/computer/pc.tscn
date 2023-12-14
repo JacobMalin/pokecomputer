@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://vx63dgvaox3e"]
+[gd_scene load_steps=15 format=3 uid="uid://vx63dgvaox3e"]
 
 [ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/com_bm_pc02.png" id="1_tc1g5"]
 [ext_resource type="PackedScene" uid="uid://n66g3gxaodlr" path="res://scenes/computer/desktop.tscn" id="2_gv6u7"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://scripts/computer/pc.gd" id="3_66oq6"]
 [ext_resource type="AudioStream" uid="uid://rxdsudov3c6y" path="res://assets/computer/pc_on_sound.mp3" id="5_xi2u4"]
 [ext_resource type="AudioStream" uid="uid://d1updlyxohcon" path="res://assets/computer/PC close.wav" id="6_kte3r"]
-[ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/table.tscn" id="7_ce8n5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42xi2"]
 albedo_texture = ExtResource("1_tc1g5")
@@ -95,30 +94,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(1, 1, 1), Vector3(0.145, 0.145, 0.145), Vector3(0.1, 0.1, 0.001)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Table:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.074551, -0.200992, 3.23043), Vector3(0, 1.05548, 0.840422), Vector3(0.00267471, 1.15961, 0.287571)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Table:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.7, 0.7, 0.7), Vector3(0.102, 0.102, 0.102), Vector3(0.07, 0.07, 0.001)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0raka"]
 _data = {
@@ -168,10 +143,5 @@ stream = ExtResource("5_xi2u4")
 [node name="OffSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
 stream = ExtResource("6_kte3r")
-
-[node name="Table" parent="." instance=ExtResource("7_ce8n5")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.074551, -0.200992, 3.23043)
-collision_layer = 0
-collision_mask = 0
 
 [connection signal="area_entered" from="MonitorArea" to="." method="_on_monitor_entered"]
