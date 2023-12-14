@@ -50,5 +50,8 @@ https://www.turbosquid.com/3d-models/3d-assets-tree-grass-rocks-1498368
 Masterball by Atlas-Labs
 https://www.cgtrader.com/free-3d-models/sports/toy/pokeball-collection
 
+Bookshelf by Fetiz.works
+https://sketchfab.com/3d-models/bookshelf-01-fetizworks-27e1808f4cdf46ddb8deb978029da366
+
 - Maybe (portal)[https://www.youtube.com/watch?v=oqDdIg3BRlg]
 - (PC Open)[https://reliccastle.com/resources/220/]
