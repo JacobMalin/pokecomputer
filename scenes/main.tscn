@@ -11,16 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="4_cwh7a"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_el4ei"]
 [ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="6_ygkyx"]
-[ext_resource type="PackedScene" uid="uid://dsgb4froubxfb" path="res://scenes/pokemon.tscn" id="7_2fqfm"]
-[ext_resource type="PackedScene" uid="uid://bpekn8na6qop8" path="res://scenes/pokeball.tscn" id="9_g3mci"]
+[ext_resource type="PackedScene" uid="uid://dsgb4froubxfb" path="res://scenes/pokemon/pokemon.tscn" id="7_2fqfm"]
+[ext_resource type="PackedScene" uid="uid://bpekn8na6qop8" path="res://scenes/pokeball/pokeball.tscn" id="9_g3mci"]
 [ext_resource type="Script" path="res://scripts/hands/index_area.gd" id="9_qrhxa"]
 [ext_resource type="PackedScene" uid="uid://d0hy51r435r8l" path="res://scenes/holster/holster.tscn" id="10_c2yjo"]
-[ext_resource type="PackedScene" uid="uid://thbnfaucudy" path="res://scenes/computer/mesh_portal.tscn" id="18_3mb5j"]
 [ext_resource type="PackedScene" uid="uid://vx63dgvaox3e" path="res://scenes/computer/pc.tscn" id="18_4o8mq"]
 [ext_resource type="PackedScene" uid="uid://wvl520hbmur3" path="res://scenes/pokespawner/pokespawner.tscn" id="18_7gr3e"]
-[ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/table.tscn" id="19_7ksaf"]
-[ext_resource type="PackedScene" uid="uid://pwtjwf8chk0e" path="res://scenes/masterball.tscn" id="20_g2eik"]
-[ext_resource type="PackedScene" uid="uid://ymv0y5mkvlqj" path="res://scenes/bookshelf.tscn" id="21_l4dp3"]
+[ext_resource type="PackedScene" uid="uid://b6103swkolubk" path="res://scenes/mirror.tscn" id="18_07xr1"]
+[ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/lab_misc/table.tscn" id="19_7ksaf"]
+[ext_resource type="PackedScene" uid="uid://pwtjwf8chk0e" path="res://scenes/lab_misc/masterball.tscn" id="20_g2eik"]
+[ext_resource type="PackedScene" uid="uid://2altcrh48tes" path="res://scenes/lab_misc/bookshelf.tscn" id="21_l4dp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7px5o"]
 sky_top_color = Color(0.258824, 0.643137, 0.933333, 1)
@@ -28,12 +28,12 @@ sky_horizon_color = Color(0.688235, 0.856863, 0.811765, 1)
 ground_bottom_color = Color(0.494118, 0.784314, 0.313726, 1)
 ground_horizon_color = Color(0.688235, 0.856863, 0.811765, 1)
 
-[sub_resource type="Sky" id="Sky_armv4"]
+[sub_resource type="Sky" id="Sky_dpw41"]
 sky_material = SubResource("ProceduralSkyMaterial_7px5o")
 
 [sub_resource type="Environment" id="Environment_j8tdp"]
 background_mode = 2
-sky = SubResource("Sky_armv4")
+sky = SubResource("Sky_dpw41")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -141,14 +141,12 @@ volume_db = -23.424
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-current = true
 
 [node name="LeftController" type="XRController3D" parent="XROrigin3D"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 script = ExtResource("2_3w6hr")
-do_rumble = false
 
 [node name="LeftHand" parent="XROrigin3D/LeftController" instance=ExtResource("1_xixr5")]
 hand_material_override = ExtResource("3_sue04")
@@ -187,7 +185,6 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 script = ExtResource("2_3w6hr")
-do_rumble = false
 
 [node name="RightHand" parent="XROrigin3D/RightController" instance=ExtResource("2_ncs64")]
 hand_material_override = ExtResource("3_sue04")
@@ -277,56 +274,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118, 0.775, 0.03)
 unique_name_in_owner = true
 
 [node name="Bulbasaur" parent="Pokemon" instance=ExtResource("7_2fqfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.305, 0.503, 5.988)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.305, 1, 5.988)
 id = 1
 
 [node name="Charmander" parent="Pokemon" instance=ExtResource("7_2fqfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502871, 5.988)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5.988)
 id = 4
 
 [node name="Squirtle" parent="Pokemon" instance=ExtResource("7_2fqfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305, 0.503, 5.988)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305, 1, 5.988)
 id = 7
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.014, -7.945)
 
-[node name="MeshPortal" parent="." instance=ExtResource("18_3mb5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772156, 1.03022, -3.53355)
-
 [node name="PC" parent="." instance=ExtResource("18_4o8mq")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57306, 0, -7.31472)
 
-[node name="Poketable" parent="." instance=ExtResource("19_7ksaf")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -0.501276, 6.11224)
+[node name="Mirror" parent="." instance=ExtResource("18_07xr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01266, -6.99805)
 
-[node name="Masterball" parent="." instance=ExtResource("20_g2eik")]
+[node name="Lab" type="Node3D" parent="."]
+
+[node name="Poketable" parent="Lab" instance=ExtResource("19_7ksaf")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 6.112)
+
+[node name="Masterball" parent="Lab" instance=ExtResource("20_g2eik")]
 transform = Transform3D(-0.701531, 0, -0.712638, 0, 1, 0, 0.712638, 0, -0.701531, 8.75641, 0, 8.52752)
 
-[node name="CutTree1" type="StaticBody3D" parent="."]
+[node name="CutTree1" type="StaticBody3D" parent="Lab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.57314, 0, 8.1485)
 
-[node name="Tree" type="MeshInstance3D" parent="CutTree1"]
+[node name="Tree" type="MeshInstance3D" parent="Lab/CutTree1"]
 transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ejuwj")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CutTree1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/CutTree1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.197933, 0.6233, 0.406462)
 shape = SubResource("BoxShape3D_qbtqi")
 
-[node name="CutTree2" type="StaticBody3D" parent="."]
+[node name="CutTree2" type="StaticBody3D" parent="Lab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.90433, 0, 7.03364)
 
-[node name="Tree" type="MeshInstance3D" parent="CutTree2"]
+[node name="Tree" type="MeshInstance3D" parent="Lab/CutTree2"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ejuwj")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CutTree2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/CutTree2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299185, 0, -0.221581)
 shape = SubResource("BoxShape3D_82aob")
 
-[node name="Bookshelf" parent="." instance=ExtResource("21_l4dp3")]
+[node name="Bookshelf" parent="Lab" instance=ExtResource("21_l4dp3")]
 transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, 4.05067)

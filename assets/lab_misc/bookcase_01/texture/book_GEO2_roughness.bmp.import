@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8cef7wjj1uhl"
-path.s3tc="res://.godot/imported/book_GEO2_roughness.bmp-ea87b34a50cc8f8f0a5cd1e7d69c9352.s3tc.ctex"
-path.etc2="res://.godot/imported/book_GEO2_roughness.bmp-ea87b34a50cc8f8f0a5cd1e7d69c9352.etc2.ctex"
+path="res://.godot/imported/book_GEO2_roughness.bmp-ea87b34a50cc8f8f0a5cd1e7d69c9352.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/lab_misc/bookcase_01/texture/book_GEO2_roughness.bmp"
-dest_files=["res://.godot/imported/book_GEO2_roughness.bmp-ea87b34a50cc8f8f0a5cd1e7d69c9352.s3tc.ctex", "res://.godot/imported/book_GEO2_roughness.bmp-ea87b34a50cc8f8f0a5cd1e7d69c9352.etc2.ctex"]
+dest_files=["res://.godot/imported/book_GEO2_roughness.bmp-ea87b34a50cc8f8f0a5cd1e7d69c9352.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://doftdr8044qlx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s2b47"]
+flip_faces = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghg2i"]
+transparency = 4
+albedo_color = Color(1, 0, 0, 0.207843)
+
+[node name="PortalReference" type="MeshInstance3D"]
+transform = Transform3D(0.638365, 0, -0.769734, 0, 1, 0, 0.769734, 0, 0.638365, 2.296, 1.78814e-07, -2.59288)
+layers = 16
+cast_shadow = 0
+mesh = SubResource("BoxMesh_s2b47")
+surface_material_override/0 = SubResource("StandardMaterial3D_ghg2i")
+
+[node name="Helper" type="Node3D" parent="."]

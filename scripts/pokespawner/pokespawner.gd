@@ -2,7 +2,7 @@ class_name PokeSpawner
 extends StaticBody3D
 
 @onready var pokemon_node = get_tree().get_root().get_node("Main/Pokemon")
-@onready var pokescene = preload("res://scenes/pokemon.tscn")
+@onready var pokescene = preload("res://scenes/pokemon/pokemon.tscn")
 @onready var audio : AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 ### Lifecycle ###

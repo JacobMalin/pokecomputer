@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://vx63dgvaox3e"]
 
-[ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/com_bm_pc02.png" id="1_tc1g5"]
-[ext_resource type="PackedScene" uid="uid://n66g3gxaodlr" path="res://scenes/computer/desktop.tscn" id="2_gv6u7"]
-[ext_resource type="ArrayMesh" uid="uid://dm7smdqkfm6ei" path="res://assets/computer/com_bm_pc02.obj" id="2_v06p8"]
+[ext_resource type="Texture2D" uid="uid://gb5fyhgyl11y" path="res://assets/computer/pc/com_bm_pc02.png" id="1_tc1g5"]
+[ext_resource type="PackedScene" uid="uid://n66g3gxaodlr" path="res://scenes/computer/box/desktop.tscn" id="2_gv6u7"]
+[ext_resource type="ArrayMesh" uid="uid://dm7smdqkfm6ei" path="res://assets/computer/pc/com_bm_pc02.obj" id="2_v06p8"]
 [ext_resource type="Script" path="res://scripts/computer/pc.gd" id="3_66oq6"]
-[ext_resource type="AudioStream" uid="uid://rxdsudov3c6y" path="res://assets/computer/pc_on_sound.mp3" id="5_xi2u4"]
-[ext_resource type="AudioStream" uid="uid://d1updlyxohcon" path="res://assets/computer/PC close.wav" id="6_kte3r"]
+[ext_resource type="AudioStream" uid="uid://rxdsudov3c6y" path="res://assets/computer/pc/pc_on_sound.mp3" id="5_5odyt"]
+[ext_resource type="AudioStream" uid="uid://d1updlyxohcon" path="res://assets/computer/pc/PC close.wav" id="6_f3t7i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42xi2"]
 albedo_texture = ExtResource("1_tc1g5")
@@ -138,10 +138,10 @@ libraries = {
 
 [node name="OnSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
-stream = ExtResource("5_xi2u4")
+stream = ExtResource("5_5odyt")
 
 [node name="OffSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
-stream = ExtResource("6_kte3r")
+stream = ExtResource("6_f3t7i")
 
 [connection signal="area_entered" from="MonitorArea" to="." method="_on_monitor_entered"]

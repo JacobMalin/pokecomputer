@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsiyru5ey4dgh"]
+
+[ext_resource type="Script" path="res://scripts/computer/box/box.gd" id="1_wxkkx"]
+[ext_resource type="Script" path="res://scripts/computer/box/corners.gd" id="2_uc8ih"]
+[ext_resource type="PackedScene" uid="uid://bgw5r8lmumjw2" path="res://scenes/computer/box/corner.tscn" id="3_6qyjt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0w6mr"]
+resource_local_to_scene = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7u7b2"]
+resource_local_to_scene = true
+flip_faces = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iobj4"]
+transparency = 4
+albedo_color = Color(0.490196, 0.541176, 0.603922, 0.0627451)
+
+[node name="Box" type="Area3D" groups=["box"]]
+collision_layer = 16
+collision_mask = 48
+script = ExtResource("1_wxkkx")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0w6mr")
+
+[node name="PortalReferenceMesh" type="MeshInstance3D" parent="."]
+layers = 16
+cast_shadow = 0
+mesh = SubResource("BoxMesh_7u7b2")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_iobj4")
+
+[node name="Corners" type="Node3D" parent="."]
+script = ExtResource("2_uc8ih")
+
+[node name="Corner+++" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.5)
+id = 7
+
+[node name="Corner++-" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0.5, -0.5)
+id = 3
+
+[node name="Corner+-+" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.5, -0.5, 0.5)
+id = 5
+
+[node name="Corner+--" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0.5, -0.5, -0.5)
+id = 1
+
+[node name="Corner-++" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0.5, 0.5)
+id = 6
+
+[node name="Corner-+-" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 0.5, -0.5)
+id = 2
+
+[node name="Corner--+" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -0.5, -0.5, 0.5)
+id = 4
+
+[node name="Corner---" parent="Corners" instance=ExtResource("3_6qyjt")]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, -0.5, -0.5, -0.5)
+
+[node name="Boxes" type="Node3D" parent="."]
+
+[node name="PokemonCopies" type="Node3D" parent="."]
+
+[connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]

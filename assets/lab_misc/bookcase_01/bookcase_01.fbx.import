@@ -28,5 +28,28 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Paper_MT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/lab_misc/bookcase_01/materials/Paper_MT.tres"
+},
+"book_GEO2_MT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/lab_misc/bookcase_01/materials/book_GEO2_MT.tres"
+},
+"book_GEO3_MT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/lab_misc/bookcase_01/materials/book_GEO3_MT.tres"
+},
+"book_GEO_MT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/lab_misc/bookcase_01/materials/book_GEO_MT.tres"
+},
+"bookcase_MT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/lab_misc/bookcase_01/materials/bookcase_MT.tres"
+}
+}
+}
 gltf/embedded_image_handling=1

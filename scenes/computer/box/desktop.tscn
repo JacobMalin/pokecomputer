@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://n66g3gxaodlr"]
+
+[ext_resource type="Script" path="res://scripts/computer/box/desktop.gd" id="1_3ymhp"]
+[ext_resource type="Material" uid="uid://cijm10y01tl7a" path="res://assets/computer/box/desktop_material.tres" id="2_t53a4"]
+[ext_resource type="PackedScene" uid="uid://dsiyru5ey4dgh" path="res://scenes/computer/box/box.tscn" id="3_fdp2y"]
+[ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/lab_misc/table.tscn" id="4_l70mp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m8pvx"]
+flip_faces = true
+size = Vector3(3.5, 3, 3.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gm1c0"]
+size = Vector3(3.5, 3, 3.5)
+
+[node name="Desktop" type="Area3D" groups=["desktop"]]
+collision_layer = 16
+collision_mask = 48
+script = ExtResource("1_3ymhp")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_m8pvx")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_t53a4")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+visible = false
+shape = SubResource("BoxShape3D_gm1c0")
+
+[node name="Boxes" type="Node3D" parent="."]
+
+[node name="Box" parent="Boxes" instance=ExtResource("3_fdp2y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1.25, 0)
+
+[node name="Box2" parent="Boxes" instance=ExtResource("3_fdp2y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 1.25, 0)
+color = Color(0.85098, 0.466667, 0.560784, 1)
+
+[node name="Pokemon" type="Node3D" parent="."]
+
+[node name="Table" parent="." instance=ExtResource("4_l70mp")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.1, 0)
+collision_layer = 0
+collision_mask = 0
+
+[node name="Desktop" parent="Table" index="0"]
+cast_shadow = 0
+
+[node name="Leg" parent="Table/Legs" index="0"]
+cast_shadow = 0
+
+[node name="Leg2" parent="Table/Legs" index="1"]
+cast_shadow = 0
+
+[node name="Leg3" parent="Table/Legs" index="2"]
+cast_shadow = 0
+
+[node name="Leg4" parent="Table/Legs" index="3"]
+cast_shadow = 0
+
+[editable path="Table"]
