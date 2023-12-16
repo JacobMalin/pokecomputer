@@ -11,9 +11,9 @@ const POKEBALL_SCALE = 0.03
 @onready var digital_scene = preload("res://scenes/pokemon/digital_pokemon.tscn")
 
 const red_materials = {
-	DisplayState.DEFAULT: preload("res://assets/pokeball/pokeball_top_material_default.tres"),
-	DisplayState.HOLSTER: preload("res://assets/pokeball/pokeball_top_material_holster.tres"),
-	DisplayState.DIGITAL: preload("res://assets/pokeball/pokeball_top_material_digital.tres"),
+	DisplayState.DEFAULT: preload("res://assets/pokeball/materials/pokeball_red_default.tres"),
+	DisplayState.HOLSTER: preload("res://assets/pokeball/materials/pokeball_red_holster.tres"),
+	DisplayState.DIGITAL: preload("res://assets/pokeball/materials/pokeball_red_digital.tres"),
 }
 
 enum CaptureState {
@@ -170,7 +170,7 @@ func exit_holster():
 func display(_display_state):
 	display_state = _display_state
 	
-	sphere_mesh.mesh.surface_set_material(0, red_materials[display_state])
+	sphere_mesh.mesh.surface_set_material(1, red_materials[display_state])
 
 	match display_state:
 		DisplayState.DEFAULT:

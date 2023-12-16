@@ -7,8 +7,8 @@ func _ready():
 	corners = null
 	pokemon = $Pokemon
 
-	save_pos = global_position + Vector3(3.5/2, 3, 3.5/2)
-	save_neg = global_position + Vector3(-3.5/2, 0, -3.5/2)
+	save_pos = global_position + Vector3(3.5/2, 3.05, 3.5/2)
+	save_neg = global_position + Vector3(-3.5/2, 0.05, -3.5/2)
 
 	for box in boxes.get_children():
 		box.check_bounds.connect(_on_check_bounds)

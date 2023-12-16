@@ -84,4 +84,4 @@ func fix_pos(pos, neg):
 
 func power(on : bool):
 	enabled = on
-	collision.disabled = !on
+	collision.set_deferred("disabled", !on)
