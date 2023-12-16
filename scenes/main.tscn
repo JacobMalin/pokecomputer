@@ -403,7 +403,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.212
 [node name="pc_lab2" parent="Lab" instance=ExtResource("23_ogb2s")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.238, -0.375, 9.289)
 
-[node name="Label3D" type="Label3D" parent="Lab"]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 9.83789, 2.11704, 8.54273)
+[node name="Notice" type="Label3D" parent="Lab"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 9.83789, 1.70627, 8.54273)
 text = "Sorry, HM01 - Cut
 Needed."
