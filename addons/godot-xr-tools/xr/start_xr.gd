@@ -116,7 +116,6 @@ func _setup_for_openxr() -> bool:
 
 	# Switch the viewport to XR
 	get_viewport().use_xr = true
-	print(get_viewport().name)
 
 	# Report success
 	return true

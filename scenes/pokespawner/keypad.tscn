@@ -58,23 +58,23 @@ _data = {
 script = ExtResource("1_4nw3r")
 
 [node name="Base" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.043, 0, 0, 0, 0.3, 0, 0.0709896, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.043, 0, 0, 0, 0.3, 0, 0.021511, 0)
 mesh = SubResource("BoxMesh_a0w8p")
 
 [node name="Stand" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.06, 0, 0, 0, 0.6, 0, 0, 0, 0.06, 0, 0.67168, 0)
+transform = Transform3D(0.06, 0, 0, 0, 0.6, 0, 0, 0, 0.06, 0, 0.622544, 0)
 mesh = SubResource("CylinderMesh_pmf1s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.614979, 0.00393713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.565843, 0.00393713)
 shape = SubResource("BoxShape3D_eji0s")
 
 [node name="Display" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0887712, 0, 0, 0, 0.00135327, -0.0400524, 0, 0.00279327, 0.0194043, 0, 1.40207, -0.16532)
+transform = Transform3D(0.0887712, 0, 0, 0, 0.00135327, -0.0400524, 0, 0.00279327, 0.0194043, 0, 1.35293, -0.16532)
 mesh = SubResource("BoxMesh_62gqf")
 
 [node name="Keypad" type="Node3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.30476, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.255624, 0)
 
 [node name="Buttons" type="Node3D" parent="Keypad"]
 transform = Transform3D(0.5, 0, 0, 0, 0.446222, -0.225579, 0, 0.225579, 0.446222, 0, 1.86963, -0.01983)

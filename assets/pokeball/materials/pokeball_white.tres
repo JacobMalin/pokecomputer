@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bi8neiu38hnpw"]
+
+[resource]
+resource_name = "01 - Default"
+vertex_color_use_as_albedo = true
+metallic = 0.4
+roughness = 0.301511

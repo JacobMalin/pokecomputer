@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=42 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/lab_misc/table.tscn" id="19_7ksaf"]
 [ext_resource type="PackedScene" uid="uid://pwtjwf8chk0e" path="res://scenes/lab_misc/masterball.tscn" id="20_g2eik"]
 [ext_resource type="PackedScene" uid="uid://2altcrh48tes" path="res://scenes/lab_misc/bookshelf.tscn" id="21_l4dp3"]
+[ext_resource type="PackedScene" uid="uid://drde5iioyvr42" path="res://scenes/computer/pokewatch/pokewatch.tscn" id="22_kigwm"]
 [ext_resource type="PackedScene" uid="uid://dmbh27tblw2ky" path="res://scenes/lab_misc/ceiling.tscn" id="22_yd14v"]
 [ext_resource type="PackedScene" uid="uid://doaea84hwna6" path="res://scenes/lab_misc/lab_machine.tscn" id="23_ogb2s"]
 
@@ -53,6 +54,17 @@ size = Vector2(10, 10)
 [sub_resource type="NavigationMesh" id="NavigationMesh_p03kc"]
 vertices = PackedVector3Array(-4.5, 0.5, -4.5, -4.5, 0.5, 4.5, 4.5, 0.5, 4.5, 4.5, 0.5, -4.5)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i8pd"]
+metallic = 0.89
+metallic_specular = 0.75
+roughness = 0.62
+
+[sub_resource type="BoxMesh" id="BoxMesh_ujgi7"]
+material = SubResource("StandardMaterial3D_8i8pd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f54og"]
+size = Vector3(20.1267, 8.87241, 0.428918)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfx1o"]
 resource_name = "Tree1_2.001"
@@ -124,17 +136,6 @@ size = Vector3(1, 1.38635, 3.14606)
 [sub_resource type="BoxShape3D" id="BoxShape3D_82aob"]
 size = Vector3(2.9975, 2.66972, 1.19486)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i8pd"]
-metallic = 0.89
-metallic_specular = 0.75
-roughness = 0.62
-
-[sub_resource type="BoxMesh" id="BoxMesh_ujgi7"]
-material = SubResource("StandardMaterial3D_8i8pd")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_f54og"]
-size = Vector3(20.1267, 8.87241, 0.428918)
-
 [node name="Main" type="Node3D"]
 script = ExtResource("1_6hrg6")
 
@@ -194,6 +195,9 @@ collision_mask = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185065, -0.0423975, 0.0805774)
 shape = SubResource("BoxShape3D_okg6x")
 
+[node name="Pokewatch" parent="XROrigin3D/LeftController" instance=ExtResource("22_kigwm")]
+transform = Transform3D(0.0234486, 0.999637, -0.0133135, 0.988322, -0.0251847, -0.150286, -0.150567, -0.00963399, -0.988553, 0.0126758, -0.0505388, 0.105191)
+
 [node name="RightController" type="XRController3D" parent="XROrigin3D"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
@@ -232,6 +236,9 @@ collision_mask = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/RightController/HandArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185065, -0.0423975, 0.0805774)
 shape = SubResource("BoxShape3D_okg6x")
+
+[node name="Pokewatch" parent="XROrigin3D/RightController" instance=ExtResource("22_kigwm")]
+transform = Transform3D(-0.134974, -0.990389, 0.0302098, -0.988311, 0.132384, -0.0756144, 0.0708885, -0.0400626, -0.996679, -0.00997666, -0.0507768, 0.109355)
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_el4ei")]
 unique_name_in_owner = true
@@ -300,7 +307,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305, 1, 5.988)
 id = 7
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, -0.014, -7.945)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, 0.000397025, -7.945)
 
 [node name="PC" parent="." instance=ExtResource("18_4o8mq")]
 unique_name_in_owner = true
@@ -311,99 +318,109 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01266, -6.99805)
 
 [node name="Lab" type="Node3D" parent="."]
 
+[node name="Ceiling" parent="Lab" instance=ExtResource("22_yd14v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.9141, -0.140038)
+
+[node name="Walls" type="Node3D" parent="Lab"]
+
+[node name="NorthWall" type="StaticBody3D" parent="Lab/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.2037)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/Walls/NorthWall"]
+transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
+mesh = SubResource("BoxMesh_ujgi7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/Walls/NorthWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
+shape = SubResource("BoxShape3D_f54og")
+
+[node name="SouthWall" type="StaticBody3D" parent="Lab/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.92774)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/Walls/SouthWall"]
+transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
+mesh = SubResource("BoxMesh_ujgi7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/Walls/SouthWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
+shape = SubResource("BoxShape3D_f54og")
+
+[node name="WestWall" type="StaticBody3D" parent="Lab/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.1029, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/Walls/WestWall"]
+transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
+mesh = SubResource("BoxMesh_ujgi7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/Walls/WestWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
+shape = SubResource("BoxShape3D_f54og")
+
+[node name="EastWall" type="StaticBody3D" parent="Lab/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.0649, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/Walls/EastWall"]
+transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
+mesh = SubResource("BoxMesh_ujgi7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/Walls/EastWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
+shape = SubResource("BoxShape3D_f54og")
+
 [node name="Poketable" parent="Lab" instance=ExtResource("19_7ksaf")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 6.112)
 
-[node name="Masterball" parent="Lab" instance=ExtResource("20_g2eik")]
+[node name="LabPCs" type="Node3D" parent="Lab"]
+
+[node name="pc_lab" parent="Lab/LabPCs" instance=ExtResource("23_ogb2s")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.21204, -0.374586, 9.28878)
+
+[node name="pc_lab2" parent="Lab/LabPCs" instance=ExtResource("23_ogb2s")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.238, -0.375, 9.289)
+
+[node name="Bookshelves" type="Node3D" parent="Lab"]
+
+[node name="Bookshelf" parent="Lab/Bookshelves" instance=ExtResource("21_l4dp3")]
+transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, 3.21065)
+
+[node name="Bookshelf2" parent="Lab/Bookshelves" instance=ExtResource("21_l4dp3")]
+transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, 0.0191205)
+
+[node name="Bookshelf3" parent="Lab/Bookshelves" instance=ExtResource("21_l4dp3")]
+transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, -3.15738)
+
+[node name="MasterballCorner" type="Node3D" parent="Lab"]
+
+[node name="Masterball" parent="Lab/MasterballCorner" instance=ExtResource("20_g2eik")]
 transform = Transform3D(-0.701531, 0, -0.712638, 0, 1, 0, 0.712638, 0, -0.701531, 8.75641, 0, 8.52752)
 
-[node name="CutTree1" type="StaticBody3D" parent="Lab"]
+[node name="CutTrees" type="Node3D" parent="Lab/MasterballCorner"]
+
+[node name="CutTree1" type="StaticBody3D" parent="Lab/MasterballCorner/CutTrees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.57314, 0, 8.1485)
 
-[node name="Tree" type="MeshInstance3D" parent="Lab/CutTree1"]
+[node name="Tree" type="MeshInstance3D" parent="Lab/MasterballCorner/CutTrees/CutTree1"]
 transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ejuwj")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/CutTree1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/MasterballCorner/CutTrees/CutTree1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.197933, 0.6233, 0.406462)
 shape = SubResource("BoxShape3D_qbtqi")
 
-[node name="CutTree2" type="StaticBody3D" parent="Lab"]
+[node name="CutTree2" type="StaticBody3D" parent="Lab/MasterballCorner/CutTrees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.90433, 0, 7.03364)
 
-[node name="Tree" type="MeshInstance3D" parent="Lab/CutTree2"]
+[node name="Tree" type="MeshInstance3D" parent="Lab/MasterballCorner/CutTrees/CutTree2"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ejuwj")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/CutTree2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/MasterballCorner/CutTrees/CutTree2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299185, 0, -0.221581)
 shape = SubResource("BoxShape3D_82aob")
 
-[node name="Bookshelf" parent="Lab" instance=ExtResource("21_l4dp3")]
-transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, 3.21065)
-
-[node name="Bookshelf2" parent="Lab" instance=ExtResource("21_l4dp3")]
-transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, 0.0191205)
-
-[node name="Bookshelf3" parent="Lab" instance=ExtResource("21_l4dp3")]
-transform = Transform3D(4.76995e-08, 0, -4, 0, 4, 0, 4, 0, 4.76995e-08, 9.82391, -2.38419e-07, -3.15738)
-
-[node name="NorthWall" type="StaticBody3D" parent="Lab"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.2037)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/NorthWall"]
-transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
-mesh = SubResource("BoxMesh_ujgi7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/NorthWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
-shape = SubResource("BoxShape3D_f54og")
-
-[node name="SouthWall" type="StaticBody3D" parent="Lab"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.92774)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/SouthWall"]
-transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
-mesh = SubResource("BoxMesh_ujgi7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/SouthWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
-shape = SubResource("BoxShape3D_f54og")
-
-[node name="WestWall" type="StaticBody3D" parent="Lab"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.1029, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/WestWall"]
-transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
-mesh = SubResource("BoxMesh_ujgi7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/WestWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
-shape = SubResource("BoxShape3D_f54og")
-
-[node name="EastWall" type="StaticBody3D" parent="Lab"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.0649, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lab/EastWall"]
-transform = Transform3D(20, 0, 0, 0, 9, 0, 0, 0, 0.419, 0, 4.48664, 0)
-mesh = SubResource("BoxMesh_ujgi7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lab/EastWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36945, 0)
-shape = SubResource("BoxShape3D_f54og")
-
-[node name="Ceiling" parent="Lab" instance=ExtResource("22_yd14v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.9141, -0.140038)
-
-[node name="pc_lab" parent="Lab" instance=ExtResource("23_ogb2s")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.21204, -0.374586, 9.28878)
-
-[node name="pc_lab2" parent="Lab" instance=ExtResource("23_ogb2s")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.238, -0.375, 9.289)
-
-[node name="Notice" type="Label3D" parent="Lab"]
+[node name="Notice" type="Label3D" parent="Lab/MasterballCorner"]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 9.83789, 1.70627, 8.54273)
 text = "Sorry, HM01 - Cut
 Needed."
