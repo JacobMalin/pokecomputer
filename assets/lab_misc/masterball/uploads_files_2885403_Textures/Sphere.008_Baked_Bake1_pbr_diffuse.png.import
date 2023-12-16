@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfp2y7yl01l0w"
-path.s3tc="res://.godot/imported/Sphere.008_Baked_Bake1_pbr_diffuse.png-13de41cf40fbb9cd977f2c5dcfa936f3.s3tc.ctex"
-path.etc2="res://.godot/imported/Sphere.008_Baked_Bake1_pbr_diffuse.png-13de41cf40fbb9cd977f2c5dcfa936f3.etc2.ctex"
+path="res://.godot/imported/Sphere.008_Baked_Bake1_pbr_diffuse.png-13de41cf40fbb9cd977f2c5dcfa936f3.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/lab_misc/masterball/uploads_files_2885403_Textures/Sphere.008_Baked_Bake1_pbr_diffuse.png"
-dest_files=["res://.godot/imported/Sphere.008_Baked_Bake1_pbr_diffuse.png-13de41cf40fbb9cd977f2c5dcfa936f3.s3tc.ctex", "res://.godot/imported/Sphere.008_Baked_Bake1_pbr_diffuse.png-13de41cf40fbb9cd977f2c5dcfa936f3.etc2.ctex"]
+dest_files=["res://.godot/imported/Sphere.008_Baked_Bake1_pbr_diffuse.png-13de41cf40fbb9cd977f2c5dcfa936f3.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
