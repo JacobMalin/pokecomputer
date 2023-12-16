@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6103swkolubk"]
+[gd_scene load_steps=13 format=3 uid="uid://b6103swkolubk"]
 
 [ext_resource type="Shader" path="res://scripts/computer/portal/portal.gdshader" id="1_2dysk"]
 [ext_resource type="Script" path="res://scripts/computer/portal/mirror.gd" id="2_c7l04"]
@@ -27,6 +27,22 @@ shader_parameter/left_tex = SubResource("ViewportTexture_etq3f")
 shader_parameter/right_tex = SubResource("ViewportTexture_qhc16")
 
 [sub_resource type="PlaceholderMesh" id="PlaceholderMesh_asav8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tqpd"]
+albedo_color = Color(0.670588, 0.670588, 0, 1)
+metallic = 0.67
+roughness = 0.62
+
+[sub_resource type="BoxMesh" id="BoxMesh_c68xd"]
+material = SubResource("StandardMaterial3D_3tqpd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ddiy"]
+albedo_color = Color(0.670588, 0.670588, 0, 1)
+metallic = 0.67
+roughness = 0.62
+
+[sub_resource type="BoxMesh" id="BoxMesh_r7er8"]
+material = SubResource("StandardMaterial3D_1ddiy")
 
 [node name="Mirror" type="Node3D"]
 
@@ -68,3 +84,19 @@ mesh = SubResource("PlaceholderMesh_asav8")
 skeleton = NodePath("../..")
 
 [node name="Helper" type="Node3D" parent="PortalReference"]
+
+[node name="MirrorFrame" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.237, 0, 0, 0, 2.112, 0, 0, 0, 0.237, -0.556692, 1.01902, 0)
+mesh = SubResource("BoxMesh_c68xd")
+
+[node name="MirrorFrame2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.237, 0, 0, 0, 2.112, 0, 0, 0, 0.237, 0.590632, 1.01902, 0)
+mesh = SubResource("BoxMesh_c68xd")
+
+[node name="MirrorFrame3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.03596e-08, -1.38357, 0, 0.237, -6.04778e-08, 0, 0, 0, 0.237, 0.0142943, 0, 0)
+mesh = SubResource("BoxMesh_r7er8")
+
+[node name="MirrorFrame4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.03596e-08, -1.38357, 0, 0.237, -6.04778e-08, 0, 0, 0, 0.237, 0.0142943, 2.08644, 0)
+mesh = SubResource("BoxMesh_r7er8")

@@ -14,37 +14,37 @@ material = SubResource("StandardMaterial3D_kkyec")
 [node name="Ceiling" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.098, 0, 0, 0, 0.085, 0, 0, 0, 16, 0, 0, 0)
+transform = Transform3D(0.104451, 0, 0, 0, 0.085, 0, 0, 0, 19.83, -0.000174153, 0, 0.00225011)
 mesh = SubResource("BoxMesh_4r1ol")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(19.499, 0, 0, 0, 0.085, 0, 0, 0, 0.098, 0, 0, -3.27576)
+transform = Transform3D(20.7826, 0, 0, 0, 0.085, 0, 0, 0, 0.121458, -0.000174153, 0, -4.05764)
 mesh = SubResource("BoxMesh_ptmug")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(19.499, 0, 0, 0, 0.085, 0, 0, 0, 0.098, 0, 0, 3.276)
+transform = Transform3D(20.7826, 0, 0, 0, 0.085, 0, 0, 0, 0.121458, -0.000174153, 0, 4.06243)
 mesh = SubResource("BoxMesh_ptmug")
 
 [node name="window" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.68486, 0, 0, 0, 0.0850399, 0, 0, 0, 6.45513, -4.88161, 0, 0)
+transform = Transform3D(10.3224, 0, 0, 0, 0.0850399, 0, 0, 0, 8.00031, -5.20313, 0, 0.00225011)
 mesh = SubResource("BoxMesh_34drj")
 
 [node name="window2" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.68486, 0, 0, 0, 0.0850399, 0, 0, 0, 6.45513, 4.89046, 0, 0)
+transform = Transform3D(10.3224, 0, 0, 0, 0.0850399, 0, 0, 0, 8.00031, 5.21221, 0, 0.00225011)
 mesh = SubResource("BoxMesh_34drj")
 
 [node name="window3" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.68486, 0, 0, 0, 0.0850399, 0, 0, 0, 4.73379, -4.88161, 0, 5.65805)
+transform = Transform3D(10.3224, 0, 0, 0, 0.0850399, 0, 0, 0, 5.86693, -5.20313, 0, 7.01468)
 mesh = SubResource("BoxMesh_34drj")
 
 [node name="window4" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.68486, 0, 0, 0, 0.0850399, 0, 0, 0, 4.73379, 4.88909, 0, 5.65805)
+transform = Transform3D(10.3224, 0, 0, 0, 0.0850399, 0, 0, 0, 5.86693, 5.21075, 0, 7.01468)
 mesh = SubResource("BoxMesh_34drj")
 
 [node name="window5" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.68486, 0, 0, 0, 0.0850399, 0, 0, 0, 4.73379, -4.88161, 0, -5.708)
+transform = Transform3D(10.3224, 0, 0, 0, 0.0850399, 0, 0, 0, 5.86693, -5.20313, 0, -7.07209)
 mesh = SubResource("BoxMesh_34drj")
 
 [node name="window6" type="MeshInstance3D" parent="."]
-transform = Transform3D(9.68486, 0, 0, 0, 0.0850399, 0, 0, 0, 4.73379, 4.88909, 0, -5.69294)
+transform = Transform3D(10.3224, 0, 0, 0, 0.0850399, 0, 0, 0, 5.86693, 5.21075, 0, -7.05342)
 mesh = SubResource("BoxMesh_34drj")

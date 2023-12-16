@@ -56,9 +56,9 @@ layers = 524288
 mesh = SubResource("CylinderMesh_2dwpl")
 
 [node name="Keypad" parent="." instance=ExtResource("1_7lmw2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.039, -0.0373904, -0.00699997)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47299, -0.0373904, 2.52063)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 visible = false
 stream = ExtResource("3_2lxs1")
-volume_db = -14.415
+volume_db = -4.325

@@ -181,9 +181,8 @@ func clear_movement_target():
 	set_movement_target(global_position)
 
 func cry():
-	if id != 0:
-		audio_player.play()
-		safe_anim_queue("animation_"+pokemon_name+"_cry")
+	audio_player.play()
+	safe_anim_queue("animation_"+pokemon_name+"_cry")
 
 func is_free():
 	return capture_state == CaptureState.FREE
