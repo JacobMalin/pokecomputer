@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dn7egt2s75w8b"]
+[gd_scene load_steps=14 format=3 uid="uid://dn7egt2s75w8b"]
 
 [ext_resource type="Script" path="res://scripts/pokespawner/keypad.gd" id="1_4nw3r"]
 [ext_resource type="PackedScene" uid="uid://iqy4qn41wpow" path="res://scenes/pokespawner/button.tscn" id="2_p2lig"]
@@ -32,6 +32,28 @@ roughness = 0.33
 [sub_resource type="BoxMesh" id="BoxMesh_x0dtw"]
 material = SubResource("StandardMaterial3D_2nrnt")
 
+[sub_resource type="Animation" id="Animation_3g1k8"]
+resource_name = "clear_display"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"clear_text"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_susci"]
+_data = {
+"clear_display": SubResource("Animation_3g1k8")
+}
+
 [node name="Keypad" type="StaticBody3D"]
 script = ExtResource("1_4nw3r")
 
@@ -48,7 +70,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.614979, 0.00393713)
 shape = SubResource("BoxShape3D_eji0s")
 
 [node name="Display" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0887712, 0, 0, 0, 0.00135327, -0.0400524, 0, 0.00279327, 0.0194043, 0, 1.39798, -0.167983)
+transform = Transform3D(0.0887712, 0, 0, 0, 0.00135327, -0.0400524, 0, 0.00279327, 0.0194043, 0, 1.40207, -0.16532)
 mesh = SubResource("BoxMesh_62gqf")
 
 [node name="Keypad" type="Node3D" parent="."]
@@ -102,4 +124,9 @@ mesh = SubResource("BoxMesh_x0dtw")
 skeleton = NodePath("../..")
 
 [node name="ID" type="Label3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.261176, 0.147604, 0, -0.147604, 0.261176, 0, 1.40455, -0.167519)
+transform = Transform3D(0.3, 0, 0, 0, 0.261176, 0.147604, 0, -0.147604, 0.261176, 0, 1.40455, -0.163526)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_susci")
+}

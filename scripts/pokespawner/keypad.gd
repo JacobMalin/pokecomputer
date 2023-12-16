@@ -6,7 +6,7 @@ extends StaticBody3D
 @onready var globals = get_node("/root/Globals")
 @onready var buttons = $Keypad/Buttons
 @onready var id_label : Label3D = $ID
-
+@onready var anim : AnimationPlayer = $AnimationPlayer
 signal spawn(num)
 
 var id = ""
@@ -41,4 +41,7 @@ func on_button_pressed(number):
 			#print(Globals.pokedex[int_id])
 			
 		id = ""
-		id_label.text = ""
+		anim.play("clear_display")
+
+func clear_text():
+	id_label.text = ""
