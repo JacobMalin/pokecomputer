@@ -53,5 +53,8 @@ https://www.cgtrader.com/free-3d-models/sports/toy/pokeball-collection
 Bookshelf by Fetiz.works
 https://sketchfab.com/3d-models/bookshelf-01-fetizworks-27e1808f4cdf46ddb8deb978029da366
 
-- Maybe (portal)[https://www.youtube.com/watch?v=oqDdIg3BRlg]
-- (PC Open)[https://reliccastle.com/resources/220/]
+- Portal based off of
+  - [How to Make Portals in Godot 4 in Just 5 Minutes](https://www.youtube.com/watch?v=oqDdIg3BRlg)
+  - [Coding Adventure: Portals](https://www.youtube.com/watch?v=cWpFZbjtSQg)
+- [PC Open](https://reliccastle.com/resources/220/)
+- Pokewatch based off of [Pokemon Token](https://cults3d.com/en/3d-model/game/pokemon-pokeball-token)
