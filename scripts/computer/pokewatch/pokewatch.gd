@@ -5,14 +5,18 @@ extends Node3D
 
 @onready var controller = get_parent()
 
-var pokewatch_mode : PokewatchMode = PokewatchMode.DEFAULT
+@onready var red = $Red
+@onready var white = $White
+@onready var button = $Button
+
 enum PokewatchMode {
 	DEFAULT,
 	DESKTOP,
 	BOX
 }
+var pokewatch_mode : PokewatchMode = PokewatchMode.DEFAULT
 
-var location = Area3D
+var location : Area3D
 
 const TRIGGER_ACTION = "trigger_click"
 const GRIP_ACTION = "grip_click"
@@ -28,9 +32,11 @@ func _ready():
 	controller.button_pressed.connect(_on_button_pressed)
 	controller.button_released.connect(_on_button_released)
 	
-	for panel in self.get_children():
+	for panel in get_children():
 		if panel is Area3D:
 			panel.on_pressed.connect(_on_panel_pressed)
+
+	pokewatch(pokewatch_mode)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -43,6 +49,7 @@ func _process(_delta):
 
 	## Update visiblity
 	visible = not trigger and not grip and angle < VIEW_ANGLE
+	
 
 
 ### Events ###
@@ -55,8 +62,8 @@ func _on_button_released(_name):
 	if _name == TRIGGER_ACTION: trigger = false
 	elif _name == GRIP_ACTION: grip = false
 	
-func _on_panel_pressed():
-	print("test")
+func _on_panel_pressed(function):
+	print(function)
 
 ### Signals ###
 
@@ -80,23 +87,14 @@ func pokewatch(_pokewatch_mode):
 
 	match pokewatch_mode:
 		PokewatchMode.DEFAULT:
-			$Red.hide()
-			$Red/CollisionShape3D.disabled = true
-			$White.hide()
-			$White/CollisionShape3D.disabled = true
-			$Button.hide()
-			$Button/CollisionShape3D.disabled = true
+			red.make_invisible()
+			white.make_invisible()
+			button.make_invisible()
 		PokewatchMode.DESKTOP:
-			$Red.show()
-			$Red/CollisionShape3D.disabled = false
-			$White.hide()
-			$White/CollisionShape3D.disabled = true
-			$Button.hide()
-			$Button/CollisionShape3D.disabled = true
+			red.make_visible()
+			white.make_invisible()
+			button.make_invisible()
 		PokewatchMode.BOX:
-			$Red.show()
-			$Red/CollisionShape3D.disabled = false
-			$White.show()
-			$White/CollisionShape3D.disabled = false
-			$Button.show()
-			$Button/CollisionShape3D.disabled = false
+			red.make_visible()
+			white.make_visible()
+			button.make_visible()

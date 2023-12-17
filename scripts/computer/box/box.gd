@@ -177,3 +177,7 @@ func power(on : bool):
 		box.power(on)
 	
 	corners.power(on)
+
+func get_children_boxes():
+	if get_children() != null:
+		pass
