@@ -12,6 +12,8 @@ enum PokewatchMode {
 	BOX
 }
 
+var location = Area3D
+
 const TRIGGER_ACTION = "trigger_click"
 const GRIP_ACTION = "grip_click"
 const VIEW_ANGLE = 50
@@ -25,6 +27,10 @@ var grip = false
 func _ready():
 	controller.button_pressed.connect(_on_button_pressed)
 	controller.button_released.connect(_on_button_released)
+	
+	for panel in self.get_children():
+		if panel is Area3D:
+			panel.on_pressed.connect(_on_panel_pressed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -48,10 +54,14 @@ func _on_button_pressed(_name):
 func _on_button_released(_name):
 	if _name == TRIGGER_ACTION: trigger = false
 	elif _name == GRIP_ACTION: grip = false
+	
+func _on_panel_pressed():
+	print("test")
 
 ### Signals ###
 
 func _on_area_entered(area:Area3D):
+	location = area
 	if area.is_in_group("desktop"):
 		pokewatch(PokewatchMode.DESKTOP)
 	elif area.is_in_group("box"):
