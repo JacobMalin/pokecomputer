@@ -5,6 +5,13 @@ extends Node3D
 
 @onready var controller = get_parent()
 
+var pokewatch_mode : PokewatchMode = PokewatchMode.DEFAULT
+enum PokewatchMode {
+	DEFAULT,
+	DESKTOP,
+	BOX
+}
+
 const TRIGGER_ACTION = "trigger_click"
 const GRIP_ACTION = "grip_click"
 const VIEW_ANGLE = 50
@@ -41,3 +48,45 @@ func _on_button_pressed(_name):
 func _on_button_released(_name):
 	if _name == TRIGGER_ACTION: trigger = false
 	elif _name == GRIP_ACTION: grip = false
+
+### Signals ###
+
+func _on_area_entered(area:Area3D):
+	if area.is_in_group("desktop"):
+		pokewatch(PokewatchMode.DESKTOP)
+	elif area.is_in_group("box"):
+		pokewatch(PokewatchMode.BOX)
+		
+func _on_area_exited(area:Area3D):
+	if area.is_in_group("desktop"):
+		pokewatch(PokewatchMode.DEFAULT)
+
+
+
+### Helper ###
+
+func pokewatch(_pokewatch_mode):
+	pokewatch_mode = _pokewatch_mode
+
+	match pokewatch_mode:
+		PokewatchMode.DEFAULT:
+			$Red.hide()
+			$Red/CollisionShape3D.disabled = true
+			$White.hide()
+			$White/CollisionShape3D.disabled = true
+			$Button.hide()
+			$Button/CollisionShape3D.disabled = true
+		PokewatchMode.DESKTOP:
+			$Red.show()
+			$Red/CollisionShape3D.disabled = false
+			$White.hide()
+			$White/CollisionShape3D.disabled = true
+			$Button.hide()
+			$Button/CollisionShape3D.disabled = true
+		PokewatchMode.BOX:
+			$Red.show()
+			$Red/CollisionShape3D.disabled = false
+			$White.show()
+			$White/CollisionShape3D.disabled = false
+			$Button.show()
+			$Button/CollisionShape3D.disabled = false

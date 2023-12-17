@@ -1,5 +1,6 @@
 extends Area3D
 
+@onready var anim : AnimationPlayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +13,7 @@ func _process(_delta):
 
 func _on_finger_entered(area):
 	if area.is_in_group("index"):
-		# anim.play("press")
+		anim.play("press")
 		print("white")
 
 		# Rumble

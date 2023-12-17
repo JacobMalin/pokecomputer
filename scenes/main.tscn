@@ -41,7 +41,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1xnqn"]
-radius = 0.009
+radius = 0.005
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_okg6x"]
 size = Vector3(0.0750698, 0.141514, 0.197411)
