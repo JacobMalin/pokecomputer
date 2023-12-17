@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://3e0pfgcef2fq" path="res://scenes/lab_misc/table.tscn" id="19_7ksaf"]
 [ext_resource type="PackedScene" uid="uid://pwtjwf8chk0e" path="res://scenes/lab_misc/masterball.tscn" id="20_g2eik"]
 [ext_resource type="PackedScene" uid="uid://2altcrh48tes" path="res://scenes/lab_misc/bookshelf.tscn" id="21_l4dp3"]
-[ext_resource type="PackedScene" uid="uid://drde5iioyvr42" path="res://scenes/computer/pokewatch/pokewatch.tscn" id="22_kigwm"]
+[ext_resource type="PackedScene" uid="uid://drde5iioyvr42" path="res://scenes/computer/pokewatch/Pokewatch.tscn" id="22_kigwm"]
 [ext_resource type="PackedScene" uid="uid://dmbh27tblw2ky" path="res://scenes/lab_misc/ceiling.tscn" id="22_yd14v"]
 [ext_resource type="PackedScene" uid="uid://doaea84hwna6" path="res://scenes/lab_misc/lab_machine.tscn" id="23_ogb2s"]
 
@@ -41,7 +41,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1xnqn"]
-radius = 0.0102049
+radius = 0.009
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_okg6x"]
 size = Vector3(0.0750698, 0.141514, 0.197411)
