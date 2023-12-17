@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://iqy4qn41wpow"]
+[gd_scene load_steps=10 format=3 uid="uid://iqy4qn41wpow"]
 
 [ext_resource type="Script" path="res://scripts/pokespawner/button.gd" id="1_sjptp"]
+[ext_resource type="FontFile" uid="uid://can2eroy5xfhl" path="res://assets/keypad_font.ttf" id="2_5da01"]
 [ext_resource type="AudioStream" uid="uid://bwsxbc1phg0il" path="res://assets/misc_audio/button_press.mp3" id="2_026c8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h23pt"]
@@ -63,8 +64,11 @@ mesh = SubResource("BoxMesh_gi27j")
 skeleton = NodePath("../../..")
 
 [node name="Number" type="Label3D" parent="Mesh"]
-transform = Transform3D(5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, 0, 0.52997, 0)
-text = "0"
+transform = Transform3D(0.499999, 0, 0, 0, -2.18557e-08, 5, 0, -0.499999, -2.18557e-07, 0.0440744, 0.52997, 0.1759)
+text = "0
+"
+font = ExtResource("2_5da01")
+font_size = 300
 outline_size = 6
 
 [node name="Collision" type="CollisionShape3D" parent="."]

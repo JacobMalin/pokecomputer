@@ -19,7 +19,7 @@ const PADDING = 0.01 ## To prevent z-fighting
 
 @onready var orig_position : Vector3 = global_position
 
-var corners : Node3D
+var corners : Corners
 var portal_ref_mesh : MeshInstance3D
 var pokemon : Node3D
 
@@ -34,9 +34,6 @@ func _ready():
 	corners = $Corners
 	portal_ref_mesh = $PortalReferenceMesh
 	pokemon = world_in_cube.get_node("LeftPortalViewport/Pokemon")
-
-	save_pos = corners.get_pos_corner()
-	save_neg = corners.get_neg_corner()
 
 	for box in boxes.get_children():
 		box.check_bounds.connect(_on_check_bounds)
@@ -95,7 +92,7 @@ func _on_corner_move(pos:Vector3, neg:Vector3):
 	portal_ref_mesh.global_position = portal.global_position
 	
 	# Update portal reference to match
-	# portal_reference.mesh.size = portal.mesh.size
+	portal_reference.mesh.size = portal.mesh.size
 	portal_reference.global_position = portal.global_position - orig_position
 
 	# Fix too small
@@ -126,7 +123,7 @@ func fix_pos(pos, neg):
 	portal_ref_mesh.global_position = portal.global_position
 	
 	# Update portal reference to match
-	# portal_reference.mesh.size = portal.mesh.size
+	portal_reference.mesh.size = portal.mesh.size
 	portal_reference.global_position = portal.global_position - orig_position
 
 	# Save corners

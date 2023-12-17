@@ -258,6 +258,7 @@ mesh = SubResource("PlaneMesh_0on5b")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+visible = false
 navigation_mesh = SubResource("NavigationMesh_p03kc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/NavigationRegion3D"]
@@ -297,14 +298,17 @@ unique_name_in_owner = true
 [node name="Bulbasaur" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.305, 1, 5.988)
 id = 1
+move_state = 0
 
 [node name="Charmander" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5.988)
 id = 4
+move_state = 0
 
 [node name="Squirtle" parent="Pokemon" instance=ExtResource("7_2fqfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305, 1, 5.988)
 id = 7
+move_state = 0
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, 0.000397025, -7.945)
@@ -314,7 +318,7 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57306, 0, -7.31472)
 
 [node name="Mirror" parent="." instance=ExtResource("18_07xr1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01266, -6.99805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
 
 [node name="Lab" type="Node3D" parent="."]
 

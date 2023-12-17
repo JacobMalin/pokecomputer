@@ -40,7 +40,7 @@ func get_pos_corner():
 	return pos_corner.global_position
 
 func get_neg_corner():
-	return pos_corner.global_position
+	return neg_corner.global_position
 
 func power(on : bool):
 	for corner in corners:

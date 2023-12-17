@@ -284,14 +284,15 @@ libraries = {
 [node name="CatchSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
 stream = ExtResource("9_b0ad5")
-volume_db = -12.168
+volume_db = -20.0
 
 [node name="ReleaseSound" type="AudioStreamPlayer3D" parent="."]
 visible = false
 stream = ExtResource("10_4eerd")
-volume_db = -17.934
+volume_db = -20.0
 
 [connection signal="dropped" from="." to="." method="_on_pokeball_dropped"]
+[connection signal="picked_up" from="." to="." method="_on_pokeball_picked_up"]
 [connection signal="body_entered" from="StartCaptureRadius" to="." method="_on_pokeball_hit_something"]
 [connection signal="body_entered" from="DigiPokeSnap" to="DigiPokeSnap" method="_on_snap_zone_body_entered" flags=18]
 [connection signal="body_exited" from="DigiPokeSnap" to="DigiPokeSnap" method="_on_snap_zone_body_exited" flags=18]

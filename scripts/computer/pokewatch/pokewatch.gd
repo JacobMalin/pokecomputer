@@ -35,7 +35,6 @@ func _process(_delta):
 ### Events ###
 
 func _on_button_pressed(_name):
-	print(_name)
 	if _name == TRIGGER_ACTION: trigger = true
 	elif _name == GRIP_ACTION: grip = true
 

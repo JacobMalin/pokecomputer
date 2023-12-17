@@ -136,9 +136,11 @@ func _on_pokeball_hit_something(body:Node):
 func _on_pokeball_dropped(_pickable):
 	capture_state = CaptureState.PRIMED
 
-func _on_digi_snap_has_dropped():
-	pc.adopt(contents)
+func _on_pokeball_picked_up(_pickable):
+	if by_controller:
+		capture_state = CaptureState.DEFAULT
 
+func _on_digi_snap_has_dropped():
 	contents = EMPTY
 
 func _on_digi_snap_has_picked_up(what):

@@ -2,13 +2,12 @@ class_name Pokemon
 extends CharacterBody3D
 
 const MOVEMENT_SPEED: float = 1.0
-const movement_target_position: Vector3 = Vector3(-3.0,0.0,2.0)
 const MIN_ANGLE: float = 30. / 180 * PI
 
 const ROTATE_SPEED: float = 1.0
 const ROTATION_NUDGE_BIAS: float = 0.5
 
-const RANDOM_DEST_DIST: float = 4.0
+const RANDOM_DEST_DIST: float = 10.0
 
 const CAPTURE_TIME = 1.0
 const RELEASE_TIME = 1.0
@@ -75,7 +74,8 @@ func _ready():
 	pokemon_cry = load("res://assets/pokemon/cries/"+pokemon_name+".mp3")
 	audio_player.stream = pokemon_cry
 
-	animation_player = pokemon_instance.get_node("AnimationPlayer")
+	if pokemon_instance.has_node("AnimationPlayer"):
+		animation_player = pokemon_instance.get_node("AnimationPlayer")
 
 	# Make sure to not await during _ready.
 	call_deferred("actor_setup")
@@ -95,14 +95,15 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-	if !direction.is_equal_approx(Vector3.ZERO):
+	if  not direction.is_equal_approx(Vector3.ZERO):
 		## Rotation code adapted from https://www.reddit.com/r/godot/comments/coy5e8/pathfinding_how_to_rotate_my_unit_towards_the/
 		var lookatpos = global_transform.origin + direction
-		var l = global_transform.looking_at(lookatpos, Vector3(0,1,0))
-		var start = Quaternion(global_transform.basis)
-		var goal = Quaternion(l.basis)
-		var final = start.slerp(goal, ROTATE_SPEED * delta)
-		global_transform.basis = Basis(final)
+		if not (global_transform.origin + direction).is_equal_approx(Vector3.UP):
+			var l = global_transform.looking_at(lookatpos, Vector3.UP)
+			var start = Quaternion(global_transform.basis)
+			var goal = Quaternion(l.basis)
+			var final = start.slerp(goal, ROTATE_SPEED * delta)
+			global_transform.basis = Basis(final)
 
 func _process(delta):
 	if capture_state == CaptureState.CAPTURE:
@@ -157,8 +158,6 @@ func _process(delta):
 ## Events ##
 
 func _on_navigation_agent_3d_navigation_finished():
-	# safe_anim_play("animation_bulbasaur_ground_idle")
-	# await get_tree().create_timer(1).timeout
 	if move_state == MoveState.WALK:
 		walk()
 
@@ -171,8 +170,8 @@ func actor_setup():
 	await get_tree().physics_frame
 
 	# Now that the navigation map is no longer empty, set the movement target.
-	# walk()
-	idle()
+	if move_state == MoveState.WALK: walk()
+	if move_state == MoveState.IDLE: idle()
 
 func set_movement_target(movement_target: Vector3):
 	navigation_agent.set_target_position(movement_target)

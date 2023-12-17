@@ -12,9 +12,9 @@ extends MeshInstance3D
 @onready var left_portal_camera : Camera3D = $LeftPortalViewport/LeftCamera
 @onready var right_portal_camera : Camera3D = $RightPortalViewport/RightCamera
 
-@onready var material : Material = get_surface_override_material(0)
-
 var xr_interface : XRInterface
+
+var NEAR_OFFSET = 0.5
 
 ### Lifecycle ###
 
@@ -30,12 +30,14 @@ func _process(_delta):
 	right_portal_camera.global_transform = reference_helper.global_transform
 
 	## Set near clipping plane
-	# var diff = global_transform.origin - main_cam.global_transform.origin
-	# var angle = main_cam.global_transform.basis.z.angle_to(diff)
-	# var near_plane = reference_helper.transform.origin.length()*abs(cos(angle))
-	# left_portal_camera.near = max(0.1, near_plane-2.2)
-	# right_portal_camera.near = max(0.1, near_plane-23.2)
+	var diff = global_transform.origin - main_cam.global_transform.origin
+	var angle = main_cam.global_transform.basis.z.angle_to(diff)
+	var near_plane = reference_helper.transform.origin.length()*abs(cos(angle))
+
+	left_portal_camera.near = max(0.01, near_plane - NEAR_OFFSET)
+	right_portal_camera.near = max(0.01, near_plane - NEAR_OFFSET)
 	
+	## IPD
 	if main.xr_active:
 		## Calculate IPD
 		var left_transform = xr_interface.get_transform_for_view(0, xr_origin.global_transform)

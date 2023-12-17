@@ -5,7 +5,7 @@ extends StaticBody3D
 # and https://www.youtube.com/watch?v=mGYi7pnEgnA&ab_channel=Gwizz
 @onready var globals = get_node("/root/Globals")
 @onready var buttons = $Keypad/Buttons
-@onready var id_label : Label3D = $ID
+@onready var id_label : Label3D = $Display/ID
 @onready var anim : AnimationPlayer = $AnimationPlayer
 signal spawn(num)
 
@@ -44,4 +44,4 @@ func on_button_pressed(number):
 		anim.play("clear_display")
 
 func clear_text():
-	id_label.text = ""
+	if id == "": id_label.text = ""

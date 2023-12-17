@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cakukkkdrgsrq"]
+[gd_scene load_steps=12 format=3 uid="uid://cakukkkdrgsrq"]
 
 [ext_resource type="Script" path="res://scripts/computer/box/world_in_cube.gd" id="1_wmjqs"]
+[ext_resource type="Script" path="res://scripts/computer/box/ref_cubes.gd" id="2_vq26t"]
 
 [sub_resource type="World3D" id="World3D_46qol"]
 
@@ -19,8 +20,8 @@ sky = SubResource("Sky_armv4")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_y4rv6"]
-size = Vector3(0.1, 0.1, 0.1)
+[sub_resource type="BoxMesh" id="BoxMesh_uqidc"]
+resource_local_to_scene = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_umi5n"]
 flip_faces = true
@@ -29,6 +30,13 @@ size = Vector3(5, 5, 5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy10u"]
 resource_local_to_scene = true
 albedo_color = Color(0.678431, 0.596078, 0.356863, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y4rv6"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8gccn"]
+resource_local_to_scene = true
+size = Vector3(0.1, 0.1, 0.1)
 
 [node name="WorldInCube" type="Node3D"]
 script = ExtResource("1_wmjqs")
@@ -61,7 +69,8 @@ h_offset = 0.034
 fov = 98.3
 
 [node name="PortalReference" type="MeshInstance3D" parent="LeftPortalViewport"]
-mesh = SubResource("BoxMesh_y4rv6")
+visible = false
+mesh = SubResource("BoxMesh_uqidc")
 
 [node name="Helper" type="Node3D" parent="LeftPortalViewport/PortalReference"]
 
@@ -72,3 +81,40 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yy10u")
 
 [node name="Pokemon" type="Node3D" parent="LeftPortalViewport"]
+
+[node name="RefCubes" type="Node3D" parent="LeftPortalViewport"]
+script = ExtResource("2_vq26t")
+
+[node name="ReferenceCube0" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+mesh = SubResource("BoxMesh_y4rv6")
+skeleton = NodePath("../../PortalReference")
+
+[node name="ReferenceCube1" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("BoxMesh_8gccn")
+skeleton = NodePath("../../PortalReference")
+
+[node name="ReferenceCube2" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_y4rv6")
+skeleton = NodePath("../../PortalReference")
+
+[node name="ReferenceCube3" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = SubResource("BoxMesh_y4rv6")
+skeleton = NodePath("../../PortalReference")
+
+[node name="ReferenceCube4" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("BoxMesh_y4rv6")
+skeleton = NodePath("../../PortalReference")
+
+[node name="ReferenceCube5" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("BoxMesh_y4rv6")
+skeleton = NodePath("../../PortalReference")
+
+[node name="ReferenceCube6" type="MeshInstance3D" parent="LeftPortalViewport/RefCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = SubResource("BoxMesh_y4rv6")
+skeleton = NodePath("../../PortalReference")
