@@ -80,7 +80,7 @@ mesh = SubResource("BoxMesh_umi5n")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yy10u")
 
-[node name="Pokemon" type="Node3D" parent="LeftPortalViewport"]
+[node name="PokemonCopies" type="Node3D" parent="LeftPortalViewport"]
 
 [node name="RefCubes" type="Node3D" parent="LeftPortalViewport"]
 script = ExtResource("2_vq26t")

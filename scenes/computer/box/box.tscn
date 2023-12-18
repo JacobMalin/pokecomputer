@@ -66,6 +66,6 @@ transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.8
 
 [node name="Boxes" type="Node3D" parent="."]
 
-[node name="PokemonCopies" type="Node3D" parent="."]
+[node name="Pokemon" type="Node3D" parent="."]
 
 [connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]

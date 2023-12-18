@@ -141,6 +141,8 @@ func _on_pokeball_picked_up(_pickable):
 		capture_state = CaptureState.DEFAULT
 
 func _on_digi_snap_has_dropped():
+	contents.reparent(pc)
+
 	contents = EMPTY
 
 func _on_digi_snap_has_picked_up(what):

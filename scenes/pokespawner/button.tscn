@@ -69,7 +69,7 @@ text = "0
 "
 font = ExtResource("2_5da01")
 font_size = 300
-outline_size = 6
+outline_size = 10
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

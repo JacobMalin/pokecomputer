@@ -121,3 +121,5 @@ editor_preview_mode = 1
 libraries = {
 "": SubResource("AnimationLibrary_kdg3s")
 }
+
+[connection signal="picked_up" from="." to="." method="_on_picked_up"]

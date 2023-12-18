@@ -17,11 +17,14 @@ const PADDING = 0.01 ## To prevent z-fighting
 @onready var world_in_cube : WorldInCube = preload("res://scenes/computer/box/world_in_cube.tscn").instantiate()
 @onready var portal_reference : Node3D = world_in_cube.get_node("LeftPortalViewport/PortalReference")
 
+@onready var digi_poke_copy_scene = preload("res://scenes/pokemon/digital_pokemon_copy.tscn")
+
 @onready var orig_position : Vector3 = global_position
 
 var corners : Corners
 var portal_ref_mesh : MeshInstance3D
 var pokemon : Node3D
+var pokemon_copies : Node3D
 
 var save_pos : Vector3
 var save_neg : Vector3
@@ -33,9 +36,10 @@ var save_neg : Vector3
 func _ready():
 	corners = $Corners
 	portal_ref_mesh = $PortalReferenceMesh
-	pokemon = world_in_cube.get_node("LeftPortalViewport/Pokemon")
+	pokemon = $Pokemon
+	pokemon_copies = world_in_cube.get_node("LeftPortalViewport/PokemonCopies")
 
-	for box in boxes.get_children():
+	for box in get_children_boxes():
 		box.check_bounds.connect(_on_check_bounds)
 		box.take_priority.connect(_on_take_priority)
 	
@@ -162,22 +166,29 @@ func in_bounds(poke : DigitalPokemon):
 func adopt(poke : DigitalPokemon):
 	if not in_bounds(poke): return false
 
-	for box in boxes.get_children():
+	for box in get_children_boxes():
 		var ret = box.adopt(poke)
 		if ret: return true
 
-	var portal_to_poke = poke.global_position - portal.global_position
 	poke.reparent(pokemon)
-	poke.global_position = portal_reference.global_position + portal_to_poke
+
+	## Copy digital pokemon
+	var digi_poke_copy : DigitalPokemonCopy = digi_poke_copy_scene.instantiate()
+	digi_poke_copy.copy_of = poke
+	digi_poke_copy.portal = portal
+	digi_poke_copy.portal_reference = portal_reference
+
+	poke.copy = digi_poke_copy
+
+	pokemon_copies.add_child(digi_poke_copy)
 
 	return true
 
 func power(on : bool):
-	for box in boxes.get_children():
+	for box in get_children_boxes():
 		box.power(on)
 	
 	corners.power(on)
 
 func get_children_boxes():
-	if get_children() != null:
-		pass
+	return boxes.get_children()

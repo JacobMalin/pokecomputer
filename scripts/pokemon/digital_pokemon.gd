@@ -26,6 +26,7 @@ enum SizeState {
 @onready var pc: PC = get_tree().get_root().get_node("Main").get_node("%PC")
 
 var mesh
+var copy : DigitalPokemonCopy
 var poke_anim_player: AnimationPlayer
 
 ## Lifecycle ##
@@ -51,12 +52,6 @@ func _ready():
 	poke_anim_player = mesh.get_node("AnimationPlayer")
 
 	idle()
-
-func _process(_delta):
-	pass
-
-
-### Events ###
 
 
 
@@ -154,6 +149,11 @@ func _on_let_go_by_controller():
 func _on_picked_up_by_ball():
 	activate_snap()
 	shrink()
+
+func _on_picked_up(_pickable):
+	if copy:
+		copy.queue_free()
+		copy = null
 
 func disable_snap():
 	for point in _grab_points:

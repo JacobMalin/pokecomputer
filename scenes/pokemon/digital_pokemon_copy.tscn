@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://rt1vknjnrp08"]
+
+[ext_resource type="Script" path="res://scripts/pokemon/digital_pokemon_copy.gd" id="1_5uva7"]
+
+[sub_resource type="Animation" id="Animation_f67r6"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_wwp03"]
+resource_name = "grow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesh:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.03, 0.03, 0.03), Vector3(0.12, 0.12, 0.12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_somn6"]
+_data = {
+"RESET": SubResource("Animation_f67r6"),
+"grow": SubResource("Animation_wwp03")
+}
+
+[node name="DigitalPokemonCopy" type="Node3D" groups=["digital_pokemon"]]
+script = ExtResource("1_5uva7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_somn6")
+}
