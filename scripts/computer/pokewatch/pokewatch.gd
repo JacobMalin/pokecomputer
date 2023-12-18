@@ -9,6 +9,8 @@ extends Node3D
 @onready var white = $White
 @onready var button = $Button
 
+signal panel_activate(panel, area)
+
 enum PokewatchMode {
 	DEFAULT,
 	DESKTOP,
@@ -17,6 +19,9 @@ enum PokewatchMode {
 var pokewatch_mode : PokewatchMode = PokewatchMode.DEFAULT
 
 var location : Area3D
+var desktop_location : Area3D
+var box_location : Area3D
+
 var box_ct = 0
 
 const TRIGGER_ACTION = "trigger_click"
@@ -64,15 +69,18 @@ func _on_button_released(_name):
 	elif _name == GRIP_ACTION: grip = false
 	
 func _on_panel_pressed(function):
-	print(function)
+	panel_activate.emit(function, location)
 
 ### Signals ###
 
 func _on_area_entered(area:Area3D):
-	location = area
 	if area.is_in_group("desktop"):
+		desktop_location = area
+		location = desktop_location
 		pokewatch(PokewatchMode.DESKTOP)
 	elif area.is_in_group("box"):
+		box_location = area
+		location = box_location
 		pokewatch(PokewatchMode.BOX)
 		box_ct += 1
 		
@@ -81,6 +89,7 @@ func _on_area_exited(area:Area3D):
 		pokewatch(PokewatchMode.DEFAULT)
 	elif area.is_in_group("box") and box_ct == 1:
 		box_ct = 0
+		location = desktop_location
 		pokewatch(PokewatchMode.DESKTOP)
 	elif area.is_in_group("box") and box_ct > 1: 
 		box_ct -= 1

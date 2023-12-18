@@ -33,8 +33,9 @@ func _ready():
 	poke_anim_player = mesh.get_node("AnimationPlayer")
 
 	# Sync idle
-	idle()
-	poke_anim_player.seek(copy_of.poke_anim_player.get_current_animation_position(), true)
+	if pokemon_name != "substitute":
+		idle()
+		poke_anim_player.seek(copy_of.poke_anim_player.get_current_animation_position(), true)
 
 	# Sync grow
 	var copy_anim_name = copy_of.digi_anim_player.current_animation
