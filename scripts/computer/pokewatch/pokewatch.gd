@@ -56,6 +56,7 @@ func _process(_delta):
 	## Update visiblity
 	visible = not trigger and not grip and angle < VIEW_ANGLE
 	
+	pokewatch(pokewatch_mode)
 
 
 ### Events ###
@@ -100,6 +101,11 @@ func _on_area_exited(area:Area3D):
 # Define the different modes of the Pokewatch
 func pokewatch(_pokewatch_mode):
 	pokewatch_mode = _pokewatch_mode
+
+	if !visible:
+		red.make_invisible()
+		white.make_invisible()
+		button.make_invisible()
 
 	match pokewatch_mode:
 		PokewatchMode.DEFAULT:
