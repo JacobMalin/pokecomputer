@@ -1,4 +1,5 @@
 extends Area3D
+class_name PokewatchPanel
 
 @onready var anim : AnimationPlayer = $AnimationPlayer
 @onready var collision : CollisionShape3D = $CollisionShape3D

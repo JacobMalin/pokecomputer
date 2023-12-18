@@ -13,7 +13,7 @@ size = Vector3(3.5, 3, 3.5)
 size = Vector3(3.5, 3, 3.5)
 
 [node name="Desktop" type="Area3D" groups=["desktop"]]
-collision_layer = 536870928
+collision_layer = 16
 collision_mask = 48
 script = ExtResource("1_3ymhp")
 

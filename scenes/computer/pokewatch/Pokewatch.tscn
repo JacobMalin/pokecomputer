@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://drde5iioyvr42"]
+[gd_scene load_steps=25 format=3 uid="uid://drde5iioyvr42"]
 
 [ext_resource type="Script" path="res://scripts/computer/pokewatch/pokewatch.gd" id="1_debun"]
 [ext_resource type="Script" path="res://scripts/computer/pokewatch/panel.gd" id="2_re4yd"]
@@ -236,14 +236,17 @@ _data = {
 "press": SubResource("Animation_4hyci")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_11yfg"]
+size = Vector3(0.187152, 0.0163525, 0.208443)
+
 [node name="Pokewatch" type="Node3D"]
 transform = Transform3D(1.1, 0, 0, 0, 1, 0, 0, 0, 1.1, 0, 0, 0)
 script = ExtResource("1_debun")
 
 [node name="Red" type="Area3D" parent="."]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0.013014)
-collision_layer = 536870912
-collision_mask = 537001984
+collision_layer = 0
+collision_mask = 131072
 script = ExtResource("2_re4yd")
 function = "add"
 
@@ -265,7 +268,7 @@ libraries = {
 [node name="White" type="Area3D" parent="."]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, -0.013)
 collision_layer = 536870912
-collision_mask = 537001984
+collision_mask = 131072
 script = ExtResource("2_re4yd")
 function = "delete"
 
@@ -287,7 +290,7 @@ libraries = {
 [node name="Button" type="Area3D" parent="."]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
 collision_layer = 536870912
-collision_mask = 537001984
+collision_mask = 131072
 script = ExtResource("2_re4yd")
 function = "minimize"
 
@@ -306,8 +309,15 @@ libraries = {
 "": SubResource("AnimationLibrary_jk2r3")
 }
 
-[connection signal="area_entered" from="Red" to="." method="_on_area_entered"]
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_11yfg")
+
 [connection signal="area_entered" from="Red" to="Red" method="_on_finger_entered"]
-[connection signal="area_exited" from="Red" to="." method="_on_area_exited"]
 [connection signal="area_entered" from="White" to="White" method="_on_finger_entered"]
 [connection signal="area_entered" from="Button" to="Button" method="_on_finger_entered"]
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_exited"]

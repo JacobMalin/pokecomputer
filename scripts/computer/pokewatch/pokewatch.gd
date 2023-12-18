@@ -33,7 +33,7 @@ func _ready():
 	controller.button_released.connect(_on_button_released)
 	
 	for panel in get_children():
-		if panel is Area3D:
+		if panel is PokewatchPanel:
 			panel.on_pressed.connect(_on_panel_pressed)
 
 	pokewatch(pokewatch_mode)
@@ -79,9 +79,9 @@ func _on_area_exited(area:Area3D):
 		pokewatch(PokewatchMode.DEFAULT)
 
 
-
 ### Helper ###
 
+# Define the different modes of the Pokewatch
 func pokewatch(_pokewatch_mode):
 	pokewatch_mode = _pokewatch_mode
 
