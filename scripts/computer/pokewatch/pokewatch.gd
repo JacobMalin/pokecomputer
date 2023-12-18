@@ -17,6 +17,7 @@ enum PokewatchMode {
 var pokewatch_mode : PokewatchMode = PokewatchMode.DEFAULT
 
 var location : Area3D
+var box_ct = 0
 
 const TRIGGER_ACTION = "trigger_click"
 const GRIP_ACTION = "grip_click"
@@ -73,10 +74,16 @@ func _on_area_entered(area:Area3D):
 		pokewatch(PokewatchMode.DESKTOP)
 	elif area.is_in_group("box"):
 		pokewatch(PokewatchMode.BOX)
+		box_ct += 1
 		
 func _on_area_exited(area:Area3D):
 	if area.is_in_group("desktop"):
 		pokewatch(PokewatchMode.DEFAULT)
+	elif area.is_in_group("box") and box_ct == 1:
+		box_ct = 0
+		pokewatch(PokewatchMode.DESKTOP)
+	elif area.is_in_group("box") and box_ct > 1: 
+		box_ct -= 1
 
 
 ### Helper ###
