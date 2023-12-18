@@ -6,6 +6,7 @@ class_name PokewatchPanel
 @onready var controller : XRController3D = get_parent().get_parent()
 
 @export var function = ""
+@export var disabled = false
 
 signal on_pressed(function)
 
@@ -19,7 +20,9 @@ func _process(_delta):
 	pass
 
 func _on_finger_entered(area):
-	if area.get_parent() != controller and area.is_in_group("index"):
+	if area.get_parent() != controller and area.is_in_group("index") and not disabled:
+		disabled = true
+		
 		anim.play("press")
 		on_pressed.emit(function)
 
