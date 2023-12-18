@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=45 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://drde5iioyvr42" path="res://scenes/computer/pokewatch/Pokewatch.tscn" id="22_kigwm"]
 [ext_resource type="PackedScene" uid="uid://dmbh27tblw2ky" path="res://scenes/lab_misc/ceiling.tscn" id="22_yd14v"]
 [ext_resource type="PackedScene" uid="uid://doaea84hwna6" path="res://scenes/lab_misc/lab_machine.tscn" id="23_ogb2s"]
+[ext_resource type="Texture2D" uid="uid://blrjyjl7syeoh" path="res://assets/lab_misc/poster.png" id="25_06h6w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7px5o"]
 sky_top_color = Color(0.258824, 0.643137, 0.933333, 1)
@@ -135,6 +136,11 @@ size = Vector3(1, 1.38635, 3.14606)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_82aob"]
 size = Vector3(2.9975, 2.66972, 1.19486)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ans0x"]
+albedo_texture = ExtResource("25_06h6w")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yon2s"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_6hrg6")
@@ -428,3 +434,8 @@ shape = SubResource("BoxShape3D_82aob")
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 9.83789, 1.70627, 8.54273)
 text = "Sorry, HM01 - Cut
 Needed."
+
+[node name="Pokeposter" type="MeshInstance3D" parent="Lab"]
+transform = Transform3D(7.8563e-08, 0.0557696, 3.3838e-08, 3.97651e-15, 2.43776e-09, -0.774122, -1.0406, 4.21048e-09, -4.03514e-16, -9.88008, 1.28706, -0.547841)
+material_override = SubResource("StandardMaterial3D_ans0x")
+mesh = SubResource("PlaneMesh_yon2s")
