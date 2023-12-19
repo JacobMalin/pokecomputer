@@ -41,7 +41,7 @@ func _on_monitor_entered(area):
 		# Rumble
 		area.rumble()
 
-func panel_press(panel : String, location : Area3D):
+func panel_press(panel : String, _location : Area3D):
 	print(panel)
 
 ### Helper ###

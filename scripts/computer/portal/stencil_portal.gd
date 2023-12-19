@@ -21,7 +21,6 @@ var xr_interface : XRInterface
 
 func _ready():
 	xr_interface = XRServer.find_interface('OpenXR')
-	print(xr_interface.get_render_target_size())
 
 func _process(_delta):
 	helper.global_transform = main_cam.global_transform

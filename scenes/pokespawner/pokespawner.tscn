@@ -4,16 +4,6 @@
 [ext_resource type="Script" path="res://scripts/pokespawner/pokespawner.gd" id="1_mbmv3"]
 [ext_resource type="AudioStream" uid="uid://ceoqtjq6kjwbu" path="res://assets/misc_audio/Teleport.mp3" id="3_2lxs1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lx4oa"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_qdhyx"]
-material = SubResource("StandardMaterial3D_lx4oa")
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_c8pwx"]
-height = 1.1783
-radius = 1.4654
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_eogi6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_budtr"]
@@ -31,29 +21,51 @@ albedo_color = Color(0.117647, 1, 1, 0.231373)
 [sub_resource type="CylinderMesh" id="CylinderMesh_2dwpl"]
 material = SubResource("StandardMaterial3D_bk0nc")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lx4oa"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qdhyx"]
+material = SubResource("StandardMaterial3D_lx4oa")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c8pwx"]
+height = 0.0249443
+radius = 1.5
+
 [node name="Pokespawner" type="StaticBody3D"]
 script = ExtResource("1_mbmv3")
 
-[node name="base" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.012, 0, 0, 0, 3, 0, 0.015, 0)
-mesh = SubResource("CylinderMesh_qdhyx")
+[node name="Mesh" type="Node3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9443, 0)
-shape = SubResource("CylinderShape3D_c8pwx")
+[node name="Top" type="Node3D" parent="Mesh"]
 
-[node name="top" type="MeshInstance3D" parent="."]
+[node name="Top" type="MeshInstance3D" parent="Mesh/Top"]
 transform = Transform3D(3, 0, 0, 0, 0.407438, 0, 0, 0, 3, 0, 3.85917, 0)
 mesh = SubResource("CylinderMesh_eogi6")
+skeleton = NodePath("../../..")
 
-[node name="red ball" type="MeshInstance3D" parent="."]
+[node name="RedBall" type="MeshInstance3D" parent="Mesh/Top"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 4.25954, 0)
 mesh = SubResource("SphereMesh_sdjyc")
+skeleton = NodePath("../../..")
 
-[node name="walls" type="MeshInstance3D" parent="."]
+[node name="Walls" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(3, 0, 0, 0, 1.70988, 0, 0, 0, 3, 0, 1.73694, 0)
 layers = 524288
 mesh = SubResource("CylinderMesh_2dwpl")
+skeleton = NodePath("../..")
+
+[node name="Base" type="MeshInstance3D" parent="Mesh"]
+transform = Transform3D(3, 0, 0, 0, 0.012, 0, 0, 0, 3, 0, 0.015, 0)
+mesh = SubResource("CylinderMesh_qdhyx")
+skeleton = NodePath("../..")
+
+[node name="TopCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.859, 0)
+shape = SubResource("CylinderShape3D_c8pwx")
+
+[node name="BaseCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0)
+shape = SubResource("CylinderShape3D_c8pwx")
 
 [node name="Keypad" parent="." instance=ExtResource("1_7lmw2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.473, 0, 2.521)

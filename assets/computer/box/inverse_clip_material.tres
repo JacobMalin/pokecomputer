@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bi74os206akgr"]
+
+[ext_resource type="Shader" path="res://assets/computer/box/inverse_clip.gdshader" id="1_k31dk"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_k31dk")
+shader_parameter/pos = Vector3(0.5, 0.5, 0.5)
+shader_parameter/neg = Vector3(-0.5, -0.5, -0.5)
+shader_parameter/w_cam = null

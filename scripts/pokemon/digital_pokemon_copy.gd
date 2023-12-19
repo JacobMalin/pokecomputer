@@ -4,6 +4,7 @@ extends Node3D
 @export var copy_of : DigitalPokemon
 var portal
 var portal_reference
+var camera
 
 var pokemon_name
 
@@ -11,6 +12,9 @@ var mesh
 var poke_anim_player: AnimationPlayer
 
 @onready var digi_anim_player: AnimationPlayer = $AnimationPlayer
+@onready var clip_mat = preload("res://assets/computer/box/clip_material.tres")
+
+var shader_update_list = []
 
 ## Lifecycle ##
 
@@ -28,6 +32,7 @@ func _ready():
 	global_position = portal_reference.global_position + portal_to_poke
 	global_rotation = copy_of.global_rotation
 
+	apply_shader(mesh)
 	add_child(mesh)
 
 	poke_anim_player = mesh.get_node("AnimationPlayer")
@@ -39,10 +44,19 @@ func _ready():
 
 	# Sync grow
 	var copy_anim_name = copy_of.digi_anim_player.current_animation
-	print(copy_anim_name)
+
 	if copy_anim_name:
 		digi_anim_player.play(copy_anim_name)
 		digi_anim_player.seek(copy_of.digi_anim_player.get_current_animation_position(), true)
+
+func _process(_delta):
+	var pos = portal_reference.global_position + portal_reference.mesh.size / 2
+	var neg = portal_reference.global_position - portal_reference.mesh.size / 2
+
+	for mat in shader_update_list:
+		mat.set_shader_parameter("pos", pos)
+		mat.set_shader_parameter("neg", neg)
+		mat.set_shader_parameter("w_cam", camera.global_position)
 
 
 
@@ -67,3 +81,23 @@ func idle():
 
 func grow():
 	digi_anim_player.play("grow")
+
+func apply_shader(node : Node3D):
+	## Apply shader to node
+	if node is MeshInstance3D:
+		## Create mat and get albedo png
+		var albedo = node.mesh.surface_get_material(0).albedo_texture
+		# var albedo_image = Image.load_from_file(albedo_path)
+		# var albedo = ImageTexture.create_from_image(albedo_image)
+		var mat = clip_mat.duplicate()
+		mat.set_shader_parameter("texture_albedo", albedo)
+
+		## Add mat to shader_update_list
+		shader_update_list.append(mat)
+
+		## Add mat back to node as surface override
+		node.set_surface_override_material(0, mat)
+
+	## Apply shader to children
+	for child in node.get_children():
+		if child is Node3D: apply_shader(child)

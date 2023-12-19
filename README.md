@@ -58,3 +58,6 @@ https://sketchfab.com/3d-models/bookshelf-01-fetizworks-27e1808f4cdf46ddb8deb978
   - [Coding Adventure: Portals](https://www.youtube.com/watch?v=cWpFZbjtSQg)
 - [PC Open](https://reliccastle.com/resources/220/)
 - Pokewatch based off of [Pokemon Token](https://cults3d.com/en/3d-model/game/pokemon-pokeball-token)
+- Rotation code based off of
+  - [Actual rotation](https://www.reddit.com/r/godot/comments/coy5e8/pathfinding_how_to_rotate_my_unit_towards_the/)
+  - [Supress errors](https://github.com/godotengine/godot/issues/79146)

@@ -18,16 +18,28 @@ enum SizeState {
 }
 @export var size_state : SizeState = SizeState.SMALL
 
+enum TangibleState {
+	TANGIBLE,
+	INTANGIBLE
+}
+@export var tangible_state : TangibleState = TangibleState.TANGIBLE
+
 @onready var globals = get_node("/root/Globals")
 @onready var collision: CollisionShape3D = $Collision
 @onready var cry_player: AudioStreamPlayer3D = $CryPlayer
 @onready var digi_anim_player: AnimationPlayer = $AnimationPlayer
+@onready var tangible_area: Area3D = $TangibleArea
 
 @onready var pc: PC = get_tree().get_root().get_node("Main").get_node("%PC")
+@onready var desktop: Desktop = pc.get_node("Desktop")
+@onready var clip_mat = preload("res://assets/computer/box/inverse_clip_material.tres")
 
 var mesh
 var copy : DigitalPokemonCopy
 var poke_anim_player: AnimationPlayer
+
+var in_box : Box
+var shader_update_list = []
 
 ## Lifecycle ##
 
@@ -43,6 +55,7 @@ func _ready():
 	mesh.name = "Mesh"
 	mesh.scale = Vector3.ONE * POKEBALL_SCALE
 
+	apply_shader(mesh)
 	add_child(mesh)
 
 	## Load cry based on id
@@ -52,6 +65,20 @@ func _ready():
 	poke_anim_player = mesh.get_node("AnimationPlayer")
 
 	idle()
+
+func _process(_delta):
+	if in_box:
+		var pos = in_box.portal.global_position + in_box.portal.mesh.size / 2
+		var neg = in_box.portal.global_position - in_box.portal.mesh.size / 2
+
+		for mat in shader_update_list:
+			mat.set_shader_parameter("override", false)
+			mat.set_shader_parameter("pos", pos)
+			mat.set_shader_parameter("neg", neg)
+			mat.set_shader_parameter("w_cam", in_box.camera.global_position)
+	else:
+		for mat in shader_update_list:
+			mat.set_shader_parameter("override", true)
 
 
 
@@ -117,7 +144,17 @@ func let_go(p_linear_velocity: Vector3, p_angular_velocity: Vector3) -> void:
 
 
 
-## Helper ##
+### Events ###
+
+func _on_exit_box(area : Area3D):
+	if area == in_box:
+		tangible(TangibleState.INTANGIBLE)
+
+func _on_enter_box(area : Area3D):
+	if area == in_box:
+		tangible(TangibleState.TANGIBLE)
+
+### Helper ###
 
 func anim_in_list(_name):
 	if poke_anim_player:
@@ -154,6 +191,7 @@ func _on_picked_up(_pickable):
 	if copy:
 		copy.queue_free()
 		copy = null
+		in_box = null
 
 func disable_snap():
 	for point in _grab_points:
@@ -178,3 +216,49 @@ func shrink():
 		collision.scale = Vector3.ONE
 		collision.position = Vector3.UP * POKEBALL_SCALE
 		mesh.scale = Vector3.ONE * POKEBALL_SCALE
+
+func set_box(box : Box):
+	in_box = box
+	
+	## Update shader
+	for mat in shader_update_list:
+		mat.set_shader_parameter("override", !in_box or in_box == desktop)
+	
+	if tangible_area.overlaps_area(box):
+		tangible(TangibleState.TANGIBLE)
+	else:
+		tangible(TangibleState.INTANGIBLE)
+
+func tangible(_tangible_state : TangibleState):
+	tangible_state = _tangible_state
+
+	match tangible_state:
+		TangibleState.TANGIBLE:
+			visible = true
+			collision.set_deferred("disabled", false)
+		TangibleState.INTANGIBLE:
+			visible = false
+			collision.set_deferred("disabled", true)
+
+
+
+func apply_shader(node : Node3D):
+	## Apply shader to node
+	if node is MeshInstance3D:
+		## Create mat and get albedo png
+		var albedo = node.mesh.surface_get_material(0).albedo_texture
+		# var albedo_image = Image.load_from_file(albedo_path)
+		# var albedo = ImageTexture.create_from_image(albedo_image)
+		var mat = clip_mat.duplicate()
+		mat.set_shader_parameter("texture_albedo", albedo)
+		mat.set_shader_parameter("override", true)
+
+		## Add mat to shader_update_list
+		shader_update_list.append(mat)
+
+		## Add mat back to node as surface override
+		node.set_surface_override_material(0, mat)
+
+	## Apply shader to children
+	for child in node.get_children():
+		if child is Node3D: apply_shader(child)

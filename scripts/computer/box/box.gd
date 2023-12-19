@@ -16,6 +16,7 @@ const PADDING = 0.01 ## To prevent z-fighting
 @onready var portal : Portal = preload("res://scenes/computer/portal/portal.tscn").instantiate()
 @onready var world_in_cube : WorldInCube = preload("res://scenes/computer/box/world_in_cube.tscn").instantiate()
 @onready var portal_reference : Node3D = world_in_cube.get_node("LeftPortalViewport/PortalReference")
+@onready var camera : Camera3D = world_in_cube.get_node("LeftPortalViewport/LeftCamera")
 
 @onready var digi_poke_copy_scene = preload("res://scenes/pokemon/digital_pokemon_copy.tscn")
 
@@ -170,6 +171,7 @@ func adopt(poke : DigitalPokemon):
 		var ret = box.adopt(poke)
 		if ret: return true
 
+	poke.set_box(self)
 	poke.reparent(pokemon)
 
 	## Copy digital pokemon
@@ -177,6 +179,7 @@ func adopt(poke : DigitalPokemon):
 	digi_poke_copy.copy_of = poke
 	digi_poke_copy.portal = portal
 	digi_poke_copy.portal_reference = portal_reference
+	digi_poke_copy.camera = camera
 
 	poke.copy = digi_poke_copy
 

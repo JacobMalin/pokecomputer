@@ -12,7 +12,3 @@ var pokedex = ["substitute", "bulbasaur", "ivysaur", "venusaur", "charmander", "
 				"goldeen", "seaking", "staryu", "starmie", "mrmime", "scyther", "jynx", "electabuzz", "magmar", "pinsir", "tauros", "magikarp", "gyarados", "lapras", "ditto", 
 				"eevee", "vaporeon", "jolteon", "flareon", "porygon", "omanyte", "omastar", "kabuto", "kabutops", "aerodactyl", "snorlax", "articuno", "zapdos", "moltres", 
 				"dratini", "dragonair", "dragonite", "mewtwo", "mew"]
-
-# func _ready():
-# 	for i in range(len(pokedex)):
-# 		print(i, pokedex[i])

@@ -2966,6 +2966,9 @@ _data = {
 [node name="body" parent="Node2/abra" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0.25, 0.0625)
 
+[node name="torso" parent="Node2/abra/body/torso2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.65625, -1.49012e-08)
+
 [node name="tail" parent="Node2/abra/body/torso2" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.814116, 0.580703, 0, -0.580703, 0.814116, 0, -0.015625, 0.109375)
 

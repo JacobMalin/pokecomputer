@@ -1,10 +1,10 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://djlh4tcahymb"]
 
-[ext_resource type="Shader" path="res://assets/clip.gdshader" id="1_24kei"]
+[ext_resource type="Shader" path="res://assets/computer/box/clip.gdshader" id="1_jd42s"]
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_24kei")
+shader = ExtResource("1_jd42s")
 shader_parameter/pos = Vector3(0.5, 0.5, 0.5)
 shader_parameter/neg = Vector3(-0.5, -0.5, -0.5)
 shader_parameter/w_cam = null

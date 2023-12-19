@@ -33,12 +33,8 @@ func on_button_pressed(number):
 	if id.length() >= 3:
 		# Spawn the correct pokemon based on the entered id
 		var int_id = int(id)
-		if int_id > 151 or int_id <= 0:
-			spawn.emit(0)
-			# print("substitute")
-		else:
-			spawn.emit(int_id)
-			#print(Globals.pokedex[int_id])
+		if int_id > 151 or int_id <= 0: spawn.emit(0)
+		else: spawn.emit(int_id)
 			
 		id = ""
 		anim.play("clear_display")

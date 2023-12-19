@@ -53,8 +53,9 @@ size = Vector3(0.0750698, 0.141514, 0.197411)
 size = Vector2(10, 10)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_p03kc"]
-vertices = PackedVector3Array(-4.5, 0.5, -4.5, -4.5, 0.5, 4.5, 4.5, 0.5, 4.5, 4.5, 0.5, -4.5)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-4.94574, 5.25, -4.9566, -4.94574, 5.25, 4.7934, 5.05426, 5.25, 4.7934, 5.05426, 5.25, -4.9566, -1.44574, 0.5, -2.4566, -0.195737, 0.5, -2.9566, -0.695737, 0.5, -3.2066, 0.804263, 0.5, -3.7066, 0.304263, 0.5, -2.9566, 1.80426, 0.5, -2.7066, 2.55426, 0.5, -3.2066, 2.55426, 0.5, -4.7066, -0.195737, 0.5, -0.4566, -1.44574, 0.5, -1.2066, -1.69574, 0.5, -0.7066, -0.445737, 0.5, 0.0433998, -1.44574, 0.5, 2.5434, -0.445737, 0.5, 0.0433998, -1.69574, 0.5, -0.7066, -3.69574, 0.5, -0.7066, -3.94574, 0.5, 4.0434, -0.195737, 0.5, 4.5434, -0.195737, 0.5, 3.7934, -1.44574, 0.5, 3.5434, -3.94574, 0.5, 4.0434, -1.44574, 0.5, -2.4566, -0.695737, 0.5, -3.2066, -0.445737, 0.5, -3.9566, -2.44574, 0.5, -4.2066, -0.445737, 0.5, -3.9566, 0.804263, 0.5, -3.7066, 2.55426, 0.5, -4.7066, -0.445737, 0.5, -3.9566, 2.55426, 0.5, -4.7066, -4.69574, 0.5, -4.7066, -2.44574, 0.5, -4.2066, -4.69574, 0.5, -4.7066, -4.69574, 0.5, 4.5434, -3.94574, 0.5, 4.0434, -3.69574, 0.5, -0.7066, -3.94574, 0.5, -2.9566, 0.0542626, 0.5, 2.2934, 0.0542626, 0.5, 0.2934, -0.445737, 0.5, 0.0433998, -1.44574, 0.5, 2.5434, -3.94574, 0.5, -2.9566, -3.19574, 0.5, -4.2066, -4.69574, 0.5, -4.7066, -3.19574, 0.5, -4.2066, -2.44574, 0.5, -4.2066, -4.69574, 0.5, -4.7066, -3.94574, 0.5, 4.0434, -1.44574, 0.5, 3.5434, -1.44574, 0.5, 2.5434, 3.05426, 3.25, -3.4566, 4.05426, 3.25, -3.4566, 3.80426, 3.25, -4.7066, 2.80426, 3.25, -4.4566, 3.05426, 0.5, 4.0434, 3.80426, 0.5, 3.7934, 3.80426, 0.5, 3.0434, 1.05426, 0.5, 2.2934, 1.30426, 0.5, 3.5434, 1.30426, 0.5, 3.5434, -0.195737, 0.5, 3.7934, -0.195737, 0.5, 4.5434, 3.05426, 0.5, 4.5434, 3.05426, 0.5, 4.0434, 0.304263, 0.5, -2.9566, -0.195737, 0.5, -2.9566, -1.44574, 0.5, -2.4566, 1.05426, 0.5, 2.2934, 3.80426, 0.5, 3.0434, 4.55426, 0.5, 3.0434, 4.55426, 0.5, -3.2066, 2.55426, 0.5, -2.2066, 0.554263, 0.5, -0.2066, 2.55426, 0.5, -2.2066, 1.80426, 0.5, -2.7066, 0.304263, 0.5, -2.9566, -1.44574, 0.5, -2.4566, -1.44574, 0.5, -1.2066, 0.554263, 0.5, -0.2066, -1.44574, 0.5, -1.2066, -0.195737, 0.5, -0.4566, 0.554263, 0.5, -0.2066, 0.0542626, 0.5, 0.2934, 0.0542626, 0.5, 2.2934, 1.05426, 0.5, 2.2934, 0.554263, 0.5, -0.2066, 4.55426, 0.5, -3.2066, 2.80426, 0.5, -2.9566, 2.55426, 0.5, -2.2066, -0.945737, 1.75, 2.7934, -0.945737, 1.75, 3.2934, 0.804263, 1.75, 3.2934, 0.804263, 1.75, 2.7934)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 11), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 16), PackedInt32Array(19, 16, 20), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 24), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 28), PackedInt32Array(29, 31, 30), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(40, 39, 36), PackedInt32Array(36, 39, 38), PackedInt32Array(36, 38, 37), PackedInt32Array(42, 41, 43), PackedInt32Array(43, 41, 44), PackedInt32Array(47, 46, 45), PackedInt32Array(50, 49, 48), PackedInt32Array(53, 52, 51), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55), PackedInt32Array(59, 58, 60), PackedInt32Array(60, 58, 62), PackedInt32Array(60, 62, 61), PackedInt32Array(64, 63, 65), PackedInt32Array(65, 63, 67), PackedInt32Array(65, 67, 66), PackedInt32Array(68, 70, 69), PackedInt32Array(72, 71, 73), PackedInt32Array(73, 71, 76), PackedInt32Array(73, 76, 75), PackedInt32Array(73, 75, 74), PackedInt32Array(78, 77, 79), PackedInt32Array(79, 77, 82), PackedInt32Array(79, 82, 81), PackedInt32Array(79, 81, 80), PackedInt32Array(84, 83, 85), PackedInt32Array(87, 86, 88), PackedInt32Array(88, 86, 89), PackedInt32Array(90, 92, 91), PackedInt32Array(96, 95, 93), PackedInt32Array(93, 95, 94)]
+agent_radius = 0.25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i8pd"]
 metallic = 0.89
@@ -155,7 +156,6 @@ environment = SubResource("Environment_j8tdp")
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_fhy0p")
 volume_db = -23.424
-autoplay = true
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
@@ -202,7 +202,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185065, -0.0423975, 0.0805
 shape = SubResource("BoxShape3D_okg6x")
 
 [node name="Pokewatch" parent="XROrigin3D/LeftController" instance=ExtResource("22_kigwm")]
-transform = Transform3D(0.0234486, 0.999637, -0.0133135, 0.988322, -0.0251847, -0.150286, -0.150567, -0.00963399, -0.988553, 0.0126758, -0.0505388, 0.105191)
+transform = Transform3D(-0.0078001, 0.976594, -0.214952, 0.990638, -0.0217516, -0.134772, -0.136294, -0.21399, -0.967281, -0.00148928, -0.0494806, 0.105191)
 
 [node name="RightController" type="XRController3D" parent="XROrigin3D"]
 unique_name_in_owner = true
@@ -244,7 +244,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185065, -0.0423975, 0.0805
 shape = SubResource("BoxShape3D_okg6x")
 
 [node name="Pokewatch" parent="XROrigin3D/RightController" instance=ExtResource("22_kigwm")]
-transform = Transform3D(-0.134974, -0.990389, 0.0302098, -0.988311, 0.132384, -0.0756144, 0.0708885, -0.0400626, -0.996679, -0.00997666, -0.0507768, 0.109355)
+transform = Transform3D(-0.0667577, -0.981093, 0.181663, -0.996721, 0.0572259, -0.0572193, 0.0457417, -0.184887, -0.981694, 0.00162387, -0.0507768, 0.109355)
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_el4ei")]
 unique_name_in_owner = true
@@ -264,11 +264,9 @@ mesh = SubResource("PlaneMesh_0on5b")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-visible = false
 navigation_mesh = SubResource("NavigationMesh_p03kc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/NavigationRegion3D"]
-visible = false
 mesh = SubResource("PlaneMesh_0on5b")
 
 [node name="Pokeballs" type="Node3D" parent="."]
@@ -317,7 +315,7 @@ id = 7
 move_state = 0
 
 [node name="Pokespawner" parent="." instance=ExtResource("18_7gr3e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, 0.000397025, -7.945)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.022, 0.000396967, -7.945)
 
 [node name="PC" parent="." instance=ExtResource("18_4o8mq")]
 unique_name_in_owner = true
