@@ -99,10 +99,9 @@ func _physics_process(delta):
 		## Rotation code adapted from https://www.reddit.com/r/godot/comments/coy5e8/pathfinding_how_to_rotate_my_unit_towards_the/
 		## Error prevention adapted from https://github.com/godotengine/godot/issues/79146
 		var lookatpos = global_transform.origin + direction
-		var v_z : Vector3 = (lookatpos - Vector3.UP).normalized()
-		var v_x : Vector3 = Vector3.UP.cross(-v_z)
-
-		if not lookatpos.is_equal_approx(Vector3.UP) and not v_x.is_zero_approx():
+		var v_z = -direction.normalized();
+		var v_x = Vector3.UP.cross(v_z);
+		if not v_x.is_zero_approx():
 			var l = global_transform.looking_at(lookatpos, Vector3.UP)
 			var start = Quaternion(global_transform.basis.orthonormalized())
 			var goal = Quaternion(l.basis)

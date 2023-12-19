@@ -135,6 +135,5 @@ monitorable = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.115, 0)
 shape = SubResource("SphereShape3D_kdcnw")
 
-[connection signal="picked_up" from="." to="." method="_on_picked_up"]
 [connection signal="area_entered" from="TangibleArea" to="." method="_on_enter_box"]
 [connection signal="area_exited" from="TangibleArea" to="." method="_on_exit_box"]

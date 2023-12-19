@@ -34,6 +34,8 @@ enum TangibleState {
 @onready var desktop: Desktop = pc.get_node("Desktop")
 @onready var clip_mat = preload("res://assets/computer/box/inverse_clip_material.tres")
 
+@onready var new_position = global_position
+
 var mesh
 var copy : DigitalPokemonCopy
 var poke_anim_player: AnimationPlayer
@@ -67,7 +69,7 @@ func _ready():
 	idle()
 
 func _process(_delta):
-	if in_box:
+	if in_box and in_box != desktop:
 		var pos = in_box.portal.global_position + in_box.portal.mesh.size / 2
 		var neg = in_box.portal.global_position - in_box.portal.mesh.size / 2
 
@@ -79,6 +81,9 @@ func _process(_delta):
 	else:
 		for mat in shader_update_list:
 			mat.set_shader_parameter("override", true)
+
+# func _integrate_forces(state):
+# 	state.transform.origin = new_position
 
 
 
@@ -142,12 +147,96 @@ func let_go(p_linear_velocity: Vector3, p_angular_velocity: Vector3) -> void:
 	# let interested parties know
 	dropped.emit(self)
 
+# Called when this object is picked up
+func pick_up(by: Node3D, with_controller: XRController3D) -> void:
+	# Skip if disabled or already picked up
+	if not enabled or _state != PickableState.IDLE:
+		return
+
+	if picked_up_by:
+		let_go(Vector3.ZERO, Vector3.ZERO)
+
+	# remember who picked us up
+	picked_up_by = by
+	by_controller = with_controller
+	hold_node = with_controller if with_controller else by
+	by_hand = XRToolsHand.find_instance(by_controller)
+	by_collision_hand = XRToolsCollisionHand.find_instance(by_controller)
+	_active_grab_point = _get_grab_point(by)
+
+	# If we have been picked up by a hand then apply the hand-pose-override
+	# from the grab-point.
+	if by_hand and _active_grab_point:
+		var grab_point_hand := _active_grab_point as XRToolsGrabPointHand
+		if grab_point_hand and grab_point_hand.hand_pose:
+			by_hand.add_pose_override(self, GRIP_POSE_PRIORITY, grab_point_hand.hand_pose)
+
+	if by_hand:
+		_on_picked_up_by_controller() ## This line is new
+
+	# If we have been picked up by a collision hand then add collision
+	# exceptions to prevent the hand and pickable colliding.
+	if by_collision_hand:
+		add_collision_exception_with(by_collision_hand)
+		by_collision_hand.add_collision_exception_with(self)
+
+	# Remember the mode before pickup
+	match release_mode:
+		ReleaseMode.UNFROZEN:
+			restore_freeze = false
+
+		ReleaseMode.FROZEN:
+			restore_freeze = true
+
+		_:
+			restore_freeze = freeze
+
+	# turn off physics on our pickable object
+	freeze = true
+	collision_layer = picked_up_layer
+	collision_mask = 0
+
+	if by.picked_up_ranged:
+		if ranged_grab_method == RangedMethod.LERP:
+			_start_ranged_grab()
+		else:
+			_do_snap_grab()
+	elif _active_grab_point:
+		_do_snap_grab()
+	else:
+		_do_precise_grab()
+
+## This method requests highlighting of the [XRToolsPickable].
+## If [param from] is null then all highlighting requests are cleared,
+## otherwise the highlight request is associated with the specified node.
+func request_highlight(from : Node, on : bool = true) -> void:
+	# Save if we are highlighted
+	var old_highlighted := _highlighted
+
+	# Update the highlight requests dictionary
+	if not from:
+		_highlight_requests.clear()
+	elif on:
+		_highlight_requests[from] = from
+	else:
+		_highlight_requests.erase(from)
+
+	# Update the highlighted state
+	_highlighted = _highlight_requests.size() > 0
+
+	# Report any changes
+	if _highlighted != old_highlighted:
+		if _highlighted: # If highlight is on and new, rumble controller
+			if from is XRToolsFunctionPickup:
+				rumble(from)
+		emit_signal("highlight_updated", self, _highlighted)
+
 
 
 ### Events ###
 
 func _on_exit_box(area : Area3D):
-	if area == in_box:
+	if area == in_box and area != desktop:
 		tangible(TangibleState.INTANGIBLE)
 
 func _on_enter_box(area : Area3D):
@@ -187,11 +276,15 @@ func _on_picked_up_by_ball():
 	activate_snap()
 	shrink()
 
-func _on_picked_up(_pickable):
+	in_box = null
+
+func _on_picked_up_by_controller():
 	if copy:
 		copy.queue_free()
 		copy = null
-		in_box = null
+	
+	in_box = desktop
+	reparent(desktop.pokemon)
 
 func disable_snap():
 	for point in _grab_points:
@@ -240,8 +333,6 @@ func tangible(_tangible_state : TangibleState):
 			visible = false
 			collision.set_deferred("disabled", true)
 
-
-
 func apply_shader(node : Node3D):
 	## Apply shader to node
 	if node is MeshInstance3D:
@@ -262,3 +353,11 @@ func apply_shader(node : Node3D):
 	## Apply shader to children
 	for child in node.get_children():
 		if child is Node3D: apply_shader(child)
+
+func rumble(from):
+	if picked_up_by: from.get_parent().full_rumble()
+
+func fix_pos(pos, neg):
+	var _new_position = global_position
+
+	global_position = _new_position.clamp(neg, pos)

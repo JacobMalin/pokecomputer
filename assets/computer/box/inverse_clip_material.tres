@@ -5,6 +5,7 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_k31dk")
+shader_parameter/override = null
 shader_parameter/pos = Vector3(0.5, 0.5, 0.5)
 shader_parameter/neg = Vector3(-0.5, -0.5, -0.5)
 shader_parameter/w_cam = null

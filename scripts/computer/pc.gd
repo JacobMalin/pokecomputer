@@ -6,8 +6,6 @@ extends Node3D
 @onready var desktop : Desktop = $Desktop
 @onready var monitor_collision : CollisionShape3D = $MonitorArea/Collision
 
-@onready var pokewatch = $"../XROrigin3D/LeftController/Pokewatch"
-
 @onready var anim : AnimationPlayer = $AnimationPlayer
 @onready var onAudio : AudioStreamPlayer3D = $OnSound
 @onready var offAudio : AudioStreamPlayer3D = $OffSound
@@ -18,8 +16,6 @@ var disabled = false
 
 func _ready():
 	if !on: anim.play_backwards("on")
-	
-	pokewatch.panel_activate.connect(panel_press)
 
 
 ### Events ###
@@ -41,8 +37,8 @@ func _on_monitor_entered(area):
 		# Rumble
 		area.rumble()
 
-func panel_press(panel : String, _location : Area3D):
-	print(panel)
+func _on_panel_press(panel : String, location : Area3D):
+	desktop._on_panel_press(panel, location)
 
 ### Helper ###
 
@@ -56,6 +52,3 @@ func update_state(start : bool):
 		if start: desktop.power(true) # only show corners at end of opening animation
 	else:
 		disabled = start
-
-
-

@@ -437,3 +437,6 @@ Needed."
 transform = Transform3D(4.62577e-08, 0.0557696, 2.75903e-08, 2.34136e-15, 2.43776e-09, -0.631192, -0.612702, 4.21048e-09, -3.29011e-16, -9.88008, 1.28738, -1.17141)
 material_override = SubResource("StandardMaterial3D_ans0x")
 mesh = SubResource("PlaneMesh_yon2s")
+
+[connection signal="panel_activate" from="XROrigin3D/LeftController/Pokewatch" to="PC" method="_on_panel_press"]
+[connection signal="panel_activate" from="XROrigin3D/RightController/Pokewatch" to="PC" method="_on_panel_press"]

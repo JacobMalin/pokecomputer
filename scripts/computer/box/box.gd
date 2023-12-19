@@ -157,6 +157,19 @@ func _on_take_priority(child):
 	# Take priority for self
 	take_priority.emit(self)
 
+func _on_panel_press(panel : String, location : Area3D):
+	if location == self:
+		match panel:
+			"add": add()
+			"minimize": minimize()
+			"delete": delete()
+
+		return true
+
+	for box in get_children_boxes():
+		if box._on_panel_press(panel, location): return true
+	
+	return false
 
 
 ### Helper ###
@@ -195,3 +208,21 @@ func power(on : bool):
 
 func get_children_boxes():
 	return boxes.get_children()
+
+func get_parent_box():
+	return get_parent().get_parent()
+
+func add():
+	print("add", name)
+
+func minimize():
+	print("minimize", name)
+
+func delete():
+	print("delete", name)
+
+	for poke in pokemon.get_children():
+		poke.reparent(get_parent_box().pokemon)
+		poke.set_box(get_parent_box())
+
+	queue_free()
