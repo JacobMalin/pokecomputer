@@ -1353,11 +1353,17 @@ transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 
 [node name="head2" parent="Node2/gyarados/body/neck2" index="4"]
 transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0.0625, -0.5625)
 
+[node name="jaw_upper2" parent="Node2/gyarados/body/neck2/head2" index="13"]
+transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391, 0, -0.125, -0.375)
+
 [node name="jaw_lower" parent="Node2/gyarados/body/neck2/head2" index="14"]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, -0.3125, -0.3125)
+transform = Transform3D(1, 0, 0, 0, 0.499999, 0.866025, 0, -0.866025, 0.499999, 0, -0.3125, -0.3125)
 
 [node name="whisker_left" parent="Node2/gyarados/body/neck2/head2" index="15"]
-transform = Transform3D(0.683013, -0.635646, 0.359789, 0.683013, 0.73038, -0.006236, -0.258819, 0.25, 0.933013, -0.21875, -0.25, -0.3125)
+transform = Transform3D(0.683013, -0.635645, 0.35979, 0.683012, 0.730381, -0.00623585, -0.25882, 0.25, 0.933013, -0.21875, -0.25, -0.3125)
+
+[node name="whisker_left22" parent="Node2/gyarados/body/neck2/head2/whisker_left" index="1"]
+transform = Transform3D(0.866026, -0.5, 0, 0.5, 0.866026, 0, 0, 0, 1, -0.1875, 4.16334e-17, 0)
 
 [node name="whisker_left32" parent="Node2/gyarados/body/neck2/head2/whisker_left/whisker_left22" index="1"]
 transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, -0.1875, -1.80411e-16, 2.22045e-16)
@@ -1366,7 +1372,10 @@ transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, -0
 transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -0.25, -0.0625, 0)
 
 [node name="whisker_right" parent="Node2/gyarados/body/neck2/head2" index="16"]
-transform = Transform3D(0.683013, 0.635646, -0.359789, -0.683013, 0.73038, -0.006236, 0.258819, 0.25, 0.933013, 0.21875, -0.25, -0.3125)
+transform = Transform3D(0.683013, 0.635645, -0.35979, -0.683012, 0.730381, -0.00623585, 0.25882, 0.25, 0.933013, 0.21875, -0.25, -0.3125)
+
+[node name="whisker_right22" parent="Node2/gyarados/body/neck2/head2/whisker_right" index="1"]
+transform = Transform3D(0.866026, 0.5, 0, -0.5, 0.866026, 0, 0, 0, 1, 0.1875, 4.16334e-17, 0)
 
 [node name="whisker_right32" parent="Node2/gyarados/body/neck2/head2/whisker_right/whisker_right22" index="1"]
 transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, 0.1875, -1.80411e-16, 2.22045e-16)
@@ -1374,8 +1383,14 @@ transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, 0.
 [node name="whisker_right42" parent="Node2/gyarados/body/neck2/head2/whisker_right/whisker_right22/whisker_right32" index="1"]
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0.25, -0.0625, 0)
 
+[node name="fin_right2" parent="Node2/gyarados/body/neck2/head2" index="17"]
+transform = Transform3D(0.707108, 0, -0.707106, 0, 1, 0, 0.707106, 0, 0.707108, 0.21875, -0.1875, -0.09375)
+
+[node name="fin_left2" parent="Node2/gyarados/body/neck2/head2" index="18"]
+transform = Transform3D(0.707108, 0, 0.707106, 0, 1, 0, -0.707106, 0, 0.707108, -0.21875, -0.1875, -0.09375)
+
 [node name="segment14" parent="Node2/gyarados/body" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.34202, -0.939693, 0, 0.939693, 0.34202, -0.03125, 0.03125, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.342021, -0.939693, 0, 0.939693, 0.342021, -0.03125, 0.03125, -0.0625)
 
 [node name="segment22" parent="Node2/gyarados/body/segment14" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, 0.03125, -0.03125, 0.375)
@@ -1393,7 +1408,7 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0.31
 transform = Transform3D(1, 0, 0, 0, 0.887011, 0.461749, 0, -0.461749, 0.887011, 0, 0, 0.3125)
 
 [node name="segment92" parent="Node2/gyarados/body/segment14/segment22/segment32/segment42/segment52/segment62/segment72/segment82" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0.03125, 0.03125, 0.375)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0.03125, 0.03125, 0.375)
 
 [node name="segment102" parent="Node2/gyarados/body/segment14/segment22/segment32/segment42/segment52/segment62/segment72/segment82/segment92" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, -0.03125, 0.3125)
@@ -1402,7 +1417,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048
 transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0.25)
 
 [node name="segment132" parent="Node2/gyarados/body/segment14/segment22/segment32/segment42/segment52/segment62/segment72/segment82/segment92/segment102/segment112/segment122" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0.1875)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0, 0.1875)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

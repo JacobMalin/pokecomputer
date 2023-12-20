@@ -3,3 +3,27 @@
 [ext_resource type="PackedScene" uid="uid://fhksh7if8imh" path="res://assets/pokemon/gltf/rhydon.gltf" id="1_8v2aj"]
 
 [node name="rhydon" instance=ExtResource("1_8v2aj")]
+
+[node name="leftarm" parent="Node2/rhydon/body" index="1"]
+transform = Transform3D(0.696364, -0.586824, -0.413176, 0.696364, 0.413176, 0.586824, -0.173648, -0.696364, 0.696364, -0.40625, 0.20029, -0.264598)
+
+[node name="lefthand" parent="Node2/rhydon/body/leftarm" index="0"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, -0.3125, 0, 0)
+
+[node name="rightarm" parent="Node2/rhydon/body" index="2"]
+transform = Transform3D(0.696364, 0.586824, 0.413176, -0.696364, 0.413176, 0.586824, 0.173648, -0.696364, 0.696364, 0.40625, 0.20029, -0.264598)
+
+[node name="righthand" parent="Node2/rhydon/body/rightarm" index="0"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, 0.3125, 0, 0)
+
+[node name="tail" parent="Node2/rhydon/body" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.987688, 0.156434, 0, -0.156434, 0.987688, 0, -0.42471, -0.123973)
+
+[node name="tail2" parent="Node2/rhydon/body/tail" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, -0.03125, 0.65625)
+
+[node name="tail3" parent="Node2/rhydon/body/tail/tail2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.894934, -0.446198, 0, 0.446198, 0.894934, 0, -0.03125, 0.4375)
+
+[node name="tail4" parent="Node2/rhydon/body/tail/tail2/tail3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.870356, -0.492424, 0, 0.492424, 0.870356, 0, -0.03125, 0.375)

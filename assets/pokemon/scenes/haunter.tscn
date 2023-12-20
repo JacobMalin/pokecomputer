@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdbvs0uk5rjs8"]
+[gd_scene load_steps=6 format=3 uid="uid://bdbvs0uk5rjs8"]
 
 [ext_resource type="PackedScene" uid="uid://b7i5aydb7mg2l" path="res://assets/pokemon/gltf/haunter.gltf" id="1_4kdmy"]
 
@@ -26,150 +26,6 @@ tracks/2/path = NodePath("Node2/haunter/body/torso/mouth_top2")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.125, -0.5)
-tracks/3/type = "position_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node2/haunter/body/torso/mouth_closed_cover")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.21875, 0.6875, -0.25)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node2/haunter/body/hand_left")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/5/type = "rotation_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node2/haunter/body/hand_left/finger_left_index")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node2/haunter/body/hand_left/finger_left_index/finger_left_index22")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/7/type = "rotation_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Node2/haunter/body/hand_left/finger_left_middle")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("Node2/haunter/body/hand_left/finger_left_middle/finger_left_middle22")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/9/type = "rotation_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("Node2/haunter/body/hand_left/finger_left_ring")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("Node2/haunter/body/hand_left/finger_left_ring/finger_left_ring22")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/11/type = "rotation_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("Node2/haunter/body/hand_left/hand_left22")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("Node2/haunter/body/hand_right")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/13/type = "rotation_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("Node2/haunter/body/hand_right/finger_right_index")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/14/type = "rotation_3d"
-tracks/14/imported = true
-tracks/14/enabled = true
-tracks/14/path = NodePath("Node2/haunter/body/hand_right/finger_right_index/finger_right_index2")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/15/type = "rotation_3d"
-tracks/15/imported = true
-tracks/15/enabled = true
-tracks/15/path = NodePath("Node2/haunter/body/hand_right/finger_right_middle")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/16/type = "rotation_3d"
-tracks/16/imported = true
-tracks/16/enabled = true
-tracks/16/path = NodePath("Node2/haunter/body/hand_right/finger_right_middle/finger_right_middle2")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/17/type = "rotation_3d"
-tracks/17/imported = true
-tracks/17/enabled = true
-tracks/17/path = NodePath("Node2/haunter/body/hand_right/finger_right_ring")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/18/type = "rotation_3d"
-tracks/18/imported = true
-tracks/18/enabled = true
-tracks/18/path = NodePath("Node2/haunter/body/hand_right/finger_right_ring/finger_right_ring2")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/19/type = "rotation_3d"
-tracks/19/imported = true
-tracks/19/enabled = true
-tracks/19/path = NodePath("Node2/haunter/body/hand_right/hand_right2")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_x22d1"]
-resource_name = "animation_haunter_cry"
-length = 1.5
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2/haunter/body/torso/mouth_top2")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.125, -0.5, 0.233333, 1, 0, 0.241667, -0.5, 0.266667, 1, 0, 0.25, -0.5, 1.23333, 1, 0, 0.25, -0.5, 1.26667, 1, 0, 0.241667, -0.5, 1.5, 1, 0, 0.125, -0.5)
-tracks/1/type = "position_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2/haunter/body/torso/mouth_top2/eye_right/eyelid_right")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.03125, -0.1875, 0.005625)
-tracks/2/type = "position_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2/haunter/body/torso/mouth_top2/eye_left7/eyelid_left")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.03125, 0.0625, 0.005625)
 tracks/3/type = "position_3d"
 tracks/3/imported = true
 tracks/3/enabled = true
@@ -582,7 +438,6 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tj6lp"]
 _data = {
 "animation_haunter_blink": SubResource("Animation_674t5"),
-"animation_haunter_cry": SubResource("Animation_x22d1"),
 "animation_haunter_ground_idle": SubResource("Animation_7issc"),
 "animation_haunter_mouth_closed": SubResource("Animation_1c5sr")
 }
@@ -590,22 +445,22 @@ _data = {
 [node name="haunter" instance=ExtResource("1_4kdmy")]
 
 [node name="hand_left" parent="Node2/haunter/body" index="1"]
-transform = Transform3D(0.866025, -0.482963, 0.12941, 0.5, 0.836516, -0.224144, 7.45058e-09, 0.258819, 0.965926, -0.8125, 0.125, -0.5)
+transform = Transform3D(0.866025, -0.482963, 0.12941, 0.5, 0.836516, -0.224145, 1.78814e-07, 0.25882, 0.965926, -0.8125, 0.125, -0.5)
 
 [node name="finger_left_index" parent="Node2/haunter/body/hand_left" index="1"]
-transform = Transform3D(0.933013, 0.00623599, -0.359789, -0.25, 0.73038, -0.635646, 0.258819, 0.683013, 0.683013, 0.09375, 0.125, -0.09375)
+transform = Transform3D(0.933013, 0.00623587, -0.35979, -0.25, 0.730381, -0.635645, 0.25882, 0.683012, 0.683013, 0.09375, 0.125, -0.09375)
 
 [node name="finger_left_index22" parent="Node2/haunter/body/hand_left/finger_left_index" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.25)
 
 [node name="finger_left_middle" parent="Node2/haunter/body/hand_left" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0.140625, -0.078125)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, 0.140625, -0.078125)
 
 [node name="finger_left_middle22" parent="Node2/haunter/body/hand_left/finger_left_middle" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.25)
 
 [node name="finger_left_ring" parent="Node2/haunter/body/hand_left" index="3"]
-transform = Transform3D(0.933013, -0.00623599, 0.359789, 0.25, 0.73038, -0.635646, -0.258819, 0.683013, 0.683013, -0.09375, 0.125, -0.09375)
+transform = Transform3D(0.933013, -0.00623587, 0.35979, 0.25, 0.730381, -0.635645, -0.25882, 0.683012, 0.683013, -0.09375, 0.125, -0.09375)
 
 [node name="finger_left_ring22" parent="Node2/haunter/body/hand_left/finger_left_ring" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.25)
@@ -614,22 +469,22 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.2
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.09375)
 
 [node name="hand_right" parent="Node2/haunter/body" index="2"]
-transform = Transform3D(0.866025, 0.482963, -0.12941, -0.5, 0.836516, -0.224144, -7.45058e-09, 0.258819, 0.965926, 0.8125, 0.125, -0.5)
+transform = Transform3D(0.866025, 0.482963, -0.12941, -0.5, 0.836516, -0.224145, -1.78814e-07, 0.25882, 0.965926, 0.8125, 0.125, -0.5)
 
 [node name="finger_right_index" parent="Node2/haunter/body/hand_right" index="1"]
-transform = Transform3D(0.933013, -0.00623599, 0.359789, 0.25, 0.73038, -0.635646, -0.258819, 0.683013, 0.683013, -0.09375, 0.125, -0.09375)
+transform = Transform3D(0.933013, -0.00623587, 0.35979, 0.25, 0.730381, -0.635645, -0.25882, 0.683012, 0.683013, -0.09375, 0.125, -0.09375)
 
 [node name="finger_right_index2" parent="Node2/haunter/body/hand_right/finger_right_index" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.25)
 
 [node name="finger_right_middle" parent="Node2/haunter/body/hand_right" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0.140625, -0.078125)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, 0.140625, -0.078125)
 
 [node name="finger_right_middle2" parent="Node2/haunter/body/hand_right/finger_right_middle" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.25)
 
 [node name="finger_right_ring" parent="Node2/haunter/body/hand_right" index="3"]
-transform = Transform3D(0.933013, 0.00623599, -0.359789, -0.25, 0.73038, -0.635646, 0.258819, 0.683013, 0.683013, 0.09375, 0.125, -0.09375)
+transform = Transform3D(0.933013, 0.00623587, -0.35979, -0.25, 0.730381, -0.635645, 0.25882, 0.683012, 0.683013, 0.09375, 0.125, -0.09375)
 
 [node name="finger_right_ring2" parent="Node2/haunter/body/hand_right/finger_right_ring" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, -0.25)

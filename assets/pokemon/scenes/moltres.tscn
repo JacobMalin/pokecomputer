@@ -384,46 +384,49 @@ _data = {
 [node name="moltres" instance=ExtResource("1_o20o6")]
 
 [node name="body" parent="Node2/moltres" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0.875, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+
+[node name="torso" parent="Node2/moltres/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.866026, 0.5, 0, -0.5, 0.866026, 0, -0.21875, 0.015625)
 
 [node name="neck" parent="Node2/moltres/body/torso" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0.53125, -0.015625)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.53125, -0.015625)
 
 [node name="head" parent="Node2/moltres/body/torso/neck" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0.375, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866026, -0.5, 0, 0.5, 0.866026, 0, 0.375, 0)
 
 [node name="tail" parent="Node2/moltres/body/torso" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0, -0.09375, 0.171875)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, -0.09375, 0.171875)
 
 [node name="leftwing" parent="Node2/moltres/body/torso" index="3"]
-transform = Transform3D(0.965926, -0.0225576, 0.257834, 9.31323e-10, 0.996195, 0.0871557, -0.258819, -0.084186, 0.96225, -0.21875, 0.4375, -0.015625)
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -0.21875, -0.125, -0.046875)
 
 [node name="leftwing2" parent="Node2/moltres/body/torso/leftwing" index="1"]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -0.6875, 0, 0)
+transform = Transform3D(-0.996195, 0, -0.0871559, 0, 1, 0, 0.0871559, 0, -0.996195, -0.6875, 0, 0)
 
 [node name="rightwing" parent="Node2/moltres/body/torso" index="4"]
-transform = Transform3D(0.965926, 0.0225576, -0.257834, -9.31323e-10, 0.996195, 0.0871557, 0.258819, -0.084186, 0.96225, 0.21875, 0.4375, -0.015625)
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0.21875, -0.125, -0.046875)
 
 [node name="rightwing2" parent="Node2/moltres/body/torso/rightwing" index="1"]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.6875, 0, 0)
+transform = Transform3D(-0.996195, 0, 0.0871559, 0, 1, 0, -0.0871559, 0, -0.996195, 0.6875, 0, 0)
 
 [node name="rightleg" parent="Node2/moltres/body" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0.15625, -0.21875, 0.015625)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.15625, -0.21875, 0.015625)
 
 [node name="rightknee2" parent="Node2/moltres/body/rightleg/rightknee" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0, -0.125, 0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.866026, -0.5, 0, 0.5, 0.866026, 0, -0.125, 0.0625)
 
 [node name="rightfoot" parent="Node2/moltres/body/rightleg/rightknee/rightknee2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.21875, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.21875, -0.0625)
 
 [node name="leftleg" parent="Node2/moltres/body" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, -0.15625, -0.21875, 0.015625)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.15625, -0.21875, 0.015625)
 
 [node name="leftknee2" parent="Node2/moltres/body/leftleg/leftknee" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0, -0.125, 0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.866026, -0.5, 0, 0.5, 0.866026, 0, -0.125, 0.0625)
 
 [node name="leftfoot" parent="Node2/moltres/body/leftleg/leftknee/leftknee2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.21875, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.21875, -0.0625)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

@@ -207,108 +207,6 @@ tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_yhcix"]
-resource_name = "animation_magikarp_male_render"
-length = 0.001
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2/magikarp/body")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.0654031, 0, 0, 0.997859)
-tracks/1/type = "position_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2/magikarp/body/whisker_right/whisker_right22")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.1875, 0, 0)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2/magikarp/body/whisker_right/whisker_right22")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
-tracks/3/type = "position_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node2/magikarp/body/whisker_left/whisker_left22")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, -0.1875, 0, 0)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node2/magikarp/body/whisker_left/whisker_left22")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node2/magikarp/body/eyes/eye_right2/eyelid_right2")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, -0.0375, 0, 0.0059375)
-tracks/6/type = "position_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node2/magikarp/body/eyes/eye_left2/eyelid_left2")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0.0375, 0, 0.0059375)
-tracks/7/type = "rotation_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Node2/magikarp/body/whisker_right")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0.135299, -0.326641, -0.29516, 0.887626)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("Node2/magikarp/body/whisker_left")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 0.135299, 0.326641, 0.29516, 0.887626)
-tracks/9/type = "rotation_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("Node2/magikarp/body/fin_right2")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.258819, 0, 0.965926)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("Node2/magikarp/body/fin_left2")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926)
-tracks/11/type = "rotation_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("Node2/magikarp/body/whisker_right/whisker_right22/whisker_right32")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("Node2/magikarp/body/whisker_left/whisker_left22/whisker_left32")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
-tracks/13/type = "rotation_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("Node2/magikarp/body/tail/tail22/tail32")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
 [sub_resource type="Animation" id="Animation_xotdb"]
 resource_name = "animation_magikarp_water_swim"
 length = 0.001
@@ -412,18 +310,123 @@ tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_yhcix"]
+resource_name = "animation_magikarp_male_render"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/magikarp/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0654031, 0, 0, 0.997859)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/magikarp/body/whisker_right/whisker_right22")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.1875, 0, 0)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/magikarp/body/whisker_right/whisker_right22")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/magikarp/body/whisker_left/whisker_left22")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.1875, 0, 0)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/magikarp/body/whisker_left/whisker_left22")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/magikarp/body/eyes/eye_right2/eyelid_right2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.0375, 0, 0.0059375)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/magikarp/body/eyes/eye_left2/eyelid_left2")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0375, 0, 0.0059375)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/magikarp/body/whisker_right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.135299, -0.326641, -0.29516, 0.887626)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/magikarp/body/whisker_left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0.135299, 0.326641, 0.29516, 0.887626)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/magikarp/body/fin_right2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.258819, 0, 0.965926)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/magikarp/body/fin_left2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/magikarp/body/whisker_right/whisker_right22/whisker_right32")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0.130526, 0.991445)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/magikarp/body/whisker_left/whisker_left22/whisker_left32")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/magikarp/body/tail/tail22/tail32")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mxcto"]
 _data = {
 "animation_magikarp_air_idle": SubResource("Animation_wyvtw"),
 "animation_magikarp_blink": SubResource("Animation_4xxp8"),
-"animation_magikarp_male_render": SubResource("Animation_yhcix"),
+"animation_magikarp_ground_idle": SubResource("Animation_yhcix"),
 "animation_magikarp_water_swim": SubResource("Animation_xotdb")
 }
 
 [node name="magikarp" instance=ExtResource("1_oun8f")]
 
+[node name="body" parent="Node2/magikarp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0.635417, -0.015625)
+
 [node name="whisker_right" parent="Node2/magikarp/body" index="9"]
-transform = Transform3D(0.596368, 0.422408, -0.682581, -0.596368, 0.802337, -0.0245259, 0.5373, 0.421696, 0.730398, 0.125, -0.0729167, -0.421875)
+transform = Transform3D(0.612373, 0.435595, -0.65974, -0.612372, 0.78915, -0.0473671, 0.500001, 0.433013, 0.749999, 0.125, -0.0729167, -0.421875)
 
 [node name="whisker_right22" parent="Node2/magikarp/body/whisker_right" index="1"]
 transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 0.1875, 0, 0)
@@ -432,7 +435,7 @@ transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0.3125, -0.0625, 0)
 
 [node name="whisker_left" parent="Node2/magikarp/body" index="10"]
-transform = Transform3D(0.596368, -0.422408, 0.682581, 0.596368, 0.802337, -0.0245259, -0.5373, 0.421696, 0.730398, -0.125, -0.0729167, -0.421875)
+transform = Transform3D(0.612373, -0.435595, 0.65974, 0.612372, 0.78915, -0.0473671, -0.500001, 0.433013, 0.749999, -0.125, -0.0729167, -0.421875)
 
 [node name="whisker_left22" parent="Node2/magikarp/body/whisker_left" index="1"]
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, -0.1875, 0, 0)
@@ -441,10 +444,10 @@ transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 
 transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -0.3125, -0.0625, 0)
 
 [node name="fin_right2" parent="Node2/magikarp/body" index="11"]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.15625, -0.135417, -0.234375)
+transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, 0.15625, -0.135417, -0.234375)
 
 [node name="fin_left2" parent="Node2/magikarp/body" index="12"]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -0.15625, -0.135417, -0.234375)
+transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, -0.15625, -0.135417, -0.234375)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

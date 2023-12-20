@@ -256,28 +256,28 @@ _data = {
 [node name="jynx" instance=ExtResource("1_t76f3")]
 
 [node name="leftarm" parent="Node2/jynx/body/body2" index="3"]
-transform = Transform3D(0.653282, -0.270598, -0.707107, 0.382683, 0.92388, 0, 0.653281, -0.270598, 0.707107, -0.34375, 0.375, -0.03125)
+transform = Transform3D(0.653281, -0.270598, -0.707107, 0.382684, 0.92388, -5.96047e-08, 0.653281, -0.270598, 0.707107, -0.34375, 0.375, -0.03125)
 
 [node name="leftforearm" parent="Node2/jynx/body/body2/leftarm" index="1"]
-transform = Transform3D(0.271707, 0.74227, -0.612545, -0.911164, 0.403282, 0.0845232, 0.309767, 0.535163, 0.785904, -0.25, 0, 0)
+transform = Transform3D(0.271707, 0.74227, -0.612545, -0.911164, 0.403282, 0.0845228, 0.309767, 0.535164, 0.785904, -0.25, 0, 0)
 
 [node name="lefthand" parent="Node2/jynx/body/body2/leftarm/leftforearm" index="1"]
-transform = Transform3D(0.707107, 0.653282, -0.270598, -0.707107, 0.653282, -0.270598, 1.49012e-08, 0.382683, 0.92388, -0.375, 0, 0)
+transform = Transform3D(0.707107, 0.653282, -0.270598, -0.707107, 0.653282, -0.270598, -8.9407e-08, 0.382684, 0.92388, -0.375, 0, 0)
 
 [node name="finger10" parent="Node2/jynx/body/body2/leftarm/leftforearm/lefthand" index="5"]
-transform = Transform3D(0.40865, -0.220538, -0.885646, 0.551952, 0.83253, 0.0473672, 0.72688, -0.50819, 0.46194, -0.0625, 0, -0.078125)
+transform = Transform3D(0.408649, -0.220539, -0.885646, 0.551952, 0.832529, 0.0473662, 0.72688, -0.508191, 0.461939, -0.0625, 0, -0.078125)
 
 [node name="rightarm" parent="Node2/jynx/body/body2" index="4"]
-transform = Transform3D(0.653282, 0.270598, 0.707107, -0.382683, 0.92388, 0, -0.653281, -0.270598, 0.707107, 0.34375, 0.375, -0.03125)
+transform = Transform3D(0.653281, 0.270598, 0.707107, -0.382684, 0.92388, -5.96047e-08, -0.653281, -0.270598, 0.707107, 0.34375, 0.375, -0.03125)
 
 [node name="rightforearm" parent="Node2/jynx/body/body2/rightarm" index="1"]
-transform = Transform3D(0.271707, -0.74227, 0.612545, 0.911164, 0.403282, 0.0845232, -0.309767, 0.535163, 0.785904, 0.25, 0, 0)
+transform = Transform3D(0.271707, -0.74227, 0.612545, 0.911164, 0.403282, 0.0845228, -0.309767, 0.535164, 0.785904, 0.25, 0, 0)
 
 [node name="righthand" parent="Node2/jynx/body/body2/rightarm/rightforearm" index="1"]
-transform = Transform3D(0.707107, -0.653282, 0.270598, 0.707107, 0.653282, -0.270598, -1.49012e-08, 0.382683, 0.92388, 0.375, 0, 0)
+transform = Transform3D(0.707107, -0.653282, 0.270598, 0.707107, 0.653282, -0.270598, 8.9407e-08, 0.382684, 0.92388, 0.375, 0, 0)
 
 [node name="finger5" parent="Node2/jynx/body/body2/rightarm/rightforearm/righthand" index="5"]
-transform = Transform3D(0.40865, 0.220538, 0.885646, -0.551952, 0.83253, 0.0473672, -0.72688, -0.50819, 0.46194, 0.0625, 0, -0.078125)
+transform = Transform3D(0.408649, 0.220539, 0.885646, -0.551952, 0.832529, 0.0473662, -0.72688, -0.508191, 0.461939, 0.0625, 0, -0.078125)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

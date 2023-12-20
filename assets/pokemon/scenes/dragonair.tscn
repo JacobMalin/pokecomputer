@@ -256,34 +256,34 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.53125, 0.03125)
 
 [node name="segment12" parent="Node2/dragonair/body" index="1"]
-transform = Transform3D(0.983955, -0.0537572, -0.170124, 0.000138002, 0.953757, -0.300578, 0.178415, 0.295732, 0.938462, 0, 0, 0)
+transform = Transform3D(0.983955, -0.0537572, -0.170124, 0.00013789, 0.953757, -0.300578, 0.178416, 0.295732, 0.938462, 0, 0, 0)
 
 [node name="segment22" parent="Node2/dragonair/body/segment12" index="1"]
-transform = Transform3D(0.977815, 0.011025, -0.20918, 0.0611091, 0.940161, 0.335207, 0.200359, -0.340553, 0.918629, 0, -0.375, -0.015625)
+transform = Transform3D(0.977815, 0.0110249, -0.20918, 0.0611091, 0.940161, 0.335207, 0.200358, -0.340553, 0.918629, 0, -0.375, -0.015625)
 
 [node name="segment32" parent="Node2/dragonair/body/segment12/segment22" index="1"]
-transform = Transform3D(0.910305, 0.293467, -0.291927, -0.0197248, 0.735197, 0.677566, 0.413467, -0.611034, 0.675042, 0, -0.375, -0.015625)
+transform = Transform3D(0.910305, 0.293467, -0.291927, -0.0197246, 0.735197, 0.677566, 0.413467, -0.611035, 0.675041, 0, -0.375, -0.015625)
 
 [node name="segment42" parent="Node2/dragonair/body/segment12/segment22/segment32" index="1"]
-transform = Transform3D(0.991445, -0.130029, 0.0113761, 0.092296, 0.760018, 0.643315, -0.092296, -0.636761, 0.765517, 0, -0.4375, 0)
+transform = Transform3D(0.991445, -0.130029, 0.0113762, 0.092296, 0.760018, 0.643315, -0.092296, -0.636761, 0.765517, 0, -0.4375, 0)
 
 [node name="segment52" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42" index="1"]
-transform = Transform3D(0.866166, -0.499703, 0.00739029, 0.499703, 0.866195, 0.00193543, -0.00736857, 0.00201655, 0.999971, 0, -0.5, 0)
+transform = Transform3D(0.866166, -0.499702, 0.00739029, 0.499702, 0.866195, 0.00193543, -0.00736857, 0.00201654, 0.999971, 0, -0.5, 0)
 
 [node name="segment63" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52" index="1"]
-transform = Transform3D(0.843451, -0.534976, 0.04891, 0.535495, 0.844533, 0.00288519, -0.0428497, 0.0237576, 0.998799, 0, -0.5, 0)
+transform = Transform3D(0.843451, -0.534976, 0.04891, 0.535495, 0.844533, 0.00288519, -0.0428496, 0.0237576, 0.998799, 0, -0.5, 0)
 
 [node name="segment7" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63" index="1"]
 transform = Transform3D(0.737277, -0.67559, 0, 0.67559, 0.737277, 0, 0, 0, 1, 0, -0.4375, 0)
 
 [node name="segment82" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7" index="1"]
-transform = Transform3D(0.86672, -0.479398, -0.137744, 0.49856, 0.82415, 0.268729, -0.0153065, -0.301586, 0.953316, 0, -0.375, 0)
+transform = Transform3D(0.86672, -0.479399, -0.137744, 0.498561, 0.824149, 0.268728, -0.0153064, -0.301586, 0.953316, 0, -0.375, 0)
 
 [node name="segment92" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82" index="1"]
-transform = Transform3D(0.887597, -0.404315, -0.220684, 0.46038, 0.763185, 0.453429, -0.0149056, -0.504061, 0.86354, 0, -0.375, 0)
+transform = Transform3D(0.887597, -0.404315, -0.220684, 0.46038, 0.763185, 0.45343, -0.0149057, -0.504061, 0.86354, 0, -0.375, 0)
 
 [node name="segment102" parent="Node2/dragonair/body/segment12/segment22/segment32/segment42/segment52/segment63/segment7/segment82/segment92" index="1"]
-transform = Transform3D(0.866324, -0.470946, -0.166411, 0.498599, 0.835199, 0.232038, 0.0297091, -0.283992, 0.958366, 0, -0.375, -0.03125)
+transform = Transform3D(0.866325, -0.470945, -0.166411, 0.498598, 0.835199, 0.232038, 0.0297092, -0.283993, 0.958366, 0, -0.375, -0.03125)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

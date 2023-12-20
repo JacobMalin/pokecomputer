@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dryqs8x075r2x"]
 
-[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/weezing.gltf" id="1_k26a3"]
+[ext_resource type="PackedScene" uid="uid://3v064l6hqqnh" path="res://assets/pokemon/gltf/weezing.gltf" id="1_k26a3"]
 
 [sub_resource type="Animation" id="Animation_fn4ge"]
 resource_name = "animation_weezing_blink"
@@ -193,7 +193,19 @@ _data = {
 [node name="weezing" instance=ExtResource("1_k26a3")]
 
 [node name="main_body2" parent="Node2/weezing/bone" index="0"]
-transform = Transform3D(0.996195, 0.0871557, 2.32831e-10, -0.0868241, 0.992404, 0.0871557, 0.00759612, -0.0868241, 0.996195, 0.25, 0.125, 0)
+transform = Transform3D(0.996195, 0.0871558, 7.68341e-09, -0.0868242, 0.992404, 0.0871558, 0.00759613, -0.0868242, 0.996195, 0.25, 0.125, 0)
+
+[node name="eyelid_left2" parent="Node2/weezing/bone/main_body2/eyes/eye_left2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046875, 1.11022e-16, 0.036875)
+
+[node name="eyelid_right2" parent="Node2/weezing/bone/main_body2/eyes/eye_right2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046875, 1.11022e-16, 0.036875)
+
+[node name="small_eyelid_left2" parent="Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_left2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11022e-16, 1.11022e-16, 0.036875)
+
+[node name="small_eyelid_right2" parent="Node2/weezing/bone/main_body2/middle_body2/small_eyes/small_eye_right2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11022e-16, 1.11022e-16, 0.036875)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

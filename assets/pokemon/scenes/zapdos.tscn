@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://yrqgb7g747a7"]
 
-[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/zapdos.gltf" id="1_j7spt"]
+[ext_resource type="PackedScene" uid="uid://c5xmr5tl36xto" path="res://assets/pokemon/gltf/zapdos.gltf" id="1_j7spt"]
 
 [sub_resource type="Animation" id="Animation_4gech"]
 resource_name = "animation_zapdos_air_fly"
@@ -342,28 +342,28 @@ _data = {
 [node name="zapdos" instance=ExtResource("1_j7spt")]
 
 [node name="body" parent="Node2/zapdos" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0.734375, 0)
+transform = Transform3D(1, 0, 0, 0, 0.499999, 0.866025, 0, -0.866025, 0.499999, 0, 0.734375, 0)
 
 [node name="head" parent="Node2/zapdos/body" index="5"]
-transform = Transform3D(1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 0, 0.40625, -0.15625)
+transform = Transform3D(1, 0, 0, 0, 0.499999, -0.866025, 0, 0.866025, 0.499999, 0, 0.40625, -0.15625)
 
 [node name="leftleg" parent="Node2/zapdos/body" index="6"]
-transform = Transform3D(0.999048, -0.0218097, 0.0377755, 0, 0.866025, 0.5, -0.0436194, -0.499524, 0.865201, -0.171875, -0.15625, -0.109375)
+transform = Transform3D(0.999048, -0.0218097, 0.0377756, 3.72529e-09, 0.866025, 0.499999, -0.0436195, -0.499523, 0.865201, -0.171875, -0.15625, -0.109375)
 
 [node name="rightleg" parent="Node2/zapdos/body" index="7"]
-transform = Transform3D(0.999048, 0.0218097, -0.0377755, 0, 0.866025, 0.5, 0.0436194, -0.499524, 0.865201, 0.171875, -0.15625, -0.109375)
+transform = Transform3D(0.999048, 0.0218097, -0.0377756, -3.72529e-09, 0.866025, 0.499999, 0.0436195, -0.499523, 0.865201, 0.171875, -0.15625, -0.109375)
 
 [node name="leftwing" parent="Node2/zapdos/body/left_wing" index="0"]
-transform = Transform3D(0.683013, -0.258819, 0.683013, 0.183013, 0.965926, 0.183013, -0.707107, 0, 0.707107, -0.375, -0.0625, 0)
+transform = Transform3D(0.683013, -0.258818, 0.683013, 0.183012, 0.965926, 0.183012, -0.707107, -2.68221e-07, 0.707107, -0.375, -0.0625, 0)
 
 [node name="leftbackwing" parent="Node2/zapdos/body/left_wing" index="1"]
-transform = Transform3D(0.554032, -0.258819, 0.79124, 0.148452, 0.965926, 0.212012, -0.819152, -7.45058e-09, 0.573576, -0.375, 0, 0)
+transform = Transform3D(0.554032, -0.258819, 0.79124, 0.148452, 0.965926, 0.212012, -0.819152, -2.01166e-07, 0.573576, -0.375, 0, 0)
 
 [node name="rightwing" parent="Node2/zapdos/body/right_wing" index="0"]
-transform = Transform3D(0.683013, 0.258819, -0.683013, -0.183013, 0.965926, 0.183013, 0.707107, 0, 0.707107, 0, 0, 0)
+transform = Transform3D(0.683013, 0.258818, -0.683013, -0.183012, 0.965926, 0.183012, 0.707107, -2.68221e-07, 0.707107, 0, 0, 0)
 
 [node name="rightbackwing" parent="Node2/zapdos/body/right_wing" index="1"]
-transform = Transform3D(0.554032, 0.258819, -0.79124, -0.148452, 0.965926, 0.212012, 0.819152, -7.45058e-09, 0.573576, 0, 0.0625, 0)
+transform = Transform3D(0.554032, 0.258819, -0.79124, -0.148452, 0.965926, 0.212012, 0.819152, -2.01166e-07, 0.573576, 0, 0.0625, 0)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

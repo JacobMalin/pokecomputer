@@ -160,28 +160,28 @@ _data = {
 [node name="grimer" instance=ExtResource("1_d4e6b")]
 
 [node name="arm_right" parent="Node2/grimer/body/torso/torso22/torso32" index="2"]
-transform = Transform3D(0.853553, 0.353553, 0.382683, -0.382683, 0.92388, 8.19564e-08, -0.353553, -0.146447, 0.92388, 0.328125, 0.140625, -0.125)
+transform = Transform3D(0.853553, 0.353554, 0.382684, -0.382684, 0.92388, -6.70552e-08, -0.353553, -0.146447, 0.92388, 0.328125, 0.140625, -0.125)
 
 [node name="arm_right22" parent="Node2/grimer/body/torso/torso22/torso32/arm_right" index="1"]
-transform = Transform3D(0.529916, -0.0639394, 0.845637, 0.219498, 0.973515, -0.0639394, -0.819152, 0.219498, 0.529916, 0.25, 0.015625, 0.09375)
+transform = Transform3D(0.529916, -0.0639394, 0.845637, 0.219498, 0.973515, -0.0639395, -0.819152, 0.219498, 0.529916, 0.25, 0.015625, 0.09375)
 
 [node name="finger_right_index2" parent="Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2" index="1"]
-transform = Transform3D(0.853553, 0.382683, 0.353553, -0.353553, 0.92388, -0.146447, -0.382683, 0, 0.92388, 0.125, 0.015625, -0.0625)
+transform = Transform3D(0.853553, 0.382684, 0.353554, -0.353554, 0.92388, -0.146447, -0.382684, -2.5332e-07, 0.92388, 0.125, 0.015625, -0.0625)
 
 [node name="finger_right_ring2" parent="Node2/grimer/body/torso/torso22/torso32/arm_right/arm_right22/hand_right2" index="3"]
-transform = Transform3D(0.853553, 0.382683, -0.353553, -0.353553, 0.92388, 0.146447, 0.382683, 0, 0.92388, 0.125, 0.015625, 0.0625)
+transform = Transform3D(0.853553, 0.382684, -0.353554, -0.353554, 0.92388, 0.146447, 0.382684, 2.5332e-07, 0.92388, 0.125, 0.015625, 0.0625)
 
 [node name="arm_left" parent="Node2/grimer/body/torso/torso22/torso32" index="3"]
-transform = Transform3D(0.853553, -0.353553, -0.382683, 0.382683, 0.92388, 8.19564e-08, 0.353553, -0.146447, 0.92388, -0.328125, 0.140625, -0.125)
+transform = Transform3D(0.853553, -0.353554, -0.382684, 0.382684, 0.92388, -6.70552e-08, 0.353553, -0.146447, 0.92388, -0.328125, 0.140625, -0.125)
 
 [node name="arm_left22" parent="Node2/grimer/body/torso/torso22/torso32/arm_left" index="1"]
-transform = Transform3D(0.529916, 0.0639394, -0.845637, -0.219498, 0.973515, -0.0639394, 0.819152, 0.219498, 0.529916, -0.25, 0.015625, 0.09375)
+transform = Transform3D(0.529916, 0.0639394, -0.845637, -0.219498, 0.973515, -0.0639395, 0.819152, 0.219498, 0.529916, -0.25, 0.015625, 0.09375)
 
 [node name="finger_left_index2" parent="Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2" index="1"]
-transform = Transform3D(0.853553, -0.382683, -0.353553, 0.353553, 0.92388, -0.146447, 0.382683, 0, 0.92388, -0.125, 0.015625, -0.0625)
+transform = Transform3D(0.853553, -0.382684, -0.353554, 0.353554, 0.92388, -0.146447, 0.382684, -2.5332e-07, 0.92388, -0.125, 0.015625, -0.0625)
 
 [node name="finger_left_ring2" parent="Node2/grimer/body/torso/torso22/torso32/arm_left/arm_left22/hand_left2" index="3"]
-transform = Transform3D(0.853553, -0.382683, 0.353553, 0.353553, 0.92388, 0.146447, -0.382683, 0, 0.92388, -0.125, 0.015625, 0.0625)
+transform = Transform3D(0.853553, -0.382684, 0.353554, 0.353554, 0.92388, 0.146447, -0.382684, 2.5332e-07, 0.92388, -0.125, 0.015625, 0.0625)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

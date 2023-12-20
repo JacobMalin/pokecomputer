@@ -146,7 +146,7 @@ _data = {
 [node name="muk" instance=ExtResource("1_4kwul")]
 
 [node name="arm_right" parent="Node2/muk/body/torso/torso22" index="3"]
-transform = Transform3D(0.96363, 0.188966, 0.188966, -0.267238, 0.68139, 0.68139, -2.98023e-08, -0.707107, 0.707107, 0.515625, 0.3125, -0.046875)
+transform = Transform3D(0.96363, 0.188966, 0.188966, -0.267238, 0.68139, 0.68139, -1.49012e-08, -0.707107, 0.707107, 0.515625, 0.3125, -0.046875)
 
 [node name="arm_right22" parent="Node2/muk/body/torso/torso22/arm_right" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0.25, 0.09375)
@@ -164,7 +164,7 @@ transform = Transform3D(0.96363, -0.267238, 0, 0.267238, 0.96363, 0, 0, 0, 1, -0
 transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0.25, 0)
 
 [node name="hand_left2" parent="Node2/muk/body/torso/torso22/arm_left/arm_left22/arm_left32" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.3125, 0)
+transform = Transform3D(1, 0, 0, 0, 0.707108, 0.707106, 0, -0.707106, 0.707108, 0, 0.3125, 0)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

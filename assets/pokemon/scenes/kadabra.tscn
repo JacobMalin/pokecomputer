@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2macuv4bsvps"]
+[gd_scene load_steps=6 format=3 uid="uid://c2macuv4bsvps"]
 
 [ext_resource type="PackedScene" uid="uid://dittudyffxro" path="res://assets/pokemon/gltf/kadabra.gltf" id="1_gchyh"]
 
@@ -47,206 +47,6 @@ tracks/5/path = NodePath("Node2/kadabra/body/torso2/chest2/head/muzzle4/jaw")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, 0.707107, 0, 0, 0.707107)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node2/kadabra/body/torso2")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/7/type = "rotation_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Node2/kadabra/body/torso2/chest2")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0.608761, 0.793353)
-tracks/9/type = "rotation_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/11/type = "rotation_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/finger_index_right")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/finger_index_right/finger_index_right22")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/13/type = "rotation_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/finger_pinky_right")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/14/type = "rotation_3d"
-tracks/14/imported = true
-tracks/14/enabled = true
-tracks/14/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/finger_pinky_right/finger_pinky_right22")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/15/type = "rotation_3d"
-tracks/15/imported = true
-tracks/15/enabled = true
-tracks/15/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/thumb_right")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/16/type = "rotation_3d"
-tracks/16/imported = true
-tracks/16/enabled = true
-tracks/16/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/thumb_right/thumb_right22")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/17/type = "rotation_3d"
-tracks/17/imported = true
-tracks/17/enabled = true
-tracks/17/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/spoon/spoon22")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/18/type = "rotation_3d"
-tracks/18/imported = true
-tracks/18/enabled = true
-tracks/18/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, -0.608761, 0.793353)
-tracks/19/type = "rotation_3d"
-tracks/19/imported = true
-tracks/19/enabled = true
-tracks/19/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/20/type = "rotation_3d"
-tracks/20/imported = true
-tracks/20/enabled = true
-tracks/20/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/21/type = "rotation_3d"
-tracks/21/imported = true
-tracks/21/enabled = true
-tracks/21/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_index_left")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/22/type = "rotation_3d"
-tracks/22/imported = true
-tracks/22/enabled = true
-tracks/22/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_index_left/finger_index_left2")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/23/type = "rotation_3d"
-tracks/23/imported = true
-tracks/23/enabled = true
-tracks/23/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_pinky_left")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/24/type = "rotation_3d"
-tracks/24/imported = true
-tracks/24/enabled = true
-tracks/24/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_pinky_left/finger_pinky_left2")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/25/type = "rotation_3d"
-tracks/25/imported = true
-tracks/25/enabled = true
-tracks/25/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/thumb_left")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/26/type = "rotation_3d"
-tracks/26/imported = true
-tracks/26/enabled = true
-tracks/26/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/thumb_left/thumb_left2")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/27/type = "rotation_3d"
-tracks/27/imported = true
-tracks/27/enabled = true
-tracks/27/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_left")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, -0.130526, 0.991445)
-
-[sub_resource type="Animation" id="Animation_k85b0"]
-resource_name = "animation_kadabra_cry"
-length = 0.916667
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2/kadabra/body/torso2/chest2/head")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.0333333, 1, 0.00630254, 0, 0, 0.99998, 0.0666667, 1, 0.0147863, 0, 0, 0.999891, 0.1, 1, 0.024723, 0, 0, 0.999694, 0.133333, 1, 0.0352023, 0, 0, 0.99938, 0.2, 1, 0.0550591, 0, 0, 0.998483, 0.233333, 1, 0.0622583, 0, 0, 0.99806, 0.266667, 1, 0.066448, 0, 0, 0.99779, 0.333333, 1, 0.070627, 0, 0, 0.997503, 0.366667, 1, 0.0719327, 0, 0, 0.99741, 0.433333, 1, 0.0733687, 0, 0, 0.997305, 0.533333, 1, 0.0723896, 0, 0, 0.997377, 0.566667, 1, 0.071084, 0, 0, 0.99747, 0.6, 1, 0.0695171, 0, 0, 0.997581, 0.633333, 1, 0.0677541, 0, 0, 0.997702, 0.666667, 1, 0.0654031, 0, 0, 0.997859, 0.733333, 1, 0.0499151, 0, 0, 0.998754, 0.766667, 1, 0.0407131, 0, 0, 0.999171, 0.833333, 1, 0.0193913, 0, 0, 0.999812, 0.866667, 1, 0.0116353, 0, 0, 0.999932, 0.9, 1, 0.00387851, 0, 0, 0.999993, 0.916667, 1, 0, 0, 0, 1)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2/kadabra/body/torso2/chest2/head/muzzle4/jaw")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.707107, 0, 0, 0.707107, 0.0333333, 1, 0.682943, 0, 0, 0.730471, 0.0666667, 1, 0.649202, 0, 0, 0.760616, 0.1, 1, 0.607992, 0, 0, 0.793943, 0.133333, 1, 0.562671, 0, 0, 0.826681, 0.2, 1, 0.472038, 0, 0, 0.881578, 0.233333, 1, 0.43779, 0, 0, 0.899077, 0.266667, 1, 0.41755, 0, 0, 0.908654, 0.333333, 1, 0.397148, 0, 0, 0.917755, 0.366667, 1, 0.390731, 0, 0, 0.920505, 0.4, 1, 0.386228, 0, 0, 0.922403, 0.433333, 1, 0.383651, 0, 0, 0.923478, 0.466667, 1, 0.383328, 0, 0, 0.923612, 0.533333, 1, 0.388481, 0, 0, 0.921457, 0.566667, 1, 0.394904, 0, 0, 0.918722, 0.6, 1, 0.402587, 0, 0, 0.915382, 0.633333, 1, 0.411196, 0, 0, 0.911547, 0.666667, 1, 0.422618, 0, 0, 0.906308, 0.733333, 1, 0.496076, 0, 0, 0.868279, 0.766667, 1, 0.538117, 0, 0, 0.84287, 0.833333, 1, 0.630325, 0, 0, 0.776332, 0.916667, 1, 0.707107, 0, 0, 0.707107)
-tracks/2/type = "position_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2/kadabra/body/torso2/chest2/head/eyes/eye_left/eyelid_left")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0.046875, -0.03125, 0)
-tracks/3/type = "position_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node2/kadabra/body/torso2/chest2/head/eyes/eye_right8/eyelid_right2")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, -0.025, -0.03125, 0.00625)
-tracks/4/type = "position_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/spoon")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, -0.1875, 0)
-tracks/5/type = "rotation_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/spoon")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 tracks/6/type = "rotation_3d"
 tracks/6/imported = true
 tracks/6/enabled = true
@@ -805,78 +605,86 @@ tracks/27/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7kaq4"]
 _data = {
 "animation_kadabra_blink": SubResource("Animation_4fnwn"),
-"animation_kadabra_cry": SubResource("Animation_k85b0"),
 "animation_kadabra_idle": SubResource("Animation_sedvm"),
 "animation_kadabra_test": SubResource("Animation_k6sk0")
 }
 
 [node name="kadabra" instance=ExtResource("1_gchyh")]
 
+[node name="torso2" parent="Node2/kadabra/body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0.65625, -0.0625)
+
+[node name="chest2" parent="Node2/kadabra/body/torso2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0.1875, 0)
+
+[node name="head" parent="Node2/kadabra/body/torso2/chest2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0.421875, -0.078125)
+
 [node name="jaw" parent="Node2/kadabra/body/torso2/chest2/head/muzzle4" index="3"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.075, -0.046875)
 
 [node name="arm_right" parent="Node2/kadabra/body/torso2/chest2/shoulder_right" index="2"]
-transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 0.15625, -0.28125, 0)
+transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0.15625, -0.28125, 0)
 
 [node name="arm_right22" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.382683, -0.92388, 0, 0.92388, 0.382683, 0, -0.3125, 0.05625)
+transform = Transform3D(0.999048, 0.0436194, 2.14204e-08, -0.0386908, 0.886167, -0.461748, -0.0201412, 0.461309, 0.887011, 0, -0.3125, 0.05625)
 
 [node name="hand_right2" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22" index="1"]
-transform = Transform3D(0.745508, 0.608761, -0.271343, -0.572049, 0.793353, 0.208209, 0.34202, -1.49012e-08, 0.939693, 0, -0.25, -0.05625)
+transform = Transform3D(0.925488, 0.191984, -0.326519, -0.146225, 0.976295, 0.159576, 0.349415, -0.0999408, 0.931623, 0, -0.25, -0.05625)
 
 [node name="finger_index_right" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2" index="1"]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 0.03125, -0.125, -0.0625)
+transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0.03125, -0.125, -0.0625)
 
 [node name="finger_index_right22" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/finger_index_right" index="1"]
-transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 0.0625, -0.09375, 0)
+transform = Transform3D(0.5373, 0.843392, 0, -0.843392, 0.5373, 0, 0, 0, 1, 0.0625, -0.09375, 0)
 
 [node name="finger_pinky_right" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2" index="2"]
-transform = Transform3D(0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0, 0, 1, 0.03125, -0.125, 0.0625)
+transform = Transform3D(0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 0, 1, 0.03125, -0.125, 0.0625)
 
 [node name="finger_pinky_right22" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/finger_pinky_right" index="1"]
-transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 0.0625, -0.09375, 0)
+transform = Transform3D(0.382684, 0.92388, 0, -0.92388, 0.382684, 0, 0, 0, 1, 0.0625, -0.09375, 0)
 
 [node name="thumb_right" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2" index="3"]
-transform = Transform3D(0.999048, 0.0402991, 0.0166924, -0.00380168, 0.461672, -0.887043, -0.0434534, 0.886135, 0.461386, -0.03125, -0.125, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.5, -0.866026, 0, 0.866026, 0.5, -0.03125, -0.125, -0.0625)
 
 [node name="thumb_right22" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/thumb_right" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.991445, -0.130526, 0, 0.130526, 0.991445, 0, -0.0625, -0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.0625, -0.03125)
 
 [node name="spoon" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2" index="4"]
-transform = Transform3D(0.996195, -0.0113761, 0.0864101, 9.31323e-10, 0.991445, 0.130526, -0.0871557, -0.130029, 0.987672, 0, -0.171875, 0)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.1875, 0)
 
 [node name="spoon22" parent="Node2/kadabra/body/torso2/chest2/shoulder_right/arm_right/arm_right22/hand_right2/spoon" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0.000369048, 0.0106482, -0.15625)
 
 [node name="shoulder_left" parent="Node2/kadabra/body/torso2/chest2" index="3"]
-transform = Transform3D(0.939778, 0.341039, -0.0225576, -0.3417, 0.936031, -0.084186, -0.00759613, 0.0868241, 0.996195, -0.25, 0.4375, 0)
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -0.25, 0.4375, 0)
 
 [node name="arm_left" parent="Node2/kadabra/body/torso2/chest2/shoulder_left" index="2"]
-transform = Transform3D(0.982717, 0.0735064, 0.169897, 0.0307606, 0.840182, -0.541431, -0.182543, 0.5373, 0.8234, -0.15625, -0.28125, 0)
+transform = Transform3D(0.999049, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, -0.15625, -0.28125, 0)
 
 [node name="arm_left2" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.173648, -0.984808, 0, 0.984808, 0.173648, 0, -0.3125, 0.05625)
+transform = Transform3D(0.999048, -0.0436194, -2.14204e-08, 0.0386908, 0.886167, -0.461748, 0.0201412, 0.461309, 0.887011, 0, -0.3125, 0.05625)
 
 [node name="hand_left" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2" index="1"]
-transform = Transform3D(0.737277, 0, -0.67559, 0, 1, 0, 0.67559, 0, 0.737277, 0, -0.25, -0.05625)
+transform = Transform3D(0.976769, -0.191984, -0.0952018, 0.199964, 0.976296, 0.0828278, 0.0770436, -0.0999407, 0.992006, 0, -0.25, -0.05625)
 
 [node name="finger_index_left" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left" index="1"]
-transform = Transform3D(0.608761, 0.793353, 0, -0.793353, 0.608761, 0, 0, 0, 1, -0.03125, -0.125, -0.0625)
+transform = Transform3D(0.984807, 0.173648, 0, -0.173648, 0.984807, 0, 0, 0, 1, -0.03125, -0.125, -0.0625)
 
 [node name="finger_index_left2" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_index_left" index="1"]
-transform = Transform3D(0.92388, -0.382683, 0, 0.382683, 0.92388, 0, 0, 0, 1, -0.0625, -0.09375, 0)
-
-[node name="finger_pinky_left" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left" index="2"]
-transform = Transform3D(0.67559, 0.737277, 0, -0.737277, 0.67559, 0, 0, 0, 1, -0.03125, -0.125, 0.0625)
-
-[node name="finger_pinky_left2" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_pinky_left" index="1"]
 transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, -0.0625, -0.09375, 0)
 
+[node name="finger_pinky_left" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left" index="2"]
+transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, -0.03125, -0.125, 0.0625)
+
+[node name="finger_pinky_left2" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/finger_pinky_left" index="1"]
+transform = Transform3D(0.866026, -0.5, 0, 0.5, 0.866026, 0, 0, 0, 1, -0.0625, -0.09375, 0)
+
 [node name="thumb_left" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.461749, -0.887011, 0, 0.887011, 0.461749, 0.03125, -0.125, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.866026, -0.5, 0, 0.5, 0.866026, 0.03125, -0.125, -0.0625)
 
 [node name="thumb_left2" parent="Node2/kadabra/body/torso2/chest2/shoulder_left/arm_left/arm_left2/hand_left/thumb_left" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, -0.000369048, -0.0674768, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.793354, 0.608761, 0, -0.608761, 0.793354, -0.000369048, -0.0674768, -0.0625)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

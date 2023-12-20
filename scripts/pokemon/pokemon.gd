@@ -213,12 +213,15 @@ func safe_anim_queue(_name, backup=""):
 ### Pokemon move states ###
 
 func walk():
-	if id != 0 and anim_in_list("animation_"+pokemon_name+"_ground_walk"):
-		move_state = MoveState.WALK
-		safe_anim_play("animation_"+pokemon_name+"_ground_walk")
-		set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
-									0.0,
-									randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
+	if id != 0:
+		if anim_in_list("animation_"+pokemon_name+"_ground_walk"):
+			move_state = MoveState.WALK
+			safe_anim_play("animation_"+pokemon_name+"_ground_walk")
+			set_movement_target(Vector3(randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST),
+										0.0,
+										randf_range(-RANDOM_DEST_DIST, RANDOM_DEST_DIST)))
+		else:
+			idle() 
 
 func idle():
 	if id != 0:

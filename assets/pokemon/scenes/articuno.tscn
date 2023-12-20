@@ -561,31 +561,31 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.1875
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0.453125, -0.046875)
 
 [node name="tail" parent="Node2/articuno/body/torso" index="4"]
-transform = Transform3D(1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 0, -0.140625, 0.203125)
+transform = Transform3D(1, 0, 0, 0, 0.499999, -0.866025, 0, 0.866025, 0.499999, 0, -0.140625, 0.203125)
 
 [node name="tail2" parent="Node2/articuno/body/torso/tail" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0.5)
+transform = Transform3D(1, 0, 0, 0, 0.499999, 0.866025, 0, -0.866025, 0.499999, 0, 0, 0.5)
 
 [node name="tail3" parent="Node2/articuno/body/torso/tail/tail2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0.625)
+transform = Transform3D(1, 0, 0, 0, 0.499999, 0.866025, 0, -0.866025, 0.499999, 0, 0, 0.625)
 
 [node name="tail4" parent="Node2/articuno/body/torso/tail/tail2/tail3" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0.6875)
+transform = Transform3D(1, 0, 0, 0, 0.499999, 0.866025, 0, -0.866025, 0.499999, 0, 0, 0.6875)
 
 [node name="tail5" parent="Node2/articuno/body/torso/tail/tail2/tail3/tail4" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0.5)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, 0, 0.5)
 
 [node name="tail6" parent="Node2/articuno/body/torso/tail/tail2/tail3/tail4/tail5" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0.4375)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, 0, 0.4375)
 
 [node name="leftwing" parent="Node2/articuno/body/torso" index="5"]
-transform = Transform3D(-7.5904e-09, -4.30473e-08, 1, -0.984808, 0.173648, 0, -0.173648, -0.984808, -4.37114e-08, -0.21875, -0.171875, -0.109375)
+transform = Transform3D(-7.59043e-09, -4.30473e-08, 1, -0.984808, 0.173649, 0, -0.173649, -0.984808, -4.37114e-08, -0.21875, -0.171875, -0.109375)
 
 [node name="leftwing2" parent="Node2/articuno/body/torso/leftwing" index="1"]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -0.6875, 0.0625, 0)
 
 [node name="rightwing" parent="Node2/articuno/body/torso" index="6"]
-transform = Transform3D(-7.5904e-09, 4.30473e-08, -1, 0.984808, 0.173648, 0, 0.173648, -0.984808, -4.37114e-08, 0.21875, -0.171875, -0.109375)
+transform = Transform3D(-7.59043e-09, 4.30473e-08, -1, 0.984808, 0.173649, 0, 0.173649, -0.984808, -4.37114e-08, 0.21875, -0.171875, -0.109375)
 
 [node name="rightwing2" parent="Node2/articuno/body/torso/rightwing" index="1"]
 transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 0.6875, 0.0625, 0)
@@ -594,7 +594,7 @@ transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.1875, -0.140625, 0.015625)
 
 [node name="rightknee2" parent="Node2/articuno/body/rightleg/rightknee" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, -0.25, 0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, -0.25, 0.0625)
 
 [node name="rightfoot" parent="Node2/articuno/body/rightleg/rightknee/rightknee2" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.28125, -0.0625)
@@ -603,7 +603,7 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.2812
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.1875, -0.140625, 0.015625)
 
 [node name="leftknee2" parent="Node2/articuno/body/leftleg/leftknee" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, -0.25, 0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.707108, -0.707106, 0, 0.707106, 0.707108, 0, -0.25, 0.0625)
 
 [node name="leftfoot" parent="Node2/articuno/body/leftleg/leftknee/leftknee2" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.28125, -0.0625)

@@ -608,22 +608,22 @@ _data = {
 [node name="dragonite" instance=ExtResource("1_e6s8f")]
 
 [node name="torso2" parent="Node2/dragonite/body" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0, 0.03125)
 
 [node name="chest" parent="Node2/dragonite/body/torso2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.875, -0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0, 0.875, -0.03125)
 
 [node name="chest22" parent="Node2/dragonite/body/torso2/chest" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0.46875, 0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0, 0.46875, 0.03125)
 
 [node name="arm_left" parent="Node2/dragonite/body/torso2/chest/chest22/arms" index="0"]
-transform = Transform3D(0.737277, -0.67559, 0, 0.659576, 0.719801, 0.21644, -0.146224, -0.159576, 0.976296, -0.375, 0, 0)
+transform = Transform3D(0.737277, -0.67559, -2.08616e-07, 0.659576, 0.7198, 0.21644, -0.146225, -0.159576, 0.976296, -0.375, 0, 0)
 
 [node name="arm_left22" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left" index="1"]
-transform = Transform3D(0.953717, 0, -0.300706, 0, 1, 0, 0.300706, 0, 0.953717, -0.375, 0, 0.15625)
+transform = Transform3D(0.953717, 0, -0.300705, 0, 1, 0, 0.300705, 0, 0.953717, -0.375, 0, 0.15625)
 
 [node name="hand_left2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22" index="1"]
-transform = Transform3D(0.990501, -0.0432462, -0.130526, 0.0436194, 0.999048, 2.32831e-10, 0.130402, -0.00569347, 0.991445, -0.3125, 0, 0)
+transform = Transform3D(0.990501, -0.0432463, -0.130526, 0.0436194, 0.999048, -9.0804e-09, 0.130402, -0.00569348, 0.991445, -0.3125, 0, 0)
 
 [node name="finger_back_left2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_left/arm_left22/hand_left2" index="1"]
 transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, -0.25, -0.109375, -0.03125)
@@ -635,13 +635,13 @@ transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 
 transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, -0.25, -0.109375, -0.28125)
 
 [node name="arm_right" parent="Node2/dragonite/body/torso2/chest/chest22/arms" index="1"]
-transform = Transform3D(0.737277, 0.67559, 0, -0.659576, 0.719801, 0.21644, 0.146224, -0.159576, 0.976296, 0.375, 0, 0)
+transform = Transform3D(0.737277, 0.67559, 2.08616e-07, -0.659576, 0.7198, 0.21644, 0.146225, -0.159576, 0.976296, 0.375, 0, 0)
 
 [node name="arm_right22" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right" index="1"]
-transform = Transform3D(0.953717, 0, 0.300706, 0, 1, 0, -0.300706, 0, 0.953717, 0.375, 0, 0.15625)
+transform = Transform3D(0.953717, 0, 0.300705, 0, 1, 0, -0.300705, 0, 0.953717, 0.375, 0, 0.15625)
 
 [node name="hand_right2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22" index="1"]
-transform = Transform3D(0.990501, 0.0432462, 0.130526, -0.0436194, 0.999048, 2.32831e-10, -0.130402, -0.00569347, 0.991445, 0.3125, 0, 0)
+transform = Transform3D(0.990501, 0.0432463, 0.130526, -0.0436194, 0.999048, -9.0804e-09, -0.130402, -0.00569348, 0.991445, 0.3125, 0, 0)
 
 [node name="finger_back_right2" parent="Node2/dragonite/body/torso2/chest/chest22/arms/arm_right/arm_right22/hand_right2" index="1"]
 transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 0.25, -0.109375, -0.03125)
@@ -653,13 +653,13 @@ transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 
 transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0.25, -0.109375, -0.28125)
 
 [node name="wing_left" parent="Node2/dragonite/body/torso2/chest/chest22/wings" index="0"]
-transform = Transform3D(0.902859, -0.0871557, 0.42101, 0.0789899, 0.996195, 0.0368336, -0.422618, -7.45058e-09, 0.906308, -0.15625, 0.15625, 0)
+transform = Transform3D(0.902859, -0.0871557, 0.421011, 0.0789898, 0.996195, 0.0368336, -0.422619, 1.86265e-08, 0.906308, -0.15625, 0.15625, 0)
 
 [node name="wing_left22" parent="Node2/dragonite/body/torso2/chest/chest22/wings/wing_left" index="1"]
 transform = Transform3D(0.976296, 0, -0.21644, 0, 1, 0, 0.21644, 0, 0.976296, -0.6875, 0.3125, 0)
 
 [node name="wing_right" parent="Node2/dragonite/body/torso2/chest/chest22/wings" index="1"]
-transform = Transform3D(0.902859, 0.0871557, -0.42101, -0.0789899, 0.996195, 0.0368336, 0.422618, -7.45058e-09, 0.906308, 0.15625, 0.15625, 0)
+transform = Transform3D(0.902859, 0.0871557, -0.421011, -0.0789898, 0.996195, 0.0368336, 0.422619, 1.86265e-08, 0.906308, 0.15625, 0.15625, 0)
 
 [node name="wing_right22" parent="Node2/dragonite/body/torso2/chest/chest22/wings/wing_right" index="1"]
 transform = Transform3D(0.976296, 0, 0.21644, 0, 1, 0, -0.21644, 0, 0.976296, 0.6875, 0.3125, 0)
@@ -668,22 +668,22 @@ transform = Transform3D(0.976296, 0, 0.21644, 0, 1, 0, -0.21644, 0, 0.976296, 0.
 transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.625, 0.0625)
 
 [node name="antenna_left" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae" index="0"]
-transform = Transform3D(0.931653, -0.315525, 0.180182, 0.339094, 0.933169, -0.119212, -0.130526, 0.172163, 0.976383, -0.15625, 0, 0)
+transform = Transform3D(0.931653, -0.315525, 0.180182, 0.339093, 0.933169, -0.119212, -0.130526, 0.172163, 0.976383, -0.15625, 0, 0)
 
 [node name="antenna_left22" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left" index="1"]
-transform = Transform3D(0.793353, -0.606445, 0.0530571, 0.608761, 0.790334, -0.0691453, 3.72529e-09, 0.0871557, 0.996195, 0.03125, 0.1875, 0)
+transform = Transform3D(0.793352, -0.606445, 0.0530571, 0.608762, 0.790334, -0.0691452, 1.49012e-08, 0.0871557, 0.996195, 0.03125, 0.1875, 0)
 
 [node name="antenna_left32" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_left/antenna_left22" index="1"]
-transform = Transform3D(0.906308, -0.419003, 0.0551628, 0.422618, 0.898554, -0.118297, -3.72529e-09, 0.130526, 0.991445, 0, 0.1875, 0)
+transform = Transform3D(0.906308, -0.419002, 0.0551627, 0.422618, 0.898554, -0.118297, 1.11759e-08, 0.130526, 0.991445, 0, 0.1875, 0)
 
 [node name="antenna_right" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae" index="1"]
-transform = Transform3D(0.931653, 0.315525, -0.180182, -0.339094, 0.933169, -0.119212, 0.130526, 0.172163, 0.976383, 0.15625, 0, 0)
+transform = Transform3D(0.931653, 0.315525, -0.180182, -0.339093, 0.933169, -0.119212, 0.130526, 0.172163, 0.976383, 0.15625, 0, 0)
 
 [node name="antenna_right22" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right" index="1"]
-transform = Transform3D(0.793353, 0.606445, -0.0530571, -0.608761, 0.790334, -0.0691453, -3.72529e-09, 0.0871557, 0.996195, -0.03125, 0.1875, 0)
+transform = Transform3D(0.793352, 0.606445, -0.0530571, -0.608762, 0.790334, -0.0691452, -1.49012e-08, 0.0871557, 0.996195, -0.03125, 0.1875, 0)
 
 [node name="antenna_right32" parent="Node2/dragonite/body/torso2/chest/chest22/neck2/head2/antennae/antenna_right/antenna_right22" index="1"]
-transform = Transform3D(0.906308, 0.419003, -0.0551628, -0.422618, 0.898554, -0.118297, 3.72529e-09, 0.130526, 0.991445, 0, 0.1875, 0)
+transform = Transform3D(0.906308, 0.419002, -0.0551627, -0.422618, 0.898554, -0.118297, -1.11759e-08, 0.130526, 0.991445, 0, 0.1875, 0)
 
 [node name="tail12" parent="Node2/dragonite/body/torso2" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.375, -0.25)
@@ -698,34 +698,34 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.6875)
 
 [node name="tail52" parent="Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0.6875)
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422619, 0, -0.422619, 0.906308, 0, 0, 0.6875)
 
 [node name="tail6" parent="Node2/dragonite/body/torso2/tail12/tail22/tail33/tail42/tail52" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.625)
 
 [node name="leg_left" parent="Node2/dragonite/body/legs" index="0"]
-transform = Transform3D(0.925417, 0.163176, 0.34202, -0.173648, 0.984808, 1.86265e-09, -0.336824, -0.0593912, 0.939693, -0.28125, 0, 0)
+transform = Transform3D(0.925417, 0.163176, 0.34202, -0.173648, 0.984808, 9.31323e-09, -0.336824, -0.0593911, 0.939693, -0.28125, 0, 0)
 
 [node name="leg_left22" parent="Node2/dragonite/body/legs/leg_left" index="1"]
-transform = Transform3D(0.999048, -0.0436194, 5.82077e-11, 0.0435779, 0.998097, 0.0436194, -0.00190265, -0.0435779, 0.999048, -0.21875, -0.5625, 0.03125)
+transform = Transform3D(0.999048, -0.0436194, -1.10595e-09, 0.0435779, 0.998097, 0.0436194, -0.00190265, -0.0435779, 0.999048, -0.21875, -0.5625, 0.03125)
 
 [node name="leg_left32" parent="Node2/dragonite/body/legs/leg_left/leg_left22" index="1"]
 transform = Transform3D(0.998108, -0.0437016, -0.0432462, 0.0434956, 0.999037, -0.00569347, 0.0434534, 0.00380168, 0.999048, 0.21875, -0.125, 0.03125)
 
 [node name="foot_left" parent="Node2/dragonite/body/legs/leg_left/leg_left22/leg_left32" index="1"]
-transform = Transform3D(0.996195, -0.0871557, 0, 0.0870728, 0.995247, -0.0436194, 0.00380168, 0.0434534, 0.999048, 0, -0.0625, 0)
+transform = Transform3D(0.996195, -0.0871558, -1.5134e-09, 0.0870728, 0.995247, -0.0436193, 0.00380168, 0.0434534, 0.999048, 0, -0.0625, 0)
 
 [node name="leg_right" parent="Node2/dragonite/body/legs" index="1"]
-transform = Transform3D(0.925417, -0.163176, -0.34202, 0.173648, 0.984808, 1.86265e-09, 0.336824, -0.0593912, 0.939693, 0.90625, 0, 0)
+transform = Transform3D(0.925417, -0.163176, -0.34202, 0.173648, 0.984808, 9.31323e-09, 0.336824, -0.0593911, 0.939693, 0.90625, 0, 0)
 
 [node name="leg_right2" parent="Node2/dragonite/body/legs/leg_right" index="1"]
-transform = Transform3D(0.999048, 0.0436194, -5.82077e-11, -0.0435779, 0.998097, 0.0436194, 0.00190265, -0.0435779, 0.999048, 0.21875, -0.5625, 0.03125)
+transform = Transform3D(0.999048, 0.0436194, 1.10595e-09, -0.0435779, 0.998097, 0.0436194, 0.00190265, -0.0435779, 0.999048, 0.21875, -0.5625, 0.03125)
 
 [node name="leg_right3" parent="Node2/dragonite/body/legs/leg_right/leg_right2" index="1"]
 transform = Transform3D(0.998108, 0.0437016, 0.0432462, -0.0434956, 0.999037, -0.00569347, -0.0434534, 0.00380168, 0.999048, -0.21875, -0.125, 0.03125)
 
 [node name="foot_right" parent="Node2/dragonite/body/legs/leg_right/leg_right2/leg_right3" index="1"]
-transform = Transform3D(0.996195, 0.0871557, 0, -0.0870728, 0.995247, -0.0436194, -0.00380168, 0.0434534, 0.999048, 0, -0.0625, 0)
+transform = Transform3D(0.996195, 0.0871558, 1.5134e-09, -0.0870728, 0.995247, -0.0436193, -0.00380168, 0.0434534, 0.999048, 0, -0.0625, 0)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

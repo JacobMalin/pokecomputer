@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bnwdjga5lal82"]
 
-[ext_resource type="PackedScene" path="res://assets/pokemon/gltf/vulpix.gltf" id="1_ujp10"]
+[ext_resource type="PackedScene" uid="uid://cc177jf4ettwn" path="res://assets/pokemon/gltf/vulpix.gltf" id="1_ujp10"]
 
 [sub_resource type="Animation" id="Animation_586kd"]
 resource_name = "animation_vulpix_blink"
@@ -594,76 +594,91 @@ _data = {
 [node name="vulpix" instance=ExtResource("1_ujp10")]
 
 [node name="eyelid_right2" parent="Node2/vulpix/body/torso2/head2/eyes/eye_right2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0396875, -1.11022e-16, -2.25514e-17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0459375, -1.11022e-16, 0.00625)
 
 [node name="eyelid_left2" parent="Node2/vulpix/body/torso2/head2/eyes/eye_left2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0396875, -1.11022e-16, -2.25514e-17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0459375, -1.11022e-16, 0.00625)
+
+[node name="head_tuft2" parent="Node2/vulpix/body/torso2/head2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0.34375, -0.015625)
 
 [node name="head_hair_front3" parent="Node2/vulpix/body/torso2/head2/head_tuft2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0.046875, -0.125)
+transform = Transform3D(1, 0, 0, 0, 0.953717, -0.300705, 0, 0.300705, 0.953717, 0, 0.046875, -0.125)
 
 [node name="head_hair_front22" parent="Node2/vulpix/body/torso2/head2/head_tuft2/head_hair_front3" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.21644, 0.976296, 0, -0.976296, 0.21644, 0, 0, -0.125)
+transform = Transform3D(1, 0, 0, 0, 0.216438, 0.976296, 0, -0.976296, 0.216438, 0, 0, -0.125)
 
 [node name="ear_right2" parent="Node2/vulpix/body/torso2/head2" index="4"]
-transform = Transform3D(0.663414, 0.720019, 0.203605, -0.55667, 0.656759, -0.508709, -0.5, 0.224144, 0.836516, 0.171875, 0.3125, -0.03125)
+transform = Transform3D(0.663414, 0.720018, 0.203605, -0.55667, 0.65676, -0.508709, -0.499999, 0.224144, 0.836516, 0.171875, 0.3125, -0.03125)
 
 [node name="ear_left2" parent="Node2/vulpix/body/torso2/head2" index="5"]
-transform = Transform3D(0.663414, -0.720019, -0.203605, 0.55667, 0.656759, -0.508709, 0.5, 0.224144, 0.836516, -0.171875, 0.3125, -0.03125)
+transform = Transform3D(0.663414, -0.720018, -0.203605, 0.55667, 0.65676, -0.508709, 0.499999, 0.224144, 0.836516, -0.171875, 0.3125, -0.03125)
 
 [node name="tail2" parent="Node2/vulpix/body/torso2" index="2"]
-transform = Transform3D(0.939693, 0.219846, -0.262003, -7.45058e-09, 0.766044, 0.642788, 0.34202, -0.604023, 0.719846, -0.015625, 0.046875, 0.09375)
+transform = Transform3D(0.939693, 0.219846, -0.262003, -6.70552e-08, 0.766045, 0.642787, 0.34202, -0.604022, 0.719847, -0.015625, 0.046875, 0.09375)
 
 [node name="tail_end2" parent="Node2/vulpix/body/torso2/tail2" index="1"]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 4.16334e-17, 0.03125, 0.25)
 
 [node name="tail23" parent="Node2/vulpix/body/torso2" index="3"]
-transform = Transform3D(0.939693, -0.219846, 0.262003, 7.45058e-09, 0.766044, 0.642788, -0.34202, -0.604023, 0.719846, 0.015625, 0.046875, 0.09375)
+transform = Transform3D(0.939693, -0.219846, 0.262003, 6.70552e-08, 0.766045, 0.642787, -0.34202, -0.604022, 0.719847, 0.015625, 0.046875, 0.09375)
 
 [node name="tail_end23" parent="Node2/vulpix/body/torso2/tail23" index="1"]
 transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, -4.16334e-17, 0.03125, 0.25)
 
 [node name="tail32" parent="Node2/vulpix/body/torso2" index="4"]
-transform = Transform3D(0.707107, 0.353553, -0.612372, -1.49012e-08, 0.866025, 0.5, 0.707107, -0.353553, 0.612372, -0.03125, 0.046875, 0.09375)
+transform = Transform3D(0.707107, 0.353554, -0.612372, 3.27826e-07, 0.866024, 0.5, 0.707107, -0.353554, 0.612372, -0.03125, 0.046875, 0.09375)
 
 [node name="tail_end32" parent="Node2/vulpix/body/torso2/tail32" index="1"]
-transform = Transform3D(0.984808, 0.0151344, 0.172987, 0, 0.996195, -0.0871557, -0.173648, 0.0858316, 0.98106, 4.16334e-17, 0.03125, 0.25)
+transform = Transform3D(0.984808, 0.0151344, 0.172987, -2.79397e-09, 0.996195, -0.0871557, -0.173648, 0.0858316, 0.98106, 4.16334e-17, 0.03125, 0.25)
 
 [node name="tail42" parent="Node2/vulpix/body/torso2" index="5"]
-transform = Transform3D(0.34202, 0.321394, -0.883022, 2.98023e-08, 0.939693, 0.34202, 0.939693, -0.116978, 0.321394, -0.046875, 0.046875, 0.09375)
+transform = Transform3D(0.342019, 0.321394, -0.883023, -8.9407e-08, 0.939693, 0.34202, 0.939693, -0.116977, 0.321393, -0.046875, 0.046875, 0.09375)
 
 [node name="tail_end42" parent="Node2/vulpix/body/torso2/tail42" index="1"]
-transform = Transform3D(0.984808, 0.0449435, 0.167731, 0, 0.965926, -0.258819, -0.173648, 0.254887, 0.951251, 4.16334e-17, 0.03125, 0.25)
+transform = Transform3D(0.984808, 0.0449434, 0.167731, -7.26432e-08, 0.965926, -0.258818, -0.173648, 0.254886, 0.951251, 4.16334e-17, 0.03125, 0.25)
 
 [node name="tail52" parent="Node2/vulpix/body/torso2" index="6"]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 1.49012e-08, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0.03125, 0.046875, 0.09375)
+transform = Transform3D(0.707107, -0.353554, 0.612372, -3.27826e-07, 0.866024, 0.5, -0.707107, -0.353554, 0.612372, 0.03125, 0.046875, 0.09375)
 
 [node name="tail_end52" parent="Node2/vulpix/body/torso2/tail52" index="1"]
-transform = Transform3D(0.984808, -0.0151344, -0.172987, 0, 0.996195, -0.0871557, 0.173648, 0.0858316, 0.98106, -4.16334e-17, 0.03125, 0.25)
+transform = Transform3D(0.984808, -0.0151344, -0.172987, 2.79397e-09, 0.996195, -0.0871557, 0.173648, 0.0858316, 0.98106, -4.16334e-17, 0.03125, 0.25)
 
 [node name="tail62" parent="Node2/vulpix/body/torso2" index="7"]
-transform = Transform3D(0.34202, -0.321394, 0.883022, -2.98023e-08, 0.939693, 0.34202, -0.939693, -0.116978, 0.321394, 0.046875, 0.046875, 0.09375)
+transform = Transform3D(0.342019, -0.321394, 0.883023, 8.9407e-08, 0.939693, 0.34202, -0.939693, -0.116977, 0.321393, 0.046875, 0.046875, 0.09375)
 
 [node name="tail_end62" parent="Node2/vulpix/body/torso2/tail62" index="1"]
-transform = Transform3D(0.984808, -0.0449435, -0.167731, 0, 0.965926, -0.258819, 0.173648, 0.254887, 0.951251, -4.16334e-17, 0.03125, 0.25)
+transform = Transform3D(0.984808, -0.0449434, -0.167731, 7.26432e-08, 0.965926, -0.258818, 0.173648, 0.254886, 0.951251, -4.16334e-17, 0.03125, 0.25)
+
+[node name="leg_front_right4" parent="Node2/vulpix/body" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, 0.125, 0.4375, -0.203125)
 
 [node name="leg_front_right22" parent="Node2/vulpix/body/leg_front_right4" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382684, 0, 0.382684, 0.92388, 0, -0.21875, 0.09375)
+transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, 0, -0.21875, 0.09375)
 
 [node name="leg_front_right32" parent="Node2/vulpix/body/leg_front_right4/leg_front_right22" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.15625, -0.09375)
 
+[node name="leg_front_left4" parent="Node2/vulpix/body" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.991445, 0.130526, 0, -0.130526, 0.991445, -0.125, 0.4375, -0.203125)
+
 [node name="leg_front_left22" parent="Node2/vulpix/body/leg_front_left4" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382684, 0, 0.382684, 0.92388, 0, -0.21875, 0.09375)
+transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, 0, -0.21875, 0.09375)
 
 [node name="leg_front_left32" parent="Node2/vulpix/body/leg_front_left4/leg_front_left22" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, -0.15625, -0.09375)
+
+[node name="leg_back_right4" parent="Node2/vulpix/body" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0.125, 0.453125, 0.1875)
 
 [node name="leg_back_right22" parent="Node2/vulpix/body/leg_back_right4" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, -0.21875, 0.09375)
 
 [node name="leg_back_right32" parent="Node2/vulpix/body/leg_back_right4/leg_back_right22" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, -0.140625, -0.03125)
+
+[node name="leg_back_left4" parent="Node2/vulpix/body" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, -0.125, 0.453125, 0.1875)
 
 [node name="leg_back_left22" parent="Node2/vulpix/body/leg_back_left4" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, -0.21875, 0.09375)

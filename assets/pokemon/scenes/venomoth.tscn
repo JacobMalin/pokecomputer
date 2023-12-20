@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://crb27obklya73"]
+[gd_scene load_steps=48 format=3 uid="uid://crb27obklya73"]
 
 [ext_resource type="Texture2D" uid="uid://ikr1if2b3m4f" path="res://assets/pokemon/gltf/venomoth_0.png" id="1_m86kn"]
 
@@ -704,67 +704,6 @@ tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.173648, 0, 0.984808)
 
-[sub_resource type="Animation" id="Animation_xcddy"]
-resource_name = "animation_venomoth_ground_walk"
-length = 0.001
-loop_mode = 1
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2/venomoth/body")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.84375, -0.1875)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2/venomoth/body")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -0.608761, 0, 0, 0.793353)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2/venomoth/body/head")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.0871557, 0, 0, 0.996195)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node2/venomoth/body/abdomen2")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node2/venomoth/body/wing_bottom_right12")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/5/type = "rotation_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node2/venomoth/body/wing_bottom_left12")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node2/venomoth/body/wing_top_right12")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, -0.0436194, 0, 0.999048)
-tracks/7/type = "rotation_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Node2/venomoth/body/wing_top_left12")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.0436194, 0, 0.999048)
-
 [sub_resource type="Animation" id="Animation_lxext"]
 resource_name = "animation_venomoth_sleep"
 length = 0.001
@@ -829,7 +768,6 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.625924, 0, 0.779885)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_52fk1"]
 _data = {
 "animation_venomoth_ground_idle": SubResource("Animation_p4dql"),
-"animation_venomoth_ground_walk": SubResource("Animation_xcddy"),
 "animation_venomoth_sleep": SubResource("Animation_lxext")
 }
 

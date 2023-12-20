@@ -1662,20 +1662,35 @@ _data = {
 
 [node name="ninetales" instance=ExtResource("1_uvi2v")]
 
+[node name="eyelid_right2" parent="Node2/ninetales/body46/torso2/neck2/head2/eyes/eyelids" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0.151562, 0, 0)
+
+[node name="eyelid_left2" parent="Node2/ninetales/body46/torso2/neck2/head2/eyes/eyelids" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, -0.151562, 0, 0)
+
 [node name="ear_right2" parent="Node2/ninetales/body46/torso2/neck2/head2" index="4"]
-transform = Transform3D(0.892539, 0.422618, -0.157379, -0.416198, 0.906308, 0.0733869, 0.173648, 1.49012e-08, 0.984808, 0.140625, 0.3125, 0)
+transform = Transform3D(0.892539, 0.422618, -0.157379, -0.416198, 0.906308, 0.073387, 0.173648, -8.9407e-08, 0.984808, 0.140625, 0.3125, 0)
 
 [node name="ear_left2" parent="Node2/ninetales/body46/torso2/neck2/head2" index="5"]
-transform = Transform3D(0.892539, -0.422618, 0.157379, 0.416198, 0.906308, 0.0733869, -0.173648, 1.49012e-08, 0.984808, -0.140625, 0.3125, 0)
+transform = Transform3D(0.892539, -0.422618, 0.157379, 0.416198, 0.906308, 0.073387, -0.173648, -8.9407e-08, 0.984808, -0.140625, 0.3125, 0)
 
 [node name="head_hair2" parent="Node2/ninetales/body46/torso2/neck2/head2" index="6"]
-transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0.5, 0.046875)
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0, 0.5, 0.046875)
 
 [node name="head_hair23" parent="Node2/ninetales/body46/torso2/neck2/head2" index="7"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.5, 0.15625)
 
 [node name="head_hair32" parent="Node2/ninetales/body46/torso2/neck2/head2" index="8"]
 transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0.4375, 0.234375)
+
+[node name="head_hair42" parent="Node2/ninetales/body46/torso2/neck2/head2" index="9"]
+transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0.328125, 0.1875)
+
+[node name="head_hair_right2" parent="Node2/ninetales/body46/torso2/neck2/head2" index="10"]
+transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, 0.125, 0.421875, 0)
+
+[node name="head_hair_left2" parent="Node2/ninetales/body46/torso2/neck2/head2" index="11"]
+transform = Transform3D(0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, 0.991445, -0.125, 0.421875, 0)
 
 [node name="tail21" parent="Node2/ninetales/body46/torso2" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.078125, 0.203125)
@@ -1693,103 +1708,103 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0.87
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.5)
 
 [node name="tail6" parent="Node2/ninetales/body46/torso2" index="3"]
-transform = Transform3D(0.461749, -0.191984, 0.865985, 0, 0.976296, 0.21644, -0.887011, -0.0999407, 0.450803, 0.25, 0.015625, 0.09375)
+transform = Transform3D(0.461749, -0.191984, 0.865985, -4.47035e-08, 0.976296, 0.216439, -0.887011, -0.0999407, 0.450803, 0.25, 0.015625, 0.09375)
 
 [node name="tail7" parent="Node2/ninetales/body46/torso2/tail6" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.015625, 0.375)
 
 [node name="tail8" parent="Node2/ninetales/body46/torso2/tail6/tail7" index="1"]
-transform = Transform3D(0.976296, -0.124145, -0.177297, -3.72529e-09, 0.819152, -0.573576, 0.21644, 0.55998, 0.799735, 0, 0, 0.5625)
+transform = Transform3D(0.976296, -0.124145, -0.177297, -1.49012e-08, 0.819151, -0.573577, 0.216439, 0.559981, 0.799734, 0, 0, 0.5625)
 
 [node name="tail9" parent="Node2/ninetales/body46/torso2/tail6/tail7/tail8" index="1"]
-transform = Transform3D(0.991445, -0.0652631, -0.113039, 3.72529e-09, 0.866025, -0.5, 0.130526, 0.495722, 0.858616, 0, 0, 0.625)
+transform = Transform3D(0.991445, -0.0652631, -0.113039, 3.35276e-08, 0.866025, -0.5, 0.130526, 0.495722, 0.858616, 0, 0, 0.625)
 
 [node name="tail10" parent="Node2/ninetales/body46/torso2/tail6/tail7/tail8/tail9" index="1"]
-transform = Transform3D(0.996195, -0.0225576, -0.084186, 9.31323e-10, 0.965926, -0.258819, 0.0871557, 0.257834, 0.96225, 0, 0, 0.375)
+transform = Transform3D(0.996195, -0.0225576, -0.084186, -6.51926e-09, 0.965926, -0.258819, 0.0871558, 0.257834, 0.96225, 0, 0, 0.375)
 
 [node name="tail2" parent="Node2/ninetales/body46/torso2" index="4"]
-transform = Transform3D(0.461749, 0.191984, -0.865985, 0, 0.976296, 0.21644, 0.887011, -0.0999407, 0.450803, -0.25, 0.015625, 0.09375)
+transform = Transform3D(0.461749, 0.191984, -0.865985, 4.47035e-08, 0.976296, 0.216439, 0.887011, -0.0999407, 0.450803, -0.25, 0.015625, 0.09375)
 
 [node name="tail3" parent="Node2/ninetales/body46/torso2/tail2" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.015625, 0.375)
 
 [node name="tail4" parent="Node2/ninetales/body46/torso2/tail2/tail3" index="1"]
-transform = Transform3D(0.976296, 0.124145, 0.177297, 3.72529e-09, 0.819152, -0.573576, -0.21644, 0.55998, 0.799735, 0, 0, 0.5625)
+transform = Transform3D(0.976296, 0.124145, 0.177297, 1.49012e-08, 0.819151, -0.573577, -0.216439, 0.559981, 0.799734, 0, 0, 0.5625)
 
 [node name="tail5" parent="Node2/ninetales/body46/torso2/tail2/tail3/tail4" index="1"]
-transform = Transform3D(0.991445, 0.0652631, 0.113039, -3.72529e-09, 0.866025, -0.5, -0.130526, 0.495722, 0.858616, 0, 0, 0.625)
+transform = Transform3D(0.991445, 0.0652631, 0.113039, -3.35276e-08, 0.866025, -0.5, -0.130526, 0.495722, 0.858616, 0, 0, 0.625)
 
 [node name="tail36" parent="Node2/ninetales/body46/torso2/tail2/tail3/tail4/tail5" index="1"]
-transform = Transform3D(0.996195, 0.0225576, 0.084186, -9.31323e-10, 0.965926, -0.258819, -0.0871557, 0.257834, 0.96225, 0, 0, 0.375)
+transform = Transform3D(0.996195, 0.0225576, 0.084186, 6.51926e-09, 0.965926, -0.258819, -0.0871558, 0.257834, 0.96225, 0, 0, 0.375)
 
 [node name="tail37" parent="Node2/ninetales/body46/torso2" index="5"]
-transform = Transform3D(0.707107, -0.241845, 0.664463, -7.45058e-09, 0.939693, 0.34202, -0.707107, -0.241845, 0.664463, 0.1875, 0.03125, 0.140625)
+transform = Transform3D(0.707107, -0.241845, 0.664463, -5.21541e-08, 0.939693, 0.34202, -0.707107, -0.241845, 0.664463, 0.1875, 0.03125, 0.140625)
 
 [node name="tail38" parent="Node2/ninetales/body46/torso2/tail37" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0.015625, 0.375)
 
 [node name="tail39" parent="Node2/ninetales/body46/torso2/tail37/tail38" index="1"]
-transform = Transform3D(0.996195, -0.0499905, -0.0713938, 0, 0.819152, -0.573576, 0.0871557, 0.571394, 0.816035, 0, 0, 0.5625)
+transform = Transform3D(0.996195, -0.0499905, -0.0713937, -1.49012e-08, 0.819152, -0.573577, 0.0871557, 0.571395, 0.816034, 0, 0, 0.5625)
 
 [node name="tail40" parent="Node2/ninetales/body46/torso2/tail37/tail38/tail39" index="1"]
-transform = Transform3D(0.996195, -0.0435779, -0.0754791, 1.86265e-09, 0.866025, -0.5, 0.0871557, 0.498097, 0.86273, 0, 0, 0.625)
+transform = Transform3D(0.996195, -0.0435778, -0.0754791, -7.07805e-08, 0.866025, -0.5, 0.0871557, 0.498097, 0.86273, 0, 0, 0.625)
 
 [node name="tail41" parent="Node2/ninetales/body46/torso2/tail37/tail38/tail39/tail40" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.375)
 
 [node name="tail42" parent="Node2/ninetales/body46/torso2" index="6"]
-transform = Transform3D(0.707107, 0.241845, -0.664463, 7.45058e-09, 0.939693, 0.34202, 0.707107, -0.241845, 0.664463, -0.1875, 0.03125, 0.140625)
+transform = Transform3D(0.707107, 0.241845, -0.664463, 5.21541e-08, 0.939693, 0.34202, 0.707107, -0.241845, 0.664463, -0.1875, 0.03125, 0.140625)
 
 [node name="tail43" parent="Node2/ninetales/body46/torso2/tail42" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0.015625, 0.375)
 
 [node name="tail44" parent="Node2/ninetales/body46/torso2/tail42/tail43" index="1"]
-transform = Transform3D(0.996195, 0.0499905, 0.0713938, 0, 0.819152, -0.573576, -0.0871557, 0.571394, 0.816035, 0, 0, 0.5625)
+transform = Transform3D(0.996195, 0.0499905, 0.0713937, 1.49012e-08, 0.819152, -0.573577, -0.0871557, 0.571395, 0.816034, 0, 0, 0.5625)
 
 [node name="tail45" parent="Node2/ninetales/body46/torso2/tail42/tail43/tail44" index="1"]
-transform = Transform3D(0.996195, 0.0435779, 0.0754791, -1.86265e-09, 0.866025, -0.5, -0.0871557, 0.498097, 0.86273, 0, 0, 0.625)
+transform = Transform3D(0.996195, 0.0435778, 0.0754791, 7.07805e-08, 0.866025, -0.5, -0.0871557, 0.498097, 0.86273, 0, 0, 0.625)
 
 [node name="tail46" parent="Node2/ninetales/body46/torso2/tail42/tail43/tail44/tail45" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.375)
 
 [node name="tail26" parent="Node2/ninetales/body46/torso2" index="7"]
-transform = Transform3D(0.887011, -0.230874, 0.399886, 0, 0.866025, 0.5, -0.461749, -0.443505, 0.768174, 0.203125, 0.046875, 0.203125)
+transform = Transform3D(0.887011, -0.230874, 0.399886, -2.23518e-07, 0.866025, 0.5, -0.461749, -0.443506, 0.768174, 0.203125, 0.046875, 0.203125)
 
 [node name="tail27" parent="Node2/ninetales/body46/torso2/tail26" index="1"]
-transform = Transform3D(0.999048, -0.0131166, -0.0416006, 4.65661e-10, 0.953717, -0.300706, 0.0436194, 0.30042, 0.952809, 0, 0.015625, 0.375)
+transform = Transform3D(0.999048, -0.0131166, -0.0416006, -4.65661e-09, 0.953717, -0.300705, 0.0436194, 0.300419, 0.952809, 0, 0.015625, 0.375)
 
 [node name="tail28" parent="Node2/ninetales/body46/torso2/tail26/tail27" index="1"]
-transform = Transform3D(0.999048, -0.028038, -0.0334144, -1.86265e-09, 0.766044, -0.642788, 0.0436194, 0.642176, 0.765315, 0, 0, 0.5625)
+transform = Transform3D(0.999048, -0.028038, -0.0334144, -2.04891e-08, 0.766044, -0.642788, 0.0436194, 0.642176, 0.765315, 0, 0, 0.5625)
 
 [node name="tail29" parent="Node2/ninetales/body46/torso2/tail26/tail27/tail28" index="1"]
-transform = Transform3D(0.999048, -0.0218097, -0.0377755, 0, 0.866025, -0.5, 0.0436194, 0.499524, 0.865201, 0, 0, 0.875)
+transform = Transform3D(0.999048, -0.0218097, -0.0377756, 3.72529e-09, 0.866025, -0.499999, 0.0436195, 0.499523, 0.865201, 0, 0, 0.875)
 
 [node name="tail30" parent="Node2/ninetales/body46/torso2/tail26/tail27/tail28/tail29" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.375)
 
 [node name="tail31" parent="Node2/ninetales/body46/torso2" index="8"]
-transform = Transform3D(0.887011, 0.230874, -0.399886, 0, 0.866025, 0.5, 0.461749, -0.443505, 0.768174, -0.203125, 0.046875, 0.203125)
+transform = Transform3D(0.887011, 0.230874, -0.399886, 2.23518e-07, 0.866025, 0.5, 0.461749, -0.443506, 0.768174, -0.203125, 0.046875, 0.203125)
 
 [node name="tail32" parent="Node2/ninetales/body46/torso2/tail31" index="1"]
-transform = Transform3D(0.999048, 0.0131166, 0.0416006, -4.65661e-10, 0.953717, -0.300706, -0.0436194, 0.30042, 0.952809, 0, 0.015625, 0.375)
+transform = Transform3D(0.999048, 0.0131166, 0.0416006, 4.65661e-09, 0.953717, -0.300705, -0.0436194, 0.300419, 0.952809, 0, 0.015625, 0.375)
 
 [node name="tail33" parent="Node2/ninetales/body46/torso2/tail31/tail32" index="1"]
-transform = Transform3D(0.999048, 0.028038, 0.0334144, 1.86265e-09, 0.766044, -0.642788, -0.0436194, 0.642176, 0.765315, 0, 0, 0.5625)
+transform = Transform3D(0.999048, 0.028038, 0.0334144, 2.04891e-08, 0.766044, -0.642788, -0.0436194, 0.642176, 0.765315, 0, 0, 0.5625)
 
 [node name="tail34" parent="Node2/ninetales/body46/torso2/tail31/tail32/tail33" index="1"]
-transform = Transform3D(0.999048, 0.0218097, 0.0377755, 0, 0.866025, -0.5, -0.0436194, 0.499524, 0.865201, 0, 0, 0.875)
+transform = Transform3D(0.999048, 0.0218097, 0.0377756, -3.72529e-09, 0.866025, -0.499999, -0.0436195, 0.499523, 0.865201, 0, 0, 0.875)
 
 [node name="tail35" parent="Node2/ninetales/body46/torso2/tail31/tail32/tail33/tail34" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.375)
 
 [node name="tail16" parent="Node2/ninetales/body46/torso2" index="9"]
-transform = Transform3D(0.965926, -0.12941, 0.224144, 0, 0.866025, 0.5, -0.258819, -0.482963, 0.836516, 0.046875, 0.0625, 0.203125)
+transform = Transform3D(0.965926, -0.12941, 0.224144, -1.86265e-07, 0.866025, 0.5, -0.25882, -0.482963, 0.836516, 0.046875, 0.0625, 0.203125)
 
 [node name="tail17" parent="Node2/ninetales/body46/torso2/tail16" index="1"]
-transform = Transform3D(0.999048, -0.0149187, -0.0409888, -4.65661e-10, 0.939693, -0.34202, 0.0436194, 0.341695, 0.938798, 0, 0, 0.5625)
+transform = Transform3D(0.999048, -0.0149187, -0.0409889, -2.98023e-08, 0.939693, -0.34202, 0.0436195, 0.341695, 0.938798, 0, 0, 0.5625)
 
 [node name="tail18" parent="Node2/ninetales/body46/torso2/tail16/tail17" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 0, 0.6875)
+transform = Transform3D(1, 0, 0, 0, 0.766045, -0.642787, 0, 0.642787, 0.766045, 0, 0, 0.6875)
 
 [node name="tail19" parent="Node2/ninetales/body46/torso2/tail16/tail17/tail18" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0.8125)
@@ -1798,13 +1813,13 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0.81
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.5)
 
 [node name="tail11" parent="Node2/ninetales/body46/torso2" index="10"]
-transform = Transform3D(0.965926, 0.12941, -0.224144, 0, 0.866025, 0.5, 0.258819, -0.482963, 0.836516, -0.046875, 0.0625, 0.203125)
+transform = Transform3D(0.965926, 0.12941, -0.224144, 1.86265e-07, 0.866025, 0.5, 0.25882, -0.482963, 0.836516, -0.046875, 0.0625, 0.203125)
 
 [node name="tail12" parent="Node2/ninetales/body46/torso2/tail11" index="1"]
-transform = Transform3D(0.999048, 0.0149187, 0.0409888, 4.65661e-10, 0.939693, -0.34202, -0.0436194, 0.341695, 0.938798, 0, 0, 0.5625)
+transform = Transform3D(0.999048, 0.0149187, 0.0409889, 2.98023e-08, 0.939693, -0.34202, -0.0436195, 0.341695, 0.938798, 0, 0, 0.5625)
 
 [node name="tail13" parent="Node2/ninetales/body46/torso2/tail11/tail12" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 0, 0.6875)
+transform = Transform3D(1, 0, 0, 0, 0.766045, -0.642787, 0, 0.642787, 0.766045, 0, 0, 0.6875)
 
 [node name="tail14" parent="Node2/ninetales/body46/torso2/tail11/tail12/tail13" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0.8125)
@@ -1812,17 +1827,41 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0.81
 [node name="tail15" parent="Node2/ninetales/body46/torso2/tail11/tail12/tail13/tail14" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0.5)
 
+[node name="leg_front_right4" parent="Node2/ninetales/body46" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, -0.171875, 0.765625, -0.421875)
+
 [node name="leg_front_right22" parent="Node2/ninetales/body46/leg_front_right4" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.375, 0.0625)
+
+[node name="leg_front_right32" parent="Node2/ninetales/body46/leg_front_right4/leg_front_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.28125, -0.0625)
+
+[node name="leg_front_left4" parent="Node2/ninetales/body46" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0.171875, 0.765625, -0.421875)
 
 [node name="leg_front_left22" parent="Node2/ninetales/body46/leg_front_left4" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.375, 0.0625)
 
+[node name="leg_front_left32" parent="Node2/ninetales/body46/leg_front_left4/leg_front_left22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.28125, -0.0625)
+
+[node name="leg_back_right4" parent="Node2/ninetales/body46" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0.171875, 0.796875, 0.25)
+
 [node name="leg_back_right22" parent="Node2/ninetales/body46/leg_back_right4" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.390625, 0.15625)
 
+[node name="leg_back_right32" parent="Node2/ninetales/body46/leg_back_right4/leg_back_right22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.328125, -0.015625)
+
+[node name="leg_back_left4" parent="Node2/ninetales/body46" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, -0.171875, 0.796875, 0.25)
+
 [node name="leg_back_left22" parent="Node2/ninetales/body46/leg_back_left4" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.390625, 0.15625)
+
+[node name="leg_back_left32" parent="Node2/ninetales/body46/leg_back_left4/leg_back_left22" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.328125, -0.015625)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
