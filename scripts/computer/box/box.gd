@@ -254,6 +254,7 @@ func box_modes(_box_mode):
 			minimized_collision.set_deferred("disabled", true)
 			
 			$PortalReferenceMesh.show()
+			portal.show()
 			boxes.show()
 			pokemon.show()
 			corners.show()
@@ -263,7 +264,13 @@ func box_modes(_box_mode):
 			minimized_collision.set_deferred("disabled", false)
 			
 			$PortalReferenceMesh.hide()
+			portal.hide()
 			boxes.hide()
 			pokemon.hide()
 			corners.hide()
 			collision.set_deferred("disabled", true)
+
+
+func _on_minimized_box_body_entered(body):
+	if body.is_in_group("index"): 
+		box_modes(BoxMode.MAXIMIZED)
