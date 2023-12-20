@@ -230,11 +230,6 @@ func minimize():
 	
 	box_modes(BoxMode.MINIMIZED)
 	
-func maximize():
-	print("maximize", name)
-	
-	box_modes(BoxMode.MAXIMIZED)
-	
 func delete():
 	print("delete", name)
 
@@ -271,6 +266,6 @@ func box_modes(_box_mode):
 			collision.set_deferred("disabled", true)
 
 
-func _on_minimized_box_body_entered(body):
-	if body.is_in_group("index"): 
-		box_modes(BoxMode.MAXIMIZED)
+func _on_minimized_box_area_entered(area):
+	if area.is_in_group("index"): 
+		box_modes(BoxMode.MAXIMIZED) # Replace with function body.

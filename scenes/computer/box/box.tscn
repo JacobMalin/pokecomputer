@@ -91,4 +91,13 @@ mesh = SubResource("BoxMesh_6ew1f")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_0jqvr")
 
+[node name="Area3D" type="Area3D" parent="MinimizedBox"]
+collision_layer = 0
+collision_mask = 131072
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MinimizedBox/Area3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("BoxShape3D_0jqvr")
+
 [connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]
+[connection signal="area_entered" from="MinimizedBox/Area3D" to="." method="_on_minimized_box_area_entered"]
