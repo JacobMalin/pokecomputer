@@ -38,7 +38,7 @@ var pokemon_copies : Node3D
 var save_pos : Vector3
 var save_neg : Vector3
 
-
+var single_click = false
 
 ### Lifecycle ###
 
@@ -260,6 +260,11 @@ func box_modes(_box_mode):
 			pokemon.show()
 			corners.show()
 			collision.set_deferred("disabled", false)
+			for child in corners.get_children():
+				for collision_child in child.get_children():
+					if collision_child is CollisionShape3D:
+						collision_child.set_deferred("disabled", false)
+			
 		BoxMode.MINIMIZED:
 			minimized.show()
 			minimized_collision.set_deferred("disabled", false)
@@ -269,9 +274,25 @@ func box_modes(_box_mode):
 			boxes.hide()
 			pokemon.hide()
 			corners.hide()
+			#disable corner collision boxes
+			for child in corners.get_children():
+				for collision_child in child.get_children():
+					if collision_child is CollisionShape3D:
+						collision_child.set_deferred("disabled", true)
 			collision.set_deferred("disabled", true)
+
+# Calls when the user presses a minimized box once
+func one_click():
+	single_click = true
+
+func refresh_click():
+	single_click = false
 
 # maximize box if it is pressed
 func _on_minimized_box_area_entered(area):
 	if area.is_in_group("index"): 
-		box_modes(BoxMode.MAXIMIZED) # Replace with function body.
+		if single_click:
+			box_modes(BoxMode.MAXIMIZED)
+			single_click = false
+		else:
+			$MinimizedBox/AnimationPlayer.play("double_click")

@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsiyru5ey4dgh"]
+[gd_scene load_steps=15 format=3 uid="uid://dsiyru5ey4dgh"]
 
 [ext_resource type="Script" path="res://scripts/computer/box/box.gd" id="1_wxkkx"]
 [ext_resource type="Script" path="res://scripts/computer/box/corners.gd" id="2_uc8ih"]
 [ext_resource type="PackedScene" uid="uid://bgw5r8lmumjw2" path="res://scenes/computer/box/corner.tscn" id="3_6qyjt"]
+[ext_resource type="Script" path="res://scripts/computer/box/minimizedbox.gd" id="4_1u77u"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_koc2i"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_qleiw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0w6mr"]
 resource_local_to_scene = true
@@ -23,6 +26,32 @@ albedo_color = Color(0, 0, 1, 0.411765)
 material = SubResource("StandardMaterial3D_oudgb")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0jqvr"]
+
+[sub_resource type="Animation" id="Animation_xn2a3"]
+resource_name = "double_click"
+length = 0.3
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"one_click"
+}, {
+"args": [],
+"method": &"refresh_click"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bvvle"]
+_data = {
+"double_click": SubResource("Animation_xn2a3")
+}
 
 [node name="Box" type="Area3D" groups=["box"]]
 collision_layer = 16
@@ -82,6 +111,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393798, 0.395373, -0.39294
 collision_layer = 0
 collision_mask = 131079
 gravity_scale = 0.0
+script = ExtResource("4_1u77u")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MinimizedBox"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
@@ -98,6 +128,17 @@ collision_mask = 131072
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MinimizedBox/Area3D"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_0jqvr")
+
+[node name="GrabPointHandLeft" parent="MinimizedBox" instance=ExtResource("4_koc2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0193986, -0.0996415)
+
+[node name="GrabPointHandRight" parent="MinimizedBox" instance=ExtResource("5_qleiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0306035, -0.0834081)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MinimizedBox"]
+libraries = {
+"": SubResource("AnimationLibrary_bvvle")
+}
 
 [connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]
 [connection signal="area_entered" from="MinimizedBox/Area3D" to="." method="_on_minimized_box_area_entered"]
