@@ -24,6 +24,12 @@ const PADDING = 0.01 ## To prevent z-fighting
 
 @onready var orig_position : Vector3 = global_position
 
+enum BoxMode {
+	MAXIMIZED,
+	MINIMIZED
+}
+var box_mode : BoxMode = BoxMode.MAXIMIZED
+
 var corners : Corners
 var portal_ref_mesh : MeshInstance3D
 var pokemon : Node3D
@@ -53,6 +59,8 @@ func _ready():
 
 	get_tree().get_root().add_child.call_deferred(world_in_cube)
 	add_child(portal)
+	
+	box_modes(box_mode)
 
 
 
@@ -220,12 +228,12 @@ func add():
 func minimize():
 	print("minimize", name)
 	
-	minimized.show()
-	minimized_collision.set_deferred("disabled", false)
+	box_modes(BoxMode.MINIMIZED)
 	
-	$PortalReferenceMesh.hide()
-	boxes.hide()
-	pokemon.hide()
+func maximize():
+	print("maximize", name)
+	
+	box_modes(BoxMode.MAXIMIZED)
 	
 func delete():
 	print("delete", name)
@@ -235,3 +243,27 @@ func delete():
 		poke.set_box(get_parent_box())
 
 	queue_free()
+
+# Define the different modes of the Box
+func box_modes(_box_mode):
+	box_mode = _box_mode
+	
+	match box_mode:
+		BoxMode.MAXIMIZED:
+			minimized.hide()
+			minimized_collision.set_deferred("disabled", true)
+			
+			$PortalReferenceMesh.show()
+			boxes.show()
+			pokemon.show()
+			corners.show()
+			collision.set_deferred("disabled", false)
+		BoxMode.MINIMIZED:
+			minimized.show()
+			minimized_collision.set_deferred("disabled", false)
+			
+			$PortalReferenceMesh.hide()
+			boxes.hide()
+			pokemon.hide()
+			corners.hide()
+			collision.set_deferred("disabled", true)
