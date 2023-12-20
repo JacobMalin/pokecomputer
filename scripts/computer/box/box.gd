@@ -12,6 +12,8 @@ const PADDING = 0.01 ## To prevent z-fighting
 
 @onready var collision : CollisionShape3D = $Collision
 @onready var boxes = $Boxes
+@onready var minimized = $MinimizedBox
+@onready var minimized_collision = $MinimizedBox/CollisionShape3D
 
 @onready var portal : Portal = preload("res://scenes/computer/portal/portal.tscn").instantiate()
 @onready var world_in_cube : WorldInCube = preload("res://scenes/computer/box/world_in_cube.tscn").instantiate()
@@ -217,7 +219,14 @@ func add():
 
 func minimize():
 	print("minimize", name)
-
+	
+	minimized.show()
+	minimized_collision.set_deferred("disabled", false)
+	
+	$PortalReferenceMesh.hide()
+	boxes.hide()
+	pokemon.hide()
+	
 func delete():
 	print("delete", name)
 

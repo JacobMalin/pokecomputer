@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsiyru5ey4dgh"]
+[gd_scene load_steps=10 format=3 uid="uid://dsiyru5ey4dgh"]
 
 [ext_resource type="Script" path="res://scripts/computer/box/box.gd" id="1_wxkkx"]
 [ext_resource type="Script" path="res://scripts/computer/box/corners.gd" id="2_uc8ih"]
@@ -14,6 +14,15 @@ flip_faces = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iobj4"]
 transparency = 4
 albedo_color = Color(0.490196, 0.541176, 0.603922, 0.0627451)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oudgb"]
+transparency = 1
+albedo_color = Color(0, 0, 1, 0.411765)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ew1f"]
+material = SubResource("StandardMaterial3D_oudgb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jqvr"]
 
 [node name="Box" type="Area3D" groups=["box"]]
 collision_layer = 16
@@ -67,5 +76,21 @@ transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.8
 [node name="Boxes" type="Node3D" parent="."]
 
 [node name="Pokemon" type="Node3D" parent="."]
+
+[node name="MinimizedBox" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393798, 0.395373, -0.392947)
+visible = false
+collision_layer = 0
+collision_mask = 7
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MinimizedBox"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_6ew1f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MinimizedBox"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("BoxShape3D_0jqvr")
+disabled = true
 
 [connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]
