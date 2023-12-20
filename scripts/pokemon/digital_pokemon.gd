@@ -275,8 +275,12 @@ func _on_let_go_by_controller():
 func _on_picked_up_by_ball():
 	activate_snap()
 	shrink()
+	
+	if copy:
+		copy.queue_free()
+		copy = null
 
-	in_box = null
+	in_box = desktop
 
 func _on_picked_up_by_controller():
 	if copy:

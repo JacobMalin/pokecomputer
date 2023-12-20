@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bvxld6ldvoexi"]
+[gd_scene load_steps=46 format=3 uid="uid://bvxld6ldvoexi"]
 
 [ext_resource type="Script" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="1_6hrg6"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_xixr5"]
@@ -46,6 +46,10 @@ radius = 0.005
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_okg6x"]
 size = Vector3(0.0750698, 0.141514, 0.197411)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kggi3"]
+radius = 0.25
+height = 1.7
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nq8ij"]
 
@@ -249,6 +253,10 @@ transform = Transform3D(-0.0667577, -0.981093, 0.181663, -0.996721, 0.0572259, -
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_el4ei")]
 unique_name_in_owner = true
 collision_mask = 971
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/PlayerBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("CapsuleShape3D_kggi3")
 
 [node name="Holster" parent="XROrigin3D" instance=ExtResource("10_c2yjo")]
 unique_name_in_owner = true
