@@ -75,10 +75,13 @@ func _on_panel_pressed(function):
 ### Signals ###
 
 func _on_area_entered(area:Area3D):
+	# check if the user is in the desktop, change modes accordingly
 	if area.is_in_group("desktop"):
 		desktop_location = area
 		location = desktop_location
 		pokewatch(PokewatchMode.DESKTOP)
+		
+	# check if the user is in a box, change modes accordingly
 	elif area.is_in_group("box"):
 		box_location = area
 		location = box_location
@@ -88,10 +91,14 @@ func _on_area_entered(area:Area3D):
 func _on_area_exited(area:Area3D):
 	if area.is_in_group("desktop"):
 		pokewatch(PokewatchMode.DEFAULT)
+	
+	# if the user leaves one of the main boxes, switch to desktop mode
 	elif area.is_in_group("box") and box_ct == 1:
 		box_ct = 0
 		location = desktop_location
 		pokewatch(PokewatchMode.DESKTOP)
+		
+	# if the user leaves one box and goes to another, switch location to parent box
 	elif area.is_in_group("box") and box_ct > 1: 
 		#box_location = area.get_parent().get_parent()
 		location = box_location
