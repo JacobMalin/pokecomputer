@@ -228,7 +228,7 @@ func add():
 	# instantiate new child box inside the current box
 	var new_box = load("res://scenes/computer/box/box.tscn").instantiate()
 	new_box.color = Color(randf(), randf(), randf())
-	add_child(new_box)
+	boxes.add_child(new_box)
 	new_box.box_modes(BoxMode.MINIMIZED)
 
 func minimize():

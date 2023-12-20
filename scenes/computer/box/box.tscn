@@ -107,7 +107,6 @@ transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.8
 [node name="Pokemon" type="Node3D" parent="."]
 
 [node name="MinimizedBox" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393798, 0.395373, -0.392947)
 collision_layer = 0
 collision_mask = 131079
 gravity_scale = 0.0
