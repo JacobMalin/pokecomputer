@@ -93,7 +93,7 @@ func _on_area_exited(area:Area3D):
 		location = desktop_location
 		pokewatch(PokewatchMode.DESKTOP)
 	elif area.is_in_group("box") and box_ct > 1: 
-		box_location = area.get_parent()
+		#box_location = area.get_parent().get_parent()
 		location = box_location
 		box_ct -= 1
 

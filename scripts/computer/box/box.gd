@@ -223,15 +223,20 @@ func get_parent_box():
 	return get_parent().get_parent()
 
 func add():
-	print("add", name)
+	print("add ", name)
+	
+	var new_box = load("res://scenes/computer/box/box.tscn").instantiate()
+	new_box.color = Color(randf(), randf(), randf())
+	add_child(new_box)
+	new_box.box_modes(BoxMode.MINIMIZED)
 
 func minimize():
-	print("minimize", name)
+	print("minimize ", name)
 	
 	box_modes(BoxMode.MINIMIZED)
 	
 func delete():
-	print("delete", name)
+	print("delete ", name)
 
 	for poke in pokemon.get_children():
 		poke.reparent(get_parent_box().pokemon)
