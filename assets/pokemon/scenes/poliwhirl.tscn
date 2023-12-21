@@ -1261,72 +1261,72 @@ tracks/24/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yus8h"]
 _data = {
 "animation_poliwhirl_blink": SubResource("Animation_os0ak"),
+"animation_poliwhirl_ground_idle": SubResource("Animation_j8nbh"),
+"animation_poliwhirl_ground_walk": SubResource("Animation_kulss"),
 "animation_poliwhirl_render": SubResource("Animation_g64t8"),
 "animation_poliwhirl_sleep": SubResource("Animation_rxhru"),
 "animation_poliwhirl_water_idle": SubResource("Animation_3ja0u"),
-"animation_poliwhirl_water_swim": SubResource("Animation_kvvnx"),
-"animation_poliwrath_ground_idle": SubResource("Animation_j8nbh"),
-"animation_poliwrath_ground_walk": SubResource("Animation_kulss")
+"animation_poliwhirl_water_swim": SubResource("Animation_kvvnx")
 }
 
 [node name="poliwhirl" instance=ExtResource("1_e485r")]
 
 [node name="body" parent="Node2/poliwhirl" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.453125, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.631656, 0)
 
-[node name="eyelid_right2" parent="Node2/poliwhirl/body/torso2/torso_right2/eye_right2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003125, 0, 0.03125)
+[node name="torso2" parent="Node2/poliwhirl/body" index="0"]
+transform = Transform3D(0.99875, 0, -0.0499864, 0, 1, 0, 0.0499864, 0, 0.99875, 0, -0.65625, 0)
 
 [node name="eyelid_left2" parent="Node2/poliwhirl/body/torso2/torso_left2/eye_left2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55112e-17, 0, 0.03125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55112e-17, 0, 0.0375)
 
 [node name="arm_right" parent="Node2/poliwhirl/body" index="1"]
-transform = Transform3D(0.561739, 0.814249, 0.146453, -0.822289, 0.530026, 0.207155, 0.0910513, -0.236794, 0.967284, 0.375, 0.15625, 0.03125)
+transform = Transform3D(0.702745, 0.707107, -0.0784203, -0.702745, 0.707107, 0.0784202, 0.110903, 1.86265e-08, 0.993831, 0.375, 0.203125, 0)
 
 [node name="arm_right22" parent="Node2/poliwhirl/body/arm_right" index="1"]
-transform = Transform3D(0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, 0.1875, 0, 0.09375)
+transform = Transform3D(0.984013, 0, 0.178095, 0, 1, 0, -0.178095, 0, 0.984013, 0.1875, 0, 0.09375)
 
 [node name="hand_right2" parent="Node2/poliwhirl/body/arm_right/arm_right22" index="1"]
-transform = Transform3D(0.962233, 0.211178, 0.171791, -0.17876, 0.96609, -0.186321, -0.205313, 0.148575, 0.967353, 0.125, 0, -0.09375)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.125, 0, -0.09375)
 
 [node name="fingers_right22" parent="Node2/poliwhirl/body/arm_right/arm_right22/hand_right2/fingers_right12" index="1"]
-transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 0.140625, 0.078125, 0)
+transform = Transform3D(0.5, 0.866026, 0, -0.866026, 0.5, 0, 0, 0, 1, 0.140625, 0.078125, 0)
 
 [node name="thumb_right2" parent="Node2/poliwhirl/body/arm_right/arm_right22/hand_right2" index="2"]
-transform = Transform3D(0.860164, 0.505522, 0.0675645, -0.510017, 0.852694, 0.113119, -0.000427637, -0.13176, 0.991282, 0.125, -0.0625, -0.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.0625, -0.125)
 
 [node name="arm_left" parent="Node2/poliwhirl/body" index="2"]
-transform = Transform3D(0.521954, -0.791068, -0.319024, 0.847824, 0.440112, 0.295799, -0.0935908, -0.424869, 0.900404, -0.375, 0.15625, 0.03125)
+transform = Transform3D(0.702745, -0.707107, -0.0784203, 0.702745, 0.707107, -0.0784203, 0.110903, -1.86265e-08, 0.993832, -0.375, 0.203125, 0)
 
 [node name="arm_left22" parent="Node2/poliwhirl/body/arm_left" index="1"]
-transform = Transform3D(0.996195, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.996195, -0.1875, 0, 0.09375)
+transform = Transform3D(0.980407, 0, -0.196982, 0, 1, 0, 0.196982, 0, 0.980407, -0.1875, 0, 0.09375)
 
 [node name="hand_left2" parent="Node2/poliwhirl/body/arm_left/arm_left22" index="1"]
-transform = Transform3D(0.984808, 7.07681e-08, -0.173648, -6.61725e-08, 1, 3.22545e-08, 0.173648, -2.02738e-08, 0.984808, -0.125, 0, -0.09375)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -0.125, 0, -0.09375)
 
 [node name="fingers_left22" parent="Node2/poliwhirl/body/arm_left/arm_left22/hand_left2/fingers_left12" index="1"]
-transform = Transform3D(0.34202, -0.939693, 0, 0.939693, 0.34202, 0, 0, 0, 1, -0.140625, 0.078125, 0)
+transform = Transform3D(0.5, -0.866026, 0, 0.866026, 0.5, 0, 0, 0, 1, -0.140625, 0.078125, 0)
 
 [node name="thumb_left2" parent="Node2/poliwhirl/body/arm_left/arm_left22/hand_left2" index="2"]
-transform = Transform3D(0.78097, -0.562547, -0.271343, 0.618263, 0.757891, 0.208209, 0.0885214, -0.330366, 0.939693, -0.125, -0.0625, -0.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -0.0625, -0.125)
 
 [node name="leg_right2" parent="Node2/poliwhirl/body" index="3"]
-transform = Transform3D(0.60493, -0.323476, -0.727615, -0.630264, 0.363945, -0.685793, 0.486649, 0.873446, 0.016286, 0.296875, -0.375, -0.03125)
+transform = Transform3D(0.984808, -0.0205055, -0.172433, 0, 0.993004, -0.118087, 0.173648, 0.116293, 0.977918, 0.25, -0.405368, 0)
 
 [node name="foot_right12" parent="Node2/poliwhirl/body/leg_right2" index="1"]
-transform = Transform3D(0.999048, -3.72529e-09, -0.0436195, 0.0201412, 0.887011, 0.461309, 0.0386909, -0.461749, 0.886167, 0, -0.125, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
 
 [node name="foot_right22" parent="Node2/poliwhirl/body/leg_right2/foot_right12" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300706, 0, -0.300706, 0.953717, 0, -0.125, -0.1875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, -0.1875)
 
 [node name="leg_left2" parent="Node2/poliwhirl/body" index="4"]
-transform = Transform3D(0.664154, 0.596616, 0.450499, 0.398191, 0.2277, -0.888592, -0.632727, 0.769547, -0.0863392, -0.234375, -0.375, -0.03125)
+transform = Transform3D(0.984808, -0.0205055, 0.172433, 0, 0.993004, 0.118086, -0.173648, -0.116293, 0.977917, -0.25, -0.391551, 0)
 
 [node name="foot_left12" parent="Node2/poliwhirl/body/leg_left2" index="1"]
-transform = Transform3D(0.996195, 5.96046e-08, 0.0871557, -0.0691453, 0.608761, 0.790334, -0.053057, -0.793353, 0.606445, 0, -0.125, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, -0.125, 0)
 
 [node name="foot_left22" parent="Node2/poliwhirl/body/leg_left2/foot_left12" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300706, 0, -0.300706, 0.953717, 0, -0.125, -0.1875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, -0.1875)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

@@ -143,42 +143,42 @@ tracks/6/enabled = true
 tracks/6/path = NodePath("Node2/kingler/body4/rightarm2")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/keys = PackedFloat32Array(0, 1, -0.0023159, 0.241884, 0.0211621, 0.970071)
 tracks/7/type = "rotation_3d"
 tracks/7/imported = true
 tracks/7/enabled = true
 tracks/7/path = NodePath("Node2/kingler/body4/rightarm2/rightforarm2")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/keys = PackedFloat32Array(0, 1, -0.00321711, 0.33601, 0.0293971, 0.941394)
 tracks/8/type = "rotation_3d"
 tracks/8/imported = true
 tracks/8/enabled = true
 tracks/8/path = NodePath("Node2/kingler/body4/rightarm2/rightforarm2/clawright3/bottomclawright2")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/keys = PackedFloat32Array(0, 1, -0.0635761, 0.0127949, -0.153204, 0.986064)
 tracks/9/type = "rotation_3d"
 tracks/9/imported = true
 tracks/9/enabled = true
 tracks/9/path = NodePath("Node2/kingler/body4/leftarm2")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/keys = PackedFloat32Array(0, 1, 0.00198892, -0.207732, -0.0181742, 0.978015)
 tracks/10/type = "rotation_3d"
 tracks/10/imported = true
 tracks/10/enabled = true
 tracks/10/path = NodePath("Node2/kingler/body4/leftarm2/leftforarm2")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/keys = PackedFloat32Array(0, 1, 0.00234481, -0.244902, -0.0214262, 0.969308)
 tracks/11/type = "rotation_3d"
 tracks/11/imported = true
 tracks/11/enabled = true
 tracks/11/path = NodePath("Node2/kingler/body4/leftarm2/leftforarm2/clawleft3/bottomclawleft2")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/keys = PackedFloat32Array(0, 1, -0.14862, -0.0183163, 0.193091, 0.969687)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u0pal"]
 _data = {
@@ -189,19 +189,37 @@ _data = {
 [node name="kingler" instance=ExtResource("1_e35ex")]
 
 [node name="body4" parent="Node2/kingler" index="0"]
-transform = Transform3D(0.999617, -0.0275645, -0.00241158, 0.0276698, 0.995813, 0.0871224, -6.98492e-10, -0.0871558, 0.996195, 0, 0.410914, 0)
+transform = Transform3D(0.999543, -0.0301103, -0.00263431, 0.0302253, 0.995739, 0.0871159, 3.25963e-09, -0.0871557, 0.996195, 0, 0.4125, 0)
 
 [node name="leftleg2" parent="Node2/kingler/body4" index="4"]
-transform = Transform3D(0.893776, 0.422967, -0.14921, -0.41797, 0.906135, 0.0649669, 0.162684, 0.00429961, 0.986669, -0.40625, -0.140625, 0.03125)
+transform = Transform3D(0.92492, 0.352053, -0.143468, -0.348161, 0.935979, 0.0522268, 0.15267, 0.0016444, 0.988276, -0.40625, -0.140625, 0.03125)
 
 [node name="leftleg23" parent="Node2/kingler/body4" index="5"]
-transform = Transform3D(0.856369, 0.463864, 0.22685, -0.501489, 0.851827, 0.151323, -0.123044, -0.243351, 0.962102, -0.40625, -0.140625, 0.1875)
+transform = Transform3D(0.830126, 0.524694, 0.188643, -0.552631, 0.819201, 0.153324, -0.0740886, -0.231528, 0.970003, -0.40625, -0.140625, 0.1875)
 
 [node name="rightleg2" parent="Node2/kingler/body4" index="6"]
-transform = Transform3D(0.889963, -0.436432, 0.132262, 0.434459, 0.899568, 0.0449724, -0.138606, 0.0174386, 0.990194, 0.40625, -0.140625, 0.03125)
+transform = Transform3D(0.921737, -0.366519, 0.126748, 0.365123, 0.930304, 0.0349269, -0.130715, 0.0140853, 0.99132, 0.40625, -0.140625, 0.03125)
 
 [node name="rightleg23" parent="Node2/kingler/body4" index="7"]
-transform = Transform3D(0.795574, -0.508711, -0.329052, 0.465497, 0.860876, -0.205437, 0.387781, 0.0102682, 0.921694, 0.40625, -0.140625, 0.1875)
+transform = Transform3D(0.768011, -0.566211, -0.299273, 0.52277, 0.82419, -0.217767, 0.36996, 0.0107962, 0.928985, 0.40625, -0.140625, 0.1875)
+
+[node name="rightarm2" parent="Node2/kingler/body4" index="8"]
+transform = Transform3D(0.882088, -0.0421779, 0.469192, 0.0399372, 0.999094, 0.0147308, -0.469388, 0.00574439, 0.882973, 0.40625, -0.0781249, -0.15625)
+
+[node name="rightforarm2" parent="Node2/kingler/body4/rightarm2" index="1"]
+transform = Transform3D(0.772466, -0.0575104, 0.632446, 0.0531865, 0.998251, 0.0258126, -0.632825, 0.0136983, 0.774174, 0.375, 0, 2.98023e-08)
+
+[node name="bottomclawright2" parent="Node2/kingler/body4/rightarm2/rightforarm2/clawright3" index="2"]
+transform = Transform3D(0.95273, 0.300511, 0.0447134, -0.303765, 0.944973, 0.12146, -0.00575295, -0.129301, 0.991589, 0, 0.015625, 0)
+
+[node name="leftarm2" parent="Node2/kingler/body4" index="9"]
+transform = Transform3D(0.913034, 0.0347229, -0.406402, -0.0363756, 0.999331, 0.00366032, 0.406257, 0.0114411, 0.913687, -0.40625, -0.078125, -0.15625)
+
+[node name="leftforarm2" parent="Node2/kingler/body4/leftarm2" index="1"]
+transform = Transform3D(0.879128, 0.0403886, -0.474872, -0.0426856, 0.999071, 0.00594894, 0.474671, 0.0150403, 0.880035, -0.375, 2.98023e-08, -1.49012e-08)
+
+[node name="bottomclawleft2" parent="Node2/kingler/body4/leftarm2/leftforarm2/clawleft3" index="2"]
+transform = Transform3D(0.92476, -0.369032, -0.0929164, 0.379921, 0.881256, 0.281156, -0.0218723, -0.295302, 0.955153, 0, 0.015625, 2.98023e-08)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

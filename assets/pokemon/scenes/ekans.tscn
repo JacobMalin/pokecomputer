@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgq5d77vqg36w"]
+[gd_scene load_steps=8 format=3 uid="uid://cgq5d77vqg36w"]
 
 [ext_resource type="PackedScene" uid="uid://bf4ye46ach1vm" path="res://assets/pokemon/gltf/ekans.gltf" id="1_wbqm7"]
 
@@ -61,143 +61,6 @@ tracks/7/path = NodePath("Node2/ekans/body/head2/jaw2")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("Node2/ekans/body/tail")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/9/type = "rotation_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("Node2/ekans/body/tail/tail22")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("Node2/ekans/body/tail/tail22/tail32")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/11/type = "rotation_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/13/type = "rotation_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/14/type = "rotation_3d"
-tracks/14/imported = true
-tracks/14/enabled = true
-tracks/14/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/15/type = "rotation_3d"
-tracks/15/imported = true
-tracks/15/enabled = true
-tracks/15/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/16/type = "rotation_3d"
-tracks/16/imported = true
-tracks/16/enabled = true
-tracks/16/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/17/type = "rotation_3d"
-tracks/17/imported = true
-tracks/17/enabled = true
-tracks/17/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/18/type = "rotation_3d"
-tracks/18/imported = true
-tracks/18/enabled = true
-tracks/18/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42/rattle52")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_c6048"]
-resource_name = "animation_ekans_cry"
-length = 0.958333
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2/ekans/body/head2")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.03125, -1.09375)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2/ekans/body/head2")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.0333333, 1, 0.0196337, 0, 0, 0.999807, 0.0666667, 1, 0.0359896, 0, 0, 0.999352, 0.1, 1, 0.0433318, 0, 0, 0.999061, 0.133333, 1, 0.0423933, 0, 0, 0.999101, 0.2, 1, 0.0383363, 0, 0, 0.999265, 0.233333, 1, 0.0353083, 0, 0, 0.999377, 0.266667, 1, 0.0319468, 0, 0, 0.99949, 0.3, 1, 0.0284487, 0, 0, 0.999595, 0.333333, 1, 0.0245412, 0, 0, 0.999699, 0.366667, 1, 0.0205122, 0, 0, 0.99979, 0.4, 1, 0.0165284, 0, 0, 0.999864, 0.433333, 1, 0.0126806, 0, 0, 0.99992, 0.466667, 1, 0.00913558, 0, 0, 0.999958, 0.5, 1, 0.00613589, 0, 0, 0.999981, 0.533333, 1, 0.00313613, 0, 0, 0.999995, 0.566667, 1, 0.000954477, 0, 0, 1, 0.6, 1, -0.000586566, 0, 0, 1, 0.633333, 1, -0.00175969, 0, 0, 0.999999, 0.666667, 1, -0.00293282, 0, 0, 0.999996, 0.833333, 1, -0.00161604, 0, 0, 0.999999, 0.9, 1, -0.000514741, 0, 0, 1, 0.958333, 1, 0, 0, 0, 1)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2/ekans/body/head2/jaw2")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.0333333, 1, -0.0252619, 0, 0, 0.999681, 0.0666667, 1, -0.0577692, 0, 0, 0.99833, 0.1, 1, -0.0886857, 0, 0, 0.99606, 0.133333, 1, -0.112839, 0, 0, 0.993613, 0.2, 1, -0.112839, 0, 0, 0.993613, 0.233333, 1, -0.120778, 0, 0, 0.99268, 0.266667, 1, -0.120778, 0, 0, 0.99268, 0.3, 1, -0.112839, 0, 0, 0.993613, 0.333333, 1, -0.128709, 0, 0, 0.991682, 0.366667, 1, -0.120864, 0, 0, 0.992669, 0.4, 1, -0.110004, 0, 0, 0.993931, 0.433333, 1, -0.0967664, 0, 0, 0.995307, 0.466667, 1, -0.081779, 0, 0, 0.996651, 0.533333, 1, -0.0495183, 0, 0, 0.998773, 0.566667, 1, -0.0351336, 0, 0, 0.999383, 0.6, 1, -0.0213309, 0, 0, 0.999773, 0.633333, 1, -0.00878087, 0, 0, 0.999961, 0.666667, 1, 0, 0, 0, 1, 0.7, 1, 0.00376288, 0, 0, 0.999993, 0.733333, 1, 0.00752571, 0, 0, 0.999972, 0.766667, 1, 0.0088803, 0, 0, 0.999961, 0.8, 1, 0.00782673, 0, 0, 0.999969, 0.833333, 1, 0.00677315, 0, 0, 0.999977, 0.866667, 1, 0.00451545, 0, 0, 0.99999, 0.9, 1, 0.00225773, 0, 0, 0.999997, 0.933333, 1, 0.00067732, 0, 0, 1, 0.958333, 1, 0, 0, 0, 1)
-tracks/3/type = "position_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node2/ekans/body/head2/eyes/eye_right2/eyelid_right2")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, -0.0375, 0, 0)
-tracks/4/type = "position_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node2/ekans/body/head2/eyes/eye_left2/eyelid_left2")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0.0375, 0, 0)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node2/ekans/body")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0.03125, 0.15625, 0)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node2/ekans/body")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/7/type = "position_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Node2/ekans")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, -0.03125, 0, 0)
 tracks/8/type = "rotation_3d"
 tracks/8/imported = true
 tracks/8/enabled = true
@@ -413,6 +276,143 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, -0.03125, 0, 0)
 
+[sub_resource type="Animation" id="Animation_3nbph"]
+resource_name = "animation_ekans_sleep"
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2/ekans")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.03125, 0.1875, 0.4375)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2/ekans/body/head2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.03125, -1.09375)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2/ekans/body/head2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0877046, -0.599578, 0.0903273, 0.790351)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2/ekans/body/head2/jaw2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2/ekans/body/head2/eyes/eye_right2/eyelid_right2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.03125, 0, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2/ekans/body/head2/eyes/eye_left2/eyelid_left2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.03125, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2/ekans/body/tail")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.0580133, -0.46076, 0.0301998, 0.885112)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2/ekans/body/tail/tail22")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.0479864, 0.462757, -0.0494277, 0.883804)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2/ekans/body/tail/tail22/tail32")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.0718352, 0.468491, -0.0843127, 0.876497)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.518773, 0, 0.854912)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0.461749, 0, 0.887011)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0.480989, 0, 0.876727)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.0559139, 0.517663, -0.0339294, 0.853081)
+tracks/13/type = "position_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Node2/ekans/body")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0.03125, 0.15625, 0)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Node2/ekans/body")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42/rattle52")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
 [sub_resource type="Animation" id="Animation_8y424"]
 resource_name = "animation_ekans_ground_idle"
 length = 0.001
@@ -519,143 +519,6 @@ tracks/14/type = "rotation_3d"
 tracks/14/imported = true
 tracks/14/enabled = true
 tracks/14/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/15/type = "rotation_3d"
-tracks/15/imported = true
-tracks/15/enabled = true
-tracks/15/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/16/type = "rotation_3d"
-tracks/16/imported = true
-tracks/16/enabled = true
-tracks/16/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/17/type = "rotation_3d"
-tracks/17/imported = true
-tracks/17/enabled = true
-tracks/17/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-tracks/18/type = "rotation_3d"
-tracks/18/imported = true
-tracks/18/enabled = true
-tracks/18/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42/rattle52")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_3nbph"]
-resource_name = "animation_ekans_sleep"
-length = 0.001
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2/ekans")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.03125, 0.1875, 0.4375)
-tracks/1/type = "position_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2/ekans/body/head2")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.03125, -1.09375)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Node2/ekans/body/head2")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.0877046, -0.599578, 0.0903273, 0.790351)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Node2/ekans/body/head2/jaw2")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.0871557, 0, 0, 0.996195)
-tracks/4/type = "position_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Node2/ekans/body/head2/eyes/eye_right2/eyelid_right2")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, -0.03125, 0, 0)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Node2/ekans/body/head2/eyes/eye_left2/eyelid_left2")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0.03125, 0, 0)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Node2/ekans/body/tail")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0.0580133, -0.46076, 0.0301998, 0.885112)
-tracks/7/type = "rotation_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Node2/ekans/body/tail/tail22")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0.0479864, 0.462757, -0.0494277, 0.883804)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("Node2/ekans/body/tail/tail22/tail32")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, -0.0718352, 0.468491, -0.0843127, 0.876497)
-tracks/9/type = "rotation_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.518773, 0, 0.854912)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, 0.461749, 0, 0.887011)
-tracks/11/type = "rotation_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 0, 0.480989, 0, 0.876727)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0.0559139, 0.517663, -0.0339294, 0.853081)
-tracks/13/type = "position_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("Node2/ekans/body")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, 0.03125, 0.15625, 0)
-tracks/14/type = "rotation_3d"
-tracks/14/imported = true
-tracks/14/enabled = true
-tracks/14/path = NodePath("Node2/ekans/body")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
@@ -829,59 +692,58 @@ tracks/18/keys = PackedFloat32Array(0, 1, 0.0375, 0, 0)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r6xvv"]
 _data = {
 "animation_ekans_blink": SubResource("Animation_1f35t"),
-"animation_ekans_cry": SubResource("Animation_c6048"),
 "animation_ekans_faint": SubResource("Animation_2lm0w"),
-"animation_ekans_ground_idle": SubResource("Animation_8y424"),
-"animation_ekans_sleep": SubResource("Animation_3nbph"),
-"animation_ekans_summary_idle": SubResource("Animation_7pqwt")
+"animation_ekans_ground_idle": SubResource("Animation_7pqwt"),
+"animation_ekans_old_idle": SubResource("Animation_8y424"),
+"animation_ekans_sleep": SubResource("Animation_3nbph")
 }
 
 [node name="ekans" instance=ExtResource("1_wbqm7")]
 
-[node name="ekans" parent="Node2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03125, -0.03125, 0)
-
-[node name="body" parent="Node2/ekans" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03125, 0.71875, 0.75)
-
 [node name="head2" parent="Node2/ekans/body" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.992461, 0.122564, 0, -0.122564, 0.992461, 0, 0.03125, -1.09375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03125, -1.09375)
 
 [node name="jaw2" parent="Node2/ekans/body/head2" index="4"]
-transform = Transform3D(1, 0, 0, 0, 0.997486, 0.0708606, 0, -0.0708606, 0.997486, 0, -0.125, -0.1875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, -0.1875)
+
+[node name="eyelid_right2" parent="Node2/ekans/body/head2/eyes/eye_right2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03125, 0, 0)
+
+[node name="eyelid_left2" parent="Node2/ekans/body/head2/eyes/eye_left2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03125, 0, 0)
 
 [node name="tail" parent="Node2/ekans/body" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.793353, -0.608761, 0, 0.608761, 0.793353, 0, 0, -1.125)
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, -1.125)
 
 [node name="tail22" parent="Node2/ekans/body/tail" index="1"]
-transform = Transform3D(-0.16582, 0.331207, 0.928874, -0.394432, 0.841015, -0.370292, -0.90384, -0.42778, -0.00881854, 0, 0, 0.5625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5625)
 
 [node name="tail32" parent="Node2/ekans/body/tail/tail22" index="1"]
-transform = Transform3D(0.119266, 0.25289, 0.960116, -0.324609, 0.923807, -0.203004, -0.938299, -0.28745, 0.192269, 0, 0, 0.5625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5625)
 
 [node name="tail42" parent="Node2/ekans/body/tail/tail22/tail32" index="1"]
-transform = Transform3D(0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, 0.422618, 0, 0, 0.5625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5625)
 
 [node name="tail52" parent="Node2/ekans/body/tail/tail22/tail32/tail42" index="1"]
-transform = Transform3D(0.611314, 0, 0.791388, 0, 1, 0, -0.791388, 0, 0.611314, 0, 0, 0.5625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5625)
 
 [node name="tail62" parent="Node2/ekans/body/tail/tail22/tail32/tail42/tail52" index="1"]
-transform = Transform3D(0.542013, -0.109062, 0.833263, -0.00176572, 0.991393, 0.130908, -0.840368, -0.0724251, 0.537155, 0, -0.03125, 0.5625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03125, 0.5625)
 
 [node name="rattle" parent="Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62" index="1"]
-transform = Transform3D(0.983265, -0.117104, 0.13956, 0, 0.766044, 0.642788, -0.182182, -0.63203, 0.753225, 0, 0, 0.625)
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0.625)
 
 [node name="rattle22" parent="Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle" index="1"]
-transform = Transform3D(0.999997, 0.000526501, -0.00237489, 2.91038e-11, 0.976296, 0.21644, 0.00243255, -0.216439, 0.976293, 0, 0, 0.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.125)
 
 [node name="rattle32" parent="Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22" index="2"]
-transform = Transform3D(0.999917, 0.00278886, -0.0125798, -1.16415e-10, 0.976296, 0.21644, 0.0128852, -0.216422, 0.976215, 0, 0, 0.15625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.15625)
 
 [node name="rattle42" parent="Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32" index="2"]
-transform = Transform3D(0.999802, 0.00173305, -0.0198089, -5.82077e-11, 0.996195, 0.0871557, 0.0198845, -0.0871385, 0.995998, 0, 0, 0.15625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.15625)
 
 [node name="rattle52" parent="Node2/ekans/body/tail/tail22/tail32/tail42/tail52/tail62/rattle/rattle22/rattle32/rattle42" index="2"]
-transform = Transform3D(0.999768, 0.00187874, -0.0214741, 5.82077e-11, 0.996195, 0.0871558, 0.0215561, -0.0871355, 0.995963, 0, 0, 0.15625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.15625)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

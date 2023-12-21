@@ -608,118 +608,112 @@ _data = {
 [node name="arcanine" instance=ExtResource("1_ihwix")]
 
 [node name="body" parent="Node2/arcanine" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.996338, 0.0854989, 0, -0.0854989, 0.996338, 0, 0.21875, -0.0625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -0.0625)
 
 [node name="neck2" parent="Node2/arcanine/body" index="1"]
-transform = Transform3D(0.933013, 0.248975, -0.259806, -0.03757, 0.78545, 0.617784, 0.357877, -0.566639, 0.742189, 0, 0.09375, -0.359375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09375, -0.359375)
 
 [node name="head2" parent="Node2/arcanine/body/neck2" index="1"]
-transform = Transform3D(0.855762, 0.39003, -0.339924, -0.382563, 0.91936, 0.0917708, 0.348306, 0.0515084, 0.935965, 0, 0.28125, 0)
-
-[node name="eyelid_left2" parent="Node2/arcanine/body/neck2/head2/eyes/eye_left2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20417e-18, 0, -2.25514e-17)
-
-[node name="eyelid_right2" parent="Node2/arcanine/body/neck2/head2/eyes/eye_right2" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.20417e-18, 0, -2.25514e-17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28125, 0)
 
 [node name="jaw3" parent="Node2/arcanine/body/neck2/head2" index="6"]
-transform = Transform3D(1, 0, 0, 0, 0.976296, 0.21644, 0, -0.21644, 0.976296, 0, 0.078125, -0.25)
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0.078125, -0.25)
 
 [node name="ear_right2" parent="Node2/arcanine/body/neck2/head2" index="7"]
-transform = Transform3D(0.949821, -0.0457862, -0.309425, 0.0346626, 0.998543, -0.0413549, 0.310868, 0.0285543, 0.950024, 0.265625, 0.34375, -0.078125)
+transform = Transform3D(0.852869, -0.173648, -0.492404, 0.150384, 0.984808, -0.0868241, 0.5, 7.45058e-08, 0.866025, 0.265625, 0.34375, -0.078125)
 
 [node name="ear_left" parent="Node2/arcanine/body/neck2/head2" index="8"]
-transform = Transform3D(0.990094, 0.00166073, 0.140398, 0.00261076, 0.999539, -0.0302344, -0.140384, 0.0303014, 0.989633, -0.265625, 0.34375, -0.078125)
+transform = Transform3D(0.852869, 0.173648, 0.492403, -0.150384, 0.984807, -0.0868241, -0.5, 7.45058e-08, 0.866025, -0.265625, 0.34375, -0.078125)
 
 [node name="fluff_head_bottom_right2" parent="Node2/arcanine/body/neck2/head2" index="10"]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.28125, -0.03125, -0.265625)
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0.28125, -0.03125, -0.265625)
 
 [node name="fluff_head_bottom_left2" parent="Node2/arcanine/body/neck2/head2" index="11"]
-transform = Transform3D(0.67559, 0, -0.737277, 0, 1, 0, 0.737277, 0, 0.67559, -0.28125, -0.03125, -0.265625)
+transform = Transform3D(0.939692, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939692, -0.28125, -0.03125, -0.265625)
 
 [node name="fluff_head_top2" parent="Node2/arcanine/body/neck2/head2" index="12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.203125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0.5, -0.203125)
 
 [node name="fluff_head_right" parent="Node2/arcanine/body/neck2/head2" index="13"]
-transform = Transform3D(0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.573576, 0.28125, 0.265625, 0.015625)
+transform = Transform3D(0.499999, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.499999, 0.28125, 0.265625, 0.015625)
 
 [node name="fluff_head_left3" parent="Node2/arcanine/body/neck2/head2" index="14"]
-transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, -0.28125, 0.265625, 0.015625)
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, -0.28125, 0.265625, 0.015625)
 
 [node name="fluff_head_back12" parent="Node2/arcanine/body/neck2/head2" index="15"]
-transform = Transform3D(1, 0, 0, 0, 0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0.453125, 0.21875)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.453125, 0.21875)
 
 [node name="fluff_head_back22" parent="Node2/arcanine/body/neck2/head2" index="16"]
-transform = Transform3D(1, 0, 0, 0, 0.923879, -0.382683, 0, 0.382683, 0.923879, 0, 0.328125, 0.21875)
+transform = Transform3D(1, 0, 0, 0, 0.965925, -0.258818, 0, 0.258818, 0.965925, 0, 0.328125, 0.21875)
 
 [node name="fluff_head_back32" parent="Node2/arcanine/body/neck2/head2" index="17"]
-transform = Transform3D(1, 0, 0, 0, 0.843391, -0.5373, 0, 0.5373, 0.843391, 0, 0.1875, 0.21875)
+transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0.1875, 0.21875)
 
 [node name="fluff_head_back42" parent="Node2/arcanine/body/neck2/head2" index="18"]
-transform = Transform3D(1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 0.03125, 0.21875)
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0.03125, 0.21875)
 
 [node name="fluff_right2" parent="Node2/arcanine/body/neck2/fluff_front" index="2"]
-transform = Transform3D(0.382683, 0, -0.92388, 0, 1, 0, 0.92388, 0, 0.382683, 0.21875, -0.21875, -0.078125)
+transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, 0.21875, -0.21875, -0.078125)
 
 [node name="leg_front_right12" parent="Node2/arcanine/body" index="2"]
-transform = Transform3D(0.832287, -0.137168, 0.537106, 0.553749, 0.250626, -0.794071, -0.0256912, 0.958317, 0.284549, 0.21875, -0.015625, -0.34375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0.21875, -0.015625, -0.34375)
 
 [node name="leg_front_right22" parent="Node2/arcanine/body/leg_front_right12" index="1"]
-transform = Transform3D(0.984135, 0.138338, 0.111092, -0.0696601, 0.877136, -0.475162, -0.163176, 0.459885, 0.872857, 0, -0.3125, 0.0625)
+transform = Transform3D(1, 0, 0, 0, 0.939692, -0.34202, 0, 0.34202, 0.939693, 0, -0.3125, 0.0625)
 
 [node name="leg_front_right_fur2" parent="Node2/arcanine/body/leg_front_right12/leg_front_right22" index="1"]
-transform = Transform3D(0.737277, -0.231065, 0.634847, 1.49012e-08, 0.939693, 0.34202, -0.67559, -0.252164, 0.692814, 0.0613131, -0.173181, -0.00227071)
+transform = Transform3D(0.965926, -0.0885212, 0.24321, -8.94069e-08, 0.939693, 0.342021, -0.258818, -0.330367, 0.907673, 0.0613131, -0.173181, -0.00227071)
 
 [node name="leg_front_right32" parent="Node2/arcanine/body/leg_front_right12/leg_front_right22" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0.03125, -0.328125, -0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, -0.328125, -0.03125)
 
 [node name="leg_front_left" parent="Node2/arcanine/body" index="3"]
-transform = Transform3D(0.563982, 0.252796, -0.786141, -0.82567, 0.156609, -0.541981, -0.0138941, 0.954761, 0.297051, -0.21875, -0.015625, -0.34375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, -0.21875, -0.015625, -0.34375)
 
 [node name="leg_front_left22" parent="Node2/arcanine/body/leg_front_left" index="1"]
-transform = Transform3D(0.997242, -0.0741693, -0.00251599, 0.0640323, 0.877093, -0.476033, 0.0375138, 0.474559, 0.879424, 0, -0.3125, 0.0625)
+transform = Transform3D(0.999999, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 0, -0.3125, 0.0625)
 
 [node name="leg_front_left_fur2" parent="Node2/arcanine/body/leg_front_left/leg_front_left22" index="1"]
-transform = Transform3D(0.766044, 0.219846, -0.604023, 0, 0.939693, 0.34202, 0.642788, -0.262003, 0.719846, -0.0613131, -0.173181, -0.00227071)
+transform = Transform3D(0.965926, 0.0885213, -0.24321, 8.9407e-08, 0.939693, 0.342021, 0.258819, -0.330367, 0.907673, -0.0613131, -0.173181, -0.00227071)
 
 [node name="leg_front_left32" parent="Node2/arcanine/body/leg_front_left/leg_front_left22" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.843391, 0.5373, 0, -0.5373, 0.843391, 0, -0.265625, -0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, -0.328125, -0.03125)
 
 [node name="leg_back_right12" parent="Node2/arcanine/body" index="4"]
-transform = Transform3D(0.939228, -0.169638, 0.298452, 0.308139, 0.0333449, -0.950757, 0.151333, 0.984942, 0.0835906, 0.21875, 0.078125, 0.3125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0.21875, 0.078125, 0.3125)
 
 [node name="leg_back_right22" parent="Node2/arcanine/body/leg_back_right12" index="1"]
-transform = Transform3D(0.991445, 1.19209e-07, -0.130526, 0.0392501, -0.953717, 0.298133, -0.124485, -0.300706, -0.945558, 0, -0.40625, 0.140625)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, -0.40625, 0.140625)
 
 [node name="leg_back_right_fur22" parent="Node2/arcanine/body/leg_back_right12/leg_back_right22/leg_back_right_fur12" index="1"]
-transform = Transform3D(0.642788, 0.0667652, -0.763129, 3.72529e-09, 0.996195, 0.0871557, 0.766044, -0.0560226, 0.640342, 0, 0.00082054, 0.0995316)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0.00082054, 0.0995316)
 
 [node name="leg_back_right33" parent="Node2/arcanine/body/leg_back_right12/leg_back_right22" index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.461749, 0.887011, 0, -0.887011, 0.461749, 0, -0.34375, -0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.34375, -0.03125)
 
 [node name="leg_back_left" parent="Node2/arcanine/body" index="5"]
-transform = Transform3D(0.785491, 0.371045, -0.495307, -0.59631, 0.239636, -0.766152, -0.165584, 0.897162, 0.40949, -0.28125, 0.078125, 0.328125)
+transform = Transform3D(1, 0, 0, 0, 0.996194, 0.0871558, 0, -0.0871558, 0.996195, -0.21875, 0.078125, 0.3125)
 
 [node name="leg_back_left22" parent="Node2/arcanine/body/leg_back_left" index="1"]
-transform = Transform3D(0.939693, 0.333913, 0.0740268, 0.196175, -0.703506, 0.683077, 0.280167, -0.62736, -0.726585, 0, -0.40625, 0.140625)
+transform = Transform3D(1, 0, 0, 0, 0.984807, -0.173648, 0, 0.173648, 0.984808, 0, -0.40625, 0.140625)
 
 [node name="leg_back_left_fur12" parent="Node2/arcanine/body/leg_back_left/leg_back_left22" index="2"]
-transform = Transform3D(0.819152, -0.148453, 0.554032, 0, 0.965926, 0.258819, -0.573577, -0.212012, 0.79124, 2.77556e-17, -0.170958, 0.0054247)
+transform = Transform3D(0.999048, 0.0112895, -0.0421332, 1.30385e-08, 0.965926, 0.258819, 0.0436195, -0.258572, 0.965006, 2.77556e-17, -0.170958, 0.0054247)
 
 [node name="leg_back_left33" parent="Node2/arcanine/body/leg_back_left/leg_back_left22" index="3"]
-transform = Transform3D(0.953717, -2.98023e-08, 0.300706, -0.272532, 0.422618, 0.864361, -0.127084, -0.906308, 0.403058, 0, -0.34375, -0.03125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, -0.34375, -0.03125)
 
 [node name="tail12" parent="Node2/arcanine/body" index="6"]
-transform = Transform3D(0.925456, -0.119168, -0.359625, -0.269164, 0.461193, -0.845489, 0.266611, 0.879261, 0.394738, 0, 0.125, 0.375)
+transform = Transform3D(1, 0, 0, 0, 0.906307, -0.422619, 0, 0.422619, 0.906307, 0, 0.125, 0.375)
 
 [node name="tail23" parent="Node2/arcanine/body/tail12" index="2"]
-transform = Transform3D(0.965926, 1.49012e-08, -0.258819, -0.139063, 0.843391, -0.518991, 0.218286, 0.5373, 0.814654, 0, 0.75, 0.28125)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0.75, 0.28125)
 
 [node name="tail32" parent="Node2/arcanine/body/tail12/tail23" index="1"]
-transform = Transform3D(0.766044, 0.0839006, -0.637288, 0, 0.991445, 0.130526, 0.642788, -0.0999889, 0.759491, 0, -0.40625, 0.4375)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, -0.40625, 0.4375)
 
 [node name="tail42" parent="Node2/arcanine/body/tail12/tail23/tail32" index="1"]
-transform = Transform3D(0.965926, -0.0669873, -0.25, 0, 0.965926, -0.258819, 0.258819, 0.25, 0.933013, 0, 0.152206, 0.297407)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0.152206, 0.297407)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
