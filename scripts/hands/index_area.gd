@@ -22,6 +22,7 @@ func _ready():
 		indexTipIdx = skeleton.find_bone("Index_Tip_R")
 
 func _process(_delta):
+	# adjust index finger collision positions to actually be on the index finger
 	position = skeleton.get_bone_global_pose(indexTipIdx).origin
 	position += POS_ADJUST[hand]
 

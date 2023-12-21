@@ -24,6 +24,8 @@ func _spawn_pokemon(id):
 	var pokemon = pokescene.instantiate()
 
 	pokemon.id = id
+	
+	# adjust newly spawned pokemon to be in the right place
 	pokemon.position = Vector3(7.098, 0, -8.016)
 	pokemon.rotation.y = PI
 

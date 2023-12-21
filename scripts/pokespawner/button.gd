@@ -12,8 +12,10 @@ signal on_pressed(num)
 func _ready():
 	number_label.text = str(number)
 
+# Call when the user presses a specific button, send the button's number
 func _on_finger_entered(area):
 	if not disabled and area.is_in_group("index"):
+		# buffer so the button can't be spammed
 		disabled = true
 		
 		anim.play("press")

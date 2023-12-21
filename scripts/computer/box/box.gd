@@ -169,6 +169,9 @@ func adopt_to_specific(poke):
 	pokemon_copies.add_child(digi_poke_copy)
 
 func power(on : bool):
+	if !on: 
+		box_modes(BoxMode.MAXIMIZED)
+	
 	for box in get_children_boxes():
 		box.power(on)
 	
@@ -187,6 +190,7 @@ func add(add_pos):
 
 	boxes.add_child(new_box)
 
+	# start added box in minimized mode
 	new_box.set_minimized_position(add_pos)
 	new_box.box_modes(BoxMode.MINIMIZED)
 
@@ -194,6 +198,7 @@ func minimize():
 	box_modes(BoxMode.MINIMIZED)
 	
 func delete():
+	# relocate any pokemon in a deleted box to its parent box
 	for poke in get_children_pokemon_recursive():
 		get_parent_box().adopt_to_specific(poke)
 

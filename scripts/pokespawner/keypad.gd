@@ -39,5 +39,6 @@ func on_button_pressed(number):
 		id = ""
 		anim.play("clear_display")
 
+# clear the display one second after the pokemon is spawned
 func clear_text():
 	if id == "": id_label.text = ""

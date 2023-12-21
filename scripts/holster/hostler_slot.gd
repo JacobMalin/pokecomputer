@@ -116,6 +116,7 @@ func _on_has_picked_up(what):
 
 ### Helper ###
 
+# Define the different modes of the holster
 func holster(_holster_mode):
 	holster_mode = _holster_mode
 

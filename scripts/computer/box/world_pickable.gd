@@ -15,8 +15,6 @@ signal world_accumulate(accumulated_position)
 @onready var accumulated_position = Vector3.ZERO
 
 
-
-
 ### Lifecycle ###
 
 func _process(_delta):

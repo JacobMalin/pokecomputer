@@ -12,13 +12,9 @@ signal on_pressed(function)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
 	pass
 
+# Called when the user presses a panel
 func _on_finger_entered(area):
 	if area.get_parent() != controller and area.is_in_group("index") and not disabled:
 		disabled = true
