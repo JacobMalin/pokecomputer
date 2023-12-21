@@ -101,3 +101,6 @@ func apply_shader(node : Node3D):
 	## Apply shader to children
 	for child in node.get_children():
 		if child is Node3D: apply_shader(child)
+
+func get_ref_to_copy():
+	return global_position - portal_reference.global_position

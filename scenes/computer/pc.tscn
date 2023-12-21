@@ -116,6 +116,7 @@ shape = SubResource("CylinderShape3D_bkl2b")
 
 [node name="Desktop" parent="." instance=ExtResource("2_gv6u7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.24809)
+color = Color(0.678431, 0.596078, 0.356863, 1)
 
 [node name="MonitorArea" type="Area3D" parent="."]
 collision_layer = 0

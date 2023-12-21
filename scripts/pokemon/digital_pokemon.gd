@@ -365,3 +365,7 @@ func fix_pos(pos, neg):
 	var _new_position = global_position
 
 	global_position = _new_position.clamp(neg, pos)
+
+func update_pos_to_copy(portal_pos):
+	var portal_ref_to_copy = copy.get_ref_to_copy()
+	global_position = portal_pos + portal_ref_to_copy

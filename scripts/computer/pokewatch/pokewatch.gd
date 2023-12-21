@@ -9,7 +9,7 @@ extends Node3D
 @onready var white = $White
 @onready var button = $Button
 
-signal panel_activate(panel, area)
+signal panel_activate(panel, area, position)
 
 enum PokewatchMode {
 	DEFAULT,
@@ -70,7 +70,7 @@ func _on_button_released(_name):
 	elif _name == GRIP_ACTION: grip = false
 	
 func _on_panel_pressed(function):
-	panel_activate.emit(function, location)
+	panel_activate.emit(function, location, global_position)
 
 ### Signals ###
 

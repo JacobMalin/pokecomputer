@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsiyru5ey4dgh"]
+[gd_scene load_steps=18 format=3 uid="uid://dsiyru5ey4dgh"]
 
 [ext_resource type="Script" path="res://scripts/computer/box/box.gd" id="1_wxkkx"]
 [ext_resource type="Script" path="res://scripts/computer/box/corners.gd" id="2_uc8ih"]
 [ext_resource type="PackedScene" uid="uid://bgw5r8lmumjw2" path="res://scenes/computer/box/corner.tscn" id="3_6qyjt"]
-[ext_resource type="Script" path="res://scripts/computer/box/minimizedbox.gd" id="4_1u77u"]
+[ext_resource type="Script" path="res://scripts/computer/box/minimized_box.gd" id="4_0mo6w"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_koc2i"]
+[ext_resource type="Script" path="res://scripts/computer/box/world_pickable.gd" id="4_s706g"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_qleiw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0w6mr"]
@@ -18,12 +19,13 @@ flip_faces = true
 transparency = 4
 albedo_color = Color(0.490196, 0.541176, 0.603922, 0.0627451)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oudgb"]
-transparency = 1
-albedo_color = Color(0, 0, 1, 0.411765)
-
 [sub_resource type="BoxMesh" id="BoxMesh_6ew1f"]
-material = SubResource("StandardMaterial3D_oudgb")
+resource_local_to_scene = true
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oudgb"]
+resource_local_to_scene = true
+albedo_color = Color(0, 0, 1, 0.411765)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0jqvr"]
 
@@ -37,12 +39,9 @@ tracks/0/path = NodePath("..")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
 "values": [{
-"args": [],
-"method": &"one_click"
-}, {
 "args": [],
 "method": &"refresh_click"
 }]
@@ -52,6 +51,12 @@ tracks/0/keys = {
 _data = {
 "double_click": SubResource("Animation_xn2a3")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5wtl"]
+resource_local_to_scene = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_0s8qo"]
+size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Box" type="Area3D" groups=["box"]]
 collision_layer = 16
@@ -107,24 +112,27 @@ transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.8
 [node name="Pokemon" type="Node3D" parent="."]
 
 [node name="MinimizedBox" type="RigidBody3D" parent="."]
-collision_layer = 0
-collision_mask = 131079
+collision_layer = 32
+collision_mask = 131107
 gravity_scale = 0.0
-script = ExtResource("4_1u77u")
+freeze = true
+freeze_mode = 1
+script = ExtResource("4_0mo6w")
+ranged_grab_method = 0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MinimizedBox"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+[node name="Mesh" type="MeshInstance3D" parent="MinimizedBox"]
 mesh = SubResource("BoxMesh_6ew1f")
+surface_material_override/0 = SubResource("StandardMaterial3D_oudgb")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MinimizedBox"]
+[node name="Collision" type="CollisionShape3D" parent="MinimizedBox"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_0jqvr")
 
-[node name="Area3D" type="Area3D" parent="MinimizedBox"]
+[node name="DoubleTapArea" type="Area3D" parent="MinimizedBox"]
 collision_layer = 0
 collision_mask = 131072
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MinimizedBox/Area3D"]
+[node name="Collision" type="CollisionShape3D" parent="MinimizedBox/DoubleTapArea"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_0jqvr")
 
@@ -139,5 +147,22 @@ libraries = {
 "": SubResource("AnimationLibrary_bvvle")
 }
 
+[node name="WorldPickable" type="RigidBody3D" parent="."]
+collision_layer = 32
+collision_mask = 131107
+freeze = true
+freeze_mode = 1
+script = ExtResource("4_s706g")
+ranged_grab_method = 0
+
+[node name="Collision" type="CollisionShape3D" parent="WorldPickable"]
+shape = SubResource("BoxShape3D_p5wtl")
+
+[node name="Mesh" type="MeshInstance3D" parent="WorldPickable"]
+visible = false
+mesh = SubResource("BoxMesh_0s8qo")
+
 [connection signal="corner_move" from="Corners" to="." method="_on_corner_move"]
-[connection signal="area_entered" from="MinimizedBox/Area3D" to="." method="_on_minimized_box_area_entered"]
+[connection signal="request_fix_pos" from="Corners" to="." method="_on_request_fix_pos"]
+[connection signal="area_entered" from="MinimizedBox/DoubleTapArea" to="." method="_on_minimized_box_area_entered"]
+[connection signal="dropped" from="WorldPickable" to="WorldPickable" method="_on_dropped"]

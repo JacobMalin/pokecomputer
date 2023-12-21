@@ -47,5 +47,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.02)
 cast_shadow = 0
 mesh = ExtResource("5_l5an0")
 skeleton = NodePath("")
-
-[connection signal="dropped" from="." to="." method="_on_dropped"]

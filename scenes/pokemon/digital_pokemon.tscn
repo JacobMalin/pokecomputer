@@ -101,7 +101,7 @@ freeze = true
 freeze_mode = 1
 script = ExtResource("1_vbjam")
 picked_up_layer = 65568
-ranged_grab_method = 2
+ranged_grab_method = 0
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)

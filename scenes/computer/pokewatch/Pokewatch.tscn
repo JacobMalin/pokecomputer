@@ -298,7 +298,7 @@ transform = Transform3D(1.1, 0, 0, 0, 1, 0, 0, 0, 1.1, 0, 0, 0)
 script = ExtResource("1_debun")
 
 [node name="Red" type="Area3D" parent="."]
-transform = Transform3D(0.02223, 0, 0, 0, 0.02223, 0, 0, 0, 0.02223, 0, 0, 0.000435371)
+transform = Transform3D(0.0260777, 0, 0, 0, 0.0260777, 0, 0, 0, 0.0260777, 0, 0, 0.000477707)
 collision_layer = 0
 collision_mask = 131072
 script = ExtResource("2_re4yd")
@@ -320,7 +320,7 @@ libraries = {
 }
 
 [node name="White" type="Area3D" parent="."]
-transform = Transform3D(0.02223, 0, 0, 0, 0.02223, 0, 0, 0, 0.02223, 0, 0, 6.7341e-05)
+transform = Transform3D(0.0260777, 0, 0, 0, 0.0260777, 0, 0, 0, 0.0260777, 0, 0, 4.59769e-05)
 collision_layer = 536870912
 collision_mask = 131072
 script = ExtResource("2_re4yd")
@@ -342,7 +342,7 @@ libraries = {
 }
 
 [node name="Button" type="Area3D" parent="."]
-transform = Transform3D(0.02223, 0, 0, 0, 0.02223, 0, 0, 0, 0.02223, 0, 0, 0.000130188)
+transform = Transform3D(0.0260777, 0, 0, 0, 0.0260777, 0, 0, 0, 0.0260777, 0, 0, 0.000119702)
 collision_layer = 536870912
 collision_mask = 131072
 script = ExtResource("2_re4yd")
@@ -363,7 +363,7 @@ libraries = {
 }
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(0.317571, 0, 0, 0, 0.317572, 0, 0, 0, 0.317571, 0, 0, 0.000130188)
+transform = Transform3D(0.372538, 0, 0, 0, 0.372539, 0, 0, 0, 0.372538, 0, 0, 0.000119702)
 collision_layer = 0
 collision_mask = 16
 

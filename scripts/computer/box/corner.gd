@@ -2,7 +2,7 @@ class_name Corner
 extends XRToolsPickable
 
 signal corner_move(id, pos)
-signal request_fix_pos
+signal request_fix_pos(corner)
 
 enum Id {X = 1, Y = 2, Z = 4}
 @export_flags("x", "y", "z") var id = 0
@@ -24,6 +24,7 @@ func _process(_delta):
 
 	if is_picked_up():
 		corner_move.emit(id, global_position)
+		new_position = global_position
 
 func _integrate_forces(state):
 	rotation = starting_rotation # Helps prevent artifacts
@@ -61,27 +62,38 @@ func request_highlight(from : Node, on : bool = true) -> void:
 
 ### Events ###
 
-func _on_dropped(_pickable):
-	request_fix_pos.emit()
-
 func _on_corner_move(_id, pos):
 	if id != _id:
 		if id & Id.X == _id & Id.X:
-			global_position.x = pos.x
+			new_position.x = pos.x
 		if id & Id.Y == _id & Id.Y:
-			global_position.y = pos.y
+			new_position.y = pos.y
 		if id & Id.Z == _id & Id.Z:
-			global_position.z = pos.z
+			new_position.z = pos.z
 
 
 
 ### Helpers ###
 
 func fix_pos(pos, neg):
-	new_position.x = pos.x if id & Id.X else neg.x
-	new_position.y = pos.y if id & Id.Y else neg.y
-	new_position.z = pos.z if id & Id.Z else neg.z
+	global_position.x = pos.x if id & Id.X else neg.x
+	global_position.y = pos.y if id & Id.Y else neg.y
+	global_position.z = pos.z if id & Id.Z else neg.z
+	new_position = global_position
+
+func fix_bounds(pos, neg, padding):
+	var _new_position = global_position
+
+	global_position = _new_position.clamp(neg + Vector3.ONE * padding, pos - Vector3.ONE * padding)
+	new_position = global_position
+	
 
 func power(on : bool):
 	enabled = on
 	collision.set_deferred("disabled", !on)
+
+func disable():
+	collision.set_deferred("disabled", true)
+
+func enable():
+	collision.set_deferred("disabled", false)

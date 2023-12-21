@@ -21,7 +21,7 @@ shape = SubResource("SphereShape3D_7lbeg")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 visible = false
 volume_db = -11.8
-unit_size = 8.0
+unit_size = 40.0
 
 [node name="Placeholder" parent="." instance=ExtResource("2_1nrag")]
 
