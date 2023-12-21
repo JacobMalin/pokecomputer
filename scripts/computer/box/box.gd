@@ -32,6 +32,7 @@ var pokemon : Node3D
 var pokemon_copies : Node3D
 var world_pickable : WorldPickable
 var minimized : MinimizedBox
+var copy_copy : Node3D
 
 var single_click = null
 
@@ -211,6 +212,10 @@ func box_modes(_box_mode):
 			global_position = minimized.global_position
 			corners._on_maximize(minimized.global_position)
 			check_bounds()
+
+			if copy_copy:
+				copy_copy.queue_free()
+				copy_copy = null
 			
 			portal_ref_mesh.show()
 			portal.show()
@@ -225,6 +230,11 @@ func box_modes(_box_mode):
 			
 		BoxMode.MINIMIZED:
 			minimized.enable()
+
+			copy_copy = pokemon_copies.duplicate()
+			minimized.add_child(copy_copy)
+			copy_copy.scale = Vector3.ONE * 0.04
+			copy_copy.position = minimized.global_position * 0.04
 			
 			portal_ref_mesh.hide()
 			portal.hide()

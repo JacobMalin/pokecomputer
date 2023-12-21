@@ -2,9 +2,9 @@ class_name DigitalPokemonCopy
 extends Node3D
 
 @export var copy_of : DigitalPokemon
-var portal
-var portal_reference
-var camera
+@export var portal : Portal
+@export var portal_reference : MeshInstance3D
+@export var camera : Camera3D
 
 var pokemon_name
 

@@ -31,8 +31,6 @@ func enable():
 	collision.set_deferred("disabled", false)
 	area_collision.set_deferred("disabled", false)
 
-
-
 func disable():
 	hide()
 	collision.set_deferred("disabled", true)
