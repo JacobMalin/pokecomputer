@@ -1,7 +1,12 @@
 class_name Desktop
 extends Box
 
+@onready var copy_material_scene = preload("res://assets/computer/box/copy_material.tres")
+
 @onready var desktop_orphanage : Node3D = preload("res://scenes/computer/box/desktop_orphanage.tscn").instantiate()
+
+@onready var closed_copies : Node3D = $ClosedCopies
+
 
 var orphanage
 
@@ -49,9 +54,40 @@ func power(on : bool):
 		for orphan in orphanage.get_children():
 			if orphan is DigitalPokemon:
 				orphan.reparent(pokemon)
+
+		for copy in closed_copies.get_children():
+			copy.queue_free()
 	else:
 		for poke in get_children_pokemon():
 			poke.reparent(orphanage)
+			
+		for box in get_children_boxes():
+			if box.box_mode == BoxMode.MAXIMIZED:
+				var copy = box.portal.duplicate()
+				copy.set_script(null)
+				copy.mesh = copy.mesh.duplicate()
+				copy.mesh.flip_faces = false
+				
+				var mat = copy_material_scene.duplicate()
+				mat.albedo_color = box.color
+				copy.set_surface_override_material(0, mat)
+				
+				closed_copies.add_child(copy)
+				
+				copy.global_position = box.portal.global_position
+			else:
+				var copy = box.minimized.mesh.duplicate()
+				copy.set_script(null)
+				copy.mesh = copy.mesh.duplicate()
+				copy.mesh.flip_faces = false
+				
+				var mat = copy_material_scene.duplicate()
+				mat.albedo_color = box.color
+				copy.set_surface_override_material(0, mat)
+				
+				closed_copies.add_child(copy)
+				
+				copy.global_position = box.minimized.mesh.global_position
 	
 	for box in get_children_boxes():
 		box.power(on)

@@ -59,4 +59,6 @@ cast_shadow = 0
 [node name="Leg4" parent="Table/Legs" index="3"]
 cast_shadow = 0
 
+[node name="ClosedCopies" type="Node3D" parent="."]
+
 [editable path="Table"]

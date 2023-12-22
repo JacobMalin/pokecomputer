@@ -171,8 +171,10 @@ func adopt_to_specific(poke):
 	pokemon_copies.add_child(digi_poke_copy)
 
 func power(on : bool):
-	if on: 
-		if box_mode == BoxMode.MAXIMIZED: portal.show()
+	if on:
+		if box_mode == BoxMode.MAXIMIZED:
+			portal.show()
+			portal_ref_mesh.show()
 		
 		for orphan in world_in_cube.orphanage.get_children():
 			if orphan is DigitalPokemon:
@@ -185,6 +187,7 @@ func power(on : bool):
 		saved_pos = minimized.global_position
 		
 		portal.hide()
+		portal_ref_mesh.hide()
 		
 		for poke in get_children_pokemon():
 			poke.reparent(world_in_cube.orphanage)

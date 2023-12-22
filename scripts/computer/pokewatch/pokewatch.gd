@@ -5,9 +5,12 @@ extends Node3D
 
 @onready var controller = get_parent()
 
+@onready var desktop : Desktop = get_tree().get_root().get_node("Main/PC/Desktop")
+
 @onready var red = $Red
 @onready var white = $White
 @onready var button = $Button
+@onready var watch_area : Area3D = $Area3D
 
 signal panel_activate(panel, area, position)
 
@@ -70,7 +73,11 @@ func _on_button_released(_name):
 	elif _name == GRIP_ACTION: grip = false
 	
 func _on_panel_pressed(function):
-	panel_activate.emit(function, location, global_position)
+	if !is_instance_valid(location):
+		var new_location = get_current_area()
+		if new_location: panel_activate.emit(function, new_location, global_position)
+	else:
+		panel_activate.emit(function, location, global_position)
 
 ### Signals ###
 
@@ -128,3 +135,17 @@ func pokewatch(_pokewatch_mode):
 			red.make_visible()
 			white.make_visible()
 			button.make_visible()
+
+func get_current_area():
+	var areas = watch_area.get_overlapping_areas()
+	return check_area(desktop, areas)
+
+func check_area(box, areas):
+	if box in areas:
+		for child in box.get_children_boxes():
+			var area = check_area(child, areas)
+			if area: return area
+
+		return box
+	
+	return null
