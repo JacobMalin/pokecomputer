@@ -68,6 +68,7 @@ func _ready():
 
 	idle()
 
+# If in a box that is not the desktop, update shader parameters so that clipping works
 func _process(_delta):
 	if in_box and in_box != desktop:
 		var pos = in_box.portal.global_position + in_box.portal.mesh.size / 2
@@ -82,14 +83,11 @@ func _process(_delta):
 		for mat in shader_update_list:
 			mat.set_shader_parameter("override", true)
 
-# func _integrate_forces(state):
-# 	state.transform.origin = new_position
-
 
 
 ### Super Overrides ###
 
-# Called when this object is dropped
+# Add a function call that is called when dropped by controller
 func let_go(p_linear_velocity: Vector3, p_angular_velocity: Vector3) -> void:
 	# Skip if idle
 	if _state == PickableState.IDLE:
@@ -147,7 +145,7 @@ func let_go(p_linear_velocity: Vector3, p_angular_velocity: Vector3) -> void:
 	# let interested parties know
 	dropped.emit(self)
 
-# Called when this object is picked up
+# Add a function call that is called when picked up by controller
 func pick_up(by: Node3D, with_controller: XRController3D) -> void:
 	# Skip if disabled or already picked up
 	if not enabled or _state != PickableState.IDLE:
@@ -206,9 +204,7 @@ func pick_up(by: Node3D, with_controller: XRController3D) -> void:
 	else:
 		_do_precise_grab()
 
-## This method requests highlighting of the [XRToolsPickable].
-## If [param from] is null then all highlighting requests are cleared,
-## otherwise the highlight request is associated with the specified node.
+# Add rumble call when highlighted by controller
 func request_highlight(from : Node, on : bool = true) -> void:
 	# Save if we are highlighted
 	var old_highlighted := _highlighted
@@ -235,16 +231,21 @@ func request_highlight(from : Node, on : bool = true) -> void:
 
 ### Events ###
 
+# Makes self intangible when not intersecting box
 func _on_exit_box(area : Area3D):
 	if area == in_box and area != desktop:
 		tangible(TangibleState.INTANGIBLE)
 
+# Makes self tangible when intersecting box
 func _on_enter_box(area : Area3D):
 	if area == in_box:
 		tangible(TangibleState.TANGIBLE)
 
+
+
 ### Helper ###
 
+# Check if animation exists
 func anim_in_list(_name):
 	if poke_anim_player:
 		var anim_list = poke_anim_player.get_animation_list()
@@ -252,6 +253,7 @@ func anim_in_list(_name):
 
 	return false
 
+# Safely play an animation, or if it doesn't exist, safely play a backup
 func safe_poke_anim_play(_name, backup=""):
 	if poke_anim_player:
 		if anim_in_list(_name):
@@ -259,19 +261,23 @@ func safe_poke_anim_play(_name, backup=""):
 		elif anim_in_list(backup):
 			poke_anim_player.play(backup)
 
+# Play cry sound and animation
 func cry():
 	if id != 0:
 		cry_player.play()
 		safe_poke_anim_play("animation_"+pokemon_name+"_cry")
 
+# Set the pokemon to idle
 func idle():
 	safe_poke_anim_play("animation_"+pokemon_name+"_ground_idle", "animation_"+pokemon_name+"_idle")
 
+# Disable snap points, play grow animation, and adopt to pc when dropped by controller
 func _on_let_go_by_controller():
 	disable_snap()
 	grow()
 	pc.adopt(self) ## Re-adopt when dropped
 
+# Reactivate snap points, play shrink animation, and frees copy when picked up by ball
 func _on_picked_up_by_ball():
 	activate_snap()
 	shrink()
@@ -282,6 +288,7 @@ func _on_picked_up_by_ball():
 
 	in_box = desktop
 
+# Frees copy and parents to desktop when picked up by controller
 func _on_picked_up_by_controller():
 	if copy:
 		copy.queue_free()
@@ -290,20 +297,24 @@ func _on_picked_up_by_controller():
 	in_box = desktop
 	reparent(desktop.pokemon)
 
+# Disables hand snap points
 func disable_snap():
 	for point in _grab_points:
 		point.enabled = false
 
+# Enables hand snap points
 func activate_snap():
 	for point in _grab_points:
 		point.enabled = true
 
+# Plays grow animation
 func grow():
 	if size_state == SizeState.SMALL:
 		size_state = SizeState.LARGE
 		
 		digi_anim_player.play("grow")
 
+# Plays shrink animation
 func shrink():
 	if size_state == SizeState.LARGE:
 		size_state = SizeState.SMALL
@@ -314,6 +325,8 @@ func shrink():
 		collision.position = Vector3.UP * POKEBALL_SCALE
 		mesh.scale = Vector3.ONE * POKEBALL_SCALE
 
+# Changes which box the digital pokemon believes it is in and updates relevant shader and 
+# tangibility
 func set_box(box : Box):
 	in_box = box
 	
@@ -326,6 +339,7 @@ func set_box(box : Box):
 	else:
 		tangible(TangibleState.INTANGIBLE)
 
+# Makes digital pokemon tangible or intangible
 func tangible(_tangible_state : TangibleState):
 	tangible_state = _tangible_state
 
@@ -337,6 +351,7 @@ func tangible(_tangible_state : TangibleState):
 			visible = false
 			collision.set_deferred("disabled", true)
 
+# Recursively replaces material with shader materials
 func apply_shader(node : Node3D):
 	## Apply shader to node
 	if node is MeshInstance3D:
@@ -358,14 +373,17 @@ func apply_shader(node : Node3D):
 	for child in node.get_children():
 		if child is Node3D: apply_shader(child)
 
+# Rumbles the controller
 func rumble(from):
 	if picked_up_by: from.get_parent().full_rumble()
 
+# Bounds digital pokemon between pos and neg
 func fix_pos(pos, neg):
 	var _new_position = global_position
 
 	global_position = _new_position.clamp(neg, pos)
 
+# Moves digital pokemon to it's copy's position
 func update_pos_to_copy(portal_pos):
 	var portal_ref_to_copy = copy.get_ref_to_copy()
 	global_position = portal_pos + portal_ref_to_copy

@@ -1,7 +1,10 @@
 class_name DigiPokeSnap
 extends XRToolsSnapZone
 
-# Overwrite super._ready
+
+### Overrided super methods ###
+
+# Overwrite super._ready to allow for cube collision
 func _ready():
 	# Dont do this
 	# $CollisionShape3D.shape.radius = grab_distance
@@ -12,10 +15,8 @@ func _ready():
 	# Perform the initial object check when next idle
 	if not Engine.is_editor_hint():
 		_initial_object_check.call_deferred()
-
-### Overrided super methods ###
 	
-# Called when a body enters the snap zone
+# Adds rumble to hover over snap point with digital pokemon
 func _on_snap_zone_body_entered(target: Node3D) -> void:
 	# Ignore objects already known about
 	if _object_in_grab_area.find(target) >= 0:
@@ -50,7 +51,7 @@ func _on_snap_zone_body_entered(target: Node3D) -> void:
 	if not is_instance_valid(picked_up_object):
 		close_highlight_updated.emit(self, enabled)
 
-# Called when a body leaves the snap zone
+# Adds rumble to exit hover over snap point with digital pokemon
 func _on_snap_zone_body_exited(target: Node3D) -> void:
 	# Rumble if leaves list
 	if target in _object_in_grab_area:
@@ -71,10 +72,12 @@ func _on_snap_zone_body_exited(target: Node3D) -> void:
 
 ### Helper ###
 
+# Rumble when hover over snap point with digital pokemon
 func enter_rumble(target):
 	if target.by_controller is RumbleController and not is_instance_valid(picked_up_object):
 		target.by_controller.enter_rumble()
 
+# Rumble when exit hover over snap point with digital pokemon
 func exit_rumble(target):
 	if target.by_controller is RumbleController and not is_instance_valid(picked_up_object):
 		target.by_controller.exit_rumble()

@@ -21,12 +21,9 @@ const HOLSTER_ANGLE_RANGE = 15
 @onready var right : Node3D = $Right
 @onready var center_ref : Node3D = $CenterReference
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+### Lifecycle ###
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Moves holster based on angle from head to center of holster
 func _process(_delta):
 	# Position
 	global_position = camera.global_position

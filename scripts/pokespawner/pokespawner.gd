@@ -16,7 +16,7 @@ func _ready():
 
 ### Events ###
 
-# called when an id is entered into the keypad
+# Spawn a new pokemon into the scene
 func _spawn_pokemon(id):
 	# play the teleporter audio
 	audio.play()

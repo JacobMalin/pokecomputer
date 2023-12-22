@@ -6,11 +6,17 @@ enum HolsterMode {
 	DIGITAL
 }
 
-
-
 ### Lifecycle ###
 
-# Overwrite super._ready
+# Calls super
+func _process(delta):
+	super._process(delta)
+
+
+
+### Super Overrides ###
+
+# Overwrite super._ready to allow for cube shaped collision
 func _ready():
 	# Dont do this
 	# $CollisionShape3D.shape.radius = grab_distance
@@ -22,15 +28,7 @@ func _ready():
 	if not Engine.is_editor_hint():
 		_initial_object_check.call_deferred()
 
-
-func _process(delta):
-	super._process(delta)
-
-
-
-### Super Overrides ###
-
-# Pickup Method: Drop the currently picked up object
+# Added line to remove object from holster when dropped
 func drop_object() -> void:
 	if not is_instance_valid(picked_up_object):
 		return
@@ -42,8 +40,8 @@ func drop_object() -> void:
 	picked_up_object = null
 	has_dropped.emit()
 	highlight_updated.emit(self, enabled)
-	
-# Called when a body enters the snap zone
+
+# Adds rumble to hover over snap point with pokeball
 func _on_snap_zone_body_entered(target: Node3D) -> void:
 	# Ignore objects already known about
 	if _object_in_grab_area.find(target) >= 0:
@@ -78,7 +76,7 @@ func _on_snap_zone_body_entered(target: Node3D) -> void:
 	if not is_instance_valid(picked_up_object):
 		close_highlight_updated.emit(self, enabled)
 
-# Called when a body leaves the snap zone
+# Adds rumble to exit hover over snap point with pokeball
 func _on_snap_zone_body_exited(target: Node3D) -> void:
 	# Rumble if leaves list
 	if target in _object_in_grab_area:
@@ -99,16 +97,17 @@ func _on_snap_zone_body_exited(target: Node3D) -> void:
 
 ### Signals ###
 
+# Makes holster digital when enters computer
 func _on_area_entered(area:Area3D):
 	if area.is_in_group("desktop"):
 		holster(HolsterMode.DIGITAL)
 
-
+# Makes holster default when enters computer
 func _on_area_exited(area:Area3D):
 	if area.is_in_group("desktop"):
 		holster(HolsterMode.DEFAULT)
 
-
+# When picks up a pokeball, inform it that it is in the holster
 func _on_has_picked_up(what):
 	what.enter_holster()
 
@@ -116,7 +115,7 @@ func _on_has_picked_up(what):
 
 ### Helper ###
 
-# Define the different modes of the holster
+# Change visibility based on holster state
 func holster(_holster_mode):
 	holster_mode = _holster_mode
 
@@ -130,10 +129,12 @@ func holster(_holster_mode):
 			else: visible = false
 			enabled = false
 
+# Rumble when pokeball hovers over slot
 func enter_rumble(target):
 	if target.by_controller is RumbleController and not is_instance_valid(picked_up_object):
 		target.by_controller.enter_rumble()
 
+# Rumble when pokeball exits hover over slot
 func exit_rumble(target):
 	if target.by_controller is RumbleController and not is_instance_valid(picked_up_object):
 		target.by_controller.exit_rumble()

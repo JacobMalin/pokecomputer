@@ -49,6 +49,7 @@ func _ready():
 		digi_anim_player.play(copy_anim_name)
 		digi_anim_player.seek(copy_of.digi_anim_player.get_current_animation_position(), true)
 
+# Update shader parameters so that clipping works
 func _process(_delta):
 	var pos = portal_reference.global_position + portal_reference.mesh.size / 2
 	var neg = portal_reference.global_position - portal_reference.mesh.size / 2
@@ -62,6 +63,7 @@ func _process(_delta):
 
 ## Helper ##
 
+# Check if animation exists
 func anim_in_list(_name):
 	if poke_anim_player:
 		var anim_list = poke_anim_player.get_animation_list()
@@ -69,6 +71,7 @@ func anim_in_list(_name):
 
 	return false
 
+# Safely play an animation, or if it doesn't exist, safely play a backup
 func safe_poke_anim_play(_name, backup=""):
 	if poke_anim_player:
 		if anim_in_list(_name):
@@ -76,12 +79,15 @@ func safe_poke_anim_play(_name, backup=""):
 		elif anim_in_list(backup):
 			poke_anim_player.play(backup)
 
+# Set the pokemon to idle
 func idle():
 	safe_poke_anim_play("animation_"+pokemon_name+"_ground_idle", "animation_"+pokemon_name+"_idle")
 
+# Plays grow animation
 func grow():
 	digi_anim_player.play("grow")
 
+# Recursively replaces material with shader materials
 func apply_shader(node : Node3D):
 	## Apply shader to node
 	if node is MeshInstance3D:
@@ -102,5 +108,6 @@ func apply_shader(node : Node3D):
 	for child in node.get_children():
 		if child is Node3D: apply_shader(child)
 
+# Get position offset of portal reference to digital pokemon copy
 func get_ref_to_copy():
 	return global_position - portal_reference.global_position

@@ -80,6 +80,7 @@ func _ready():
 	# Make sure to not await during _ready.
 	call_deferred("actor_setup")
 
+# Does pokemon navigation
 func _physics_process(delta):
 	if navigation_agent.is_navigation_finished() || move_state != MoveState.WALK:
 		return
@@ -108,6 +109,7 @@ func _physics_process(delta):
 			var final = start.slerp(goal, ROTATE_SPEED * delta)
 			global_transform.basis = Basis(final)
 
+# Animates pokemon movement duing capture and release phases
 func _process(delta):
 	if capture_state == CaptureState.CAPTURE:
 		if capture_elapsed >= CAPTURE_TIME:
@@ -160,6 +162,7 @@ func _process(delta):
 
 ## Events ##
 
+# When navigation is finished, assign new target
 func _on_navigation_agent_3d_navigation_finished():
 	if move_state == MoveState.WALK:
 		walk()
@@ -167,7 +170,8 @@ func _on_navigation_agent_3d_navigation_finished():
 
 
 ## Helper ##
-	
+
+# Once nav map is set up, start pokemon idle or walk
 func actor_setup():
 	# Wait for the first physics frame so the NavigationServer can sync.
 	await get_tree().physics_frame
@@ -176,19 +180,24 @@ func actor_setup():
 	if move_state == MoveState.WALK: walk()
 	if move_state == MoveState.IDLE: idle()
 
+# Set new movement target
 func set_movement_target(movement_target: Vector3):
 	navigation_agent.set_target_position(movement_target)
 
+# Clear movement targer
 func clear_movement_target():
 	set_movement_target(global_position)
 
+# Play cry sound and animation
 func cry():
 	audio_player.play()
 	safe_anim_queue("animation_"+pokemon_name+"_cry")
 
+# Checks if pokemon is not captured
 func is_free():
 	return capture_state == CaptureState.FREE
 
+# Check if animation exists
 func anim_in_list(_name):
 	if animation_player:
 		var anim_list = animation_player.get_animation_list()
@@ -196,6 +205,7 @@ func anim_in_list(_name):
 
 	return false
 
+# Safely play an animation, or if it doesn't exist, safely play a backup
 func safe_anim_play(_name, backup=""):
 	if animation_player:
 		if anim_in_list(_name):
@@ -203,6 +213,7 @@ func safe_anim_play(_name, backup=""):
 		elif anim_in_list(backup):
 			animation_player.play(backup)
 
+# Safely queue an animation, or if it doesn't exist, safely queue a backup
 func safe_anim_queue(_name, backup=""):
 	if animation_player:
 		if anim_in_list(_name):
@@ -212,6 +223,7 @@ func safe_anim_queue(_name, backup=""):
 
 ### Pokemon move states ###
 
+# Set the pokemon to walk, or if no animation exists, idle
 func walk():
 	if id != 0:
 		if anim_in_list("animation_"+pokemon_name+"_ground_walk"):
@@ -223,6 +235,7 @@ func walk():
 		else:
 			idle() 
 
+# Set the pokemon to idle
 func idle():
 	if id != 0:
 		move_state = MoveState.IDLE
@@ -235,6 +248,7 @@ func idle():
 func pre_capture():
 	capture_state = CaptureState.PRE_CAPTURE
 
+# Capture the pokemon
 func capture(dest_rot):
 	capture_state = CaptureState.CAPTURE
 	capture_elapsed = 0
@@ -249,9 +263,11 @@ func capture(dest_rot):
 
 	idle()
 
+# Marks state to contain after capture animation
 func end_capture():
 	capture_state = CaptureState.CONTAIN
 
+# Releases the pokemon
 func release(dest_pos, start_rot, dest_rot):
 	capture_state = CaptureState.RELEASE
 	release_elapsed = 0
@@ -264,6 +280,7 @@ func release(dest_pos, start_rot, dest_rot):
 
 	cry()
 
+# Marks state to free after release animation and sets poke to walk
 func end_release():
 	capture_state = CaptureState.FREE
 	collision.disabled = false

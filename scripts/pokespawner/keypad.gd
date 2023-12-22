@@ -15,7 +15,6 @@ var id = ""
 
 ### Lifecycle ###
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	for button in buttons.get_children():
 		if button is Node3D:
@@ -25,6 +24,7 @@ func _ready():
 
 ### Events ###
 
+# Updates display and signals pokemon spawning
 func on_button_pressed(number):
 	# takes in the entered id and changes the display
 	id += str(number)
@@ -39,6 +39,6 @@ func on_button_pressed(number):
 		id = ""
 		anim.play("clear_display")
 
-# clear the display one second after the pokemon is spawned
+# Clear the display one second after the pokemon is spawned
 func clear_text():
 	if id == "": id_label.text = ""

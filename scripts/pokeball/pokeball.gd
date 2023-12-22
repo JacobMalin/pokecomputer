@@ -60,15 +60,12 @@ var drop_start_rot
 
 ## Lifecycle ##
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()
 
-
+# Controlls and animates pokeball rise and drop
 func _process(delta):
 	if capture_state == CaptureState.RISE: # Look at target
-		# Maybe fix some year: Pokeball snaps into place once rise starts
-
 		# Get target for look at
 		var target_position
 		if contents == EMPTY and closest_pokemon != null: ## Look at the closest pokemon in a range of POKE_SCAN_RANGE
@@ -90,6 +87,7 @@ func _process(delta):
 		var intermediate_rot = drop_start_rot.lerp(Vector3.ZERO, drop_elapsed / DROP_TIME)
 		mesh.rotation = intermediate_rot
 
+# Animates pokeball rise
 func _integrate_forces(state):
 	# Rise upwards
 	if capture_state == CaptureState.RISE:
@@ -97,9 +95,9 @@ func _integrate_forces(state):
 		state.angular_velocity = Vector3.ZERO
 
 
-## This method requests highlighting of the [XRToolsPickable].
-## If [param from] is null then all highlighting requests are cleared,
-## otherwise the highlight request is associated with the specified node.
+## Super Overrides ##
+
+# Add rumble call when highlighted by controller
 func request_highlight(from : Node, on : bool = true) -> void:
 	# Save if we are highlighted
 	var old_highlighted := _highlighted
@@ -125,6 +123,7 @@ func request_highlight(from : Node, on : bool = true) -> void:
 
 ## Events ##
 
+# When pokeball hits surface and is primed, starts pokeball capture/release animation
 func _on_pokeball_hit_something(body:Node):
 	var all_pokeballs = get_tree().get_nodes_in_group("pokeball")
 	if body in all_pokeballs or capture_state != CaptureState.PRIMED: # Don't hit itself and do not activate until primed
@@ -133,18 +132,22 @@ func _on_pokeball_hit_something(body:Node):
 	# This controls many things, but essentially drives the pokemon capture/release
 	animation_player.play("capture_and_release")
 
+# When pokeball is dropped by a controller, prime the pokeball for capture/release
 func _on_pokeball_dropped(_pickable):
 	capture_state = CaptureState.PRIMED
 
+# When pokeball is picked up by controller, unprime the pokeball
 func _on_pokeball_picked_up(_pickable):
 	if by_controller:
 		capture_state = CaptureState.DEFAULT
 
+# When digital pokemon is taken out of holster reparent digital pokemon from pokeball to pc
 func _on_digi_snap_has_dropped():
 	contents.reparent(pc)
 
 	contents = EMPTY
 
+# When digital pokemon is placed into holster reparent digital pokemon from pc to pokeball
 func _on_digi_snap_has_picked_up(what):
 	what.reparent(self)
 
@@ -156,21 +159,26 @@ func _on_digi_snap_has_picked_up(what):
 
 ## Helper ##
 
+# When pokeball enters computer, make invisible
 func enter_computer():
 	if display_state == DisplayState.HOLSTER:
 		display(DisplayState.DIGITAL)
 
+# When pokeball exits computer, make semi-transparent
 func exit_computer():
 	if display_state == DisplayState.DIGITAL:
 		display(DisplayState.HOLSTER)
 
+# When pokeball enters holster, make semi-transparent and unprime pokeball
 func enter_holster():
 	display(DisplayState.HOLSTER)
 	capture_state = CaptureState.DEFAULT
 
+# When pokeball exits holster, make opaque
 func exit_holster():
 	display(DisplayState.DEFAULT)
 
+# Update pokeball mesh transparency and appropriately disable/enable collisions/visibility
 func display(_display_state):
 	display_state = _display_state
 	
@@ -196,6 +204,7 @@ func display(_display_state):
 			digi_snap.enabled = true
 			if contents: contents.visible = true
 
+# Rumble controller
 func rumble(from):
 	if contents: from.get_parent().full_rumble()
 	else: from.get_parent().empty_rumble()
@@ -203,7 +212,8 @@ func rumble(from):
 
 ### RISE phase ###
 
-func scan(): # If pokeball is empty, choose closest pokemon to capture
+# If pokeball is empty, choose closest pokemon to capture and mark pokemon as precaptured
+func scan():
 	if contents == EMPTY:
 		var all_pokemon = get_tree().get_nodes_in_group("pokemon")
 		var can_be_captured = (func(poke): return poke in all_pokemon and poke.is_free())
@@ -214,16 +224,19 @@ func scan(): # If pokeball is empty, choose closest pokemon to capture
 		# If there is a free pokemon nearby, mark as pre_captured
 		if closest_pokemon: closest_pokemon.pre_capture()
 
+# Return if poke is closer than _min
 func is_closer(poke, _min):
 	return poke.global_position.distance_squared_to(global_position) < \
 		   _min.global_position.distance_squared_to(global_position)
 
 ### HOLD phase ###
 
+# If empty, start capture, else start release
 func capture_and_release():
 	if contents == EMPTY: capture()
 	else: release()
 
+# Captures the pokemon
 func capture():
 	if closest_pokemon == null: # If no pokemon was found in the scan phase
 		$AnimationPlayer.stop()
@@ -247,6 +260,7 @@ func capture():
 	contents_temp.capture(mesh.global_rotation)
 	mesh.rotate_object_local(Vector3.UP, PI)
 
+# Deletes the digital pokemon and reinstantiates and relases the pokemon
 func release():
 	# Undigitize pokemon
 	var contents_id = contents.id
@@ -269,7 +283,7 @@ func release():
 
 	contents = EMPTY
 
-# A position on the ground 1 meter away from ball in the direction of the player
+# Returns a position on the ground 1 meter away from ball in the direction of the player
 func release_position():
 	var player_to_ball = global_position - player_body.global_position
 	player_to_ball.y = 0
@@ -279,6 +293,7 @@ func release_position():
 
 ### DROP phase ###
 
+# At end of capture, create digital pokemon and delete pokemon
 func drop_start():
 	drop_elapsed = 0
 	drop_start_rot = mesh.rotation
