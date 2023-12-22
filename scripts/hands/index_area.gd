@@ -21,6 +21,7 @@ func _ready():
 		skeleton = %RightController/RightHand/Hand_low_R/Armature/Skeleton3D
 		indexTipIdx = skeleton.find_bone("Index_Tip_R")
 
+# Sets position of collision to align with index tip bone
 func _process(_delta):
 	# adjust index finger collision positions to actually be on the index finger
 	position = skeleton.get_bone_global_pose(indexTipIdx).origin
@@ -30,5 +31,6 @@ func _process(_delta):
 
 ### Helper ###
 
+# Forwards rumble call to parent controller
 func rumble():
 	get_parent().rumble()
