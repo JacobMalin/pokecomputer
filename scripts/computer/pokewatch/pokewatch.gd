@@ -47,7 +47,7 @@ func _ready():
 
 	pokewatch(pokewatch_mode)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Updates the visibility of the panels
 func _process(_delta):
 	## Check angle of axis-x-of-watch to watch-to-head
 	var watch_x = global_transform.basis.y
@@ -64,14 +64,17 @@ func _process(_delta):
 
 ### Events ###
 
+# Changes the visibility of the watch when a controller button is pressed
 func _on_button_pressed(_name):
 	if _name == TRIGGER_ACTION: trigger = true
 	elif _name == GRIP_ACTION: grip = true
 
+# Changes the visibility of the watch when a controller button is released
 func _on_button_released(_name):
 	if _name == TRIGGER_ACTION: trigger = false
 	elif _name == GRIP_ACTION: grip = false
 	
+# Checks the position of the panel when pressed, and sends a signal to the box the watch is in
 func _on_panel_pressed(function):
 	if !is_instance_valid(location):
 		var new_location = get_current_area()
@@ -81,6 +84,7 @@ func _on_panel_pressed(function):
 
 ### Signals ###
 
+# Updates mode of the pokewatch based on areas the user enters
 func _on_area_entered(area:Area3D):
 	# check if the user is in the desktop, change modes accordingly
 	if area.is_in_group("desktop"):
@@ -95,6 +99,7 @@ func _on_area_entered(area:Area3D):
 		pokewatch(PokewatchMode.BOX)
 		box_ct += 1
 		
+# Updates mode of the pokewatch based on areas the user exits
 func _on_area_exited(area:Area3D):
 	if area.is_in_group("desktop"):
 		pokewatch(PokewatchMode.DEFAULT)
@@ -113,7 +118,7 @@ func _on_area_exited(area:Area3D):
 
 ### Helper ###
 
-# Define the different modes of the Pokewatch
+# Makes the panels visible/invisible based on the mode
 func pokewatch(_pokewatch_mode):
 	pokewatch_mode = _pokewatch_mode
 
@@ -136,10 +141,12 @@ func pokewatch(_pokewatch_mode):
 			white.make_visible()
 			button.make_visible()
 
+# Get the box the watch is currently in
 func get_current_area():
 	var areas = watch_area.get_overlapping_areas()
 	return check_area(desktop, areas)
 
+# Recursively checks which box the watch is in
 func check_area(box, areas):
 	if box in areas:
 		for child in box.get_children_boxes():

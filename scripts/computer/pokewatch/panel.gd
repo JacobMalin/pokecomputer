@@ -10,11 +10,9 @@ class_name PokewatchPanel
 
 signal on_pressed(function)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+### Events ###
 
-# Called when the user presses a panel
+# Signals the specific function of the panel pressed when a panel is pressed
 func _on_finger_entered(area):
 	if area.get_parent() != controller and area.is_in_group("index") and not disabled:
 		disabled = true
@@ -25,10 +23,15 @@ func _on_finger_entered(area):
 		# Rumble
 		area.rumble()
 
+
+### Helpers ###
+
+# Makes the panel invisible
 func make_invisible():
 	hide()
 	collision.set_deferred("disabled", true)
 
+# Makes the panel visible
 func make_visible(): 
 	show()
 	collision.set_deferred("disabled", false)

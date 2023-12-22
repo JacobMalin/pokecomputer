@@ -20,14 +20,17 @@ func _ready():
 
 ### Events ###
 
+# Changes the position a small amount per tick
 func _on_world_move(new_pos):
 	portal_ref.global_position = world_accumulate + new_pos
 
 	fix_pos()
 
+#Saves the accumulated position when dropped
 func _on_world_accumulate(accumulated_position):
 	world_accumulate += accumulated_position
 
+# Update the portal reference's position based on the movement of the portal
 func _on_portal_move(current_portal_pos, orig_portal_pos):
 	if not previous_portal_pos: previous_portal_pos = orig_portal_pos
 
@@ -40,6 +43,7 @@ func _on_portal_move(current_portal_pos, orig_portal_pos):
 
 ### Helper ###
 
+# Bounds the portal within the larger cube
 func fix_pos():
 	var cube_pos = cube.global_position + cube.mesh.size / 2
 	var cube_neg = cube.global_position - cube.mesh.size / 2

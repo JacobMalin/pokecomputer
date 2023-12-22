@@ -21,6 +21,8 @@ var NEAR_OFFSET = 0.5
 func _ready():
 	xr_interface = XRServer.find_interface('OpenXR')
 
+# Sets the position of the portal cameras, sets the near clipping plane, changes the 
+# distance of the two portal cameras to match the IPD
 func _process(_delta):
 	## Move cameras
 	helper.global_transform = main_cam.global_transform

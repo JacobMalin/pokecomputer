@@ -20,6 +20,7 @@ func _ready():
 
 ### Events ###
 
+# Turns monitor on/off when pressed and gives haptic feedback
 func _on_monitor_entered(area):
 	if not disabled and area.is_in_group("index"):
 		disabled = true
@@ -37,6 +38,7 @@ func _on_monitor_entered(area):
 		# Rumble
 		area.rumble()
 
+# Receives signal from watch and relays to desktop
 func _on_panel_press(panel : String, location : Area3D, _position : Vector3):
 	desktop._on_panel_press(panel, location, _position)
 

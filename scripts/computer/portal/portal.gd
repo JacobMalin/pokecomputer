@@ -29,6 +29,7 @@ func _ready():
 	material.set_shader_parameter("left_tex", left_viewport.get_texture())
 	material.set_shader_parameter("right_tex", right_viewport.get_texture())
 
+# Sets the position of the portal cameras, changes the distance of the two portal cameras to match the IPD
 func _process(_delta):
 	## Move cameras
 	helper.global_transform = main_cam.global_transform

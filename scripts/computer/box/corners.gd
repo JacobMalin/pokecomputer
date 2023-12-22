@@ -24,7 +24,8 @@ func _ready():
 
 ### Events ###
 
-# Recieved from all children then broadcasted to all children
+# When one corner moves, update all corners relative to that movement. Make sure it can't 
+# get too small. Make sure it can't go out of bounds
 func _on_corner_move(id, _position):
 	
 	# Calc pos and neg corner
@@ -69,6 +70,7 @@ func _on_corner_move(id, _position):
 	# Signal up
 	corner_move.emit()
 
+# Updates the position of corners when box is maximized
 func _on_maximize(new_center):
 	var pos = get_pos_corner()
 	var neg = get_neg_corner()
@@ -85,40 +87,50 @@ func _on_maximize(new_center):
 
 ### Helpers ###
 
+# Gets the positive corner's position
 func get_pos_corner():
 	return pos_corner.new_position
 
+# Gets the negative corner's position
 func get_neg_corner():
 	return neg_corner.new_position
 
+# Gets the size of the box
 func get_size():
 	return get_pos_corner() - get_neg_corner()
 
+# Gets the center of the box
 func get_center():
 	return (get_pos_corner() + get_neg_corner()) / 2
 
+# Enables or disables corners and enables/disables collision
 func power(on : bool):
 	for corner in corners:
 		corner.power(on)
 
+# Disables collision and makes corners invisible
 func disable():
 	hide()
 
 	for corner in corners:
 		corner.disable()
 
+# Enables collision and makes corners visible
 func enable():
 	show()
 
 	for corner in corners:
 		corner.enable()
 
+# Gets the positive corner's position of the parent box
 func get_pos_parent_bound():
 	return get_parent().get_parent_box().get_pos_corner()
 
+# Gets the negative corner's position of the parent box
 func get_neg_parent_bound():
 	return get_parent().get_parent_box().get_neg_corner()
 
+# Moves all corners within the bounds of the parent box
 func check_bounds():
 	var pos = get_pos_corner()
 	var neg = get_neg_corner()

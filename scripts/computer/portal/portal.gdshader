@@ -7,9 +7,7 @@ uniform sampler2D right_tex;
 uniform float x_offset;
 uniform float y_offset;
 
-void vertex() {
-}
-
+// Sets albedo color per eye based on portal camera texture, and does color correction
 void fragment() {
 	if (VIEW_INDEX == VIEW_MONO_LEFT) {
 		vec2 left_screen_uv = SCREEN_UV + vec2(x_offset, y_offset);

@@ -24,6 +24,7 @@ func _ready():
 	get_tree().get_root().add_child.call_deferred(desktop_orphanage)
 	orphanage = desktop_orphanage.get_node("SubViewport/Orphanage")
 
+# Traps digital pokemon in desktop
 func _process(_delta):
 	for poke in pokemon.get_children():
 		poke.fix_pos(get_pos_corner(), get_neg_corner())
@@ -32,6 +33,7 @@ func _process(_delta):
 
 ### Events ###
 
+# Move child to top of list
 func _on_take_priority(child):
 	boxes.move_child(child, 0)
 
@@ -39,9 +41,11 @@ func _on_take_priority(child):
 
 ### Helper ###
 
+# Digital pokemon are trapped in the desktop
 func in_bounds(_poke : DigitalPokemon):
-	return true ## digital pokemon are always in the desktop
+	return true
 
+# Reparents pokemon and sets copy to null
 func adopt_to_specific(poke):
 	poke.set_box(self)
 	poke.reparent(pokemon)
@@ -49,6 +53,8 @@ func adopt_to_specific(poke):
 	## Dont copy digital pokemon
 	poke.copy = null
 
+# Moves all rigid bodies into temporary storage when the PC is turned off and recalls from 
+# temporary storage when the PC is finished turning on
 func power(on : bool):
 	if on: 
 		for orphan in orphanage.get_children():
@@ -94,17 +100,22 @@ func power(on : bool):
 	
 	# corners.power(on)
 
+# Desktop has no parent
 func get_parent_box():
 	return false
 
+# Desktop cannot be minimized
 func minimize():
 	print("Error: Desktop cannot be minimized")
 
+# Desktop cannot be deleted
 func delete():
 	print("Error: Desktop cannot be deleted")
 
+# Get's the desktop's positive corner's position
 func get_pos_corner():
 	return global_position + Vector3(3.5/2, 3.05, 3.5/2)
 
+# Get's the desktop's negative corner's position
 func get_neg_corner():
 	return global_position + Vector3(-3.5/2, 0.05, -3.5/2)

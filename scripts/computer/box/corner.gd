@@ -18,7 +18,7 @@ enum Id {X = 1, Y = 2, Z = 4}
 func _ready():
 	super._ready()
 
-
+# Locks rotation and signals corner position to corners
 func _process(_delta):
 	rotation = starting_rotation # Lock rotation
 
@@ -26,6 +26,7 @@ func _process(_delta):
 		corner_move.emit(id, global_position)
 		new_position = global_position
 
+# Updates global position
 func _integrate_forces(state):
 	rotation = starting_rotation # Helps prevent artifacts
 
@@ -35,9 +36,7 @@ func _integrate_forces(state):
 
 ### Super Overrides ###
 
-## This method requests highlighting of the [XRToolsPickable].
-## If [param from] is null then all highlighting requests are cleared,
-## otherwise the highlight request is associated with the specified node.
+# Change request_highlight so that highlight is kept when held
 func request_highlight(from : Node, on : bool = true) -> void:
 	# Save if we are highlighted
 	var old_highlighted := _highlighted
@@ -61,7 +60,7 @@ func request_highlight(from : Node, on : bool = true) -> void:
 
 
 ### Events ###
-
+# Update corner depending on other corner movement
 func _on_corner_move(_id, pos):
 	if id != _id:
 		if id & Id.X == _id & Id.X:
@@ -75,12 +74,14 @@ func _on_corner_move(_id, pos):
 
 ### Helpers ###
 
+# Fix the position of the corner
 func fix_pos(pos, neg):
 	global_position.x = pos.x if id & Id.X else neg.x
 	global_position.y = pos.y if id & Id.Y else neg.y
 	global_position.z = pos.z if id & Id.Z else neg.z
 	new_position = global_position
 
+# Moves corner into bounds of parent box
 func fix_bounds(pos, neg, padding):
 	var _new_position = global_position
 
@@ -88,12 +89,15 @@ func fix_bounds(pos, neg, padding):
 	new_position = global_position
 	
 
+# Enables or disables corner and enables/disables collision
 func power(on : bool):
 	enabled = on
 	collision.set_deferred("disabled", !on)
 
+# Disables collision
 func disable():
 	collision.set_deferred("disabled", true)
 
+# Enables collision
 func enable():
 	collision.set_deferred("disabled", false)

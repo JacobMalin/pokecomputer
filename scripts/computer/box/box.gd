@@ -68,6 +68,8 @@ func _ready():
 	world_pickable.world_move.connect(world_in_cube._on_world_move)
 	world_pickable.world_accumulate.connect(world_in_cube._on_world_accumulate)
 
+# Updates position and size of minimized_box, portal, collision, portal_reference_mesh, 
+# world_in_cube, digital pokemon
 func _process(_delta):
 	if box_mode == BoxMode.MINIMIZED: 
 		minimized.fix_pos(get_parent_box().get_pos_corner(), get_parent_box().get_neg_corner(), PADDING)
@@ -98,6 +100,9 @@ func _process(_delta):
 			if poke is DigitalPokemon:
 				poke.update_pos_to_copy(global_position)
 
+### Events ###
+
+# Takes priority and updates children box bounds
 func _on_corner_move():
 	# Take priority
 	take_priority.emit(self)
@@ -106,12 +111,14 @@ func _on_corner_move():
 	for box in get_children_boxes():
 		box.check_bounds()
 
+# Move child to top of list and take priority for self
 func _on_take_priority(child):
 	boxes.move_child(child, 0)
 
 	# Take priority for self
 	take_priority.emit(self)
 
+# If the panel press is for self, then perform relevant function. Else, propogate to children
 func _on_panel_press(panel : String, location : Area3D, _position : Vector3):
 	if location == self:
 		match panel:
@@ -126,12 +133,14 @@ func _on_panel_press(panel : String, location : Area3D, _position : Vector3):
 	
 	return false
 
+# Update digimon position when world moves
 func _on_world_move(_new_pos):
 	# Update digimon position
 	for poke in get_children_pokemon():
 		if poke is DigitalPokemon:
 			poke.update_pos_to_copy.call_deferred(portal.global_position)
 
+# Update digimon position when world accumulates
 func _on_world_accumulate(_accumulated_position):
 	# Update digimon position
 	for poke in get_children_pokemon():
@@ -142,9 +151,11 @@ func _on_world_accumulate(_accumulated_position):
 
 ### Helper ###
 
+# Return if pokemon is in this box
 func in_bounds(poke : DigitalPokemon):
 	return overlaps_body(poke)
 
+# Adopts pokemon to self, or child, if in bounds
 func adopt(poke : DigitalPokemon):
 	if not in_bounds(poke): return false
 
@@ -154,6 +165,7 @@ func adopt(poke : DigitalPokemon):
 	adopt_to_specific(poke)
 
 	return true
+
 
 func adopt_to_specific(poke):
 	poke.set_box(self)
@@ -170,6 +182,7 @@ func adopt_to_specific(poke):
 
 	pokemon_copies.add_child(digi_poke_copy)
 
+# Changes this box to be on or off based on PC
 func power(on : bool):
 	if on:
 		if box_mode == BoxMode.MAXIMIZED:
@@ -198,12 +211,15 @@ func power(on : bool):
 	
 	corners.power(on)
 
+# Get children boxes
 func get_children_boxes():
 	return boxes.get_children()
 
+# Get parent box
 func get_parent_box():
 	return get_parent().get_parent()
 
+# Add a new child box
 func add(add_pos):	
 	# instantiate new child box inside the current box
 	var new_box = load("res://scenes/computer/box/box.tscn").instantiate()
@@ -215,9 +231,11 @@ func add(add_pos):
 	new_box.set_minimized_position(add_pos)
 	new_box.box_modes(BoxMode.MINIMIZED)
 
+# Minimize this box
 func minimize():	
 	box_modes(BoxMode.MINIMIZED)
-	
+
+# Delete this box and reparent children
 func delete():
 	# relocate any pokemon in a deleted box to its parent box
 	for poke in get_children_pokemon_recursive():
@@ -227,7 +245,7 @@ func delete():
 
 	queue_free()
 
-# Define the different modes of the Box
+# Change the mode of the box
 func box_modes(_box_mode):
 	box_mode = _box_mode
 	
@@ -274,10 +292,11 @@ func box_modes(_box_mode):
 				box.box_modes(BoxMode.MINIMIZED)
 				box.minimized.disable()
 
+# Called by double click animation after first click and resets click memory
 func refresh_click():
 	single_click = null
 
-# Maximize box if it is pressed
+# Maximize box if it is double clicked
 func _on_minimized_box_area_entered(area):
 	if area.is_in_group("index"): 
 		if box_mode == BoxMode.MINIMIZED: area.rumble()
@@ -289,21 +308,27 @@ func _on_minimized_box_area_entered(area):
 			single_click = area
 			$MinimizedBox/AnimationPlayer.play("double_click")
 
+# Set the position of the minimized box
 func set_minimized_position(new_pos):
 	minimized.set_minimized_position(new_pos)
 
+# Get the positive corner position of the box
 func get_pos_corner():
 	return corners.get_pos_corner()
 
+# Get the negative corner position of the box
 func get_neg_corner():
 	return corners.get_neg_corner()
 
+# Moves the corners in bounds
 func check_bounds():
 	corners.check_bounds()
 
+# Gets children pokemon
 func get_children_pokemon():
 	return pokemon.get_children()
 
+# Recursively gets children pokemon
 func get_children_pokemon_recursive():
 	var poke_list = []
 	
