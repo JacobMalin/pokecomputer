@@ -15,7 +15,9 @@ var disabled = false
 ### Lifecycle ###
 
 func _ready():
-	if !on: anim.play_backwards("on")
+	if !on:
+		anim.play.call_deferred("on")
+		desktop.power.call_deferred(false)
 
 
 ### Events ###

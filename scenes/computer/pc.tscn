@@ -103,6 +103,7 @@ _data = {
 
 [node name="PC" type="StaticBody3D"]
 script = ExtResource("3_66oq6")
+on = false
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
