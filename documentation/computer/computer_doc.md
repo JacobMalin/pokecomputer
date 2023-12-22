@@ -6,4 +6,4 @@
 
 
 
-- [PC](pc.md)
+[PC](pc.md)
