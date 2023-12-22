@@ -1,4 +1,4 @@
-# csci-5619-final-project
+# PokéComputer: World-In-Cube
  
 ## Documentation
 
