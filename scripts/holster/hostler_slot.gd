@@ -8,7 +8,6 @@ enum HolsterMode {
 
 ### Lifecycle ###
 
-# Calls super
 func _process(delta):
 	super._process(delta)
 

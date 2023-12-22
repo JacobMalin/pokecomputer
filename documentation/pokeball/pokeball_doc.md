@@ -1,3 +1,3 @@
 # Pokeball
 
-- [pokeball](pokeball.doc)
+- [pokeball](pokeball.md)
