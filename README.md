@@ -5,8 +5,8 @@
 - [Computer](documentation/computer/computer_doc.md)
 - [Hands](documentation/hands/hands_doc.md)
 - [Holster](documentation/holster/holster_doc.md)
-- [Pokémon](documentation/pokeball/pokeball_doc.md)
-- [Pokéball](documentation/pokemon/pokemon_doc.md)
+- [Pokéball](documentation/pokeball/pokeball_doc.md)
+- [Pokémon](documentation/pokemon/pokemon_doc.md)
 - [Pokéspawner](documentation/pokespawner/pokespawner_doc.md)
 
 ## Third Party Assets

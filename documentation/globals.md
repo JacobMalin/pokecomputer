@@ -1,3 +1,5 @@
 # Globals
 
-pokedex
+## Pokedex
+
+Globally available pokemon name-to-ID conversion

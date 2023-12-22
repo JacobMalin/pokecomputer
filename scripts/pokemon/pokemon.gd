@@ -244,7 +244,7 @@ func idle():
 
 ### Pokemon capture states ###
 
-## Marks pokemon as not available to capture
+# Marks pokemon as not available to capture
 func pre_capture():
 	capture_state = CaptureState.PRE_CAPTURE
 

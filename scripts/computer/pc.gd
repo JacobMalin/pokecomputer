@@ -48,6 +48,7 @@ func _on_panel_press(panel : String, location : Area3D, _position : Vector3):
 func adopt(poke : DigitalPokemon):
 	desktop.adopt(poke)
 
+# Called during the animation for on. Updates disabled and desktop power
 func update_state(start : bool):
 	if on:
 		disabled = !start

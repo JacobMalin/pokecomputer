@@ -2,7 +2,7 @@ class_name DigiPokeSnap
 extends XRToolsSnapZone
 
 
-### Overrided super methods ###
+### Super Overrides ###
 
 # Overwrite super._ready to allow for cube collision
 func _ready():
