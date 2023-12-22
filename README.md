@@ -1,4 +1,6 @@
 # csci-5619-final-project
+
+[Computer](documentation/computer.md)
  
 Third Party Assets:
 
