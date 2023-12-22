@@ -20,6 +20,7 @@ const PADDING = 0.01 ## To prevent z-fighting
 
 @onready var orig_position : Vector3 = global_position
 
+
 enum BoxMode {
 	MAXIMIZED,
 	MINIMIZED
@@ -34,7 +35,8 @@ var world_pickable : WorldPickable
 var minimized : MinimizedBox
 var copy_copy : Node3D
 
-var single_click = null
+var saved_pos : Vector3
+var single_click : Area3D
 
 ### Lifecycle ###
 
@@ -169,8 +171,24 @@ func adopt_to_specific(poke):
 	pokemon_copies.add_child(digi_poke_copy)
 
 func power(on : bool):
-	if !on: 
-		box_modes(BoxMode.MAXIMIZED)
+	if on: 
+		if box_mode == BoxMode.MAXIMIZED: portal.show()
+		
+		for orphan in world_in_cube.orphanage.get_children():
+			if orphan is DigitalPokemon:
+				orphan.reparent(pokemon)
+			elif orphan is MinimizedBox:
+				orphan.reparent(self)
+				orphan.set_minimized_position(saved_pos)
+				
+	else:
+		saved_pos = minimized.global_position
+		
+		portal.hide()
+		
+		for poke in get_children_pokemon():
+			poke.reparent(world_in_cube.orphanage)
+		minimized.reparent(world_in_cube.orphanage)
 	
 	for box in get_children_boxes():
 		box.power(on)

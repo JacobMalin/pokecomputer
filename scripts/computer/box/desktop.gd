@@ -1,6 +1,10 @@
 class_name Desktop
 extends Box
 
+@onready var desktop_orphanage : Node3D = preload("res://scenes/computer/box/desktop_orphanage.tscn").instantiate()
+
+var orphanage
+
 ### Lifecycle ###
 
 func _ready():
@@ -11,6 +15,9 @@ func _ready():
 
 	for box in get_children_boxes():
 		box.take_priority.connect(_on_take_priority)
+	
+	get_tree().get_root().add_child.call_deferred(desktop_orphanage)
+	orphanage = desktop_orphanage.get_node("SubViewport/Orphanage")
 
 func _process(_delta):
 	for poke in pokemon.get_children():
@@ -38,7 +45,15 @@ func adopt_to_specific(poke):
 	poke.copy = null
 
 func power(on : bool):
-	for box in boxes.get_children():
+	if on: 
+		for orphan in orphanage.get_children():
+			if orphan is DigitalPokemon:
+				orphan.reparent(pokemon)
+	else:
+		for poke in get_children_pokemon():
+			poke.reparent(orphanage)
+	
+	for box in get_children_boxes():
 		box.power(on)
 	
 	# corners.power(on)

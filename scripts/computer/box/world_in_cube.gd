@@ -3,6 +3,7 @@ extends Node3D
 
 @onready var cube : MeshInstance3D = $LeftPortalViewport/Cube
 @onready var portal_ref : MeshInstance3D = $LeftPortalViewport/PortalReference
+@onready var orphanage : Node3D = $LeftPortalViewport/Orphanage
 
 var color
 var world_accumulate = Vector3.ZERO

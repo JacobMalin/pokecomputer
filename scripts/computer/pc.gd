@@ -49,6 +49,6 @@ func adopt(poke : DigitalPokemon):
 func update_state(start : bool):
 	if on:
 		disabled = !start
-		if start: desktop.power(true) # only show corners at end of opening animation
+		if start: desktop.power(true)
 	else:
 		disabled = start

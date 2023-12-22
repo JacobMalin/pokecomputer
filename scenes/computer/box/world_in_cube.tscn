@@ -73,3 +73,5 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yy10u")
 
 [node name="PokemonCopies" type="Node3D" parent="LeftPortalViewport"]
+
+[node name="Orphanage" type="Node3D" parent="LeftPortalViewport"]

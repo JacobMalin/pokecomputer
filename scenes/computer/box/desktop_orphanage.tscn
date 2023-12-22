@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://y7hboob3qj3r"]
+
+[sub_resource type="World3D" id="World3D_iplqe"]
+
+[node name="DesktopOrphanage" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+own_world_3d = true
+world_3d = SubResource("World3D_iplqe")
+
+[node name="Orphanage" type="Node3D" parent="SubViewport"]

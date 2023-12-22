@@ -37,13 +37,6 @@ func _process(_delta):
 	left_portal_camera.global_transform = reference_helper.global_transform
 	right_portal_camera.global_transform = reference_helper.global_transform
 
-	## Set near clipping plane
-	## TODO: make work
-	# var diff = global_transform.origin - main_cam.global_transform.origin
-	# var angle = main_cam.global_transform.basis.z.angle_to(diff)
-	# var near_plane = helper.transform.origin.length()*abs(cos(angle))
-	# left_portal_camera.near = max(0.1, near_plane-4.2)
-	# right_portal_camera.near = max(0.1, near_plane-4.2)
 	
 	if main.xr_active:
 		## Calculate IPD
