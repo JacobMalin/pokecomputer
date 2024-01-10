@@ -1,4 +1,10 @@
 # PokéComputer: World-In-Cube
+
+By: Jacob Malin (malin146), Ben Larson (lars6866)
+
+## Description
+
+This is a prototype of a Virtual 3D Folder System that uses a specific technique that we are calling World-In-Cube to allows each folder to be a sub-world that the user can view and interact with. To give an example use case for this prototype, the folder system can store Pokémon that can be placed in the computer after they have been digitized into a Pokéball. This project was built in godot for the Meta Quest 2.
  
 ## Documentation
 
