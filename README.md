@@ -4,18 +4,65 @@ By: Jacob Malin (malin146), Ben Larson (lars6866)
 
 ## Description
 
-This is a prototype of a Virtual 3D Folder System that uses a specific technique that we are calling World-In-Cube to allow each folder to be a sub-world that the user can view and interact with. To give an example use case for this prototype, the folder system can store Pokémon that can be placed in the computer after they have been digitized into a Pokéball. This project was built in Godot for the Meta Quest 2.
+This is a prototype of a virtual 3D Folder System that uses a specific technique that we are calling World-In-Cube to allow each folder to be a sub-world that the user can view and interact with. To give an example use case for this prototype, the folder system can store Pokémon that can be placed in the computer after they have been digitized into a Pokéball. This project was built in Godot for the Meta Quest 2.
 
 ## The Pokéballs
 
-![](videos/Pokeball%20throw.mp4)
-![](videos/Mirror.mp4)
+Taking advantage of virtual reality user input design, all user input is either pushing buttons or throwing objects. In the case of the pokéballs, throwing a pokéball will activate it and attempt to catch the closest pokémon. Throwing the pokéball again will release the pokémon to walk around.
 
-![](videos/Bylbasaur%20spawn.mp4)
+https://github.com/JacobMalin/pokecomputer/assets/34765120/dc4df893-3222-4c32-88e6-2a4968fc8930
 
+https://github.com/JacobMalin/pokecomputer/assets/34765120/64732fa7-320d-44e3-a26f-880f50e77636
 
-https://github.com/JacobMalin/pokecomputer/assets/34765120/45b56859-4421-4989-ab85-a012e01ebafb
+## The pokéholster and the mirror
 
+The pokéballs are stored in the pokéholster attached to the player's waist. Looking down at the pokéholster will move the pokéballs to the front for ease of access. As well, the holster is equipped with haptic feedback to allow the user to grab pokéballs while not looking down. The mirror is built with the same portal technology that enables the pokéboxes to operate.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/698ffd86-6faf-49a1-9036-249a5940c860
+
+## The Pokéspawner
+
+The pokéspawner allows the user to bring in more pokémon to capture and store in the PokéComputer.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/41c64dcf-2e3b-4c9f-b827-a40cfbbec40c
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/7edee92f-b1e1-454a-b3c0-fa0110194d8b
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/588fc0e4-fb5f-40a1-8ed0-30c97e3dd3bf
+
+## The PokéComputer
+
+Taking after the PokéComputer from the games, the PokéComputer allows the user to store and later retrieve pokémon. The PokéComputer user interface can be opened and closed by tapping on the screen of the computer.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/c840918b-21ab-4531-a3f1-f97e7bf7dd1e
+
+In the opened state, users can grab pokémon from their digital pokéholster, which will remove the pokémon from the pokéball. The pokémon can be then placed within the bounds of the computer for safe storage.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/7a0077ef-5cb0-4aa3-b8ab-54ae84425283
+
+Users can arrange their pokémon however they would like, placing them within the desktop space or within boxes. 
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/8e9bb208-dc3e-4255-b29a-33443be55dbb
+
+The World-In-Cube illusion is what allows the boxes to appear so dynamic. Within each box exists a sub-world in which pokémon can be stored. The boxes are simply 'windows' into the sub-world that allow the user to view their contents and interact with the contents within the bounds of the window. The illusion of the world-in-cube becomes complete when stepping inside of the box, at which point only the light-gray tinted window indicates that you are not present within the sub-world.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/216139cb-01d7-4caf-be9f-6fc7f439794a
+
+The boxes may be resized to view more or less of the world within the box. Notably, this means that from certain angles, the pokémon within the box may not be visible.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/916956ba-f291-4cbe-a8a4-4d7cf6dec04c
+
+The pokéwatch allows for interaction with the PokéComputer. The pokéwatch is only accessible when the user's hands are within the desktop area, and appears when the user rotates their palm towards them. Within the desktop new boxes can be created with the red button. If the user's hand is within a box, the white button can be used to delete the box and the center button may be used to minimize the box. A minimized box may be restored by double-tapping the box.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/294f3f96-d37c-44cc-a292-c20086026466
+
+Boxes may, of course, be nested by pushing the red button to spawn a new box while the user's hand is within a box.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/8dbab98d-3b37-469e-9187-ceaefa1d868e
+
+Finally, the contents of a box may be moved around by grabbing the air within a box and dragging it around.
+
+https://github.com/JacobMalin/pokecomputer/assets/34765120/0e145e9c-5a0f-49a2-80d1-a09aa61304fe
 
 ## Documentation
 
